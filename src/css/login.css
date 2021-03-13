@@ -1,0 +1,79 @@
+
+.ro{
+    overflow-x: hidden;
+    position: relative;
+}
+
+.img1{
+    width: 100%;
+}
+.sign{
+    font-weight: bold;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+}
+.lbl_txt{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.inp_login{
+    border-radius: 7px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid rgba(45, 45, 45, 0.2);
+    color: #2d2d2d;
+}
+.inp_login:focus{
+    outline: none;
+    border: 1px solid rgba(45, 45, 45, 0.2);
+    box-shadow: none;
+}
+
+.spaceee{
+    padding: 13% 25%;
+}
+.hgt1{
+    height: 100px;
+}
+.btn_submit{
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    background: #BE8EED ;
+    color: #fff;
+    padding: 7px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 17px;
+}
+.btn_submit:focus{
+    outline: none;
+}
+
+/* placeholder color */
+.inp_login::placeholder {
+    color: rgba(45, 45, 45, 0.3);
+    /* Firefox */
+}
+
+.inp_login:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(45, 45, 45, 0.3);
+}
+
+.inp_login::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(45, 45, 45, 0.3);
+}
+
+/* error message */
+.error {
+    color: #FF4D4D;
+    /* width: 585px; */
+    /* text-align: right; */
+    font-size: 10px;
+    margin-top: 3px;
+    font-family: 'CerebicRegular';
+    font-weight: 600;
+}

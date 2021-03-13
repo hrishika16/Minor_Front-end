@@ -1,0 +1,127 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+.brk{
+    overflow-x: hidden;
+    position: relative;
+    background: #DEE6F1  ;
+}
+
+.link_cls {
+    font-family: 'caros_bold';
+    font-size: 17px;
+    margin-left: 10px;
+    color: #fff;
+}
+.nav_d{
+    background: #045174;
+}
+.graph_img{
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px 6px #0000001A;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background: #fff;
+}
+
+
+
+.link_cls:hover {
+    color: #fff;
+    /* background: #fff; */
+    /* border: 2px solid #fff; */
+    box-shadow: 5px 5px 15px #00000035;
+    /* width: 120px; */
+    border-radius: 8px;
+    transition: ease-in-out;
+    /* transform: scale(1); */
+    text-decoration: none;
+    outline: none;
+}
+
+.dashoard_txt {
+    color: #FFFFFF;
+    font-family: 'CerebicRegular';
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+    background: transparent;
+    width: 40px;
+    margin-top: 13px;
+}
+.sidebar{
+    background-color: #2d2d2d;
+    height: 100%;
+     position:absolute;
+    position: fixed;
+    /* top:65px; */
+    z-index: 999;
+    display: block;
+    width: 254px;
+    z-index: 100;
+    padding-top: 60px;
+    /* overflow-y: scroll; */
+    transition: all 0.3s;
+    outline: none;
+}
+
+#sidebarp {
+    width: 250px;
+    padding-top: 60px;
+    border-right: 1px solid #2d2d2d;
+    position: fixed;
+    top: 50px;
+    left: -250px;
+    height: 100vh;
+    z-index: 998;
+    background-color: #2d2d2d;
+    color: #fff;
+    transition: all 0.15s ease-out;
+}
+
+#sidebarp.active {
+    left: 0;
+}
+
+.main{
+    padding-left: 275px;
+    width: 100%;
+    overflow-x: hidden;
+    /* overflow-x: hidden;
+    display: block;
+    position: relative; */
+    background: #f5f5f5;
+    /* height: 100%; */
+}
+
+#content {
+    left: 0;
+}
+#content.active {
+    left: 250px;
+}
+
+.m2{
+    padding: 20px 40px 20px 0px;
+}
+
+.m1{
+    padding: 20px 0px 20px 20px;
+}
+
+.flr{
+    float: right;
+}
