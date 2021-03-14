@@ -1,0 +1,144 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+.ll{
+    position: relative;
+    overflow-x: hidden;
+    height: 100vh;
+    background: #045174;
+}
+.img_log{
+    max-width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.rr_1{
+    margin: auto;
+    margin-top: 7vh;
+}
+.bg1{
+    background:#fff ;
+    width: 54%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.bg2{
+    padding: 10% 7%;
+    width: 44%;
+    background: #F7F7F7;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.logIn{
+    font-family: 'caros_bold';
+    font-size: 28px;
+    text-align: center;
+    color: #045174;
+    margin-bottom: 25px;
+}
+
+.hj_1{
+    height: 110px;
+}
+
+.emm{
+    font-family: 'carosM';
+    font-size: 16px;
+    color: #045174;
+    margin-bottom: 7px;
+}
+
+.error{
+    color: #FF5656;
+    font-family: 'caros';
+    font-size: 15px;
+    margin-top: 3px;
+}
+
+.log_btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #F8951D;
+    box-shadow: 5px 5px 15px #00000021;
+    color: #fff;
+    width: 100%;
+    font-family: 'caros_bold';
+    font-size: 17px;
+    padding: 9px;
+    margin-bottom: 14px;
+}
+
+.log_btn:focus{
+    outline: none;
+}
+
+.inp_1{
+    border: none;
+    box-shadow: 5px 5px 15px #00000021;
+    border-radius: 6px;
+    width: 100%;
+    padding: 8px;
+    font-family: 'caros';
+    font-size: 14px;
+    color: #045174 ;
+}
+.inp_1:focus{
+    border: none;
+    outline: none;
+}
+
+.frgt{
+    color: #045174 ;
+    font-family: 'caros_bold';
+    font-size: 17px;
+}
+#err_u{
+    display: none;
+}
+#err_p{
+    display: none; 
+}
+@media(max-width:1200px){
+    .rr_1{
+        margin-top: 20vh;
+    }
+}
+
+/* @media(max-width:991px){
+    .rr_1{
+        margin-top: 21vh;
+    }
+} */
+
+@media(max-width:766px){
+    .bg1{
+        width: 100%;
+    }
+    .img_log{
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 20px;
+    }
+    .bg2{
+        width: 100%;
+        border-top-right-radius:0px;
+        border-bottom-left-radius: 20px;
+    }
+    .rr_1{
+        padding-top: 4%;
+        padding-bottom: 4%;
+        margin-top: 0px;
+    }
+}
