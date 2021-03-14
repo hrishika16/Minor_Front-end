@@ -19,11 +19,12 @@ class Header extends Component {
                             <Link to='/userA' className="nav-link link_cls">User </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/mentor' className="nav-link link_cls">Mentor </Link>
+                            <Link to='/mentorA' className="nav-link link_cls">Mentor </Link>
                         </li>
                     </ul>
                     </div>
                 </nav>
+                
             </div>
         )
     }

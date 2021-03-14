@@ -1,6 +1,8 @@
 import react from 'react'
 import { BrowserRouter, Switch, Route,Redirect } from 'react-router-dom';
 import AdminL from './Admin/AdminL';
+import Alogin from './Admin/Alogin';
+import Mentor from './Admin/Mentor';
 import User from './Admin/User';
 import Login from './login'
 let isLoggedIn;
@@ -13,6 +15,8 @@ function App() {
               <Route exact path='/' component={Login}  />
               <Route exact path='/admin' component={AdminL}  />
               <Route exact path='/userA' component={User} />
+              <Route exact path='/mentorA' component={Mentor} />
+              <Route exact path='/adminLogin' component={Alogin} />
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}
