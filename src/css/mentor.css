@@ -1,0 +1,84 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+.whole_m{
+    position: relative;
+    overflow-x: hidden;
+    /* background: #DEE6F1; */
+    height: 100vh;
+}
+.cust_m{
+    margin-top: 40px;
+    color: #045174;
+    font-size: 22px;
+    font-family: 'caros_bold';
+}
+
+.table_1_m {
+    text-align: center;
+    font-family: 'caros';
+    border: none !important;
+    width: 100%;
+    box-shadow: 5px 5px 15px 15px #00000015;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.table_1_m td,
+.table_1_m th {
+    padding: 12px;
+}
+
+.table_1_m tbody {
+    color: #01355D;
+    font-size: 14px;
+    /* line-height: 1.2; */
+    font-family: 'caros';
+    background: #fff;
+}
+
+.table_1_m tbody tr{
+    padding: 10px;
+    border-bottom: 1px solid #DBDEE2;
+}
+
+.table_1_m thead {
+    background-color: #F8951D;
+}
+
+.table_1_m th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'caros_bold';
+    color: #2D2D2D;
+}
+.see_more_m{
+    width: 100px;
+    padding: 6px;
+    border: none;
+    background: #01355D;
+    color: #fff;
+    outline: none;
+    font-family: 'caros';
+    border-radius: 8px;
+    float: right;
+}
+.see_more_m:focus{
+    outline: none;
+}
+
+
+@media(max-width:991px){
+    .table_m{
+        overflow-x: scroll;
+    }
+}
