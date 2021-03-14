@@ -40,24 +40,25 @@ class User extends Component {
            return (
                <React.Fragment key={user.id}>
               <tr >
-                 <td className='date_w'>{user.username}</td>
-                 <td className='time_w'>{user.email}</td>
+                 <td >{user.username}</td>
+                 <td >{user.email}</td>
                  <td>{user.phone}</td>
                  <td>{user.website}</td>
                  <td>{user.id}</td>
-                 <td className='update_w'>
-                    <div className='row'>
-                        <div className='col-lg-8 col-7 up_w'>
+                 <td >
+                    {/* <div className='row'>
+                        <div className='col-lg-8 col-4 up_w'>
                             {user.name}
                         </div>
-                        <div className='col-lg-4 col-5 btns_w'>
+                        <div className='col-lg-4 col-8 btns_w'>
                             <div className='fl'>
                                 <button className=' see_more'  >  See more</button>
                                
                             </div>
                         </div>
-                    </div>
-                 </td>
+                    </div> */}
+                    {user.name}    <button className=' see_more'  >  See more</button>
+                 </td> 
               </tr>
               
               </React.Fragment>
@@ -85,14 +86,16 @@ class User extends Component {
                 <Header/>
                 <div className='container-fluid'>
                     <p className='cust'>CUSTOMER DETAILS</p>
-                    <table className='table_1' >
-                        <thead>
-                            <tr>{this.renderTableHeader()}</tr>
-                        </thead>
-                        <tbody>
-                            {this.renderTableData()}
-                        </tbody>
-                    </table>
+                    <div className='table_d'>
+                        <table className='table_1' >
+                            <thead>
+                                <tr>{this.renderTableHeader()}</tr>
+                            </thead>
+                            <tbody>
+                                {this.renderTableData()}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         )
