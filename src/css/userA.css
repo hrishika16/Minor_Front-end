@@ -7,7 +7,28 @@
     font-family: 'caros_bold';
     src: url('../font//cretype\ \ Caros\ Bold.otf');
 }
-
+.mrgb_1{
+    margin-top: 40px;
+}
+.add_btn{
+    border: none;
+    border-radius: 7px;
+    background: url('../img/plus.svg');
+    background-repeat: no-repeat;
+    background-position: right 14px bottom 11px;
+    background-size: 20px 20px;
+    width: 96px;
+    text-align: justify;
+    background-color: #045174;
+    color: #fff;
+    font-family: 'caros';
+    font-size: 16px;
+    padding: 9px;
+    float: right;
+}
+.add_btn:focus{
+    outline: none;
+}
 .whole{
     position: relative;
     overflow-x: hidden;
@@ -15,7 +36,7 @@
     height: 100vh;
 }
 .cust{
-    margin-top: 40px;
+    /* margin-top: 40px; */
     color: #045174;
     font-size: 22px;
     font-family: 'caros_bold';
@@ -65,8 +86,15 @@
     font-family: 'caros_bold';
     color: #2D2D2D;
 }
+.pdlr{
+    padding-right: 0px;
+}
+.pdrr{
+    padding-left: 0px;
+}
 .see_more{
-    width: 100px;
+    width: 110px;
+    /* width: 100%; */
     padding: 6px;
     border: none;
     background: #01355D;
@@ -74,10 +102,25 @@
     outline: none;
     font-family: 'caros';
     border-radius: 8px;
-    float: right;
+    /* float: right; */
 }
 .see_more:focus{
     outline: none;
+    border: none;
+}
+.plus_img{
+    width: 18px;
+}
+.seemore_dropitem{
+    font-family: 'caros';
+    color: #01355D;
+    font-size: 15px;
+    border-bottom: 0.5px solid rgba(45, 45, 45, 0.2);
+}
+.seemore_dropitem1{
+    font-family: 'caros';
+    color: #01355D;
+    font-size: 15px;
 }
 
 @media(max-width:991px){

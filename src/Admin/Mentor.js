@@ -2,18 +2,27 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Header from "./Header";
 import '../css/mentor.css'
+import ReactPaginate from 'react-paginate'
+import '../css/Paginate.css'
+let selectedPage;
 
 class Mentor extends Component {
     constructor(props) {
         super(props)
     
         this.state = {
-             users : []
+             users : [],
+             offset : 0,
+             data : [],
+             perPage : 9 ,
+             currentPage : 1,
+             totalPages : 0
         }
     }
 
     componentDidMount(){
         // https://jsonplaceholder.typicode.com/users
+        this.handleAxiosDrop()
         axios({
             method : 'get',
             url : 'https://jsonplaceholder.typicode.com/users',
@@ -33,6 +42,52 @@ class Mentor extends Component {
         })
     }
 
+    handleAxiosDrop() {
+        axios({
+            method : 'post',
+            // url : 'https://api.wappgo.com/legal251AppDashboardAPI/?parameter=paginateNewsalert',
+            // data : {
+            //     "category" : data_catgory,
+            //     "page" : this.state.currentPage
+            // } ,
+            // headers : {
+            //     "jwt" : localStorage.getItem('login')
+            // }
+           })
+           .then(response =>{
+               const data = response.data.data
+                const forPage = response.data.TotalPages
+                console.log(data)
+                if(response.data.status === 200){
+                    this.setState({
+                        pageCount : forPage,
+                        users : data
+                    })
+                }
+                else{
+                    console.log('something went wrong');
+                }
+            
+            this.renderTableData()
+           })
+           .catch(error => {
+               console.log('error',error)
+           })
+    }
+
+
+    handlePageClick = e =>{
+        selectedPage = e.selected;
+       const offset = selectedPage * this.state.perPage;
+
+       this.setState({
+           currentPage : selectedPage,
+           offset : offset
+       },()=>{
+        this.handleAxiosDrop()
+       } )
+   }
+
     renderTableData() {
         return this.state.users.map((user) => {
            return (
@@ -44,18 +99,24 @@ class Mentor extends Component {
                  <td>{user.website}</td>
                  <td>{user.id}</td>
                  <td className='update_w'>
-                    {/* <div className='row'>
-                        <div className='col-lg-8 col-4 up_w'>
+                    {/* {user.name}    <button className=' see_more'  >  See more</button> */}
+                    <div className='row'>
+                        <div className='col-lg-6 col-5 up_w'>
                             {user.name}
                         </div>
-                        <div className='col-lg-4 col-8 btns_w'>
-                            <div className='fl'>
-                                <button className=' see_more'  >  See more</button>
-                               
+                        <div className='col-lg-6 col-7 btns_w'>
+                            <div className="dropdown">
+                                <button className="dropdown-toggle see_more" type="button" id="mentorDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    See more
+                                </button>
+                                <div className="dropdown-menu" aria-labelledby="mentorDropdownButton">
+                                    <a className="dropdown-item seemore_dropitem" href="#">Add</a>
+                                    <a className="dropdown-item seemore_dropitem" href="#">Remove</a>
+                                    <a className="dropdown-item seemore_dropitem1" href="#">More Details</a>
+                                </div>
                             </div>
                         </div>
-                    </div> */}
-                    {user.name}    <button className=' see_more'  >  See more</button>
+                    </div>
                  </td>
               </tr>
               
@@ -83,7 +144,14 @@ class Mentor extends Component {
             <div className='whole_m'>
                 <Header/>
                 <div className='container-fluid'>
-                    <p className='cust_m'>MENTOR DETAILS</p>
+                    <div className='row mrgb_2'>
+                        <div className='col-lg-6'>
+                            <p className='cust_m'>MENTOR DETAILS</p> 
+                        </div>
+                        <div className='col-lg-6'>
+                            <button className='add_btn_m'>ADD  </button>
+                        </div>
+                    </div>
                     <div className='table_m'>
                         <table className='table_1_m' >
                             <thead>
@@ -93,6 +161,23 @@ class Mentor extends Component {
                                 {this.renderTableData()}
                             </tbody>
                         </table>
+                    </div>
+                     {/* pagination */}
+                     <div className='paginee'>
+                        <ReactPaginate
+                            previousLabel = {"<"}
+                            nextLabel = {">"}
+                            breakLabel = {"...."}
+                            breakClassName = {"break-me"}
+                            pageCount = {this.state.pageCount}
+                            marginPagesDisplayed = {2}
+                            pageRangeDisplayed = {5}
+                            onPageChange = {this.handlePageClick}
+                            containerClassName = {'pagination pg_1'}
+                            subContainerClassName = {'pages pagination pg_1'}
+                            activeClassName = {`active `}
+                        />
+                        <br/>  
                     </div>
                 </div>
             </div>
