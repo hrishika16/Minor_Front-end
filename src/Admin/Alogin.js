@@ -16,12 +16,12 @@ function Alogin() {
         console.log('clock')
         // authentication.onAuthentication()
         if(adminName === ''){
-            document.querySelector('#err_u').innerHTML = 'User Name is Required';
+            document.querySelector('#err_u').innerHTML = 'Email is required';
             document.getElementById('err_u').style.display = 'block';
             document.querySelector('#adminName').focus()
         }
         if(password === ''){
-        document.querySelector('#err_p').innerHTML = 'Password is Required';
+        document.querySelector('#err_p').innerHTML = 'Password is required';
         document.getElementById('err_p').style.display = 'block';
         document.querySelector('#password').focus()
         }
@@ -71,31 +71,32 @@ function Alogin() {
                 <div className='col-xs-6 bg2'>
                     <div>
                         <p className='logIn'>ADMIN LOGIN</p>
+                        {/* text between these fields */}
                         {/* email */}
                         <div className='hj_1'>
-                            <p className='emm'>Your E-mail</p>
+                            <p className='emm'>Email</p>
                             <input
                                 type='email'
-                                placeholder = 'name@domain.com'
+                                placeholder = 'Enter your Email'
                                 className='inp_1'
                                 id='adminName'
                                 value={adminName} 
                                 onChange={e=>setAdmin(e.target.value)}
                             />
-                            <p className='error' id='err_u'>This field cannot be empty</p>
+                            <p className='errorr' id='err_u'>This field cannot be empty</p>
                         </div>
                         {/* password */}
                         <div className='hj_1'>
                             <p className='emm'>Password</p>
                             <input
                                 type='password'
-                                placeholder = 'at least 8 characters'
+                                placeholder = 'Enter your Password'
                                 className='inp_1'
                                 id='password' 
                                 value={password} 
                             onChange={e=>setPassword(e.target.value)}
                             />
-                            <p className='error' id='err_p'>This field cannot be empty</p>
+                            <p className='errorr' id='err_p'>This field cannot be empty</p>
                         </div>
                         <button className='log_btn' onClick={SubmitHandler} >Log in</button>
                             <p className='text-center frgt'>Forgot Password ?</p>

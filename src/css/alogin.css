@@ -17,6 +17,9 @@
     overflow-x: hidden;
     height: 100vh;
     background: #045174;
+    /* background: url('../img/copy.svg'); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
 }
 .img_log{
     max-width: 100%;
@@ -25,6 +28,7 @@
 }
 .rr_1{
     margin: auto;
+    /* display: none; */
     margin-top: 7vh;
 }
 .bg1{
@@ -36,7 +40,7 @@
 .bg2{
     padding: 10% 7%;
     width: 44%;
-    background: #F7F7F7;
+    background: #E6E6E6;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -45,7 +49,7 @@
     font-size: 28px;
     text-align: center;
     color: #045174;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 
 .hj_1{
@@ -59,11 +63,13 @@
     margin-bottom: 7px;
 }
 
-.error{
+.errorr{
     color: #FF5656;
-    font-family: 'caros';
-    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
     margin-top: 3px;
+    font-weight: 600;
+    text-align: right;
 }
 
 .log_btn{
@@ -72,7 +78,7 @@
     cursor: pointer;
     border-radius: 8px;
     background: #F8951D;
-    box-shadow: 5px 5px 15px #00000021;
+    /* box-shadow: 5px 5px 15px #00000021; */
     color: #fff;
     width: 100%;
     font-family: 'caros_bold';
@@ -87,7 +93,7 @@
 
 .inp_1{
     border: none;
-    box-shadow: 5px 5px 15px #00000021;
+    /* box-shadow: 5px 5px 10px #00000021; */
     border-radius: 6px;
     width: 100%;
     padding: 8px;
@@ -99,7 +105,18 @@
     border: none;
     outline: none;
 }
-
+.inp_1::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(45, 45, 45, 0.2);
+    
+  }
+  
+  .inp_1  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(45, 45, 45, 0.2);
+  }
+  
+  .inp_1 ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(45, 45, 45, 0.2);
+  }
 .frgt{
     color: #045174 ;
     font-family: 'caros_bold';
