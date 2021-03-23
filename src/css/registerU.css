@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face {
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face {
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+.pddd{
+   padding: 2% 25%;
+}
+.nnn{
+    border: 1px solid rgba(45, 45, 45, 0.2);
+    padding: 2%;
+}
+.step_1 {
+    font-family: 'caros_bold';
+    font-size: 23px;
+    /* margin-top: 50px; */
+}
+
+.whole_12 {
+    position: relative;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.hr_11 {
+    height: 100px;
+}
+
+.optnl {
+    font-family: 'caros';
+    border-radius: 12px;
+    color: rgba(45, 45, 45, 0.2);
+}
+
+.field_names {
+    font-family: 'carosM';
+    color: #045174;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.inp_register {
+    width: 100%;
+    border: 0.5px solid rgba(45, 45, 45, 0.2);
+    font-family: 'caros';
+    border-radius: 5px;
+    color: #045174;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.inp_register:focus {
+    outline: none;
+    border: 0.5px solid rgba(45, 45, 45, 0.2);
+}
+
+.inp_register::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(45, 45, 45, 0.2);
+
+}
+
+.inp_register :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(45, 45, 45, 0.2);
+}
+
+.inp_register ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(45, 45, 45, 0.2);
+}
+.next_btn_1{
+    font-family: 'caros_bold';
+    color: #fff;
+    padding: 9px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    width: 100%;
+    background: #F8951D;
+    margin-bottom: 30px;
+}
+.next_btn_1:focus{
+    outline: none;
+}
+.requ_1 {
+    width: 8px;
+    margin-top: -7px;
+}
+
+.error_reg {
+    color: #FF5656;
+    font-family: 'caros';
+    font-size: 15px;
+    margin-top: 3px;
+}
+
+#error_fn {
+    display: none;
+}
+
+#error_ln {
+    display: none;
+}
+
+#error_cn {
+    display: none;
+}
+
+
+#error_add {
+    display: none;
+}

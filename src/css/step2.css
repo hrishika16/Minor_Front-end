@@ -1,0 +1,77 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.whole_22{
+    position: relative;
+    overflow-x: hidden;
+}
+
+.pdddm{
+    padding: 2% 25%;
+}
+
+.nnnm{
+    border: 1px solid rgba(45, 45, 45, 0.2);
+    padding: 2%;
+}
+
+.start_yr{
+    width: 110px;
+    /* width: 100%; */
+    padding: 6px;
+    border: none;
+    background: #01355D;
+    color: #fff;
+    outline: none;
+    font-family: 'caros';
+    border-radius: 8px;
+    /* float: right; */
+}
+.start_yr:focus{
+    outline: none;
+    border: none;
+}
+
+.start_yr_inp{
+    width: 100%;
+    border: 0.5px solid rgba(45, 45, 45, 0.2);
+    font-family: 'caros';
+    border-radius: 5px;
+    color: #045174;
+    font-size: 15px;
+    padding: 8px;
+}
+
+.start_yr_inp:focus {
+    outline: none;
+    border: 0.5px solid rgba(45, 45, 45, 0.2);
+}
+
+.next_2btn {
+    font-family: 'caros_bold';
+    color: #fff;
+    padding: 9px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    width: 100%;
+    background: #F8951D;
+    margin-bottom: 30px;
+    margin-top: 4px;
+}
+
+.next_2btn:focus{
+    outline: none;
+}
