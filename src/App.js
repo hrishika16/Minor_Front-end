@@ -4,19 +4,31 @@ import AdminL from './Admin/AdminL';
 import Alogin from './Admin/Alogin';
 import Mentor from './Admin/Mentor';
 import User from './Admin/User';
+import Dashboard from './Dashboard';
+import LandingPage from './LandingPage';
 import Login from './login'
+import Profession from './Profession';
+import RegisterU from './RegisterU';
+import Step2 from './Step2';
 let isLoggedIn;
+
+
 function App() {
   return (
     <div className="App">
      <BrowserRouter>
             <Switch>
               {/* login */}
-              <Route exact path='/' component={Login}  />
+              <Route exact path='/login' component={Login}  />
               <Route exact path='/admin' component={AdminL}  />
               <Route exact path='/userA' component={User} />
               <Route exact path='/mentorA' component={Mentor} />
               <Route exact path='/adminLogin' component={Alogin} />
+              <Route exact path='/' component={LandingPage} />
+              <Route exact path='/register' component={RegisterU} />
+              <Route exact path='/page2' component={Step2} />
+              <Route exact path='/page3' component={Profession} />
+              <Route exact path='/dashboard' component={Dashboard} />
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}

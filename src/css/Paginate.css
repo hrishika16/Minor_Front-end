@@ -1,0 +1,90 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.paginee{
+    margin-bottom: 20px;
+}
+
+.pagination {
+    justify-content: center;
+    float: right;
+    /* position: absolute;
+    bottom: 50px;
+    right: 50px; */
+    /* margin-bottom: 20px; */
+    width: 220px;
+    padding: 4px;
+    border-radius: 3px;   
+}
+
+/* ul {
+    list-style: none;
+    padding: 0;
+    background: #ffffff;
+} */
+
+ul.pagination li {
+    display: inline-block;
+    width: 20px;
+    text-align: right;
+    /* border: 1px solid #e2e2e2; */
+    display: flex;
+    font-family: 'carosM';
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+ ul.pagination li a {
+    text-decoration: none;
+    color: #2D2D2D;
+    font-family: 'carosM';
+    border: none;
+    font-size: 15px;
+}
+
+ ul.pagination li.active a {
+    color: #F8951D;
+    border: none;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+}
+
+ul.pagination li.active {
+    background-color: transparent;
+    outline: none;
+}
+
+.pagination ul.pagination li a:hover,
+ul.pagination li a.active {
+    color: blue;
+    border: none;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.page-selection {
+    width: 48px;
+    height: 30px;
+    color: #F8951D;
+}
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
