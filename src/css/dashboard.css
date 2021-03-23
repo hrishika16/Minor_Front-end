@@ -1,0 +1,26 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.contt{
+    position: relative;
+    overflow-x: hidden;
+}
+
+.main{
+    padding-left: 254px;
+    width: 100%;
+    /* overflow-x: hidden; */
+    background: #f5f5f5;
+}
