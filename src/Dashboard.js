@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './css/dashboard.css'
+import HeaderUser from './HeaderUser'
 import Sidebar from './Sidebar'
 
 class Dashboard extends Component {
@@ -8,7 +9,18 @@ class Dashboard extends Component {
             <div className='contt'>
                 <Sidebar/>
                 <div className='main'>
-                    saxena
+                    <HeaderUser/>
+                    <div>
+                        <p className='had_txt'>Dashboard</p>
+                        <div className='row'>
+                            <div className='col-md-8'>
+
+                            </div>
+                            <div className='col-md-4'>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
