@@ -23,7 +23,7 @@
     height: 100%;
     position: fixed;
     display: block;
-    width: 254px;
+    width: 204px;
     z-index: 100;
     transition: all 0.3s;
     outline: none;
@@ -37,4 +37,15 @@
 .userImg{
     width: 120px;
     margin-top: 40px;
+}
+
+.sidess_11{
+    padding-left: 20px;
+}
+
+.linkss_11{
+    color: #fff;
+    font-family: 'carosM';
+    font-size: 20px;
+    vertical-align: middle;
 }
