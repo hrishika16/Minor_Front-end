@@ -11,13 +11,15 @@ class Dashboard extends Component {
                 <div className='main'>
                     <HeaderUser/>
                     <div>
-                        <p className='had_txt'>Dashboard</p>
-                        <div className='row'>
-                            <div className='col-md-8'>
-
-                            </div>
-                            <div className='col-md-4'>
-                                
+                        <div className='container'>
+                            <p className='had_txt'>Dashboard</p>
+                            <div className='row'>
+                                <div className='col-md-8'>
+                                    <div className='posts'></div>
+                                </div>
+                                <div className='col-md-4'>
+                                    <div className='reqq'></div>
+                                </div>
                             </div>
                         </div>
                     </div>
