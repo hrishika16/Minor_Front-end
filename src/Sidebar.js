@@ -19,19 +19,19 @@ class Sidebar extends Component {
                     </div>
                     <br/>
                     <div className='sidess_11'>
-                        <p className='linkss_11'>Profile</p>
+                        <button className='linkss_11'>Profile</button>
                     </div>
                     <div className='sidess_11'>
-                        <p className='linkss_11'>Chat Screen</p>
+                        <button className='linkss_11'>Chat Screen</button>
                     </div>
                     <div className='sidess_11'>
-                        <p className='linkss_11'>Jobs/Startup</p>
+                        <button className='linkss_11'>Jobs/Startup</button>
                     </div>
                     <div className='sidess_11'>
-                        <p className='linkss_11'>Network</p>
+                        <button className='linkss_11'>Network</button>
                     </div>
                     <div className='sidess_11'>
-                        <p className='linkss_11'>Our Story</p>
+                        <button className='linkss_11'>Our Story</button>
                     </div>
                 </div>
             </div>
