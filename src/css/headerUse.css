@@ -40,10 +40,11 @@
 .add_post_btn{
     padding: 7px;
     border: none;
-    background: #01355D;
-    color: #fff;
+    /* background: #01355D;
+    color: #fff; */
+    background: #fff;
     outline: none;
-    font-size: 13px;
+    font-size: 12px;
     font-family: 'caros';
     border-radius: 8px;
 }
@@ -57,14 +58,32 @@
 .see_more_n{
     padding: 7px;
     border: none;
-    background: #01355D;
-    color: #fff;
+    /* background: #01355D;
+    color: #fff; */
+    background: #fff;
     outline: none;
-    font-size: 13px;
+    font-size: 12px;
     font-family: 'caros';
     border-radius: 8px;
 }
 
 .see_more_n:focus{
     outline: none;
+}
+
+.logout_btn_dd{
+    background: #fff;
+    border: none;
+    font-family: 'caros';
+    font-size: 12px;
+    padding: 7px;
+    border-radius: 8px;
+}
+
+.logout_btn_dd:focus{
+    outline: none;
+}
+
+.logg_img{
+    width: 14px;
 }

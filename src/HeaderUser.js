@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './css/headerUse.css'
+import logout from './img/logout.svg';
 
 class HeaderUser extends Component {
     render() {
@@ -37,6 +38,9 @@ class HeaderUser extends Component {
                                     <a className="dropdown-item seemore_dropitem" href="#">Remove</a>
                                     <a className="dropdown-item seemore_dropitem1" href="#">More Details</a>
                                 </div>
+                            </li>
+                            <li>
+                                <button className='logout_btn_dd'> Logout <img src={logout} alt='logout button' className='logg_img' /></button>
                             </li>
                         </ul>
                     </div>
