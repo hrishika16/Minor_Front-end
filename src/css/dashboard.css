@@ -27,18 +27,47 @@
 
 .had_txt{
     color: #045174;
-    font-size: 20px;
-    font-family:'caros_bold' ;
+    font-size: 17px;
+    font-family:'caros_bold';
+    margin-top: 15px;
+    text-align: center;
 }
 
 .posts{
     border: 1px solid #2d2d2d;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     height: 60px;
 }
 
 .reqq{
     border: 1px solid #2d2d2d;
-    border-radius: 5px;
-    height: 200px;
+    /* border-radius: 5px; */
+    /* height: 200px; */
+    padding: 15px;
+}
+
+.box_11{
+    border: none;
+    background: #045174;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.user_rr{
+    padding-left: 8px;
+    padding-top: 4px;
+    width: 45px;
+}
+
+.userName{
+    font-family: 'carosM';
+    color: #fff;
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.profeSS{
+    font-family: 'caros';
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 0px;
 }
