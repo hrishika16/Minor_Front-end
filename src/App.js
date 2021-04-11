@@ -35,7 +35,6 @@ function App() {
               {/* <Route path='/404' component={Sucess} /> */}
               <Redirect to='/404'/>
             </Switch> 
-                  
           </BrowserRouter> 
     </div>
   );
