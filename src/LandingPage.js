@@ -1,11 +1,13 @@
 import React,{useState} from 'react'
 import axios from 'axios'
 import './css/landingP.css'
+import { Redirect } from 'react-router'
 
 function LandingPage() {
 
     const[emailRegisterM , setEmailRegisterM] = useState('')
     const[passwordR , setPasswordR] = useState('')
+    const[nextP, setnextP] = useState(false)
 
     const SubmitSignUp = (e) => {
         e.preventDefault()
@@ -38,6 +40,7 @@ function LandingPage() {
         //                 setLogin(true)
         //                  localStorage.setItem('login' , res.data.jwt)
         //                 console.log(res)
+        //                  setnextP(true)
         //             }
         //             else {
         //                 console.log(res.data.message);
@@ -47,6 +50,14 @@ function LandingPage() {
         //             console.log(err)
         //         })
         // }
+    }
+
+    if(nextP){
+        return(
+            <Redirect
+                to='/register'
+            />
+        )
     }
 
     return (

@@ -75,3 +75,17 @@
 .next_2btn:focus{
     outline: none;
 }
+
+@media(max-width:1200px){
+    .pdddm{
+        padding: 8% 10%;
+    }
+}
+@media(max-width:991px){
+    .pdddm{
+        padding: 8% 2%;
+    }
+    .nnnm{
+        border: none;
+    }
+}

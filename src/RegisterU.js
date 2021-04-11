@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './css/registerU.css'
 import star from './img/star.svg'
 
@@ -7,9 +8,15 @@ class RegisterU extends Component {
         super(props)
     
         this.state = {
-             
+             nextPage2 : false
         }
     }
+
+    // setToNextPage(){
+    //     this.setState({
+    //         nextPage2 : true
+    //     })
+    // }
     
     render() {
         return (
@@ -71,7 +78,7 @@ class RegisterU extends Component {
                         />
                         <p className='error_reg' id='error_add'>Required</p>
                     </div>
-                    <button className='next_btn_1'>Next</button>
+                    <button  className='next_btn_1'><Link to='/page2' className='pp'>Next</Link></button>
                 </div>
                 </div>
             </div>

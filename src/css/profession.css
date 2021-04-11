@@ -32,3 +32,17 @@
     font-size: 23px;
     /* margin-top: 50px; */
 }
+
+@media(max-width:1200px){
+    .pddd_1{
+        padding: 8% 10%;
+    }
+}
+@media(max-width:991px){
+    .pddd_1{
+        padding: 8% 2%;
+    }
+    .nnnm{
+        border: none;
+    }
+}

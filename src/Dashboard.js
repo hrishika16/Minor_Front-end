@@ -10,7 +10,8 @@ class Dashboard extends Component {
         super(props)
     
         this.state = {
-             requests : []
+             requests : [],
+             request5 : []
         }
     }
 
@@ -19,6 +20,7 @@ class Dashboard extends Component {
         .then(resp =>{
             console.log(resp.data)
             this.setState({requests : resp.data})
+            this.setState({request5 : this.state.requests.slice(0,5) })
         })
         .catch(error =>{
             console.log('err',error)
@@ -26,15 +28,15 @@ class Dashboard extends Component {
     }
 
     renderRequests(){
-        return this.state.requests.map((user) => {
+        return this.state.request5.map((user) => {
             return (
                 <React.Fragment key={user.id}>
                 <div className='box_11'>
                    <div className='row'>
-                        <div className='col-lg-4'>
+                        <div className='col-lg-3'>
                             <img src={userI} alt='user Icon' className='user_rr' />
                         </div>
-                        <div className='col-lg-8'>
+                        <div className='col-lg-9 padr_dd'>
                             <p className='userName'>{user.username}</p>
                             <p className='profeSS'>{user.email}</p>
                         </div>
@@ -63,17 +65,8 @@ class Dashboard extends Component {
                                 <div className='col-md-4'>
                                     <div className='reqq'>
                                         <p className='had_txt'>Your Requests</p>
-                                        
-                                            {/* <div className='row'>
-                                                <div className='col-lg-4'>
-                                                    <img src={user} alt='user Icon' className='user_rr' />
-                                                </div>
-                                                <div className='col-lg-8'>
-                                                    <p className='userName'>Username</p>
-                                                    <p className='profeSS'>Profession</p>
-                                                </div>
-                                            </div> */}
-                                            {this.renderRequests()}
+                                        {this.renderRequests()}
+                                        <center><button className='see_btn_dd'>See More</button></center>
                                     </div>
                                 </div>
                             </div>

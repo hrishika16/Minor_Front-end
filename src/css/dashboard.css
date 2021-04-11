@@ -34,23 +34,22 @@
 }
 
 .posts{
-    border: 1px solid #2d2d2d;
-    /* border-radius: 10px; */
-    height: 60px;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 5px 5px 10px #00000014;
 }
 
 .reqq{
-    border: 1px solid #2d2d2d;
-    /* border-radius: 5px; */
-    /* height: 200px; */
     padding: 15px;
+    background: #fff;
+    box-shadow: 5px 5px 10px #00000014;
 }
 
 .box_11{
     border: none;
     background: #045174;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .user_rr{
     padding-left: 8px;
@@ -70,4 +69,19 @@
     color: #fff;
     font-size: 14px;
     margin-bottom: 0px;
+}
+
+.see_btn_dd{
+    border: none;
+    width: 110px;
+    background: #F8951D;
+    color: #2d2d2d;
+    font-family: 'caros_bold';
+    font-size: 15px;
+    padding: 7px;
+    border-radius: 4px;
+}
+
+.padr_dd{
+    padding-left: 0px;
 }

@@ -89,6 +89,13 @@
     background: #F8951D;
     margin-bottom: 30px;
 }
+.next_btn_1 .pp{
+    color: #fff;
+}
+.next_btn_1 .pp:hover{
+    color: #fff;
+    text-decoration: none;
+}
 .next_btn_1:focus{
     outline: none;
 }
@@ -119,4 +126,18 @@
 
 #error_add {
     display: none;
+}
+
+@media(max-width:1200px){
+    .pddd{
+        padding: 8% 10%;
+    }
+}
+@media(max-width:991px){
+    .pddd{
+        padding: 8% 2%;
+    }
+    .nnn{
+        border: none;
+    }
 }

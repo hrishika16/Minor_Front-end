@@ -101,10 +101,10 @@ class User extends Component {
                  <td>{user.id}</td>
                  <td >
                     <div className='row'>
-                        <div className='col-lg-6 col-5 up_w'>
+                        <div className='col-lg-6 col-12 up_w'>
                             {user.name}
                         </div>
-                        <div className='col-lg-6 col-7 btns_w'>
+                        <div className='col-lg-6 col-12 btns_w'>
                             <div className="dropdown">
                                 <button className="dropdown-toggle see_more" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     See more
