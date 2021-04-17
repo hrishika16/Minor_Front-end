@@ -6,11 +6,18 @@ class HeaderUser extends Component {
     render() {
         return (
             <div className='bg_he'>
+                <div className='tryyy'>
                 <nav className="navbar navbar-expand-lg ">
+                {/* logo space */}
+                    <div className='logo class="navbar-brand"'>
+                        LOGO
+                    </div>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
+                    
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul className='mr-auto'></ul>
                         <form className="form-inline">
                             <input className="form-control inp_search" type="search" placeholder="Search" aria-label="Search"/>
                         </form>
@@ -45,6 +52,7 @@ class HeaderUser extends Component {
                         </ul>
                     </div>
                 </nav>
+                </div>
             </div>
         )
     }

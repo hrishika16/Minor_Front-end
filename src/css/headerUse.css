@@ -14,7 +14,20 @@
 }
 
 .bg_he{
-    background: #2d2d2d;
+    background: #DEE6F1;
+}
+
+.logo{
+    color: #01355D;
+    font-size: 22px;
+}
+.tryyy{
+    position: fixed;
+    background: #DEE6F1;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }
 
 .me_1{

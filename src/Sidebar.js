@@ -7,10 +7,6 @@ class Sidebar extends Component {
         return (
             <div className='cside'>
                 <div className='sidebard'> 
-                    {/* logo space */}
-                    <div className='logo'>
-                        LOGO
-                    </div>
                     {/* User icon */}
                     <div>
                         <center>

@@ -19,8 +19,10 @@ class Dashboard extends Component {
         axios.get('https://jsonplaceholder.typicode.com/users')
         .then(resp =>{
             console.log(resp.data)
-            this.setState({requests : resp.data})
-            this.setState({request5 : this.state.requests.slice(0,5) })
+            this.setState({
+                requests : resp.data,
+                request5 : this.state.requests.slice(0,7) 
+            })
         })
         .catch(error =>{
             console.log('err',error)
@@ -50,9 +52,10 @@ class Dashboard extends Component {
     render() {
         return (
             <div className='contt'>
+            <HeaderUser/>
                 <Sidebar/>
                 <div className='main'>
-                    <HeaderUser/>
+                    
                     <div>
                         <div className='container'>
                             <br/>
