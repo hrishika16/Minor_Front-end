@@ -4,6 +4,7 @@ import AdminL from './Admin/AdminL';
 import Alogin from './Admin/Alogin';
 import Mentor from './Admin/Mentor';
 import User from './Admin/User';
+import Connections from './Connections';
 import Dashboard from './Dashboard';
 import LandingPage from './LandingPage';
 import Login from './login'
@@ -29,6 +30,7 @@ function App() {
               <Route exact path='/page2' component={Step2} />
               <Route exact path='/page3' component={Profession} />
               <Route exact path='/dashboard' component={Dashboard} />
+              <Route exact path='/connections' component={Connections} />
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}

@@ -66,7 +66,7 @@ function Login() {
         <div className='ro'>
             <div className='row'>
                 <div className='col-lg-5 col-12'>
-                    <img src={img1} alt='Login image 1' className='img1' />
+                    {/* <img src={img1} alt='Login image 1' className='img1' /> */}
                 </div>
                 <div className='col-lg-7 col-12'>
                     
