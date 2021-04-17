@@ -1,0 +1,73 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.whole_25{
+    position: relative;
+    overflow-x: hidden;
+    background: #f5f5f5;
+}
+.conn_12{
+    margin-top: 70px;
+}
+.connectio{
+    font-family: 'caros_bold';
+    color: #F8951D;
+    font-size: 27px;
+}
+
+.box_13{
+    border-radius: 7px;
+    box-shadow: 5px 5px 10px #00000014;
+    border: 1px solid rgba(45, 45, 45, 0.2);
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.proff{
+    font-family: 'carosM';
+    color: #01355D;
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.user_rImg{
+    padding-left: 8px;
+    padding-top: 4px;
+    width: 60px;
+}
+
+.profeS{
+    font-family: 'caros';
+    color: rgba(45, 45, 45, 0.4);
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.unfllow_btn:focus{
+    outline: none;
+}
+
+.unfllow_btn{
+    border: none;
+    border-radius: 15px;
+    background: #F8951D;
+    font-family: 'caros_bold';
+    color: #fff;
+    float: right;
+    width: 100px;
+    font-size: 14px;
+    padding: 8px;
+}
