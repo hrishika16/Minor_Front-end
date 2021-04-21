@@ -22,9 +22,11 @@ class Connections extends Component {
             console.log(resp.data)
             this.setState({
                 connections : resp.data,
-                connections_half : this.state.connections.slice(0,7),
-                connections_anotherhalf : this.state.connections.slice(8,14)
+                connections_half : resp.data.slice(0,7),
+                connections_anotherhalf : resp.data.slice(8,14)
+                
             })
+            console.log("conections half",this.state.connections_half)
         })
         .catch(error =>{
             console.log('err',error)
@@ -32,15 +34,36 @@ class Connections extends Component {
     }
 
     renderConnectionsInfo(){
-        return this.state.connections.map((user) => {
+        return this.state.connections_half.map((user) => {
             return (
                 <React.Fragment key={user.id}>
                     <div className='box_13'>
                         <div className='row'>
-                            <div className='col-lg-3'>
+                            <div className='col-3'>
                                 <img src={userI} alt='user Icon' className='user_rImg' />
                             </div>
-                            <div className='col-lg-9 padr_dd'>
+                            <div className='col-9 padr_dd'>
+                                <p className='proff'>{user.username}</p>
+                                <p className='profeS'>{user.email}</p>
+                                <button className='unfllow_btn'>Unfollow</button>
+                            </div>
+                        </div>
+                    </div>    
+               </React.Fragment>
+            )
+         })
+    }
+    
+    renderConnectionsInfoAnother(){
+        return this.state.connections_anotherhalf.map((user) => {
+            return (
+                <React.Fragment key={user.id}>
+                    <div className='box_13'>
+                        <div className='row'>
+                            <div className='col-3'>
+                                <img src={userI} alt='user Icon' className='user_rImg' />
+                            </div>
+                            <div className='col-9 padr_dd'>
                                 <p className='proff'>{user.username}</p>
                                 <p className='profeS'>{user.email}</p>
                                 <button className='unfllow_btn'>Unfollow</button>
@@ -67,7 +90,7 @@ class Connections extends Component {
                                 {this.renderConnectionsInfo()}
                             </div>
                             <div className='col-lg-6 col-12'>
-                                {this.renderConnectionsInfo()}
+                                {this.renderConnectionsInfoAnother()}
                             </div>
                         </div>
                     </div>

@@ -21,7 +21,7 @@ class HeaderUser extends Component {
                         <form className="form-inline">
                             <input className="form-control inp_search" type="search" placeholder="Search" aria-label="Search"/>
                         </form>
-                        <ul className='mr-auto'></ul>
+                        {/* <ul className='mr-auto'></ul> */}
                         <ul className='mr-auto navbar-nav nav_11'>    
                             <li className="nav-item me_1">
                                 <button className='add_post_btn'>Add Post</button>
