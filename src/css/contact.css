@@ -1,0 +1,54 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.complete{
+    margin-top: 70px;
+    position: relative;
+    overflow-x: hidden;
+    padding-left: 55px;
+   
+}
+
+.columnFirst{
+margin-top: 50px;
+
+}
+.heading{
+    margin-top: 60px;
+    color: #023858;
+    font-size: 70px;
+    font-family:'caros_Bold';
+    
+}
+
+.columnSecond{
+   margin: 0px;
+   padding-right: 0px;
+    float: right;
+}
+.contactBtn{
+background-color:#F98935;
+border: none;
+border-radius: 19px;
+color: #023858;
+font-family:'caros_bold' ;
+font-size: 16px;
+padding: 8px;
+width: 140px;
+}
+
+.contactBtn:focus{
+    outline: none;
+}
