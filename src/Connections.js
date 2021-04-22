@@ -22,9 +22,11 @@ class Connections extends Component {
             console.log(resp.data)
             this.setState({
                 connections : resp.data,
-                connections_half : this.state.connections.slice(0,7),
-                connections_anotherhalf : this.state.connections.slice(8,14)
+                connections_half : resp.data.slice(0,7),
+                connections_anotherhalf : resp.data.slice(8,14)
+                
             })
+            console.log("conections half",this.state.connections_half)
         })
         .catch(error =>{
             console.log('err',error)
@@ -32,7 +34,7 @@ class Connections extends Component {
     }
 
     renderConnectionsInfo(){
-        return this.state.connections.map((user) => {
+        return this.state.connections_half.map((user) => {
             return (
                 <React.Fragment key={user.id}>
                     <div className='box_13'>
@@ -67,7 +69,7 @@ class Connections extends Component {
                                 {this.renderConnectionsInfo()}
                             </div>
                             <div className='col-lg-6 col-12'>
-                                {this.renderConnectionsInfo()}
+                                {this.renderConnectionsInfoAnother()}
                             </div>
                         </div>
                     </div>
