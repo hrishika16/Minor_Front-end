@@ -39,31 +39,10 @@ class Connections extends Component {
                 <React.Fragment key={user.id}>
                     <div className='box_13'>
                         <div className='row'>
-                            <div className='col-3'>
+                            <div className='col-lg-3 col-md-3 col-3'>
                                 <img src={userI} alt='user Icon' className='user_rImg' />
                             </div>
-                            <div className='col-9 padr_dd'>
-                                <p className='proff'>{user.username}</p>
-                                <p className='profeS'>{user.email}</p>
-                                <button className='unfllow_btn'>Unfollow</button>
-                            </div>
-                        </div>
-                    </div>    
-               </React.Fragment>
-            )
-         })
-    }
-    
-    renderConnectionsInfoAnother(){
-        return this.state.connections_anotherhalf.map((user) => {
-            return (
-                <React.Fragment key={user.id}>
-                    <div className='box_13'>
-                        <div className='row'>
-                            <div className='col-3'>
-                                <img src={userI} alt='user Icon' className='user_rImg' />
-                            </div>
-                            <div className='col-9 padr_dd'>
+                            <div className='col-lg-9 col-md-9 col-9 padr_dd'>
                                 <p className='proff'>{user.username}</p>
                                 <p className='profeS'>{user.email}</p>
                                 <button className='unfllow_btn'>Unfollow</button>

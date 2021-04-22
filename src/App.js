@@ -10,6 +10,7 @@ import Dashboard from './Dashboard';
 import LandingPage from './LandingPage';
 import Login from './login'
 import Profession from './Profession';
+import Profile from './Profile';
 import RegisterU from './RegisterU';
 import Step2 from './Step2';
 let isLoggedIn;
