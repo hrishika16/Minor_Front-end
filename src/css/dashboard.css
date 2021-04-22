@@ -90,3 +90,9 @@
 .padr_dd{
     padding-left: 0px;
 }
+
+/* @media(max-width:766px) {
+    .padr_dd{
+        padding-left: 20px;
+    }
+} */
