@@ -9,6 +9,7 @@ import Dashboard from './Dashboard';
 import LandingPage from './LandingPage';
 import Login from './login'
 import Profession from './Profession';
+import Profile from './Profile';
 import RegisterU from './RegisterU';
 import Step2 from './Step2';
 let isLoggedIn;
@@ -31,6 +32,7 @@ function App() {
               <Route exact path='/page3' component={Profession} />
               <Route exact path='/dashboard' component={Dashboard} />
               <Route exact path='/connections' component={Connections} />
+              <Route exact path='/profile' component={Profile} />
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}
