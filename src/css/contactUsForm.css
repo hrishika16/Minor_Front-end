@@ -1,0 +1,76 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+.complete{
+    margin-top: 70px;
+    position: relative;
+    overflow-x: hidden;
+    padding-left: 55px;
+   
+}
+.columnFirst{
+    margin-top: 50px;
+    
+    }
+    .heading{
+        margin-top: 60px;
+        color: #023858;
+        font-size: 50px;
+        padding: 0px;
+        font-family:'caros_Bold';
+        
+    }
+    .sendBtn{
+        position: relative;
+        margin-top: 50px;
+    background-color:#F98935;
+    border: none;
+    border-radius: 25px;
+    color: #023858;
+    font-family:'caros_bold' ;
+    font-size: 20px;
+    padding: 10px;
+    width: 140px;
+    
+    }
+    .inputElement{
+        margin-top: 60px;
+        padding: 10px;
+        width: 300px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        
+    }
+    .message{
+        margin-top: 10px;
+    width:300px;
+  height: 150px;
+  padding: 12px 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+    }
+
+    .message:focus{
+        outline: none;
+    }
+    .inputElement:focus{
+        outline:none;
+    }
+    .sendBtn:focus{
+        outline:none;
+    }
