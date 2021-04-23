@@ -29,6 +29,7 @@ function App() {
               <Route exact path='/adminLogin' component={Alogin} />
               <Route exact path='/' component={LandingPage} />
               <Route exact path='/register' component={RegisterU} />
+              <Route exact path='/profile' component={Profile} />
               <Route exact path='/page2' component={Step2} />
               <Route exact path='/page3' component={Profession} />
               <Route exact path='/dashboard' component={Dashboard} />
