@@ -1,15 +1,19 @@
-import React, { Component } from 'react'
+import React,{useState} from 'react'
 import './css/profile.css'
 import HeaderUser from './HeaderUser'
 import userIcon from './img/userIcon.svg'
 
-class Profile extends Component {
-    render() {
-        return (
-            <div className='whole_27'>
+function Profile() {
+
+    const[user_Name , setName] = useState('')
+    const[user_bio , setBio] = useState('')
+    const[user_desp , setDesp] = useState('')
+
+    return (
+        <div className='whole_27'>
                 <HeaderUser/>
                 <div className='container-fluid mm_11'>
-                    <button className='edit_btn_p'>Edit profile</button>
+                    <button className='edit_btn_p' data-toggle="modal" data-target="#EditProfileModal">Edit profile</button>
                     <div className='row'>
                         <div className='col-lg-6'>
                             <div className='row'>
@@ -65,9 +69,56 @@ class Profile extends Component {
                         </div>
                     </center>
                 </div>
+                {/* Edit Modal */}
+                <div className="modal fade" id="EditProfileModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div className="modal-dialog modal-dialog-centered" role="document">
+                        <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLongTitle">Edit Info</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div className="modal-body">
+                            {/* <center> */}
+                            <img src={userIcon} alt='user Icon' className='userImg1' />
+                            
+                                <p className='profile_md'>NAME</p>
+                                <input
+                                     type='text'
+                                    className='inp_prof'
+                                    id='username'
+                                    maxLength='50'
+                                    value={user_Name} 
+                                    onChange={e=>setName(e.target.value)}
+                                />
+                                <p className='profile_md'>BIO</p>
+                                <input
+                                     type='text'
+                                    className='inp_prof'
+                                    id='user_bio'
+                                    maxLength='50'
+                                    value={user_bio} 
+                                    onChange={e=>setBio(e.target.value)}
+                                />
+                                <p className='profile_md'>DESCRIPTION</p>
+                                <textarea
+                                     type='text'
+                                    className='inp_prof'
+                                    id='username'
+                                    value={user_desp} 
+                                    onChange={e=>setDesp(e.target.value)}
+                                />
+                            {/* </center> */}
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        )
-    }
+    )
 }
 
 export default Profile
+
+
+

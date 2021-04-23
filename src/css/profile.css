@@ -149,3 +149,25 @@
 .count_btn:focus{
     outline: none;
 }
+
+.profile_md{
+    font-size: 17px;
+    font-family: 'caros_bold';
+    color: #045174;
+    margin-bottom: 7px;
+}
+
+.inp_prof{
+    border: 1px solid rgba(45,45,45,0.6);
+    width: 100%;
+    font-size: 15px;
+    padding: 7px;
+    resize: none;
+    margin-bottom: 10px;
+    font-family: 'caros';
+}
+
+.inp_prof:focus{
+    outline: none;
+    border: 1px solid rgba(45,45,45,0.6);
+}
