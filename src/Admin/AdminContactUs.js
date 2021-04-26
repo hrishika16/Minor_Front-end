@@ -6,7 +6,7 @@ import phone from './img/phone.svg'
 import email from './img/email.svg'
 
 
-function ContactUsForm() {
+function AdminContactUs() {
 
   const[intialName,changeName] = useState('')
   const[intialEmail,changeEmail] = useState('')
@@ -34,29 +34,16 @@ function ContactUsForm() {
        else{
             axios({
               method : 'post',
-              url:'http://localhost:3001/contactUs',
-              data: {
-                username : intialName , 
-                email : intialEmail , 
-                message : intialMessage ,
-                subject : intialSubject
-              },
-              headers : {
-                AuthKey : 'asdfgh '
-              }
+              // url:'',
+              data:{username:intialName , email:intialEmail , message:intialMessage ,subject:intialSubject}
             })
             .then(resp=>{
               console.log(resp)
-              if(resp.data.status === 200){
+              if(resp.data.message === 201){
                 //error occur 
-                console.log(resp.data.message)
-              }
-              else if(resp.data.status === 202) {
-                // console.log(res.data.message);
-                console.log(" Please center with correct credentials")
               }
               else{
-                  console.log("Some error occured")
+                console.log(resp.data.message)
               }
             })
             .catch(error=>{
@@ -131,5 +118,5 @@ function ContactUsForm() {
     )
 }
 
-export default ContactUsForm
+export default AdminContactUs
 
