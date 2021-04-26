@@ -17,46 +17,54 @@ class User extends Component {
              data : [],
              perPage : 9 ,
              currentPage : 1,
-             totalPages : 0
+             totalPages : 0,
+             category : 'student'
         }
     }
 
     componentDidMount(){
         // https://jsonplaceholder.typicode.com/users
         this.handleAxiosDrop()
-        axios({
-            method : 'get',
-            url : 'https://jsonplaceholder.typicode.com/users',
-            // headers : {
-            //     "jwt" : localStorage.getItem('login')
-            // }
-        })
-        .then(resp =>{
-            console.log(resp.data)
-            this.setState({
-                users : resp.data
-            })
-            console.log(this.state.users)
-        })
-        .catch(error =>{
-            console.log('err',error)
-        })
+        // axios({
+        //     method : 'get',
+        //     url : 'https://jsonplaceholder.typicode.com/users',
+        //     headers : {
+        //         AuthKey : 'asdfgh '
+        //     },
+        //     data : {
+        //         category : this.state.category
+        //     }
+        // })
+        // .then(resp =>{
+        //     console.log(resp.data)
+        //     this.setState({
+        //         users : resp.data
+        //     })
+        //     console.log(this.state.users)
+        // })
+        // .catch(error =>{
+        //     console.log('err',error)
+        // })
     }
 
     handleAxiosDrop() {
         axios({
             method : 'post',
-            // url : 'https://api.wappgo.com/legal251AppDashboardAPI/?parameter=paginateNewsalert',
+            url : 'http://localhost:3001/adminUsersData',
             // data : {
             //     "category" : data_catgory,
             //     "page" : this.state.currentPage
             // } ,
-            // headers : {
-            //     "jwt" : localStorage.getItem('login')
-            // }
+            headers : {
+                AuthKey : 'asdfgh '
+            },
+            data : {
+                "category" : this.state.category,
+                "page" : this.state.currentPage
+            }
            })
            .then(response =>{
-               const data = response.data.data
+               const data = response.data
                 const forPage = response.data.TotalPages
                 console.log(data)
                 if(response.data.status === 200){

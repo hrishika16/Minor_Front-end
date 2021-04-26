@@ -34,17 +34,29 @@ function ContactUsForm() {
        else{
             axios({
               method : 'post',
-              // url:'',
-              data:{username:intialName , email:intialEmail , message:intialMessage ,subject:intialSubject}
+              url:'http://localhost:3001/contactUs',
+              data: {
+                username : intialName , 
+                email : intialEmail , 
+                message : intialMessage ,
+                subject : intialSubject
+              },
+              headers : {
+                AuthKey : 'asdfgh '
+              }
             })
             .then(resp=>{
               console.log(resp)
               if(resp.data.message === 201){
                 //error occur 
               }
-              else{
-                console.log(resp.data.message)
-              }
+              if(resp.data.status === 202) {
+                // console.log(res.data.message);
+                console.log(" Please center with correct credentials")
+            }
+            else{
+                console.log("Some error occured")
+            }
             })
             .catch(error=>{
               console.log(error)

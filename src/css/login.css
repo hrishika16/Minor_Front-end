@@ -1,53 +1,59 @@
-
-.ro{
+.ro {
     overflow-x: hidden;
     position: relative;
 }
 
-.img1{
+.img1 {
     width: 100%;
 }
-.sign{
+
+.sign {
     font-weight: bold;
     color: #2d2d2d;
     margin-bottom: 20px;
 }
-.lbl_txt{
+
+.lbl_txt {
     font-weight: bold;
     font-size: 15px;
     margin-bottom: 5px;
 }
-.inp_login{
+
+.inp_login {
     border-radius: 7px;
     outline: none;
     font-size: 16px;
     border: 1px solid rgba(45, 45, 45, 0.2);
     color: #2d2d2d;
 }
-.inp_login:focus{
+
+.inp_login:focus {
     outline: none;
     border: 1px solid rgba(45, 45, 45, 0.2);
     box-shadow: none;
 }
 
-.spaceee{
+.spaceee {
     padding: 13% 25%;
 }
-.hgt1{
+
+.hgt1 {
     height: 100px;
 }
-.btn_submit{
+
+.btn_submit {
     margin-top: 10px;
     border: none;
     outline: none;
-    background: #BE8EED ;
+    background: #BE8EED;
     color: #fff;
     padding: 7px;
     width: 100%;
     border-radius: 8px;
     font-size: 17px;
 }
-.btn_submit:focus{
+
+.btn_submit:focus {
     outline: none;
 }
 
