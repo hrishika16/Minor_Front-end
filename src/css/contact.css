@@ -17,16 +17,19 @@
     margin-top: 70px;
     position: relative;
     overflow-x: hidden;
-    padding-left: 55px;
+    /* padding-left: 55px; */
+    margin-bottom: 10px;
    
 }
 
 .columnFirst{
 margin-top: 50px;
+margin-bottom: 40px;
+padding-left: 55px;
 
 }
-.heading{
-    margin-top: 60px;
+.headingContactUs{
+    /* margin-top: 60px; */
     color: #023858;
     font-size: 75px;
     padding: 0px;
@@ -67,3 +70,23 @@ width: 180px;
 .contactBtn:focus{
     outline: none;
 }
+
+@media only screen and (max-width: 766px) {
+    
+    .headingContactUs{
+        font-size: 50px;
+    }
+    .headingSecond{
+        font-size: 25px;
+    }
+    .headingThird{
+        font-size: 15px;
+    }
+  .complete{
+      margin-top: 20px;
+  }
+  .contactBtn{
+      margin-top: 40px;
+
+  }
+  }
