@@ -17,19 +17,19 @@ function ContactUsForm() {
   e.preventDefault()
   if(intialName ===''){
  document.getElementById("intialNameError").style.display="block"
-//  document.getElementById("name").focus()
+
   }
   if(intialEmail ===''){
     document.getElementById("intialEmailError").style.display="block"
-    // document.getElementById("email").focus()
+ 
      }
      if(intialMessage ===''){
       document.getElementById("intialMessageError").style.display="block"
-      // document.getElementById("message").focus()
+    
        }
       if(intialSubject === ''){
         document.getElementById("intialSubjectError").style.display="block"
-        // document.getElementById("subject").focus()
+     
       }
        else{
             axios({
@@ -99,7 +99,7 @@ function ContactUsForm() {
             </div>
             <br></br>
             <div className="constantSize">
-            <input type = "text" placeholder="Subject" id="subject" className="inputElement" value={intialSubject} onChange={(e)=>changeName(e.target.value)}></input>
+            <input type = "text" placeholder="Subject" id="subject" className="inputElement" value={intialSubject} onChange={(e)=>changeSubject(e.target.value)}></input>
             <p className="error" id="intialSubjectError">Subject is Required</p>
             </div>
             <br></br>
