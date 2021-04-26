@@ -1,76 +1,191 @@
-@font-face{
+@font-face {
     font-family: 'caros';
     src: url('../font/cretype\ \ Caros.otf');
 }
 
-@font-face{
+@font-face {
     font-family: 'caros_bold';
     src: url('../font//cretype\ \ Caros\ Bold.otf');
 }
 
-@font-face{
+@font-face {
     font-family: 'carosM';
     src: url('../font/cretype\ \ Caros\ Medium.otf');
 }
-.complete{
-    margin-top: 70px;
+
+.completeContactForm {
+    margin-top: 10px;
     position: relative;
     overflow-x: hidden;
-    padding-left: 55px;
-   
+    /* margin-right: 5px;
+  margin-bottom: 10px; */
+
+    margin-bottom: 10px;
+
+
 }
-.columnFirst{
-    margin-top: 50px;
-    
-    }
-    .heading{
-        margin-top: 60px;
-        color: #023858;
-        font-size: 50px;
-        padding: 0px;
-        font-family:'caros_Bold';
-        
-    }
-    .sendBtn{
-        position: relative;
-        margin-top: 50px;
-    background-color:#F98935;
+
+.headingContact {
+    color: #F98935;
+    font-size: 50px;
+    font-family: 'caros_Bold';
+    margin-bottom: 50px;
+}
+
+.columnFirstSend {
+    /* padding-top: 70px; */
+    /* padding-left: 50px; */
+    padding-top: 60px;
+    margin-bottom: 60px;
+}
+
+.columnFirstSend h2 {
+    font-size: 25px;
+    font-family: 'caros_Bold';
+    color: #F98935;
+}
+
+.columnFirstSend h3 {
+    font-size: 20px;
+    font-family: 'carosM';
+    margin-left: 70px;
+    color: #023858;
+}
+
+.columnFirstSend img {
+    padding-top: 4px;
+}
+
+.columnSecondSend {
+    /* padding-left: 10px; */
+    /* margin-right: 20px; */
+
+
+}
+
+.headingSend {
+
+    margin-bottom: 40px;
+    color: #023858;
+    font-size: 40px;
+    padding: 0px;
+    font-family: 'caros_Bold';
+
+}
+
+.sendBtn {
+    position: relative;
+    margin-top: 20px;
+    background-color: #F98935;
     border: none;
     border-radius: 25px;
     color: #023858;
-    font-family:'caros_bold' ;
+    font-family: 'caros_bold';
     font-size: 20px;
     padding: 10px;
     width: 140px;
-    
-    }
-    .inputElement{
-        margin-top: 60px;
-        padding: 10px;
-        width: 300px;
-        border: 2px solid #ccc;
-        border-radius: 10px;
-        
-    }
-    .message{
-        margin-top: 10px;
-    width:300px;
-  height: 150px;
-  padding: 12px 10px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  resize: none;
+
+}
+
+.inputElement {
+
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    color: #2d2d2d;
+
+}
+
+.inputElement::placeholder {
+    color: rgba(45, 45, 45, 0.3);
+    /* Firefox */
+}
+
+.inputElement:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(45, 45, 45, 0.3);
+}
+
+.inputElement::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(45, 45, 45, 0.3);
+}
+
+.message {
+    margin-top: 10px;
+    width: 300px;
+    height: 150px;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    color: #2d2d2d;
+}
+
+.message:focus {
+    outline: none;
+}
+
+.inputElement:focus {
+    outline: none;
+}
+
+.sendBtn:focus {
+    outline: none;
+}
+
+
+
+#intialNameError {
+    display: none;
+
+}
+
+#intialEmailError {
+    display: none;
+}
+
+#intialMessageError {
+    display: none;
+    margin-bottom: 10px;
+}
+
+#intialSubjectError {
+    display: none;
+}
+
+.constantSize {
+    height: 50px;
+}
+
+.constantMessageSize {
+    height: 160px;
+}
+
+.inlinestyle {
+    display: inline;
+    margin-left: 20px;
+}
+
+/* @media only screen and (max-width: 1200px) {
+        .inputElement{
+            width: 100%;
+        }
+        .message{
+            width:100%;
+        }
+      } */
+@media only screen and (max-width: 766px) {
+    .inputElement {
+        width: 100%;
     }
 
-    .message:focus{
-        outline: none;
+    .message {
+        width: 100%;
     }
-    .inputElement:focus{
-        outline:none;
-    }
-    .sendBtn:focus{
-        outline:none;
-    }
+}
+
