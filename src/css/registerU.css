@@ -13,7 +13,7 @@
     src: url('../font/cretype\ \ Caros\ Medium.otf');
 }
 .pddd{
-   padding: 2% 25%;
+   padding: 1% 15%;
 }
 .nnn{
     border: 1px solid rgba(45, 45, 45, 0.2);
@@ -53,6 +53,7 @@
     border: 0.5px solid rgba(45, 45, 45, 0.2);
     font-family: 'caros';
     border-radius: 5px;
+    resize: none;
     color: #045174;
     font-size: 16px;
     padding: 8px;
@@ -87,7 +88,8 @@
     font-size: 17px;
     width: 100%;
     background: #F8951D;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+    margin-top: 26px;
 }
 .next_btn_1 .pp{
     color: #fff;
@@ -107,7 +109,8 @@
 .error_reg {
     color: #FF5656;
     font-family: 'caros';
-    font-size: 15px;
+    font-size: 10px;
+    float: right;
     margin-top: 3px;
 }
 
@@ -119,7 +122,22 @@
     display: none;
 }
 
-#error_cn {
+#error_cont{
+    display: none;
+}
+#error_pc {
+    display: none;
+}
+
+#error_state {
+    display: none;
+}
+
+#error_city {
+    display: none;
+}
+
+#error_gender {
     display: none;
 }
 
@@ -130,7 +148,7 @@
 
 @media(max-width:1200px){
     .pddd{
-        padding: 8% 10%;
+        padding: 4% 8%;
     }
 }
 @media(max-width:991px){
@@ -140,4 +158,7 @@
     .nnn{
         border: none;
     }
+    /* .next_btn_1{
+        margin-top: 20px;
+    } */
 }

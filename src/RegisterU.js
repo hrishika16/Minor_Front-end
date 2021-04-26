@@ -1,89 +1,208 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './css/registerU.css'
 import star from './img/star.svg'
 
-class RegisterU extends Component {
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-             nextPage2 : false
+function RegisterU() {
+    const[firstNameReg, setFirstNameReg] = useState('')
+    const[lastNameReg, setLastNameReg] = useState('')
+    const[contactNumReg, setContactNumReg] = useState('')
+    const[dobReg, setDobReg] = useState('')
+    const[stateReg, setStateReg] = useState('')
+    const[cityReg, setCityReg] = useState('')
+    const[genderReg, setGenderReg] = useState('')
+    const[pinReg, setPinReg] = useState('')
+
+    const firstDetailsReg =(event) =>{
+        event.preventDefault()
+        if(firstNameReg === ''){
+            document.querySelector('#error_fn').innerHTML = 'First Name is Required'
+            document.getElementById('error_fn').style.display = 'block'
+        }
+        if(lastNameReg === ''){
+            document.querySelector('#error_ln').innerHTML = 'Last Name is Required'
+            document.getElementById('error_ln').style.display = 'block'
+        }
+        if(contactNumReg === ''){
+            document.querySelector('#error_cont').innerHTML = 'Contact Number is Required'
+            document.getElementById('error_cont').style.display = 'block'
+        }
+        if(dobReg === ''){
+            document.querySelector('#error_dob').innerHTML = 'DOB is Required'
+            document.getElementById('error_dob').style.display = 'block'
+        }
+        if(stateReg === ''){
+            document.querySelector('#error_state').innerHTML = 'State is Required'
+            document.getElementById('error_state').style.display = 'block'
+        }
+        if(genderReg === ''){
+            document.querySelector('#error_gender').innerHTML = 'Gender is Required'
+            document.getElementById('error_gender').style.display = 'block'
+        }
+        if(cityReg === ''){
+            document.querySelector('#error_city').innerHTML = 'City is Required'
+            document.getElementById('error_city').style.display = 'block'
+        }
+        if(pinReg === ''){
+            document.querySelector('#error_pc').innerHTML = 'Preferential City is Required'
+            document.getElementById('error_pc').style.display = 'block'
         }
     }
 
-    // setToNextPage(){
-    //     this.setState({
-    //         nextPage2 : true
-    //     })
-    // }
-    
-    render() {
         return (
             <div className='whole_12'>
                 <div className='container pddd'>
                     <div className='nnn'>
                     <p className='step_1'>Step 1</p>
-                    <div className='hr_11'>
-                        <p className='field_names'>First Name <img src={star} alt='required field' className='requ_1' /> </p>
-                        <input
-                            type='text'
-                            placeholder='Type here...'
-                            id='firstName'
-                            className='inp_register'
-                            // onChange={}
-                        />
-                        <p className='error_reg' id='error_fn'>Required</p>
+                    <div className='row'>
+                        <div className='col-lg-6 col-12'>
+                            <div className='hr_11'>
+                                <p className='field_names'>First Name <img src={star} alt='required field' className='requ_1' /> </p>
+                                <input
+                                    type='text'
+                                    placeholder='Type here...'
+                                    id='firstName'
+                                    maxLength='30'
+                                    className='inp_register'
+                                    value={firstNameReg}
+                                    onChange={e => setFirstNameReg(e.target.value)}
+                                />
+                                <p className='error_reg' id='error_fn'></p>
+                            </div>
+                        </div>
+                        <div className='col-lg-6 col-12'>
+                            <div className='hr_11'>
+                                <p className='field_names'>Last Name <img src={star} alt='required field' className='requ_1' /></p>
+                                <input
+                                    type='text'
+                                    placeholder='Type here...'
+                                    id='lastName'
+                                    maxLength='30'
+                                    className='inp_register'
+                                    value={lastNameReg}
+                                    onChange={e => setLastNameReg(e.target.value)}
+                                />
+                                <p className='error_reg' id='error_ln'></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='row'>
+                        <div className='col-lg-6 col-12'>
+                            <div className='hr_11'>
+                                <p className='field_names'>Contact Number <img src={star} alt='required field' className='requ_1' /></p>
+                                <input
+                                    type='tel'
+                                    placeholder='Type here...'
+                                    maxLength='10'
+                                    id='contactNo'
+                                    className='inp_register'
+                                    value={contactNumReg}
+                                    onChange={e => setContactNumReg(e.target.value)}
+                                />
+                                <p className='error_reg' id='error_cont'></p>
+                            </div>
+                        </div>
+                        <div className='col-lg-6 col-12'>
+                            <div className='hr_11'>
+                                <p className='field_names'>DOB <img src={star} alt='required field' className='requ_1' /></p>
+                                <input
+                                    type='date'
+                                    className='start_yr_inp'
+                                    id='start_y'
+                                    value={dobReg}
+                                    onChange={e => setDobReg(e.target.value)}
+                                />
+                                <p className='error_reg' id='error_dob'></p>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <div className='row'>
+                        <div className='col-lg-6 col-12'></div>
+                        <div className='col-lg-6 col-12'></div>
                     </div>
                     <div className='hr_11'>
-                        <p className='field_names'>Middle Name <span className='optnl'>(optional)</span> </p>
-                        <input
-                            type='text'
-                            placeholder='Type here...'
-                            id='middleName'
-                            className='inp_register'
-                            // onChange={}
-                        />
+                    
+                                <p className='field_names'>Middle Name <span className='optnl'>(optional)</span> </p>
+                                <input
+                                    type='text'
+                                    placeholder='Type here...'
+                                    id='middleName'
+                                    className='inp_register'
+                                    // onChange={}
+                                />
+                            </div> */}
+                   
+                    <div className='row'>
+                        <div className='col-lg-6 col-12'>
+                            <div className='hr_11'>
+                                <p className='field_names'>State <img src={star} alt='required field' className='requ_1' /></p>
+                                <input
+                                    type='text'
+                                    placeholder='Type here...'
+                                    id='contactNo'
+                                    maxLength='20'
+                                    className='inp_register'
+                                    value={stateReg}
+                                    onChange={e => setStateReg(e.target.value)}
+                                />
+                                <p className='error_reg' id='error_state'></p>
+                            </div>
+                        </div>
+                        <div className='col-lg-6 col-12'>
+                            <div className='hr_11'>
+                                <p className='field_names'>City <img src={star} alt='required field' className='requ_1' /></p>
+                                <input
+                                    type='text'
+                                    placeholder='Type here...'
+                                    id='contactNo'
+                                    maxLength='20'
+                                    className='inp_register'
+                                    value={cityReg}
+                                    onChange={e => setCityReg(e.target.value)}
+                                />
+                                <p className='error_reg' id='error_city'></p>
+                            </div>
+                        </div>
                     </div>
-                    <div className='hr_11'>
-                        <p className='field_names'>Last Name <img src={star} alt='required field' className='requ_1' /></p>
-                        <input
-                            type='text'
-                            placeholder='Type here...'
-                            id='lastName'
-                            className='inp_register'
-                            // onChange={}
-                        />
-                        <p className='error_reg' id='error_ln'>Required</p>
+
+                    <div className='row'>
+                        <div className='col-lg-6 col-12'>
+                            <div className='hr_11'>
+                                <p className='field_names'>Gender <img src={star} alt='required field' className='requ_1' /></p>
+                                <input
+                                    type='text'
+                                    placeholder='Type here...'
+                                    id='contactNo'
+                                    maxLength='20'
+                                    className='inp_register'
+                                    value={genderReg}
+                                    onChange={e => setGenderReg(e.target.value)}
+                                />
+                                <p className='error_reg' id='error_gender'></p>
+                            </div>
+                        </div>
+                        <div className='col-lg-6 col-12'>
+                            <div className='hr_11'>
+                                <p className='field_names'>Preferential City <img src={star} alt='required field' className='requ_1' /></p>
+                                <input
+                                    type='text'
+                                    placeholder='Type here...'
+                                    id='contactNo'
+                                    maxLength='6'
+                                    className='inp_register'
+                                    value={pinReg}
+                                    onChange={e => setPinReg(e.target.value)}
+                                />
+                                <p className='error_reg' id='error_pc'></p>
+                            </div>
+                        </div>
                     </div>
-                    <div className='hr_11'>
-                        <p className='field_names'>Contact Number <img src={star} alt='required field' className='requ_1' /></p>
-                        <input
-                            type='text'
-                            placeholder='Type here...'
-                            id='contactNo'
-                            className='inp_register'
-                            // onChange={}
-                        />
-                        <p className='error_reg' id='error_cn'>Required</p>
-                    </div>
-                    <div className='hr_11'>
-                        <p className='field_names'>Address <img src={star} alt='required field' className='requ_1' /></p>
-                        <input
-                            type='text'
-                            placeholder='Type here...'
-                            id='address'
-                            className='inp_register'
-                            // onChange={}
-                        />
-                        <p className='error_reg' id='error_add'>Required</p>
-                    </div>
-                    <button  className='next_btn_1'><Link to='/page2' className='pp'>Next</Link></button>
+                    
+                    <button  className='next_btn_1' onClick={firstDetailsReg}>Next</button>
                 </div>
                 </div>
             </div>
         )
     }
-}
 
 export default RegisterU
