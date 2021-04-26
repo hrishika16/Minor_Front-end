@@ -8,6 +8,7 @@ import Connections from './Connections';
 import ContactUs from './ContactUs';
 import ContactUsForm from './contactUsForm';
 import Dashboard from './Dashboard';
+import Error404 from './Error404';
 import ForgotPassword from './ForgotPassword';
 import LandingPage from './LandingPage';
 import Login from './login'
@@ -39,6 +40,7 @@ function App() {
               <Route exact path = '/contactUs' component={ContactUs}></Route>
               <Route exact path = '/contactUsForm' component={ContactUsForm}></Route>
               <Route exact path ='/forgotPassword' component={ForgotPassword}></Route>
+              <Route exact path='/404' component={Error404}></Route>
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}
