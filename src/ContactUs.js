@@ -8,7 +8,7 @@ function ContactUs() {
 <div className="container-fluid complete" >
     <div className="row" >
       <div className="col-12 col-lg-6 columnFirst">
-        <h1 className="heading">Contact Us</h1>
+        <h1 className="headingContactUs">Contact Us</h1>
         <h2 className="headingSecond">Get In Touch With Us</h2>
         <h3 className="headingThird">Click on the below button to post your queries.<br></br>We are here to help you out.</h3>
         <button className="contactBtn">Contact Us </button>

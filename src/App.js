@@ -6,8 +6,9 @@ import Mentor from './Admin/Mentor';
 import User from './Admin/User';
 import Connections from './Connections';
 import ContactUs from './ContactUs';
-import contactUsForm from './contactUsForm';
+import ContactUsForm from './contactUsForm';
 import Dashboard from './Dashboard';
+import ForgotPassword from './ForgotPassword';
 import LandingPage from './LandingPage';
 import Login from './login'
 import Profession from './Profession';
@@ -36,7 +37,8 @@ function App() {
               <Route exact path='/dashboard' component={Dashboard} />
               <Route exact path='/connections' component={Connections} />
               <Route exact path = '/contactUs' component={ContactUs}></Route>
-              <Route exact path = '/contactUsForm' component={contactUsForm}></Route>
+              <Route exact path = '/contactUsForm' component={ContactUsForm}></Route>
+              <Route exact path ='/forgotPassword' component={ForgotPassword}></Route>
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}
