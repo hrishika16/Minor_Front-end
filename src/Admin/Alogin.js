@@ -25,38 +25,46 @@ function Alogin() {
         document.getElementById('err_p').style.display = 'block';
         document.querySelector('#password').focus()
         }
-        // else {
+        else {
             
-        //         axios({
-        //             method :'post',
-        //             url :'https://api.wappgo.com/legal251AppDashboardAPI/?parameter=login',
-        //             data: { username : adminName , password : password},
-        //             headers : {
-        //                 AuthKey :'asdf'
-        //             }
-        //         }) 
-        //         .then(res=>{
-        //             console.log(res)
-        //             if(res.data.message === 201){
-        //                 setLogin(true)
-        //                  localStorage.setItem('login' , res.data.jwt)
-        //                 console.log(res)
-        //             }
-        //             else {
-        //                 console.log(res.data.message);
-        //             }
-        //         })
-        //         .catch(err=>{
-        //             console.log(err)
-        //         })
-        // }
+                axios({
+                    method :'post',
+                    url :'http://localhost:3001/adminLogin',
+                    data: { email : adminName , password : password},
+                    headers : {
+                        AuthKey :'asdfgh '
+                    }
+                }) 
+                .then(res=>{
+                    console.log(res)
+                    if(res.data.status === 200){
+                        setLogin(true)
+                        console.log(login)
+                        //  localStorage.setItem('login' , res.data.jwt)
+                        console.log(res)
+                    }
+                    if(res.data.status === 202) {
+                        // console.log(res.data.message);
+                        console.log(" Please center with correct credentials")
+                    }
+                    else{
+                        console.log("Some error occured")
+                    }
+                })
+                .catch(err=>{
+                    console.log(err)
+
+                })
+        }
     }
 
     if(login){
+        return(
+            
         <Redirect to= {{
             pathname : "/admin" 
         }}
-        />
+        />)
     }
 
     return (

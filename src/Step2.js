@@ -42,10 +42,10 @@ class Step2 extends Component {
                             />
                             <p className='error_reg' id='error_cn'>Required</p>
                         </div>
-                        <div className='hr_11'>
+                        {/* <div className='hr_11'>
                             <div className='row'>
                                 <div className='col-6'>
-                                    <p className='field_names'>Start year <img src={star} alt='required field' className='requ_1' /></p>
+                                    <p className='field_names'>DOB <img src={star} alt='required field' className='requ_1' /></p>
                                     <input
                                         type='date'
                                         className='start_yr_inp'
@@ -63,7 +63,7 @@ class Step2 extends Component {
                                     />
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <button className='next_2btn'>Next</button>
                     </div>
                 </div>
