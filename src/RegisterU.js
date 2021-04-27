@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import './css/registerU.css'
 import star from './img/star.svg'
+import axios from 'axios'
 
-function RegisterU() {
+
+function RegisterU(props) {
     const[firstNameReg, setFirstNameReg] = useState('')
     const[lastNameReg, setLastNameReg] = useState('')
     const[contactNumReg, setContactNumReg] = useState('')
@@ -12,6 +14,7 @@ function RegisterU() {
     const[cityReg, setCityReg] = useState('')
     const[genderReg, setGenderReg] = useState('')
     const[pinReg, setPinReg] = useState('')
+    const[sendTo2,sendToStep2] = useState(false)
 
     const firstDetailsReg =(event) =>{
         event.preventDefault()
@@ -47,6 +50,54 @@ function RegisterU() {
             document.querySelector('#error_pc').innerHTML = 'Preferential City is Required'
             document.getElementById('error_pc').style.display = 'block'
         }
+        else{
+            const email = localStorage.getItem("email")
+            
+            axios({
+                method : 'post',
+                    url : `http://localhost:3001/page1`,
+                    headers : {
+                        AuthKey : 'asdfgh'
+                    },
+                    data : {
+                        "first_name" : firstNameReg ,
+                        "last_name" : lastNameReg,
+                        "contact" : contactNumReg,
+                        "dob" : dobReg,
+                        "state" : stateReg,
+                        "city" : cityReg,
+                        "gender" : genderReg,
+                        "prefCity" : pinReg,
+                        "email" : email
+                    }
+            }) 
+            .then(res=>{
+                console.log(res)
+                if(res.data.status === 200){
+                    console.log(res.data.message)
+                    sendToStep2(true)
+                }
+                else if(res.data.status === 202) {
+                // console.log(res.data.message);
+                console.log(" Please center with correct credentials")
+                }
+                else{
+                    console.log("Some error occured")
+                }
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+        }
+    }
+
+    if(sendTo2){
+        return(
+            <Redirect to= {{
+                pathname : "/page2" 
+            }}
+            />
+        )
     }
 
         return (

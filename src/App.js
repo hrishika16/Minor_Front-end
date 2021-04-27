@@ -50,7 +50,7 @@ function App() {
               <Route exact path='/jobSeeker' component={JobSeeker} />
               <Route exact path='/404' component={Error404}></Route>
               <Route exact path ='/emailSent' component={EmailSent}></Route>
-              <Route exact path = '/waiting' component={Waiting}></Route>
+              <Route exact path = '/waiting/:token' component={Waiting}></Route>
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}

@@ -19,7 +19,7 @@
 }
 
 .pdddm{
-    padding: 2% 25%;
+    padding: 2% 20%;
 }
 
 .nnnm{
@@ -44,6 +44,41 @@
     border: none;
 }
 
+.rad_txt{
+    color: #01355D;
+    font-family: 'carosM';
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.emp_select{
+    border: 0.5px solid rgba(45, 45, 45, 0.2);
+    font-family: 'caros';
+    border-radius: 5px;
+    color: #045174;
+    font-size: 15px;
+    padding: 8px;
+}
+
+.emp_select:focus{
+    outline: none;
+    border: 0.5px solid rgba(45, 45, 45, 0.2);
+    box-shadow: none;
+}
+
+.emp_sel_txt{
+    color: #045174;
+    font-family: 'caros';
+    padding: 7px;
+}
+
+.emp_sel_txt_1{
+    visibility: hidden;
+}
+
+#emp_ff{
+    display: none;
+}
 .start_yr_inp{
     width: 100%;
     border: 0.5px solid rgba(45, 45, 45, 0.2);

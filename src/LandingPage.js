@@ -7,7 +7,7 @@ import $ from 'jquery'
 function LandingPage(props) {
 
     
-    // const urlToken = props.match.params.urlToken
+    
     const[emailRegisterM , setEmailRegisterM] = useState('')
     const[passwordR , setPasswordR] = useState('')
     const[emailCompanyM,setEmailCompanyM] = useState('')
@@ -61,9 +61,10 @@ function LandingPage(props) {
 
     if(nextP){
         window.$('#exampleModalCenter').modal('hide');
+        // console.log(nextP)
         return(
             <Redirect to= {{
-                pathname : "/waiting" 
+                pathname : "/waiting/:token" 
             }}
             />
         )
