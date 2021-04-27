@@ -358,7 +358,7 @@ class Mentor extends Component {
                                     </div>
                             
 
-                                <p id = "totalPosts_Mentor " className="labelMentor ">Total posts : {this.state.totalPosts_Mentor} </p>
+                                {/* <p id = "totalPosts_Mentor " className="labelMentor ">Total posts : {this.state.totalPosts_Mentor} </p> */}
                                 
                                 <div class="modal-footer">
                               <button type="button" className="btn btn-secondary submitBtnMentor" data-dismiss="modal" onClick={this.handelSubmit} >Submit</button>
