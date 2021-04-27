@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
 import axios from 'axios'
+import mentorLogin from '../img/mentor_login_f.jpg'
+import '../css/mentorLogin.css'
 
 function MentorLogin() {
 
@@ -12,7 +14,7 @@ function MentorLogin() {
     
         if(username === ''){
           
-            document.getElementById('usernameErr').style.display = 'block';
+            document.getElementById('usernameErr').style.display ='block';
         
         }
         if(password === ''){
@@ -55,38 +57,40 @@ function MentorLogin() {
    
     return (
         <div>
-            <div className = "container-fluid">
+            <div className = "container-fluid mainMentorLogin">
                 <div className = "row">
                     <div className = "col-12 col-lg-6">
-
+                    <center>
+                   <img src= {mentorLogin} alt = "login mentor" className="mentorLoginImg" ></img>
+                   </center>
                     </div>
                     <div className = "col-12 col-lg-6">
                  
-                    <h2 >Login</h2>
-                    <div >
+                    <h2 className="headingMentorLogin" >Login</h2>
+                    <div className="constDiv">
                         <p > Username</p>
                         <input 
-                        type="text" 
-                        className="form-control" 
-                        placeholder='Username'
+                        type="email" 
+                        className="form-control input-mentorLogin" 
+                        placeholder='Email'
                         id='user-name' 
                         value={username} 
                         onChange={e=>setUsername(e.target.value)}/>
-                        <p className='error' id='usernameErr' ></p>   
+                        <p className='error' id='usernameErr'>Email is Required</p>   
                     </div>
-                     <div >
+                     <div  className="constDiv">
                         <p >Password</p>
                         <input 
                             type="password"
                             placeholder='Type here...'
-                            className ="form-control inp_login"
+                            className ="form-control input-mentorLogin"
                             id='password' 
                             value={password} 
                             onChange={e=>setPassword(e.target.value)}/>   
-                        <p className='error' id='passwordErr'></p>  
+                        <p className='error' id='passwordErr'> Password is Required</p>  
                      </div>
                        
-                    <button className="btn_submit" onClick={SubmitHandler}>Login</button>
+                    <button className="loginBtn " onClick={SubmitHandler}>Login</button>
                     </div>
                 </div>
             </div>
