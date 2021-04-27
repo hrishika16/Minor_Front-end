@@ -74,23 +74,33 @@ class Mentor extends Component {
        
         axios({
             method : 'post',
-            // url : 'https://jsonplaceholder.typicode.com/users',
+            url : `http://localhost:3001/mentorSignup`,
+            headers : {
+                AuthKey : 'asdfgh'
+            },
             data : {
-                
                 username : username_Mentor,
                 email : email_Mentor,
                 password : password_Mentor ,
                 contact : contactNumber_Mentor,
                 dob : dob_Mentor,
-                qualification : qualification_Mentor,
-                totalPosts : totalPosts_Mentor
-                
-
+                qualification : qualification_Mentor
             }
             
         })
         .then(resp =>{
-            
+            console.log(resp.data)
+                if(resp.data.status === 200){
+                    console.log(resp.data.message)
+                    // sendToStep2(true)
+                }
+                else if(resp.data.status === 202) {
+                // console.log(res.data.message);
+                console.log(" Please center with correct credentials")
+                }
+                else{
+                    console.log("Some error occured")
+                }
         })
         .catch(error =>{
             console.log('err',error)
@@ -109,7 +119,18 @@ class Mentor extends Component {
             method : 'get',
             url : 'https://jsonplaceholder.typicode.com/users',
             // headers : {
-            //     "jwt" : localStorage.getItem('login')
+            //     AuthKey : 'asdfgh'
+            // },
+            // data : {
+            //     "username" : firstNameReg ,
+            //     "last_name" : lastNameReg,
+            //     "contact" : contactNumReg,
+            //     "dob" : dobReg,
+            //     "state" : stateReg,
+            //     "city" : cityReg,
+            //     "gender" : genderReg,
+            //     "prefCity" : pinReg,
+            //     "email" : email
             // }
         })
         .then(resp =>{
@@ -356,10 +377,6 @@ class Mentor extends Component {
                                     ></input>
                                      <p className="error">Username is required </p>
                                     </div>
-                            
-
-                                {/* <p id = "totalPosts_Mentor " className="labelMentor ">Total posts : {this.state.totalPosts_Mentor} </p> */}
-                                
                                 <div class="modal-footer">
                               <button type="button" className="btn btn-secondary submitBtnMentor" data-dismiss="modal" onClick={this.handelSubmit} >Submit</button>
                               </div>
