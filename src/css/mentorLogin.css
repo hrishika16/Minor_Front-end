@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face {
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face {
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.mainMentorLogin{
+
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.mentorLoginImg{
+ margin-top: 30px;
+    height: 600px;
+}
+
+.headingMentorLogin{
+ margin-top: 60px;
+    color:#F98935;
+    font-size: 40px;
+    font-family: 'caros_Bold';
+
+}
+
+.input-mentorLogin{
+    padding: 20px;
+    width: 370px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    color: #2d2d2d;
+ 
+}
+
+.loginBtn{
+    position: relative;
+    margin-top: 20px;
+    background-color: #F98935;
+    border: none;
+    border-radius: 25px;
+    color: #023858;
+    font-family: 'caros_bold';
+    font-size: 20px;
+    padding: 10px;
+    width: 370px;
+}
+
+.loginBtn:focus{
+    outline: none;
+}
+
+.input-mentorLogin:focus{
+    outline:none; 
+}
+
+#passwordErr{
+    display: none;
+}
+
+#usernameErr{
+    display:none; 
+}
+
+.constDiv{
+    height: 80px; 
+    margin-bottom: 30px;
+}
+
+@media(max-width:766px){
+   .mentorLoginImg{
+       height: auto;
+       width: 100%;
+   }
+   .input-mentorLogin{
+       width: 100%;
+
+   }
+   .loginBtn{
+       width:100%;
+   }
+}
