@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face {
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face {
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.mainMentorProfile {
+    overflow-x: hidden;
+    position: relative;
+
+}
+
+.imgMentorProfile{
+    height : 150px;
+    width : 150px;
+    margin-bottom: 30px;
+    
+}
+
+.profileDetails{
+    font-size: 20px;
+    font-family: 'caros_Bold';
+    color: #F98935;
+    margin-bottom: 10px;
+}
