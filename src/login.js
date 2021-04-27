@@ -14,7 +14,7 @@ function Login() {
         e.preventDefault()
         authentication.onAuthentication()
         if(username === ''){
-            document.querySelector('#userErr').innerHTML = 'User Name is Required';
+            document.querySelector('#userErr').innerHTML = 'Email is Required';
             document.getElementById('error_1').style.display = 'block';
             document.querySelector('#user-name').focus()
         }
@@ -27,12 +27,16 @@ function Login() {
         else {
             
                 axios({
-                    method :'post',
-                    // url :'https://api.wappgo.com/legal251AppDashboardAPI/?parameter=login',
-                    data: { username : username , password : password},
-                    // headers : {
-                    //     AuthKey :'asdf'
-                    // }
+                //     method : 'post',
+                //     url : 'http://localhost:3001/signupdata',
+                //     headers : {
+                //         AuthKey : 'asdfgh '
+                //     },
+                //     data : {
+                //         email : username,
+                //         password : password,
+                //         // category : 
+                //     }
                 }) 
                 .then(res=>{
                     console.log(res)

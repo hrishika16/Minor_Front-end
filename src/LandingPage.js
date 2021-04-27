@@ -7,59 +7,101 @@ function LandingPage() {
 
     const[emailRegisterM , setEmailRegisterM] = useState('')
     const[passwordR , setPasswordR] = useState('')
+    const[emailCompanyM,setEmailCompanyM] = useState('')
+    const[passwordCompany , setPasswordCompany] = useState('')
     const[signUp, setSignUp] = useState('Sign Up')
     const[nextP, setnextP] = useState(false)
 
     const SubmitSignUp = (e) => {
+        console.log('mormal')
         e.preventDefault()
-        
-        console.log('clock')
-        // authentication.onAuthentication()
         if(emailRegisterM === ''){
-            document.querySelector('#err_ur').innerHTML = 'User Name is Required';
-            document.getElementById('err_ur').style.display = 'block';
-            document.querySelector('#emailR').focus()
+            document.querySelector('#err_ur').innerHTML = 'Email is Required';
+            document.getElementById('err_ur').style.display = 'block'
         }
         if(passwordR === ''){
-        document.querySelector('#err_pr').innerHTML = 'Password is Required';
-        document.getElementById('err_pr').style.display = 'block';
-        document.querySelector('#passwordR').focus()
+        document.querySelector('#err_pr').innerText = 'Password is Required';
+        document.getElementById('err_pr').style.display = 'block'
+        }
+        else {
+            axios({
+                method : 'post',
+                    url : 'http://localhost:3001/signupdata',
+                    headers : {
+                        AuthKey : 'asdfgh'
+                    },
+                    data : {
+                        "email" : emailRegisterM,
+                        "password" : passwordR,
+                        "category" : "student"
+                    }
+            }) 
+            .then(res=>{
+                console.log(res)
+                if(res.data.status === 200){
+                    console.log(res.data.message)
+                  }
+                  else if(res.data.status === 202) {
+                    // console.log(res.data.message);
+                    console.log(" Please center with correct credentials")
+                  }
+                  else{
+                      console.log("Some error occured")
+                  }
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+        }
+    }
+
+    const SubmitCompanySignUp = (e) => {
+        console.log("cinapnay")
+        e.preventDefault()
+        if(emailCompanyM === ''){
+            document.getElementById('err_company').innerHTML = 'Email is Required';
+            document.getElementById('err_company').style.display = 'block';
+        }
+        if(passwordCompany === ''){
+        document.getElementById('err_pcompany').innerHTML = 'Password is Required';
+        document.getElementById('err_pcompany').style.display = 'block';
         }
         // else {
-            
-        //         axios({
-        //             method :'post',
-        //             url :'https://api.wappgo.com/legal251AppDashboardAPI/?parameter=login',
-        //             data: { username : adminName , password : password},
+        //     axios({
+        //         method : 'post',
+        //             url : 'http://localhost:3001/signupdata',
         //             headers : {
-        //                 AuthKey :'asdf'
-        //             }
-        //         }) 
-        //         .then(res=>{
+        //                 AuthKey : 'asdfgh '
+        //             },
+        //             // data : {
+        //             //     email : username,
+        //             //     password : password,
+        //                 // category : 
+        //             // }
+        //     }) 
+        //     .then(res=>{
+        //         console.log(res)
+        //         if(res.data.message === 201){
+        //             // setLogin(true)
         //             console.log(res)
-        //             if(res.data.message === 201){
-        //                 setLogin(true)
-        //                  localStorage.setItem('login' , res.data.jwt)
-        //                 console.log(res)
-        //                  setnextP(true)
-        //             }
-        //             else {
-        //                 console.log(res.data.message);
-        //             }
-        //         })
-        //         .catch(err=>{
-        //             console.log(err)
-        //         })
+        //         }
+        //         else {
+        //             console.log(res.data.message);
+        //         }
+        //     })
+        //     .catch(err=>{
+        //         console.log(err)
+        //     })
         // }
     }
 
-    if(nextP){
-        return(
-            <Redirect
-                to='/register'
-            />
-        )
-    }
+    // if(nextP){
+    //     return(
+    //         <Redirect
+    //             to='/register'
+    //         />
+    //     )
+    // }
 
     
 
@@ -159,11 +201,11 @@ function LandingPage() {
                             type='email'
                             placeholder = 'name@domain.com'
                             className='inp_r'
-                            id='emailR'
-                            value={emailRegisterM} 
-                            onChange={e=>setEmailRegisterM(e.target.value)}
+                            id='emailCompany'
+                            value={emailCompanyM} 
+                            onChange={e=>setEmailCompanyM(e.target.value)}
                         />
-                         <p className='error' id='err_ur'>This field cannot be empty</p>
+                         <p className='error' id='err_company'>This field cannot be empty</p>
                     </div>
                     <div className='rh_1'>
                         <p className='emr'>Password</p>
@@ -171,14 +213,14 @@ function LandingPage() {
                             type='password'
                             placeholder = 'at least 8 characters'
                             className='inp_r'
-                            id='passwordR' 
-                            value={passwordR} 
-                            onChange={e=>setPasswordR(e.target.value)}
+                            id='passwordCompany' 
+                            value={passwordCompany} 
+                            onChange={e=>setPasswordCompany(e.target.value)}
                         />
-                        <p className='error' id='err_pr'>This field cannot be empty</p>
+                        <p className='error' id='err_pcompany'>This field cannot be empty</p>
                     </div>
                     {/* dropdown button- sign in with google,2 more options */}
-                    <button className='sigU_btn' onClick={SubmitSignUp} >Sign Up</button>
+                    <button className='sigU_btn' onClick={SubmitCompanySignUp} >Sign Up</button>
                 </div>
                 </div>
             </div>
