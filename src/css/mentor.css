@@ -97,6 +97,57 @@
     outline: none;
 }
 
+.labelMentor{
+   
+    font-family: 'caros_Bold';
+    color:#F8951D;
+    margin-bottom: 0px;
+    display: inline-block;
+
+}
+.inputElementMentor{
+    color: #01355D;
+    font-family: 'caros';
+    margin-bottom: 0px;
+    display: inline-block;
+    height: 35px;
+
+    
+}
+.form-control{
+    margin-bottom: 0px;
+}
+
+.submitBtnMentor{
+
+    position: relative;
+    background-color: #F8951D;
+    border: none;
+    border-radius: 25px;
+    color: #023858;
+    font-family: 'caros_bold';
+    font-size: 20px;
+    padding: 5px;
+    width: 140px;
+}
+
+.submitBtnMentor:hover{
+      background-color: #F8951D;
+}
+
+.modal-footer {
+    border-top: 0 none;
+    padding:0px;
+    margin:0px;
+}
+.modal-title{
+   height: 10px;
+    color:#023858
+}
+
+.form-group{
+    height : 70px;
+}
 
 @media(max-width:991px){
     .table_m{
