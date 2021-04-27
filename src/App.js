@@ -8,6 +8,7 @@ import Connections from './Connections';
 import ContactUs from './ContactUs';
 import ContactUsForm from './contactUsForm';
 import Dashboard from './Dashboard';
+import EmailSent from './EmailSent';
 import Error404 from './Error404';
 import ForgotPassword from './ForgotPassword';
 import LandingPage from './LandingPage';
@@ -16,6 +17,7 @@ import Profession from './Profession';
 import Profile from './Profile';
 import RegisterU from './RegisterU';
 import Step2 from './Step2';
+import Waiting from './Waiting';
 let isLoggedIn;
 
 
@@ -41,6 +43,8 @@ function App() {
               <Route exact path = '/contactUsForm' component={ContactUsForm}></Route>
               <Route exact path ='/forgotPassword' component={ForgotPassword}></Route>
               <Route exact path='/404' component={Error404}></Route>
+              <Route exact path ='/emailSent' component={EmailSent}></Route>
+              <Route exact path = '/waiting' component={Waiting}></Route>
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}
