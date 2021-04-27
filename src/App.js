@@ -21,6 +21,7 @@ import Profile from './Profile';
 import RegisterU from './RegisterU';
 import Step2 from './Step2';
 import Waiting from './Waiting';
+import MentorLogin from './Admin/MentorLogin';
 let isLoggedIn;
 
 
@@ -51,6 +52,7 @@ function App() {
               <Route exact path='/404' component={Error404}></Route>
               <Route exact path ='/emailSent' component={EmailSent}></Route>
               <Route exact path = '/waiting' component={Waiting}></Route>
+              <Route exact path = '/mentorLogin' component = {MentorLogin}></Route>
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}
