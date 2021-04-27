@@ -47,16 +47,17 @@ function ContactUsForm() {
             })
             .then(resp=>{
               console.log(resp)
-              if(resp.data.message === 201){
+              if(resp.data.status === 200){
                 //error occur 
+                console.log(resp.data.message)
               }
-              if(resp.data.status === 202) {
+              else if(resp.data.status === 202) {
                 // console.log(res.data.message);
                 console.log(" Please center with correct credentials")
-            }
-            else{
-                console.log("Some error occured")
-            }
+              }
+              else{
+                  console.log("Some error occured")
+              }
             })
             .catch(error=>{
               console.log(error)

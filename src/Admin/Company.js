@@ -149,7 +149,7 @@ class Company extends Component {
                 <div className='container-fluid'>
                     <div className='row mrgb_1'>
                         <div className='col-lg-6'>
-                            <p className='cust'>CUSTOMER DETAILS</p>
+                            <p className='cust'>COMPANY DETAILS</p>
                         </div>
                         <div className='col-lg-6'>
                             <button className='add_btn'>ADD  </button>

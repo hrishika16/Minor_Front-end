@@ -30,6 +30,12 @@
 #err_pr{
     display: none;
 }
+#err_company{
+    display: none;
+}
+#err_pcompany{
+    display: none;
+}
 .rh_1{
     height: 100px;
 }

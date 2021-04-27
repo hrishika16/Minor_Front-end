@@ -1,121 +1,189 @@
-import React,{useState} from 'react'
-import './css/contactUsForm.css'
+import React,{Component} from 'react'
+import '../css/contactUsForm.css'
+import ReactPaginate from 'react-paginate'
 import axios from 'axios'
-import address from './img/address.svg'
-import phone from './img/phone.svg'
-import email from './img/email.svg'
+import Header from './Header'
+let selectedPage;
 
+class AdminContactUs extends Component {
 
-function AdminContactUs() {
+  constructor(props) {
+    super(props)
 
-  const[intialName,changeName] = useState('')
-  const[intialEmail,changeEmail] = useState('')
-  const[intialMessage,changeMessage] = useState('')
-  const[intialSubject , changeSubject] = useState('')
+    this.state = {
+         users : [],
+         offset : 0,
+         data : [],
+         perPage : 9 ,
+         currentPage : 1,
+         totalPages : 0
+    }
+}
 
- const onSendDetails=(e)=> {
-  e.preventDefault()
-  if(intialName ===''){
- document.getElementById("intialNameError").style.display="block"
+componentDidMount(){
+    // https://jsonplaceholder.typicode.com/users
+    this.handleAxiosDrop()
+    // axios({
+    //     method : 'get',
+    //     url : 'https://jsonplaceholder.typicode.com/users',
+    //     // headers : {
+    //     //     "jwt" : localStorage.getItem('login')
+    //     // }
+    // })
+    // .then(resp =>{
+    //     console.log(resp.data)
+    //     this.setState({
+    //         users : resp.data
+    //     })
+    //     console.log(this.state.users)
+    // })
+    // .catch(error =>{
+    //     console.log('err',error)
+    // })
+}
 
-  }
-  if(intialEmail ===''){
-    document.getElementById("intialEmailError").style.display="block"
- 
-     }
-     if(intialMessage ===''){
-      document.getElementById("intialMessageError").style.display="block"
-    
-       }
-      if(intialSubject === ''){
-        document.getElementById("intialSubjectError").style.display="block"
-     
-      }
-       else{
-            axios({
-              method : 'post',
-              // url:'',
-              data:{username:intialName , email:intialEmail , message:intialMessage ,subject:intialSubject}
-            })
-            .then(resp=>{
-              console.log(resp)
-              if(resp.data.message === 201){
-                //error occur 
-              }
-              else{
-                console.log(resp.data.message)
-              }
-            })
-            .catch(error=>{
-              console.log(error)
-            })
-       }
-
-  }
-
- 
-
-    return (
-        <div className="container completeContactForm" >
-        <center>
-          <h1 className="headingContact">Contact Us</h1>
-       
-          </center>
-        <div className="row" >
-      
-          <div className="col-12 col-lg-6 columnFirstSend ">
+handleAxiosDrop() {
+    axios({
+          method : 'post',
+          url : 'http://localhost:3001/contactusdata',
+          headers : {
+              AuthKey : 'asdfgh '
+          },
+          data : {
+              page : this.state.currentPage
+          }
+       })
+       .then(response =>{
+           const data = response.data.data
+            const forPage = response.data.TotalPages
+            console.log(data)
+            if(response.data.status === 200){
+                this.setState({
+                    pageCount : forPage,
+                    users : data
+                })
+                console.log(data)
+            }
+            else{
+                console.log('something went wrong');
+            }
         
-          <img src={address} alt="phone" width="40px" height="40px"></img>
-          <h2 className="inlinestyle">Address</h2>
-          <h3>Indore</h3>
-          <br></br>
-          <br></br>
-          <img src={phone} alt="phone"  width="40px" height="40px" ></img>
-          <h2 className="inlinestyle">Phone</h2>
-          <h3>+91 8602415434</h3>
-          <br></br>
-          <br></br>
-          <img src={email}  alt="Email"  width="40px" height="40px"></img>
-          <h2 className="inlinestyle">Email</h2>
-          <h3>xyz@gmail.com</h3>
+        this.renderTableData()
+       })
+       .catch(error => {
+           console.log('error',error)
+       })
+}
+
+
+handlePageClick = e =>{
+    selectedPage = e.selected;
+   const offset = selectedPage * this.state.perPage;
+
+   this.setState({
+       currentPage : selectedPage,
+       offset : offset
+   },()=>{
+    this.handleAxiosDrop()
+   } )
+}
+
+renderTableData() {
+    return this.state.users.map((user) => {
+       return (
+           <React.Fragment key={user._id}>
+          <tr >
+             <td >{user.updatedAt}</td>
+             <td >{user.username}</td>
+             <td>{user.email}</td>
+             <td>{user.queryId}</td>
+             <td >
+                <div className='row'>
+                    <div className='col-lg-6 col-12 up_w'>
+                        {user.message}
+                    </div>
+                    <div className='col-lg-6 col-12 btns_w'>
+                        <div className="dropdown">
+                            <button className="dropdown-toggle see_more" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                See more
+                            </button>
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a className="dropdown-item seemore_dropitem" href="#">Add</a>
+                                <a className="dropdown-item seemore_dropitem" href="#">Remove</a>
+                                <a className="dropdown-item seemore_dropitem1" href="#">More Details</a>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+                {/* <button className=' see_more'  >  See more</button>   dropdown see more - remove,suspend(cannot login from this account),more details(modal to show all details and edit option) */}   
+                
+                
+             </td> 
+          </tr>
           
-          
-          
-        </div>
-         <div className="col-12 col-lg-6 columnSecondSend">
-          <div>
-        
-            <h1 className="headingSend">Send Message</h1>
-          
-            <form>
-            <div className="constantSize">
-            <input type = "text" placeholder="Name" id="name" className="inputElement" value={intialName} onChange={(e)=>changeName(e.target.value)}></input>
-            <p className="error" id="intialNameError">User Name is Required</p>
-            </div>
-            <br></br>
-             <div className="constantSize">
-            <input type="email" placeholder="Email-Id" id="email" className="inputElement" value={intialEmail} onChange={(e)=>changeEmail(e.target.value)}></input>
-            <p className="error" id="intialEmailError">Email-Id is Required</p>
-            </div>
-            <br></br>
-            <div className="constantSize">
-            <input type = "text" placeholder="Subject" id="subject" className="inputElement" value={intialSubject} onChange={(e)=>changeSubject(e.target.value)}></input>
-            <p className="error" id="intialSubjectError">Subject is Required</p>
-            </div>
-            <br></br>
-          <div className="constantMessageSize">
-            <textarea placeholder="Enter Your Message" id="message" className="message" value={intialMessage} onChange={(e)=>changeMessage(e.target.value)}></textarea>
-            <p className="error" id="intialMessageError">Message is Required</p>
-            </div>
-            <br></br>
-            <button className="sendBtn" onClick={onSendDetails}>Send</button>
-            </form>
-           
-          </div>
-          </div>
-        </div>
-    </div>
+          </React.Fragment>
+       )
+    })
+ }
+
+ renderTableHeader() {
+    return(
+        <React.Fragment>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Query ID</th>
+            <th>Subject</th>
+        </React.Fragment>
     )
+ }
+
+
+render() {
+    return (
+        <div className='whole'>
+            <Header/>
+            <div className='container-fluid'>
+                <div className='row mrgb_1'>
+                    <div className='col-lg-6'>
+                        <p className='cust'>CONTACT DETAILS</p>
+                    </div>
+                    <div className='col-lg-6'>
+                        <button className='add_btn'>ADD  </button>
+                    </div>
+                </div>
+                {/* sort by button */}
+                <div className='table_d'>
+                    <table className='table_1' >
+                        <thead>
+                            <tr>{this.renderTableHeader()}</tr>
+                        </thead>
+                        <tbody>
+                            {this.renderTableData()}
+                        </tbody>
+                    </table>
+                </div>
+                {/* pagination */}
+                <div className='paginee'>
+                    <ReactPaginate
+                        previousLabel = {"<"}
+                        nextLabel = {">"}
+                        breakLabel = {"...."}
+                        breakClassName = {"break-me"}
+                        pageCount = {this.state.pageCount}
+                        marginPagesDisplayed = {2}
+                        pageRangeDisplayed = {5}
+                        onPageChange = {this.handlePageClick}
+                        containerClassName = {'pagination pg_1'}
+                        subContainerClassName = {'pages pagination pg_1'}
+                        activeClassName = {`active `}
+                    />
+                    <br/>  
+                </div>
+            </div>
+        </div>
+    )
+}
 }
 
 export default AdminContactUs

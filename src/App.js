@@ -1,10 +1,13 @@
 import react from 'react'
 import { BrowserRouter, Switch, Route,Redirect } from 'react-router-dom';
+import AdminContactUs from './Admin/AdminContactUs';
 import AdminL from './Admin/AdminL';
 import Alogin from './Admin/Alogin';
 import Mentor from './Admin/Mentor';
 import User from './Admin/User';
 import Connections from './Connections';
+import Company from './Admin/Company';
+import JobSeeker from './Admin/JobSeeker';
 import ContactUs from './ContactUs';
 import ContactUsForm from './contactUsForm';
 import Dashboard from './Dashboard';
@@ -42,6 +45,9 @@ function App() {
               <Route exact path = '/contactUs' component={ContactUs}></Route>
               <Route exact path = '/contactUsForm' component={ContactUsForm}></Route>
               <Route exact path ='/forgotPassword' component={ForgotPassword}></Route>
+              <Route exact path ='/adminContactUs' component={AdminContactUs} />
+              <Route exact path ='/adminCompany' component={Company} />
+              <Route exact path='/jobSeeker' component={JobSeeker} />
               <Route exact path='/404' component={Error404}></Route>
               <Route exact path ='/emailSent' component={EmailSent}></Route>
               <Route exact path = '/waiting' component={Waiting}></Route>
