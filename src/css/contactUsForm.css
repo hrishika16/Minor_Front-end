@@ -49,10 +49,7 @@
     padding-top: 4px;
 }
 
-.columnSecondSend {
-    /* padding-left: 10px; */
-    /* margin-right: 20px; */
-}
+
 
 .headingSend {
 
@@ -81,7 +78,7 @@
 .inputElement {
 
     padding: 10px;
-    width: 300px;
+    width: 370px;
     border: 2px solid #ccc;
     border-radius: 10px;
     color: #2d2d2d;
@@ -105,7 +102,7 @@
 
 .message {
     margin-top: 10px;
-    width: 300px;
+    width: 370px;
     height: 150px;
     padding: 12px 10px;
     box-sizing: border-box;
@@ -115,6 +112,21 @@
     font-size: 16px;
     resize: none;
     color: #2d2d2d;
+}
+
+.message::placeholder {
+    color: rgba(45, 45, 45, 0.3);
+    /* Firefox */
+}
+
+.message:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(45, 45, 45, 0.3);
+}
+
+.message::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(45, 45, 45, 0.3);
 }
 
 .message:focus {
