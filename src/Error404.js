@@ -8,8 +8,8 @@ function Error404() {
         <div className="container errorMessage">
         <center>
          <img src ={error_page} alt="error 404" width ="100%" ></img> 
-         <h1>Error !</h1>
-         <h2>Page Not Found</h2>
+       
+        <button className="homepageBtn">Back to Homepage</button>
         </center>
         </div>
        
