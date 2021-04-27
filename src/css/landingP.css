@@ -69,6 +69,10 @@
     margin-bottom: 10px;
 }
 
+.sigU_btn:focus{
+    outline: none;
+}
+
 .stSel{
     visibility: hidden;
 }

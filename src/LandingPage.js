@@ -2,14 +2,17 @@ import React,{useState} from 'react'
 import axios from 'axios'
 import './css/landingP.css'
 import { Redirect } from 'react-router'
+import $ from 'jquery'
 
-function LandingPage() {
+function LandingPage(props) {
 
+    
+    // const urlToken = props.match.params.urlToken
     const[emailRegisterM , setEmailRegisterM] = useState('')
     const[passwordR , setPasswordR] = useState('')
     const[emailCompanyM,setEmailCompanyM] = useState('')
     const[passwordCompany , setPasswordCompany] = useState('')
-    const[signUp, setSignUp] = useState('Sign Up')
+    // const[signUp, setSignUp] = useState('Sign Up')
     const[nextP, setnextP] = useState(false)
 
     const SubmitSignUp = (e) => {
@@ -26,7 +29,7 @@ function LandingPage() {
         else {
             axios({
                 method : 'post',
-                    url : 'http://localhost:3001/signupdata',
+                    url : `http://localhost:3001/signupdata`,
                     headers : {
                         AuthKey : 'asdfgh'
                     },
@@ -40,19 +43,30 @@ function LandingPage() {
                 console.log(res)
                 if(res.data.status === 200){
                     console.log(res.data.message)
-                  }
-                  else if(res.data.status === 202) {
-                    // console.log(res.data.message);
-                    console.log(" Please center with correct credentials")
-                  }
-                  else{
-                      console.log("Some error occured")
-                  }
+                    setnextP(true)
+                }
+                else if(res.data.status === 202) {
+                // console.log(res.data.message);
+                console.log(" Please center with correct credentials")
+                }
+                else{
+                    console.log("Some error occured")
+                }
             })
             .catch(err=>{
                 console.log(err)
             })
         }
+    }
+
+    if(nextP){
+        window.$('#exampleModalCenter').modal('hide');
+        return(
+            <Redirect to= {{
+                pathname : "/waiting" 
+            }}
+            />
+        )
     }
 
     const SubmitCompanySignUp = (e) => {
