@@ -27,6 +27,10 @@
     padding: 2%;
 }
 
+.hrexp_1{
+    height: 70px;
+}
+
 .start_yr{
     width: 110px;
     /* width: 100%; */
@@ -105,9 +109,28 @@
     background: #F8951D;
     margin-bottom: 30px;
     margin-top: 4px;
+    display: none;
 }
 
 .next_2btn:focus{
+    outline: none;
+}
+
+.sub_btn_step{
+    font-family: 'caros_bold';
+    color: #fff;
+    padding: 9px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    width: 100%;
+    background: #F8951D;
+    /* margin-bottom: 30px;
+    margin-top: 4px; */
+    margin-bottom: 25px;
+}
+
+.sub_btn_step:focus{
     outline: none;
 }
 
