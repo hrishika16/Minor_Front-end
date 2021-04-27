@@ -8,7 +8,7 @@ let selectedPage;
 
 class Mentor extends Component {
     constructor(props) {
-        super(props)
+        super(props);
     
         this.state = {
              users : [],
@@ -16,9 +16,91 @@ class Mentor extends Component {
              data : [],
              perPage : 9 ,
              currentPage : 1,
-             totalPages : 0
-        }
+             totalPages : 0,
+             username_Mentor : '',
+             email_Mentor : '',
+             dob_Mentor : '',
+             password_Mentor : '',
+             qualification_Mentor : '',
+             contactNumber_Mentor : '',
+             totalPosts_Mentor : 0 
+         };
+
+        this.handelSubmit = this.handelSubmit.bind(this);
+        this.handelChange = this.handelChange.bind(this);
     }
+
+   handelChange(event){
+    this.setState({
+       username_Mentor: event.target.value,
+       email_Mentor : event.target.value,
+       dob_Mentor : event.target.value,
+       password_Mentor : event.target.value,
+       qualification_Mentor : event.target.value,
+       password_Mentor: event.target.value,
+       contactNumber_Mentor : event.target.value
+
+      })
+      console.log(this.state)
+   }
+
+   handelSubmit(event){
+    const { username_Mentor, email_Mentor, dob_Mentor, qualification_Mentor, contactNumber_Mentor,totalPosts_Mentor,password_Mentor } = this.state
+    event.preventDefault()
+    // alert('${email_Mentor}')
+   
+    if(username_Mentor === ''){
+
+        document.getElementById('username_Mentor').style.display = 'block'
+    }
+    if(email_Mentor === ''){
+
+        document.getElementById('email_Mentor').style.display = 'block'
+    }
+    if(dob_Mentor === ''){
+
+        document.getElementById('dob_Mentor').style.display = 'block'
+    }
+    if(qualification_Mentor === ''){
+
+        document.getElementById('qualification_Mentor').style.display = 'block'
+    }
+    if(contactNumber_Mentor === ''){
+
+        document.getElementById('contactNumber_Mentor').style.display = 'block'
+    }
+    
+    else {
+       
+        axios({
+            method : 'post',
+            // url : 'https://jsonplaceholder.typicode.com/users',
+            data : {
+                
+                username : username_Mentor,
+                email : email_Mentor,
+                password : password_Mentor ,
+                contact : contactNumber_Mentor,
+                dob : dob_Mentor,
+                qualification : qualification_Mentor,
+                totalPosts : totalPosts_Mentor
+                
+
+            }
+            
+        })
+        .then(resp =>{
+            
+        })
+        .catch(error =>{
+            console.log('err',error)
+        })
+
+    }
+    console.log("email",email_Mentor);
+
+
+  }
 
     componentDidMount(){
         // https://jsonplaceholder.typicode.com/users
@@ -149,7 +231,7 @@ class Mentor extends Component {
                             <p className='cust_m'>MENTOR DETAILS</p> 
                         </div>
                         <div className='col-lg-6'>
-                            <button className='add_btn_m'>ADD  </button>
+                            <button className='add_btn_m' data-toggle="modal" data-target="#AddModal">ADD  </button>
                         </div>
                     </div>
                     <div className='table_m'>
@@ -178,6 +260,115 @@ class Mentor extends Component {
                             activeClassName = {`active `}
                         />
                         <br/>  
+                    </div>
+                </div>
+                {/* Add Modal  */}
+                <div className="modal fade" id="AddModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div className="modal-dialog " role="document">
+                        <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLongTitle">Details </h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                       <div className="modal-body">
+                       <form >
+                       <div className="form-group">
+                       <label for="username_Mentor " class=" labelMentor" >Username :</label>
+                          <input 
+                             type='text' 
+                             id ="username_Mentor" 
+                             name = "username_Mentor"
+                      
+                             className = "form-control inputElementMentor"
+                             value = {this.state.username_Mentor}
+                             onChange = {this.handelChange}
+                           
+                          ></input>
+                          <p className="error">Username is required </p>
+                          </div>
+
+                        <div className="form-group">
+                          <label  for="email_Mentor" className=" labelMentor">Email-Id :</label>
+                          <input
+                             type ="email"
+                             id ="email_Mentor"
+                             name = "email_Mentor"
+                             className = "form-control inputElementMentor"
+                             value = {this.state.email_Mentor}
+                             onChange = {this.handelChange}
+
+                           ></input>
+                            <p className="error">Username is required </p>
+                           </div>
+                          
+                           <div className="form-group">
+                           <label  for="password_Mentor " className=" labelMentor">Password :</label>
+                           <input 
+                             type = "password"
+                             id ="password_Mentor"
+                             name = "password_Mentor"
+                           
+                             className = "form-control inputElementMentor"
+                             value = {this.state.password_Mentor}
+                             onChange = {this.handelChange}
+                             ></input>
+                              <p className="error">Username is required </p>
+                             </div>
+                            
+                             <div className="form-group">
+                             <label for="contact_Mentor" className=" labelMentor" >Contact Number :</label>
+                             <input 
+                                type = "tel"
+                                id ="contact_Mentor"
+                                name = "contactNumber_Mentor"
+                                
+                                className = "form-control inputElementMentor"
+                                value = {this.state.contactNumber_Mentor}
+                                onChange = {this.handelChange}
+                            ></input>
+                             <p className="error">Username is required </p>
+                            </div>
+                            
+                            <div className="form-group">
+                            <label for="DOB_Mentor" className=" labelMentor">Date of Birth :</label>
+                            <input 
+                                type = "date"
+                                id ="DOB_Mentor"
+                                name = "DOB_Mentor"
+                                className = "form-control inputElementMentor"
+                                value = {this.state.dob_Mentor}
+                                onChange = {this.handelChange}
+                                ></input>
+                                 <p className="error">Username is required </p>
+                                </div>
+                               
+                                <div className="form-group">
+                                <label for="qualification_Mentor" class="labelMentor" >Qualification :</label>
+                                <input 
+                                    type = "text"
+                                    id = "qualification_Mentor"
+                                    name = "qualification_Mentor"
+                                    className = "form-control inputElementMentor"
+                                    value = {this.state.qualification_Mentor}
+                                    onChange = {this.handelChange}
+                                    ></input>
+                                     <p className="error">Username is required </p>
+                                    </div>
+                            
+
+                                <p id = "totalPosts_Mentor " className="labelMentor ">Total posts : {this.state.totalPosts_Mentor} </p>
+                                
+                                <div class="modal-footer">
+                              <button type="button" className="btn btn-secondary submitBtnMentor" data-dismiss="modal" onClick={this.handelSubmit} >Submit</button>
+                              </div>
+                               
+                       </form>
+
+                        </div> 
+                   
+                        </div>
                     </div>
                 </div>
             </div>
