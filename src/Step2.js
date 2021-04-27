@@ -30,18 +30,20 @@ class Step2 extends Component {
     this.setState({
         exp_H : event.currentTarget.value
     })
-    console.log(this.state.exp_H)
-    this.handleSelectExp()
+    
    }
 
-   handleSelectExp(){
-        if(this.state.exp_H == 'yes'){
-            document.getElementById('emp_ff').style.display = "block"
-        }
-        else if(this.state.exp_H == 'no'){
-            document.getElementById('emp_ff').style.display = "none"
-        }
+   handleExp= event =>{
+    event.preventDefault()
+    console.log(this.state.exp_H)
+    if(this.state.exp_H == 'Yes'){
+        document.getElementById('emp_ff').style.display = "block"
+    }
+    else if(this.state.exp_H == 'No'){
+        document.getElementById('emp_ff').style.display = "none"
+    }
    }
+
     
     render() {
         return (
@@ -119,13 +121,14 @@ class Step2 extends Component {
                                 </div>
                                 
                             </div>
-                            <div className='hr_11'>
+                            <div className='hrexp_1'>
                                 <select className="custom-select emp_select" value={this.state.exp_H} onChange={this.handleExperience}>
-                                    <option value='emp_h' className='emp_sel_txt' >Do you have any experience ?</option>
-                                    <option value="yes" className='emp_sel_txt'  >Yes </option>
-                                    <option value="no" className='emp_sel_txt' >No </option>
+                                    <option defaultValue='emp_h' className='emp_sel_txt' >Do you have any experience ?</option>
+                                    <option defaultValue="yes" className='emp_sel_txt'  >Yes </option>
+                                    <option defaultValue="no" className='emp_sel_txt' >No </option>
                                 </select>
                             </div>
+                            <button className='sub_btn_step' onClick={this.handleExp}>Submit</button>
                         </div>
                         <div className='employee_field' id='emp_ff'>
                             <div className='row'>
@@ -139,7 +142,7 @@ class Step2 extends Component {
                                             className='inp_register'
                                             // onChange={}
                                         />
-                                        <p className='error_reg' id='error_title_desg'>Required</p>
+                                        {/* <p className='error_reg' id='error_title_desg'>Required</p> */}
                                     </div>
                                 </div>
                                 <div className='col-lg-6 col-12'>
@@ -152,7 +155,7 @@ class Step2 extends Component {
                                             className='inp_register'
                                             // onChange={}
                                         />
-                                        <p className='error_reg' id='error_comp_name'>Required</p>
+                                        {/* <p className='error_reg' id='error_comp_name'>Required</p> */}
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +169,7 @@ class Step2 extends Component {
                                             className='inp_register'
                                             // onChange={}
                                         />
-                                        <p className='error_reg' id='error_doj'>Required</p>
+                                        {/* <p className='error_reg' id='error_doj'>Required</p> */}
                                     </div>
                                 </div>
                                 <div className='col-lg-6 col-12'>
@@ -178,67 +181,33 @@ class Step2 extends Component {
                                             className='inp_register'
                                             // onChange={}
                                         />
-                                        <p className='error_reg' id='error_doj'>Required</p>
+                                        {/* <p className='error_reg' id='error_doj'>Required</p> */}
                                     </div>
                                 </div>
                             </div>
                             <div className='hr_11'>
                             <select className="custom-select emp_select" value={this.state.emp_Type} onChange={this.handleEmpType}>
-                                <option selected disabled value='emp_type' className='emp_sel_txt_1'>Employee Type</option>
-                                <option value="full_time " className='emp_sel_txt'>Full Time </option>
-                                <option value="part_time " className='emp_sel_txt'>Part Time </option>
-                                <option value="self_employed " className='emp_sel_txt'>Self Employed </option>
-                                <option value="freelance" className='emp_sel_txt'>Freelance </option>
-                                <option value="internship  " className='emp_sel_txt'>Internship </option>
-                                <option value="trainee  " className='emp_sel_txt'>Trainee </option>
+                                <option selected disabled defaultValue='emp_type' className='emp_sel_txt_1'>Employee Type</option>
+                                <option defaultValue="full_time " className='emp_sel_txt'>Full Time </option>
+                                <option defaultValue="part_time " className='emp_sel_txt'>Part Time </option>
+                                <option defaultValue="self_employed " className='emp_sel_txt'>Self Employed </option>
+                                <option defaultValue="freelance" className='emp_sel_txt'>Freelance </option>
+                                <option defaultValue="internship  " className='emp_sel_txt'>Internship </option>
+                                <option defaultValue="trainee  " className='emp_sel_txt'>Trainee </option>
                             </select>
                             </div>
                         </div>
-                        {/* <div className='hr_11'>
-                            <p className='field_names'>School or College/University <img src={star} alt='required field' className='requ_1' /> </p>
-                            <input
-                                type='text'
-                                placeholder='Type here...'
-                                id='firstName'
-                                className='inp_register'
-                                // onChange={}
-                            />
-                            <p className='error_reg' id='error_fn'>Required</p>
-                        </div> */}
-                        
-                        {/* <div className='hr_11'>
-                            <p className='field_names'>Specialization <img src={star} alt='required field' className='requ_1' /></p>
-                            <input
-                                type='text'
-                                placeholder='Type here...'
-                                id='contactNo'
-                                className='inp_register'
-                                // onChange={}
-                            />
-                            <p className='error_reg' id='error_rnn'>Required</p>
-                        </div> */}
-                        {/* <div className='hr_11'>
+                        <div className='start_up'>
                             <div className='row'>
-                                <div className='col-6'>
-                                    <p className='field_names'>DOB <img src={star} alt='required field' className='requ_1' /></p>
-                                    <input
-                                        type='date'
-                                        className='start_yr_inp'
-                                        id='start_y'
-                                        // onChange = {}
-                                    />
+                                <div className='col-lg-6 col-12'>
+                                    <div className='hr_11'>
+                                        
+                                    </div>
                                 </div>
-                                <div className='col-6'>
-                                    <p className='field_names'>End year <img src={star} alt='required field' className='requ_1' /></p>
-                                    <input
-                                        type='date'
-                                        className='start_yr_inp'
-                                        id='end_y'
-                                        // onChange = {}
-                                    />
-                                </div>
+                                <div className='col-lg-6 col-12'></div>
                             </div>
-                        </div> */}
+                        </div>
+                        
                         <button className='next_2btn'>Next</button>
                     </div>
                 </div>
