@@ -1,92 +1,110 @@
-@font-face{
+@font-face {
     font-family: 'caros';
     src: url('../font/cretype\ \ Caros.otf');
 }
 
-@font-face{
+@font-face {
     font-family: 'caros_bold';
     src: url('../font//cretype\ \ Caros\ Bold.otf');
 }
 
-@font-face{
+@font-face {
     font-family: 'carosM';
     src: url('../font/cretype\ \ Caros\ Medium.otf');
 }
 
-.complete{
+.complete {
     margin-top: 70px;
     position: relative;
     overflow-x: hidden;
-    /* padding-left: 55px; */
+
     margin-bottom: 10px;
-   
-}
-
-.columnFirst{
-margin-top: 50px;
-margin-bottom: 40px;
-padding-left: 55px;
 
 }
-.headingContactUs{
-    /* margin-top: 60px; */
+
+.columnFirst {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding-left: 55px;
+
+}
+
+.headingContactUs {
+
     color: #023858;
     font-size: 75px;
     padding: 0px;
-    font-family:'caros_Bold';
-    
+    font-family: 'caros_Bold';
+
 }
 
-.headingSecond{
+.headingSecond {
     margin-top: 10px;
     color: #023858;
     font-size: 35px;
     font-family: 'caros';
 }
-.headingThird{
+
+.headingThird {
     margin-top: 30px;
-    color:#023858;
+    color: #023858;
     font-size: 20px;
     font-family: 'caros';
 }
-.columnSecond{
-   margin: 0px;
-   padding-right: 0px;
+
+.columnSecond {
+    margin: 0px;
+    padding-right: 0px;
     float: right;
 }
-.contactBtn{
+
+.contactBtn {
     margin-top: 50px;
-background-color:#F98935;
-border: none;
-border-radius: 25px;
-color: #023858;
-font-family:'caros_bold' ;
-font-size: 20px;
-padding: 12px;
-width: 180px;
+    background-color: #F98935;
+    border: none;
+    border-radius: 25px;
+    color: #023858;
+    font-family: 'caros_bold';
+    font-size: 20px;
+    padding: 12px;
+    width: 180px;
 
 }
 
-.contactBtn:focus{
+.contactBtn:focus {
     outline: none;
 }
 
 @media only screen and (max-width: 766px) {
-    
-    .headingContactUs{
-        font-size: 50px;
-    }
-    .headingSecond{
-        font-size: 25px;
-    }
-    .headingThird{
-        font-size: 15px;
-    }
-  .complete{
-      margin-top: 20px;
-  }
-  .contactBtn{
-      margin-top: 40px;
 
-  }
-  }
+    .headingContactUs {
+        font-size: 50px;
+
+    }
+
+    .headingSecond {
+        font-size: 25px;
+        text-align: justify;
+    }
+
+    .headingThird {
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .complete {
+        margin-top: 20px;
+    }
+
+    .contactBtn {
+        margin-top: 40px;
+
+    }
+
+    .columnFirst {
+        padding-left: 20px;
+        margin-top: 10px;
+
+
+    }
+}
