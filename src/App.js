@@ -23,6 +23,7 @@ import Step2 from './Step2';
 import Waiting from './Waiting';
 import MentorLogin from './Admin/MentorLogin';
 import MentorProfile from './Admin/MentorProfile';
+import MentorPost from './Admin/MentorPost';
 let isLoggedIn;
 
 
@@ -55,6 +56,7 @@ function App() {
               <Route exact path = '/waiting/:token' component={Waiting}></Route>
               <Route exact path = '/mentorLogin' component = {MentorLogin}></Route>
               <Route exact path = '/mentorProfile' component={MentorProfile}></Route>
+              <Route exact path = '/mentorPost' component = {MentorPost}></Route>
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}
