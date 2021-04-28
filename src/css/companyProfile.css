@@ -1,0 +1,65 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.mainCP{
+    position: relative;
+    overflow-x: hidden;
+}
+
+.sidebardCP{
+    background: #045174;
+    height: 100%;
+    position: fixed;
+    display: block;
+    width: 204px;
+    z-index: 100;
+    transition: all 0.3s;
+    outline: none;
+ 
+
+}
+
+.completeCP{
+    /* margin :auto; */
+    /* margin-left: 10px; */
+    width: 100%;
+    padding-left: 203px;
+}
+
+.imgCP{
+ 
+    border: 2px solid #2d2d2d;
+    border-radius: 50%;
+    width : 250px ;
+    height:  250px;
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px; 
+    background-color: rgb(255, 255, 255);
+}
+
+.detailCP{
+
+    text-align: center;
+    margin-top: 60px;
+    font-family: 'caros_Bold';
+   
+}
+
+.detailCP h1{
+    color : #F98935;
+    
+}
+
