@@ -16,16 +16,129 @@
 .postM{
     overflow-x: hidden;
     position: relative;
+    margin-top: 30px;
+    margin-left: 10px;
+    /* margin-right: 10px; */
 
+}
+
+.rowMargin{
+    margin-top: 40px;
 }
 
 .post_boxM{
     background: #f5f5f5;
-    padding: 20px;
-    width: 600px;
-    margin-top: 50px;
+    padding: 40px;
+    width: 550px;
+    /* margin-top: 50px; */
 }
 
 .box_posttM{
     padding : 30px;
+    border: 1px solid #045174;;
+    width: 480px;
+    height: 300px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.post_ImgM{
+    width: 30px;
+    /* display: inline-block; */
+}
+
+.user_NameM{
+    font-size: 20px;
+    font-family: 'caros_Bold';
+    color:  #045174;;
+}
+.box_posttSubH{
+    font-size: 15px;
+    font-family: 'caros_M';
+    color:  #F8951D;
+    display: inline-block;
+}
+
+.box_posttSubD{
+    font-size: 10px;
+    font-family: 'caros';
+    color:  #045174;;
+}
+
+.valM{
+    height : 60px;
+  background-color:#fff;
+    border: 1px solid #045174;;
+    border-radius: 15px;
+
+}
+
+.addPostM{
+    background-color: #BFD7ED;
+    height: 600px;
+    padding: 40px;
+    /* width: 100%; */
+}
+
+.addPostBtn{
+    text-align: center;
+  background-color: #F98935;
+    border: none;
+    border-radius: 25px;
+    color: #023858;
+    font-family: 'caros_bold';
+    font-size: 20px;
+    padding: 10px;
+    width: 140px;
+}
+
+#subjectErrM{
+    display: none;
+}
+
+#messageErrM{
+    display: none;
+}
+.addPostHeading{
+    text-align: center;
+    color: #023858;
+    font-size: 40px;
+    font-family: 'caros_Bold';
+
+}
+
+.inputM{
+    font-size: 20px;
+    color: #023858;
+    font-family: 'caros';
+    width: 370px;
+    height : 50px ; 
+    padding: 12px 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+
+}
+.messageM {
+    
+    width: 370px;
+    height: 80px;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    font-size: 20px;
+    resize: none;
+    color: #023858;
+}
+.inputM:focus{
+    outline: none;
+}
+.messageM:focus{
+    outline: none ; 
+}
+
+.addPostBtn:focus{
+    outline: none;
 }
