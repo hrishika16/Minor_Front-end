@@ -6,26 +6,28 @@ import axios from 'axios'
 import '../css/mentorProfile.css'
 
 function MentorProfile() {
-
-    
+    let dataProfiel = [];
+    // const[dataProfiel, setdataProfiel] = useState([])
 
     useEffect( ()=>{
         const mentor_id = localStorage.getItem('mentorid')
         axios({
             method : 'post',
-            url : 'http://localhost:3001/mentorLogin',
+            url : 'http://localhost:3001/mentorProfile',
             headers : {
                 AuthKey : 'asdfgh '
             },
             data : {
                 'mentorid' : mentor_id
-              
             }
         }) 
         .then(res=>{
             console.log(res)
+
             if(res.data.status === 200){
-                console.log(res.data.message)
+                console.log(res.data)
+                 dataProfiel = res.data.data[0]
+                console.log(dataProfiel)
             }
             else if(res.data.status === 202) {
             // console.log(res.data.message);
@@ -39,6 +41,24 @@ function MentorProfile() {
             console.log(err)
         })
     },[])
+
+    const renderDetailsOfMentor = ()=>{
+        
+        return dataProfiel.map((det) =>{
+            // const pass = det.password.subString(0,4)
+            console.log("hello",det.username)
+            return(
+                <React.Fragment key={det.mentorId}>
+                  <p className="profileDetails">Name : {det.username}</p>
+                  <p className="profileDetails"> Email-ID : {det.email} </p>
+                  <p className="profileDetails">Phone Number : {det.contact} </p>
+                  <p className="profileDetails">Qualification : {det.qualification} </p>
+                  <p className="profileDetails">DOB : {det.dob} </p>
+                  <p className="profileDetails">Total Posts :</p>
+                </React.Fragment>
+            )
+        })
+    }
     
     
     return (
@@ -51,15 +71,24 @@ function MentorProfile() {
                  <center>
                   <img src={mentorLogin} alt = "image" width="150px" height = "150px" className="imgMentorProfile"></img>
                 
-                  <p className="profileDetails">Name : </p>
-                  <p className="profileDetails"> Email-ID : </p>
-                  <p className="profileDetails">Password : </p>
-                  <p className="profileDetails">Phone Number : </p>
-                  <p className="profileDetails">Qualification : </p>
-                  <p className="profileDetails">DOB : </p>
-                  <p className="profileDetails">Total Posts :</p>
+                    
+                        {/* dataProfiel.map((det) =>{
+                        // const pass = det.password.subString(0,4)
+                        return(
+                            <React.Fragment key={det.mentorId}>
+                            <p className="profileDetails">Name : {det.username}</p>
+                            <p className="profileDetails"> Email-ID : {det.email} </p>
+                            <p className="profileDetails">Phone Number : {det.contact} </p>
+                            <p className="profileDetails">Qualification : {det.qualification} </p>
+                            <p className="profileDetails">DOB : {det.dob} </p>
+                            <p className="profileDetails">Total Posts :</p>
+                            </React.Fragment>
+                        )
+                    }) */}
+                    
                   </center>
                  </div>
+                 {renderDetailsOfMentor()}
              </div>
          </div>
         </div>

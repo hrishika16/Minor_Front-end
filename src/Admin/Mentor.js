@@ -4,7 +4,7 @@ import Header from "./Header";
 import '../css/mentor.css'
 import ReactPaginate from 'react-paginate'
 import '../css/Paginate.css'
-import $ from 'jquery'
+import $, { event } from 'jquery'
 let selectedPage;
 
 
@@ -45,13 +45,19 @@ class Mentor extends Component {
     
    }
 
+   handelChangeDob = e =>{
+       this.setState({
+        dob_Mentor : e.target.value
+       })
+   }
+
    handelSubmit = (event)=>{
     const { username_Mentor, email_Mentor, dob_Mentor, qualification_Mentor, contactNumber_Mentor,totalPosts_Mentor,password_Mentor } = this.state
     event.preventDefault()
     // alert('${email_Mentor}')
 //   console.log("my username",username_Mentor)
 //   console.log("my username",email_Mentor)
-//   console.log("my username",dob_Mentor)
+    console.log("my username",dob_Mentor)
    
     if(username_Mentor === ''){
 
@@ -61,10 +67,10 @@ class Mentor extends Component {
 
         document.getElementById('emailErrM').style.display = 'block'
     }
-    // if(dob_Mentor === ''){
+    if(dob_Mentor === ''){
 
-    //     document.getElementById('dobErrM').style.display = 'block'
-    // }
+        document.getElementById('dobErrM').style.display = 'block'
+    }
     if(qualification_Mentor === ''){
 
         document.getElementById('qualiErrM').style.display = 'block'
@@ -80,9 +86,9 @@ class Mentor extends Component {
     
     
     else {
-        window.$("#btnSubmit").on("click",function() {
-           $( "#AddModal" ).hide();
-          });
+        // $("#btnSubmit").on("click",function() {
+            window.$( "#AddModal" ).modal('hide');
+        //   });
        
         // axios({
         //     method : 'post',
@@ -162,36 +168,36 @@ class Mentor extends Component {
     }
 
     handleAxiosDrop() {
-        axios({
-            method : 'post',
-            // url : 'https://api.wappgo.com/legal251AppDashboardAPI/?parameter=paginateNewsalert',
-            // data : {
-            //     "category" : data_catgory,
-            //     "page" : this.state.currentPage
-            // } ,
-            // headers : {
-            //     "jwt" : localStorage.getItem('login')
-            // }
-           })
-           .then(response =>{
-               const data = response.data.data
-                const forPage = response.data.TotalPages
-                console.log(data)
-                if(response.data.status === 200){
-                    this.setState({
-                        pageCount : forPage,
-                        users : data
-                    })
-                }
-                else{
-                    console.log('something went wrong');
-                }
+        // axios({
+        //     method : 'post',
+        //     // url : 'https://api.wappgo.com/legal251AppDashboardAPI/?parameter=paginateNewsalert',
+        //     // data : {
+        //     //     "category" : data_catgory,
+        //     //     "page" : this.state.currentPage
+        //     // } ,
+        //     // headers : {
+        //     //     "jwt" : localStorage.getItem('login')
+        //     // }
+        //    })
+        //    .then(response =>{
+        //        const data = response.data.data
+        //         const forPage = response.data.TotalPages
+        //         console.log(data)
+        //         if(response.data.status === 200){
+        //             this.setState({
+        //                 pageCount : forPage,
+        //                 users : data
+        //             })
+        //         }
+        //         else{
+        //             console.log('something went wrong');
+        //         }
             
-            this.renderTableData()
-           })
-           .catch(error => {
-               console.log('error',error)
-           })
+        //     this.renderTableData()
+        //    })
+        //    .catch(error => {
+        //        console.log('error',error)
+        //    })
     }
 
 
@@ -283,7 +289,7 @@ class Mentor extends Component {
                         </table>
                     </div>
                      {/* pagination */}
-                     <div className='paginee'>
+                     {/* <div className='paginee'>
                         <ReactPaginate
                             previousLabel = {"<"}
                             nextLabel = {">"}
@@ -298,7 +304,7 @@ class Mentor extends Component {
                             activeClassName = {`active `}
                         />
                         <br/>  
-                    </div>
+                    </div> */}
                 </div>
                 {/* Add Modal  */}
                 <div className="modal fade" id="AddModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" >
@@ -381,8 +387,8 @@ class Mentor extends Component {
                                 id ="DOB_Mentor"
                                 name = "DOB_Mentor"
                                 className = "form-control inputElementMentor"
-                                value = {dob_Mentor}
-                                onChange = {this.handelChange}
+                                value = {this.state.dob_Mentor}
+                                onChange = {this.handelChangeDob}
                                 ></input>
                                  <p className="error" id="dobErrM">Date of Birth is required </p>
                                 </div>
@@ -400,7 +406,7 @@ class Mentor extends Component {
                                      <p className="error" id="qualiErrM">Qualification is required </p>
                                     </div>
                                     <p className="labelMentor">Total Posts : {totalPosts_Mentor}</p>
-                                <div class="modal-footer">
+                                <div className="modal-footer">
                               <button type="submit" className="btn btn-secondary submitBtnMentor"  onClick={this.handelSubmit} id="btnSubmit">Submit</button>
                               </div>
                                

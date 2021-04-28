@@ -56,7 +56,7 @@ const onAddClick = (e) =>{
 }
 
     return (
-        <div>
+        <div className='postM'>
             <Header></Header>
            <br></br>
             
