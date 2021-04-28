@@ -32,7 +32,9 @@ position: relative;
     width: 340px;
     text-align: center;
 }
-
+.btn_submitCL:focus{
+    outline: none;
+}
 #userErr{
     display: none;
 }
@@ -43,7 +45,7 @@ position: relative;
 
 .loginBorder{
 
-    border: 2px solid #023858;
+    /* border: 2px solid #023858; */
     border-radius: 10px;
 }
 

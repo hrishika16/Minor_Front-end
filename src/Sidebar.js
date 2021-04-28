@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './css/sidebar.css'
 import userIcon from './img/userIcon.svg'
 
@@ -15,9 +16,11 @@ class Sidebar extends Component {
                     </div>
                     <br/>
                     <div className='sidess_11'>
-                        <button className='linkss_11'>Profile</button>
+                        {/* <button className='linkss_11'>Profile</button> */}
+                        <Link to='/profile' className='linkss_12'>Profile</Link>
                     </div>
                     <div className='sidess_11'>
+                    
                         <button className='linkss_11'>Chat Screen</button>
                     </div>
                     <div className='sidess_11'>

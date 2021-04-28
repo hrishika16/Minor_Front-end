@@ -31,6 +31,10 @@
     height: 70px;
 }
 
+.hremp_11{
+    height: 70px;
+}
+
 .start_yr{
     width: 110px;
     /* width: 100%; */
@@ -107,9 +111,9 @@
     font-size: 17px;
     width: 100%;
     background: #F8951D;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px;
     margin-top: 4px;
-    display: none;
+    display: none; */
 }
 
 .next_2btn:focus{

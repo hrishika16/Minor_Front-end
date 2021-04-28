@@ -13,6 +13,8 @@ class User extends Component {
     
         this.state = {
              users : [],
+             users2 : [],
+             j : 10,
              offset : 0,
              data : [],
              perPage : 9 ,
@@ -23,38 +25,13 @@ class User extends Component {
     }
 
     componentDidMount(){
-        // https://jsonplaceholder.typicode.com/users
         this.handleAxiosDrop()
-        // axios({
-        //     method : 'get',
-        //     url : 'https://jsonplaceholder.typicode.com/users',
-        //     headers : {
-        //         AuthKey : 'asdfgh '
-        //     },
-        //     data : {
-        //         category : this.state.category
-        //     }
-        // })
-        // .then(resp =>{
-        //     console.log(resp.data)
-        //     this.setState({
-        //         users : resp.data
-        //     })
-        //     console.log(this.state.users)
-        // })
-        // .catch(error =>{
-        //     console.log('err',error)
-        // })
     }
 
     handleAxiosDrop() {
         axios({
             method : 'post',
             url : 'http://localhost:3001/adminUsersData',
-            // data : {
-            //     "category" : data_catgory,
-            //     "page" : this.state.currentPage
-            // } ,
             headers : {
                 AuthKey : 'asdfgh '
             },
@@ -64,14 +41,16 @@ class User extends Component {
             }
            })
            .then(response =>{
-               const data = response.data
+               const data = response.data.data
                 const forPage = response.data.TotalPages
                 console.log(data)
                 if(response.data.status === 200){
                     this.setState({
                         pageCount : forPage,
-                        users : data
+                        users : data,
+                        users2 : this.state.users.slice(0,this.state.j)
                     })
+                    console.log("data",this.state.users)
                 }
                 else{
                     console.log('something went wrong');
@@ -84,51 +63,27 @@ class User extends Component {
            })
     }
 
+    submitHandler = () =>{
+            
+        this.setState({
+            j : this.state.j + 5,
+            users2 : this.state.users.slice(0,this.state.j)
+        });
+    }
 
-    handlePageClick = e =>{
-        selectedPage = e.selected;
-       const offset = selectedPage * this.state.perPage;
 
-       this.setState({
-           currentPage : selectedPage,
-           offset : offset
-       },()=>{
-        this.handleAxiosDrop()
-       } )
-   }
 
     renderTableData() {
         return this.state.users.map((user) => {
            return (
-               <React.Fragment key={user.id}>
+               <React.Fragment key={user._id}>
               <tr >
-                 <td >{user.username}</td>
+              <td>{user.userID}</td>
+                 <td >{user.first_name} {user.last_name}</td>
                  <td >{user.email}</td>
-                 <td>{user.phone}</td>
-                 <td>{user.website}</td>
-                 <td>{user.id}</td>
-                 <td >
-                    <div className='row'>
-                        <div className='col-lg-6 col-12 up_w'>
-                            {user.name}
-                        </div>
-                        <div className='col-lg-6 col-12 btns_w'>
-                            <div className="dropdown">
-                                <button className="dropdown-toggle see_more" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    See more
-                                </button>
-                                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a className="dropdown-item seemore_dropitem" href="#">Add</a>
-                                    <a className="dropdown-item seemore_dropitem" href="#">Remove</a>
-                                    <a className="dropdown-item seemore_dropitem1" href="#">More Details</a>
-                                </div>
-                        </div>
-                        </div>
-                    </div>
-                    {/* <button className=' see_more'  >  See more</button>   dropdown see more - remove,suspend(cannot login from this account),more details(modal to show all details and edit option) */}   
-                    
-                    
-                 </td> 
+                 <td>{user.category}</td>
+                 
+                 
               </tr>
               
               </React.Fragment>
@@ -139,12 +94,11 @@ class User extends Component {
      renderTableHeader() {
         return(
             <React.Fragment>
+                <th>Id</th>
                 <th>Username</th>
                 <th>Email</th>
-                <th>Contact</th>
                 <th>Category</th>
-                <th>Date</th>
-                <th>Time</th>
+                
             </React.Fragment>
         )
      }
@@ -174,23 +128,9 @@ class User extends Component {
                             </tbody>
                         </table>
                     </div>
-                    {/* pagination */}
-                    <div className='paginee'>
-                        <ReactPaginate
-                            previousLabel = {"<"}
-                            nextLabel = {">"}
-                            breakLabel = {"...."}
-                            breakClassName = {"break-me"}
-                            pageCount = {this.state.pageCount}
-                            marginPagesDisplayed = {2}
-                            pageRangeDisplayed = {5}
-                            onPageChange = {this.handlePageClick}
-                            containerClassName = {'pagination pg_1'}
-                            subContainerClassName = {'pages pagination pg_1'}
-                            activeClassName = {`active `}
-                        />
-                        <br/>  
-                    </div>
+                    <center>
+                        <button className='see_more'>See More</button>
+                    </center>
                 </div>
             </div>
         )

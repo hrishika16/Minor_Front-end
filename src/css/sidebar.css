@@ -39,18 +39,39 @@
 
 .sidess_11{
     padding-left: 20px;
+    margin-bottom: 20px;
 }
 
 .linkss_11{
     color: #fff;
     background: none;
     border: none;
-    margin-bottom: 20px;
+    padding: 0px;
+    /* margin-bottom: 20px; */
     font-family: 'carosM';
     font-size: 17px;
     vertical-align: middle;
 }
 
+.linkss_11:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.linkss_12{
+    color: #fff;
+    background: none;
+    border: none;
+    /* margin-bottom: 20px; */
+    font-family: 'carosM';
+    font-size: 17px;
+    vertical-align: middle;
+}
+
+.linkss_12:hover{
+    text-decoration: none;
+    color: #fff;
+}
 .linkss_11:focus{
     outline: none;
 }
