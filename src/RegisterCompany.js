@@ -11,9 +11,10 @@ function RegisterCompany() {
     const[yoeReg, setYOEReg] = useState('')
     const[industryReg, setIndustryReg] = useState('')
     const[overviewReg, setOverviewReg] = useState('')
-    const[genderReg, setGenderReg] = useState('')
-    const[pinReg, setPinReg] = useState('')
+    const[companySize, setCompanySize] = useState('')
+    const[companyType, setCompanyType] = useState('')
     const[sendTo2,sendToStep2] = useState(false)
+
 
     const firstDetailsReg =(event) =>{
         event.preventDefault()
@@ -37,7 +38,7 @@ function RegisterCompany() {
             document.querySelector('#error_state').innerHTML = 'State is Required'
             document.getElementById('error_state').style.display = 'block'
         }
-        if(genderReg === ''){
+        if(companySize === ''){
             document.querySelector('#error_gender').innerHTML = 'Gender is Required'
             document.getElementById('error_gender').style.display = 'block'
         }
@@ -45,7 +46,7 @@ function RegisterCompany() {
             document.querySelector('#error_city').innerHTML = 'City is Required'
             document.getElementById('error_city').style.display = 'block'
         }
-        if(pinReg === ''){
+        if(companyType === ''){
             document.querySelector('#error_pc').innerHTML = 'Preferential City is Required'
             document.getElementById('error_pc').style.display = 'block'
         }
@@ -65,8 +66,8 @@ function RegisterCompany() {
                         "dob" : yoeReg,
                         "state" : industryReg,
                         "city" : overviewReg,
-                        "gender" : genderReg,
-                        "prefCity" : pinReg,
+                        "companySize" : companySize,
+                        "companyType" : companyType,
                         "email" : email
                     }
             }) 
@@ -138,19 +139,20 @@ function RegisterCompany() {
                     </div>
                     <div className='row'>
                         <div className='col-lg-6 col-12'>
-                            <div className='hr_11'>
-                                <p className='field_names'>Address <img src={star} alt='required field' className='requ_1' /></p>
+                        <div className='hr_11'>
+                                <p className='field_names'>Industry <img src={star} alt='required field' className='requ_1' /></p>
                                 <input
                                     type='text'
                                     placeholder='Type here...'
-                                    maxLength='10'
-                                    id='address'
+                                    id='industry'
+                                    maxLength='20'
                                     className='inp_register'
-                                    value={addressC}
-                                    onChange={e => setAddressC(e.target.value)}
+                                    value={industryReg}
+                                    onChange={e => setIndustryReg(e.target.value)}
                                 />
-                                <p className='error_reg' id='error_cont'></p>
+                                <p className='error_reg' id='error_state'></p>
                             </div>
+                            
                         </div>
                         <div className='col-lg-6 col-12'>
                             <div className='hr_11'>
@@ -181,31 +183,74 @@ function RegisterCompany() {
                                     // onChange={}
                                 />
                             </div> */}
-                   
-                    <div className='row'>
+
+                            <div className='row'>
                         <div className='col-lg-6 col-12'>
                             <div className='hr_11'>
-                                <p className='field_names'>Industry <img src={star} alt='required field' className='requ_1' /></p>
+                                <p className='field_names'>Company Size <img src={star} alt='required field' className='requ_1' /></p>
                                 <input
-                                    type='text'
+                                    type='number'
                                     placeholder='Type here...'
-                                    id='industry'
-                                    maxLength='20'
+                                    id='companySize'
+                                    maxLength='10'
                                     className='inp_register'
-                                    value={industryReg}
-                                    onChange={e => setIndustryReg(e.target.value)}
+                                    value={companySize}
+                                    onChange={e => setCompanySize(e.target.value)}
                                 />
-                                <p className='error_reg' id='error_state'></p>
+                                <p className='error_reg' id='error_gender'></p>
                             </div>
                         </div>
                         <div className='col-lg-6 col-12'>
                             <div className='hr_11'>
-                                <p className='field_names'>Overiew <img src={star} alt='required field' className='requ_1' /></p>
-                                <input
+                                <p className='field_names'>Company Type <img src={star} alt='required field' className='requ_1' /></p>
+                                <select className="custom-select inp_register" value={companyType}  onChange={e => setCompanyType(e.target.value)}>
+                                    <option selected value="0">Company Type</option>
+                                    <option value="1">One Person Company (OPC) </option>
+                                    <option value="2">Limited Liability Partnership (LLP)</option>
+                                    <option value="3">Private Limited Company</option>
+                                    <option value="4">Public Limited Company (PLC)</option>
+                                </select>
+                               
+                                {/* <input
                                     type='text'
                                     placeholder='Type here...'
+                                    id='companyType'
+                                    maxLength='6'
+                                    className='inp_register'
+                                    value={companyType}
+                                    onChange={e => setCompanyType(e.target.value)}
+                                /> */}
+                                <p className='error_reg' id='error_pc'></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                    <div className='row'>
+                        <div className='col-lg-6 col-12'>
+                        <div className='hr_11'>
+
+                        <p className='field_names'>Address <img src={star} alt='required field' className='requ_1' /></p>
+                        <textarea
+                            
+                            placeholder='Type here...'
+                            maxLength='50'
+                            id='address'
+                            className='inp_register'
+                            value={addressC}
+                            onChange={e => setAddressC(e.target.value)}
+                        />
+                        <p className='error_reg' id='error_cont'></p>
+                        </div>
+                        </div>
+                        <div className='col-lg-6 col-12'>
+                            <div className='hr_11'>
+                                <p className='field_names'>Overiew <img src={star} alt='required field' className='requ_1' /></p>
+                                <textarea
+                                 
+                                    placeholder='Type here...'
                                     id='overviewReg'
-                                    maxLength='20'
+                                    maxLength='50'
                                     className='inp_register'
                                     value={overviewReg}
                                     onChange={e => setOverviewReg(e.target.value)}
@@ -215,39 +260,7 @@ function RegisterCompany() {
                         </div>
                     </div>
 
-                    <div className='row'>
-                        <div className='col-lg-6 col-12'>
-                            <div className='hr_11'>
-                                <p className='field_names'>Gender <img src={star} alt='required field' className='requ_1' /></p>
-                                <input
-                                    type='text'
-                                    placeholder='Type here...'
-                                    id='contactNo'
-                                    maxLength='20'
-                                    className='inp_register'
-                                    value={genderReg}
-                                    onChange={e => setGenderReg(e.target.value)}
-                                />
-                                <p className='error_reg' id='error_gender'></p>
-                            </div>
-                        </div>
-                        <div className='col-lg-6 col-12'>
-                            <div className='hr_11'>
-                                <p className='field_names'>Preferential City <img src={star} alt='required field' className='requ_1' /></p>
-                                <input
-                                    type='text'
-                                    placeholder='Type here...'
-                                    id='contactNo'
-                                    maxLength='6'
-                                    className='inp_register'
-                                    value={pinReg}
-                                    onChange={e => setPinReg(e.target.value)}
-                                />
-                                <p className='error_reg' id='error_pc'></p>
-                            </div>
-                        </div>
-                    </div>
-                    
+                   
                     <button  className='next_btn_1' onClick={firstDetailsReg}>Next</button>
                 </div>
                 </div>
