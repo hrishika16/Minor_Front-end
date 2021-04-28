@@ -2,7 +2,10 @@ import React,{useState} from 'react'
 import axios from 'axios'
 import './css/landingP.css'
 import { Redirect } from 'react-router'
+import targetUsers from './img/users_landing.jpg'
+import features from './img/landing_features.png'
 import $ from 'jquery'
+
 
 function LandingPage(props) {
 
@@ -128,7 +131,7 @@ function LandingPage(props) {
     
 
     return (
-        <div>
+        <div  className = "mainLanding">
         {/* navbar */}
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <a className="navbar-brand" href="#">Navbar</a>
@@ -247,6 +250,67 @@ function LandingPage(props) {
                 </div>
             </div>
             </div>
+           
+           <div className="target_user">
+           <center>
+           <h1 className = "headingUsers">Our Target Users</h1>
+           </center>
+           <div className = "container-fluid">
+                <div className = "row">
+                    <div className = "col-12 col-lg-8 ">
+                    <img src = {targetUsers} alt = "target users"></img>
+                    </div>
+                    <div className = "col-12 col-lg-4">
+                    <center>
+                    <div className="userBoxL">
+                    <center>
+                   <h1 className = "tochooseL">user</h1>
+                   </center>
+                   </div>
+
+                   <br></br>
+                   <div className="userBoxL">
+                   <center>
+                   <h1 className = "tochooseL">user</h1>
+                   </center>
+                   </div>
+                   <br></br>
+                   <div className="userBoxL">
+                   <center>
+                   <h1 className = "tochooseL">user</h1>
+                   </center>
+                   </div>
+                   <br></br>
+                   <div className="userBoxL">
+                   <h1 className = "tochooseL">user</h1>
+                   </div>
+                   </center>
+                </div>
+                {/* <div className = "col-12 col-lg-2">
+                <div className="card text-white  mb-3 user_detailsLR">
+                   
+                    <div className="card-header ">Startup</div>
+                    <div className="card-header">Company</div>
+                    {/* <div className="card-body">
+                        <h5 className="card-title">Dark card title</h5>
+                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div> */}
+                    {/* </div> */} 
+
+                </div>
+
+              
+           </div>
+           <br></br>
+           <center>
+           <h2 className = "headingUsers">Our Features</h2>
+           <h3 className = "tochooseL">Why To Choose Us</h3>
+          
+           <img src = {features} alt = "features" ></img>
+           </center>
+        
+           
+           </div>
         </div>
     )
 }
