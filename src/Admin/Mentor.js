@@ -32,13 +32,6 @@ class Mentor extends Component {
 
    handelChange = (event)=>{
     this.setState({
-    //    username_Mentor: event.target.value,
-    //    email_Mentor : event.target.value,
-    //    dob_Mentor : event.target.value,
-    //    password_Mentor : event.target.value,
-    //    qualification_Mentor : event.target.value,
-    //    password_Mentor: event.target.value,
-    //    contactNumber_Mentor : event.target.value
     [event.target.name]: event.target.value
   
       })
@@ -54,10 +47,6 @@ class Mentor extends Component {
    handelSubmit = (event)=>{
     const { username_Mentor, email_Mentor, dob_Mentor, qualification_Mentor, contactNumber_Mentor,totalPosts_Mentor,password_Mentor } = this.state
     event.preventDefault()
-    // alert('${email_Mentor}')
-//   console.log("my username",username_Mentor)
-//   console.log("my username",email_Mentor)
-    console.log("my username",dob_Mentor)
    
     if(username_Mentor === ''){
 
@@ -90,43 +79,43 @@ class Mentor extends Component {
             window.$( "#AddModal" ).modal('hide');
         //   });
        
-        // axios({
-        //     method : 'post',
-        //     // url : `http://localhost:3001/mentorSignup`,
-        //     headers : {
-        //         AuthKey : 'asdfgh'
-        //     },
-        //     data : {
-        //         username : username_Mentor,
-        //         email : email_Mentor,
-        //         password : password_Mentor ,
-        //         contact : contactNumber_Mentor,
-        //         dob : dob_Mentor,
-        //         qualification : qualification_Mentor
-        //     }
+        axios({
+            method : 'post',
+            url : `http://localhost:3001/mentorSignup`,
+            headers : {
+                AuthKey : 'asdfgh'
+            },
+            data : {
+                username : username_Mentor,
+                email : email_Mentor,
+                password : password_Mentor ,
+                contact : contactNumber_Mentor,
+                dob : dob_Mentor,
+                qualification : qualification_Mentor
+            }
             
-        // })
-        // .then(resp =>{
-        //     console.log(resp.data)
-        //         if(resp.data.status === 200){
-        //             window.$("#btnSubmit").click(function() {
-        //                 console.log("work hua ")
-        //                 $( "#AddModal" ).hide();
-        //               });
-        //             console.log(resp.data.message)
-        //             // sendToStep2(true)
-        //         }
-        //         else if(resp.data.status === 202) {
-        //         // console.log(res.data.message);
-        //         console.log(" Please center with correct credentials")
-        //         }
-        //         else{
-        //             console.log("Some error occured")
-        //         }
-        // })
-        // .catch(error =>{
-        //     console.log('err',error)
-        // })
+        })
+        .then(resp =>{
+            console.log(resp.data)
+                if(resp.data.status === 200){
+                    window.$("#btnSubmit").click(function() {
+                        console.log("work hua ")
+                        $( "#AddModal" ).hide();
+                      });
+                    console.log(resp.data.message)
+                    // sendToStep2(true)
+                }
+                else if(resp.data.status === 202) {
+                // console.log(res.data.message);
+                console.log(" Please center with correct credentials")
+                }
+                else{
+                    console.log("Some error occured")
+                }
+        })
+        .catch(error =>{
+            console.log('err',error)
+        })
 
     }
     

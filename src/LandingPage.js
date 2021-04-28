@@ -120,7 +120,7 @@ function LandingPage(props) {
         window.$('#companyModalSingUp').modal('hide');
         return(
             <Redirect
-                to='/registerForComapany'
+                to='/registerForCompany'
             />
         )
     }

@@ -1,14 +1,50 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Header from './Admin/Header'
 import HeaderUser from './HeaderUser'
 import userIcon from './img/userIcon.svg'
 import './css/companyProfile.css'
+import axios from 'axios'
 import building from './img/companyBuilding.jpg'
 
 function CompanyProfile() {
+
+    const[companyData, setCompanyData] = useState([])
+
+    useEffect( ()=>{
+        const companyid = localStorage.getItem("companyid")
+        axios({
+            method : 'post',
+            url : 'http://localhost:3001/companyProfile',
+            data: {
+                'companyid' : companyid
+              },
+              headers : {
+                AuthKey : 'asdfgh '
+              }
+        }) 
+        // setdataPost([res.data])
+        .then(resp=>{
+            console.log(resp)
+            if(resp.data.status === 200){
+              //error occur 
+              setCompanyData([resp.data.data[0]])
+              console.log(resp.data.message)
+            }
+            else if(resp.data.status === 202) {
+              // console.log(res.data.message);
+              console.log(" Please center with correct credentials")
+            }
+            else{
+                console.log("Some error occured")
+            }
+          })
+          .catch(error=>{
+            console.log(error)
+          })
+    },[])
+
     return (
         <div>
-           {/* <HeaderUser></HeaderUser> */}
            <div className='mainCP'>
                 <div className='sidebardCP'> 
                     {/* User icon */}

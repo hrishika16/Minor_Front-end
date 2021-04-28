@@ -63,7 +63,7 @@ function RegisterCompany() {
         }
         else{
             const email = localStorage.getItem("emailC")
-            
+            console.log(companyName,website,addressC,yoeReg,industryReg,overviewReg,companySize,companyType,email,aboutwReg,contactNumber)
             axios({
                 method : 'post',
                     url : `http://localhost:3001/comapnypage1`,
@@ -104,14 +104,14 @@ function RegisterCompany() {
         }
     }
 
-    // if(sendToProfileOfComp){
-    //     return(
-    //         <Redirect to= {{
-    //             pathname : "/page2" 
-    //         }}
-    //         />
-    //     )
-    // }
+    if(sendToProfileOfComp){
+        return(
+            <Redirect to= {{
+                pathname : "/companyProfile" 
+            }}
+            />
+        )
+    }
 
         return (
             <div className='whole_12'>
