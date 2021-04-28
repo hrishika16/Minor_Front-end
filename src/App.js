@@ -24,6 +24,7 @@ import Waiting from './Waiting';
 import MentorLogin from './Admin/MentorLogin';
 import MentorProfile from './Admin/MentorProfile';
 import MentorPost from './Admin/MentorPost';
+import RegisterCompany from './RegisterCompany';
 let isLoggedIn;
 
 
@@ -57,6 +58,7 @@ function App() {
               <Route exact path = '/mentorLogin' component = {MentorLogin}></Route>
               <Route exact path = '/mentorProfile' component={MentorProfile}></Route>
               <Route exact path = '/mentorPost' component = {MentorPost}></Route>
+              <Route exact path='/registerForComapany' component={RegisterCompany} />
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}

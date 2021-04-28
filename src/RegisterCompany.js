@@ -1,40 +1,39 @@
-import React, { useState } from 'react'
+import React,{useState} from 'react'
 import { Redirect } from 'react-router-dom'
 import './css/registerU.css'
 import star from './img/star.svg'
 import axios from 'axios'
 
-
-function RegisterU() {
-    const[firstNameReg, setFirstNameReg] = useState('')
-    const[lastNameReg, setLastNameReg] = useState('')
-    const[contactNumReg, setContactNumReg] = useState('')
-    const[dobReg, setDobReg] = useState('')
-    const[stateReg, setStateReg] = useState('')
-    const[cityReg, setCityReg] = useState('')
+function RegisterCompany() {
+    const[companyName, setCompanyName] = useState('')
+    const[website, setWebsite] = useState('')
+    const[addressC, setAddressC] = useState('')
+    const[yoeReg, setYOEReg] = useState('')
+    const[industryReg, setIndustryReg] = useState('')
+    const[overviewReg, setOverviewReg] = useState('')
     const[genderReg, setGenderReg] = useState('')
     const[pinReg, setPinReg] = useState('')
     const[sendTo2,sendToStep2] = useState(false)
 
     const firstDetailsReg =(event) =>{
         event.preventDefault()
-        if(firstNameReg === ''){
+        if(companyName === ''){
             document.querySelector('#error_fn').innerHTML = 'First Name is Required'
             document.getElementById('error_fn').style.display = 'block'
         }
-        if(lastNameReg === ''){
+        if(website === ''){
             document.querySelector('#error_ln').innerHTML = 'Last Name is Required'
             document.getElementById('error_ln').style.display = 'block'
         }
-        if(contactNumReg === ''){
+        if(addressC === ''){
             document.querySelector('#error_cont').innerHTML = 'Contact Number is Required'
             document.getElementById('error_cont').style.display = 'block'
         }
-        if(dobReg === ''){
+        if(yoeReg === ''){
             document.querySelector('#error_dob').innerHTML = 'DOB is Required'
             document.getElementById('error_dob').style.display = 'block'
         }
-        if(stateReg === ''){
+        if(industryReg === ''){
             document.querySelector('#error_state').innerHTML = 'State is Required'
             document.getElementById('error_state').style.display = 'block'
         }
@@ -42,7 +41,7 @@ function RegisterU() {
             document.querySelector('#error_gender').innerHTML = 'Gender is Required'
             document.getElementById('error_gender').style.display = 'block'
         }
-        if(cityReg === ''){
+        if(overviewReg === ''){
             document.querySelector('#error_city').innerHTML = 'City is Required'
             document.getElementById('error_city').style.display = 'block'
         }
@@ -60,12 +59,12 @@ function RegisterU() {
                         AuthKey : 'asdfgh'
                     },
                     data : {
-                        "first_name" : firstNameReg ,
-                        "last_name" : lastNameReg,
-                        "contact" : contactNumReg,
-                        "dob" : dobReg,
-                        "state" : stateReg,
-                        "city" : cityReg,
+                        "first_name" : companyName ,
+                        "last_name" : website,
+                        "contact" : addressC,
+                        "dob" : yoeReg,
+                        "state" : industryReg,
+                        "city" : overviewReg,
                         "gender" : genderReg,
                         "prefCity" : pinReg,
                         "email" : email
@@ -108,30 +107,30 @@ function RegisterU() {
                     <div className='row'>
                         <div className='col-lg-6 col-12'>
                             <div className='hr_11'>
-                                <p className='field_names'>First Name <img src={star} alt='required field' className='requ_1' /> </p>
+                                <p className='field_names'>Company Name <img src={star} alt='required field' className='requ_1' /> </p>
                                 <input
                                     type='text'
                                     placeholder='Type here...'
-                                    id='firstName'
+                                    id='companyName'
                                     maxLength='30'
                                     className='inp_register'
-                                    value={firstNameReg}
-                                    onChange={e => setFirstNameReg(e.target.value)}
+                                    value={companyName}
+                                    onChange={e => setCompanyName(e.target.value)}
                                 />
                                 <p className='error_reg' id='error_fn'></p>
                             </div>
                         </div>
                         <div className='col-lg-6 col-12'>
                             <div className='hr_11'>
-                                <p className='field_names'>Last Name <img src={star} alt='required field' className='requ_1' /></p>
+                                <p className='field_names'>Website <img src={star} alt='required field' className='requ_1' /></p>
                                 <input
                                     type='text'
                                     placeholder='Type here...'
-                                    id='lastName'
+                                    id='website'
                                     maxLength='30'
                                     className='inp_register'
-                                    value={lastNameReg}
-                                    onChange={e => setLastNameReg(e.target.value)}
+                                    value={website}
+                                    onChange={e => setWebsite(e.target.value)}
                                 />
                                 <p className='error_reg' id='error_ln'></p>
                             </div>
@@ -140,28 +139,28 @@ function RegisterU() {
                     <div className='row'>
                         <div className='col-lg-6 col-12'>
                             <div className='hr_11'>
-                                <p className='field_names'>Contact Number <img src={star} alt='required field' className='requ_1' /></p>
+                                <p className='field_names'>Address <img src={star} alt='required field' className='requ_1' /></p>
                                 <input
-                                    type='tel'
+                                    type='text'
                                     placeholder='Type here...'
                                     maxLength='10'
-                                    id='contactNo'
+                                    id='address'
                                     className='inp_register'
-                                    value={contactNumReg}
-                                    onChange={e => setContactNumReg(e.target.value)}
+                                    value={addressC}
+                                    onChange={e => setAddressC(e.target.value)}
                                 />
                                 <p className='error_reg' id='error_cont'></p>
                             </div>
                         </div>
                         <div className='col-lg-6 col-12'>
                             <div className='hr_11'>
-                                <p className='field_names'>DOB <img src={star} alt='required field' className='requ_1' /></p>
+                                <p className='field_names'>Date Of Establishment<img src={star} alt='required field' className='requ_1' /></p>
                                 <input
                                     type='date'
                                     className='start_yr_inp'
-                                    id='start_y'
-                                    value={dobReg}
-                                    onChange={e => setDobReg(e.target.value)}
+                                    id='start_doe'
+                                    value={yoeReg}
+                                    onChange={e => setYOEReg(e.target.value)}
                                 />
                                 <p className='error_reg' id='error_dob'></p>
                             </div>
@@ -186,30 +185,30 @@ function RegisterU() {
                     <div className='row'>
                         <div className='col-lg-6 col-12'>
                             <div className='hr_11'>
-                                <p className='field_names'>State <img src={star} alt='required field' className='requ_1' /></p>
+                                <p className='field_names'>Industry <img src={star} alt='required field' className='requ_1' /></p>
                                 <input
                                     type='text'
                                     placeholder='Type here...'
-                                    id='contactNo'
+                                    id='industry'
                                     maxLength='20'
                                     className='inp_register'
-                                    value={stateReg}
-                                    onChange={e => setStateReg(e.target.value)}
+                                    value={industryReg}
+                                    onChange={e => setIndustryReg(e.target.value)}
                                 />
                                 <p className='error_reg' id='error_state'></p>
                             </div>
                         </div>
                         <div className='col-lg-6 col-12'>
                             <div className='hr_11'>
-                                <p className='field_names'>City <img src={star} alt='required field' className='requ_1' /></p>
+                                <p className='field_names'>Overiew <img src={star} alt='required field' className='requ_1' /></p>
                                 <input
                                     type='text'
                                     placeholder='Type here...'
-                                    id='contactNo'
+                                    id='overviewReg'
                                     maxLength='20'
                                     className='inp_register'
-                                    value={cityReg}
-                                    onChange={e => setCityReg(e.target.value)}
+                                    value={overviewReg}
+                                    onChange={e => setOverviewReg(e.target.value)}
                                 />
                                 <p className='error_reg' id='error_city'></p>
                             </div>
@@ -254,6 +253,8 @@ function RegisterU() {
                 </div>
             </div>
         )
-    }
+}
 
-export default RegisterU
+
+
+export default RegisterCompany

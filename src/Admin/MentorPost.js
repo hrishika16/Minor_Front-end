@@ -13,14 +13,14 @@ const[intialMessageM,setMessage] = useState('')
 const onAddClick = (e) =>{
 
     e.preventDefault()
-  if(intialSubjectM ===''){
- document.getElementById("subjectErrM").style.display="block"
+    if(intialSubjectM ===''){
+        document.getElementById("subjectErrM").style.display="block"
 
-  }
-  if(intialMessageM ===''){
-    document.getElementById("messageErrM").style.display="block"
+    }
+    if(intialMessageM ===''){
+        document.getElementById("messageErrM").style.display="block"
  
-     }
+    }
     
     
        else{
@@ -117,9 +117,16 @@ const onAddClick = (e) =>{
                 <p className="error" id="subjectErrM"> Subject is required</p>
                 </div>
                    <br></br>
+<<<<<<< HEAD
                    <div className = "constHeightM">
                   
                         <h5 class="card-title">Type Your Message Here</h5>
+=======
+                   <div className="card text-white bg-primary mb-3">
+                    <div className="card-header">Message : </div>
+                    <div className="card-body">
+                        <h5 className="card-title">Type Your Message Here</h5>
+>>>>>>> e27c4de5bc955af2b449491e272676a9ebd5918b
                         <textarea className="card-text messageM"
                       
                         value = {intialMessageM} 
