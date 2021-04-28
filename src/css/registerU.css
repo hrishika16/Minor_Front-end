@@ -18,6 +18,7 @@
 .nnn{
     border: 1px solid rgba(45, 45, 45, 0.2);
     padding: 2%;
+    /* height: 560px; */
 }
 .step_1 {
     font-family: 'caros_bold';
@@ -146,6 +147,44 @@
     display: none;
 }
 
+#error_compn{
+    display: none;
+}
+
+#error_web{
+    display: none;
+}
+
+#error_address{
+    display: none;
+}
+
+#error_yoe{
+    display: none;
+}
+
+#error_ind{
+    display: none;
+}
+
+#error_cmps{
+    display: none;
+}
+#error_overview{
+    display: none;
+}
+
+#error_ptype{
+    display: none;
+}
+
+#error_aboutw{
+    display: none;
+}
+
+#error_contact{
+    display: none;
+}
 @media(max-width:1200px){
     .pddd{
         padding: 4% 8%;

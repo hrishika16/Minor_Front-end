@@ -1,36 +1,106 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Sidebar from '../Sidebar'
 import Header from './Header'
 import userIcon from '../img/userIcon.svg'
 import '../css/mentorPost.css'
 import axios from 'axios'
+import userI from '../img/userIcon.svg'
 
 
 function MentorPost() {
 
 const[intialSubjectM, setSubject] = useState('')
 const[intialMessageM,setMessage] = useState('')
+const[dataPost, setdataPost] = useState([])
+const mentor_id = localStorage.getItem('mentorid')
+const mentorUsername = localStorage.getItem('mentorUsername')
+useEffect( ()=>{
+    
+    axios({
+        method : 'post',
+        url : 'http://localhost:3001/allMentorPost',
+        data: {
+            'mentorid' : mentor_id,
+            'action' : 'allPost'
+          },
+          headers : {
+            AuthKey : 'asdfgh '
+          }
+    }) 
+    // setdataPost([res.data])
+    .then(resp=>{
+        console.log(resp)
+        if(resp.data.status === 200){
+          //error occur 
+          setdataPost([resp.data.data[0]])
+          console.log(resp.data.message)
+        }
+        else if(resp.data.status === 202) {
+          // console.log(res.data.message);
+          console.log(" Please center with correct credentials")
+        }
+        else{
+            console.log("Some error occured")
+        }
+      })
+      .catch(error=>{
+        console.log(error)
+      })
+},[])
+
+
+const renderRequests =()=> {
+    return dataPost.map((II) => {
+        console.log(II.id)
+        
+        return (
+            <React.Fragment key={II.id}>
+            <div className='post_boxM'>
+                <div className='row someborder'>
+                    <div className='col-3 '>
+                        <img src={userIcon} alt='profile' className='post_ImgM' />
+                    </div>
+                    <div className='col-9'>
+                        <p className='user_NameM'>{mentorUsername}</p>
+                    </div>
+                </div>
+                <div className=' box_posttM'>
+                    <p className = "box_posttSubH">Subject:<span className='something'> {II.subject} </span> </p>
+                    <p  className = "box_posttSubH" >Message  </p>
+                    <p className='msg_post'>
+                    {II.message}
+                    </p>
+                    <br></br>
+                </div>
+                          
+                </div>
+           </React.Fragment>
+        )
+     })
+}
 
 const onAddClick = (e) =>{
 
     e.preventDefault()
-    if(intialSubjectM ===''){
-        document.getElementById("subjectErrM").style.display="block"
-
+    if(intialSubjectM === ''){
+        document.querySelector('#subj_err').innerHTML = 'Subject is Required'
+        document.getElementById('subj_err').style.display = 'block'
     }
-    if(intialMessageM ===''){
-        document.getElementById("messageErrM").style.display="block"
- 
+    if(intialMessageM === ''){
+        document.querySelector('#msg_err').innerHTML = 'Message is Required'
+        document.getElementById('msg_err').style.display = 'block'
     }
     
     
        else{
+        
             axios({
               method : 'post',
-            //   url:'http://localhost:3001/contactUs',
+              url : 'http://localhost:3001/mentorPost',
               data: {
-               message : intialMessageM ,
-                subject : intialSubjectM
+                'mentorid' : mentor_id,
+                'subject' : intialSubjectM,
+                'message' : intialMessageM
               },
               headers : {
                 AuthKey : 'asdfgh '
@@ -61,81 +131,50 @@ const onAddClick = (e) =>{
             <Header></Header>
           
             
-            <div className='container-fluid  postM '>
+            <div className='container '>
              <div className = 'row rowMargin'>
-           
-                 <div className = 'col-12 col-lg-6 container'>
-                 <center>
-                 <h1>All Posts </h1>
-                 </center>
-                   <div className='post_boxM'>
-                            <div className='row'>
-                                <div className='col-3 '>
-                                    <img src={userIcon} alt='profile' className='post_ImgM' />
-                                </div>
-                                <div className='col-9'>
-                                    <p className='user_NameM'>Name</p>
-                                </div>
-                            </div>
+             <div className='col-lg-1'></div>
+                <div className='col-lg-5'>
+                <div className='post_boxM'>
                             <div className=' box_posttM'>
+                            <div className='box_2'>
+                            <p class="text-center login-txt">Add Post</p>
+                            <div class="box1">
+                                <p class="border_txt"> Subject</p>
+                                <input type="text" id="user" maxLength="35" class="form-control inp_mm" value={intialSubjectM} onChange={e => setSubject(e.target.value)} placeholder="Type here..."/>
+                                <p className='error' id='subj_err'></p>
+                            </div>
+                            </div>
+                            <div className='box_3'>
+                            <div class="box1">
+                                <p class="border_txt"> Message</p>
+                                <textarea type="text" id="user" maxLength="600" class="form-control inp_mm " value={intialMessageM} onChange={e => setMessage(e.target.value)} placeholder="Type here..."/>
+                                <p className='error' id='msg_err'></p>
+                            </div>
+                            </div>
                             <center>
-                            <p className = "box_posttSubH">Subject</p>
-                            <br></br>
+                            <button className='see_btn_dd' onClick={onAddClick}>ADD</button>
+                            </center>
                             
-                            <div className="valSM">
+                            {/* <div className="valSM">
                             <p  className = "box_posttSubD">{intialSubjectM}</p>
                             </div>
-                            <br></br>
                             <p  className = "box_posttSubH" >Message </p>
                             <br></br>
                             <div className = "valM">
                             <p  className = "box_posttSubD">{intialMessageM}</p>
-                            </div>
-                            </center>
-                            </div>
-                          
+                            </div> */}
                             </div>
                           
-                      </div>
-                    
-                     
-                {/* <div className = "col-12 col-lg-6 ">
-
-                <center>
-                <h1 className="addPostHeading">Add Your Post </h1>
-                <div className = "addPostM">
-                <div className = "constHeightM ">
-               
-                        <h5 className="card-title">Type Your Subject Here</h5>
-                        <input className="card-text inputM"
-                            type = "text" 
-                            id="subject" 
-                          
-                            value = {intialSubjectM}
-                            onChange = {(e) => setSubject(e.target.value)}
-
-                    ></input>
-             
-                <p className="error" id="subjectErrM"> Subject is required</p>
+                        </div>
                 </div>
-                   <br></br>
-                   <div className = "constHeightM">
-                  
-                        <h5 class="card-title">Type Your Message Here</h5>
-                        <textarea className="card-text messageM"
-                      
-                        value = {intialMessageM} 
-                        onChange = {(e) => setMessage(e.target.value)}></textarea>
-                  
-                   <p className="error" id="messageErrM"> Message is required</p>
-                   </div>
-                   <br></br>
-                   <center>
-                   <button type = "button" className = "addPostBtn" onClick ={onAddClick}>Add +</button>
-                   </center>
-                   </div>
-                   </center>
-                </div> */}
+                
+
+                 <div className = 'col-lg-5 col-12'>
+                 
+                 {renderRequests()}
+                      </div>
+                      <div className='col-lg-1'></div>
                  </div>
              </div>
         </div>

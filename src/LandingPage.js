@@ -99,6 +99,7 @@ function LandingPage(props) {
                 console.log(res)
                 if(res.data.status === 200){
                     console.log(res.data.message)
+                    localStorage.setItem('emailC' , res.data.data[0].email)
                     setnextC(true)
                 }
                 else if(res.data.status === 202) {
