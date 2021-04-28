@@ -176,7 +176,7 @@ function RegisterCompany() {
 
                         <p className='field_names'>Contact Number <img src={star} alt='required field' className='requ_1' /></p>
                         <input
-                            type = "text"
+                            type = "tel"
                             placeholder='Type here...'
                             maxLength='10'
                             id='contactNumber'
@@ -191,7 +191,7 @@ function RegisterCompany() {
                             <div className='hr_11'>
                                 <p className='field_names'>Alternate Number <img src={star} alt='required field' className='requ_1' /></p>
                                 <input
-                                 type = "text"
+                                 type = "tel"
                                     placeholder='Type here...'
                                     id='alternateNumber'
                                     maxLength='10'
