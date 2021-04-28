@@ -23,33 +23,33 @@ function CompanyLogin() {
         }
        
         else {
-            
-                axios({
-                //     method : 'post',
-                //     url : 'http://localhost:3001/signupdata',
-                //     headers : {
-                //         AuthKey : 'asdfgh '
-                //     },
-                //     data : {
-                //         email : username,
-                //         password : password,
-                //         // category : 
-                //     }
-                }) 
-                .then(res=>{
-                    console.log(res)
-                    if(res.data.message === 201){
-                        setLogin(true)
-                        //  localStorage.setItem('login' , res.data.jwt)
-                        console.log(res)
-                    }
-                    else {
-                        console.log(res.data.message);
-                    }
-                })
-                .catch(err=>{
-                    console.log(err)
-                })
+            axios({
+                method : 'post',
+                url : 'http://localhost:3001/companyLogin',
+                data: {
+                    'email ' : email,
+                    'password' : password
+                  },
+                  headers : {
+                    AuthKey : 'asdfgh '
+                  }
+            }) 
+            .then(resp=>{
+                console.log(resp)
+                if(resp.data.status === 200){
+                  console.log(resp.data.message)
+                }
+                else if(resp.data.status === 202) {
+                  // console.log(res.data.message);
+                  console.log(" Please center with correct credentials")
+                }
+                else{
+                    console.log("Some error occured")
+                }
+              })
+              .catch(error=>{
+                console.log(error)
+              })
         }
     }
 
