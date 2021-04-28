@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Admin/Header'
 import HeaderUser from './HeaderUser'
+import userIcon from './img/userIcon.svg'
 
 function CompanyProfile() {
     return (
