@@ -15,69 +15,80 @@ function RegisterCompany() {
     const[companyType, setCompanyType] = useState('')
     const[contactNumber,setContactNumber] = useState('')
     const[alternateNumber,setAlternateNumber] = useState('')
-    const[sendTo2,sendToStep2] = useState(false)
+    const[aboutwReg,setaboutwReg] = useState('')
+    const[sendToProfileOfComp,sendsendToProfileOfComp] = useState(false)
 
 
     const firstDetailsReg =(event) =>{
         event.preventDefault()
         if(companyName === ''){
-            document.querySelector('#error_fn').innerHTML = 'First Name is Required'
-            document.getElementById('error_fn').style.display = 'block'
+            document.querySelector('#error_compn').innerHTML = 'Company Name is Required'
+            document.getElementById('error_compn').style.display = 'block'
+        }
+        if(aboutwReg === ''){
+            document.querySelector('#error_aboutw').innerHTML = 'About is Required'
+            document.getElementById('error_aboutw').style.display = 'block'
+        }
+        if(contactNumber === ''){
+            document.querySelector('#error_contact').innerHTML = 'Contact Number is Required'
+            document.getElementById('error_contact').style.display = 'block'
         }
         if(website === ''){
-            document.querySelector('#error_ln').innerHTML = 'Last Name is Required'
-            document.getElementById('error_ln').style.display = 'block'
+            document.querySelector('#error_web').innerHTML = 'Website url is Required'
+            document.getElementById('error_web').style.display = 'block'
         }
         if(addressC === ''){
-            document.querySelector('#error_cont').innerHTML = 'Contact Number is Required'
-            document.getElementById('error_cont').style.display = 'block'
+            document.querySelector('#error_address').innerHTML = 'Address is Required'
+            document.getElementById('error_address').style.display = 'block'
         }
         if(yoeReg === ''){
-            document.querySelector('#error_dob').innerHTML = 'DOB is Required'
-            document.getElementById('error_dob').style.display = 'block'
+            document.querySelector('#error_yoe').innerHTML = 'Year Of Establishment is Required'
+            document.getElementById('error_yoe').style.display = 'block'
         }
         if(industryReg === ''){
-            document.querySelector('#error_state').innerHTML = 'State is Required'
-            document.getElementById('error_state').style.display = 'block'
+            document.querySelector('#error_ind').innerHTML = 'Industry is Required'
+            document.getElementById('error_ind').style.display = 'block'
         }
         if(companySize === ''){
-            document.querySelector('#error_gender').innerHTML = 'Gender is Required'
-            document.getElementById('error_gender').style.display = 'block'
+            document.querySelector('#error_cmps').innerHTML = 'Company Size is Required'
+            document.getElementById('error_cmps').style.display = 'block'
         }
         if(overviewReg === ''){
-            document.querySelector('#error_city').innerHTML = 'City is Required'
-            document.getElementById('error_city').style.display = 'block'
+            document.querySelector('#error_overview').innerHTML = 'OverView is Required'
+            document.getElementById('error_overview').style.display = 'block'
         }
         if(companyType === ''){
-            document.querySelector('#error_pc').innerHTML = 'Preferential City is Required'
-            document.getElementById('error_pc').style.display = 'block'
+            document.querySelector('#error_ptype').innerHTML = 'Company Type is Required'
+            document.getElementById('error_ptype').style.display = 'block'
         }
         else{
-            const email = localStorage.getItem("email")
+            const email = localStorage.getItem("emailC")
             
             axios({
                 method : 'post',
-                    url : `http://localhost:3001/page1`,
+                    url : `http://localhost:3001/comapnypage1`,
                     headers : {
                         AuthKey : 'asdfgh'
                     },
                     data : {
-                        "first_name" : companyName ,
-                        "last_name" : website,
-                        "contact" : addressC,
-                        "dob" : yoeReg,
-                        "state" : industryReg,
-                        "city" : overviewReg,
-                        "companySize" : companySize,
+                        "name" : companyName ,
+                        "website" : website,
+                        "address" : addressC,
+                        "estdYear" : yoeReg,
+                        "industry" : industryReg,
+                        "overview" : overviewReg,
+                        "size" : companySize,
                         "companyType" : companyType,
-                        "email" : email
+                        "email" : email,
+                        "about" : aboutwReg,
+                        "contact" : contactNumber
                     }
             }) 
             .then(res=>{
                 console.log(res)
                 if(res.data.status === 200){
                     console.log(res.data.message)
-                    sendToStep2(true)
+                    sendsendToProfileOfComp(true)
                 }
                 else if(res.data.status === 202) {
                 // console.log(res.data.message);
@@ -93,14 +104,14 @@ function RegisterCompany() {
         }
     }
 
-    if(sendTo2){
-        return(
-            <Redirect to= {{
-                pathname : "/page2" 
-            }}
-            />
-        )
-    }
+    // if(sendToProfileOfComp){
+    //     return(
+    //         <Redirect to= {{
+    //             pathname : "/page2" 
+    //         }}
+    //         />
+    //     )
+    // }
 
         return (
             <div className='whole_12'>
@@ -120,7 +131,7 @@ function RegisterCompany() {
                                     value={companyName}
                                     onChange={e => setCompanyName(e.target.value)}
                                 />
-                                <p className='error_reg' id='error_fn'></p>
+                                <p className='error_reg' id='error_compn'></p>
                             </div>
                         </div>
                         <div className='col-lg-6 col-12'>
@@ -135,7 +146,7 @@ function RegisterCompany() {
                                     value={website}
                                     onChange={e => setWebsite(e.target.value)}
                                 />
-                                <p className='error_reg' id='error_ln'></p>
+                                <p className='error_reg' id='error_web'></p>
                             </div>
                         </div>
                     </div>
@@ -152,7 +163,7 @@ function RegisterCompany() {
                                     value={industryReg}
                                     onChange={e => setIndustryReg(e.target.value)}
                                 />
-                                <p className='error_reg' id='error_state'></p>
+                                <p className='error_reg' id='error_ind'></p>
                             </div>
                             
                         </div>
@@ -166,7 +177,7 @@ function RegisterCompany() {
                                     value={yoeReg}
                                     onChange={e => setYOEReg(e.target.value)}
                                 />
-                                <p className='error_reg' id='error_dob'></p>
+                                <p className='error_reg' id='error_yoe'></p>
                             </div>
                         </div>
                     </div>
@@ -176,7 +187,7 @@ function RegisterCompany() {
 
                         <p className='field_names'>Contact Number <img src={star} alt='required field' className='requ_1' /></p>
                         <input
-                            type = "text"
+                            type = "tel"
                             placeholder='Type here...'
                             maxLength='10'
                             id='contactNumber'
@@ -184,14 +195,14 @@ function RegisterCompany() {
                             value={contactNumber}
                             onChange={e => setContactNumber(e.target.value)}
                         />
-                        <p className='error_reg' id='error_cont'></p>
+                        <p className='error_reg' id='error_contact'></p>
                         </div>
                         </div>
                         <div className='col-lg-6 col-12'>
                             <div className='hr_11'>
-                                <p className='field_names'>Alternate Number <img src={star} alt='required field' className='requ_1' /></p>
+                                <p className='field_names'>Alternate Number </p>
                                 <input
-                                 type = "text"
+                                 type = "tel"
                                     placeholder='Type here...'
                                     id='alternateNumber'
                                     maxLength='10'
@@ -199,26 +210,9 @@ function RegisterCompany() {
                                     value={alternateNumber}
                                     onChange={e => setAlternateNumber(e.target.value)}
                                 />
-                                <p className='error_reg' id='error_city'></p>
                             </div>
                         </div>
                     </div>
-
-                    {/* <div className='row'>
-                        <div className='col-lg-6 col-12'></div>
-                        <div className='col-lg-6 col-12'></div>
-                    </div>
-                    <div className='hr_11'>
-                    
-                                <p className='field_names'>Middle Name <span className='optnl'>(optional)</span> </p>
-                                <input
-                                    type='text'
-                                    placeholder='Type here...'
-                                    id='middleName'
-                                    className='inp_register'
-                                    // onChange={}
-                                />
-                            </div> */}
 
                             <div className='row'>
                         <div className='col-lg-6 col-12'>
@@ -233,30 +227,20 @@ function RegisterCompany() {
                                     value={companySize}
                                     onChange={e => setCompanySize(e.target.value)}
                                 />
-                                <p className='error_reg' id='error_gender'></p>
+                                <p className='error_reg' id='error_cmps'></p>
                             </div>
                         </div>
                         <div className='col-lg-6 col-12'>
                             <div className='hr_11'>
                                 <p className='field_names'>Company Type <img src={star} alt='required field' className='requ_1' /></p>
                                 <select className="custom-select inp_register" value={companyType}  onChange={e => setCompanyType(e.target.value)}>
-                                    <option selected value="0">Company Type</option>
-                                    <option value="1">One Person Company (OPC) </option>
-                                    <option value="2">Limited Liability Partnership (LLP)</option>
-                                    <option value="3">Private Limited Company</option>
-                                    <option value="4">Public Limited Company (PLC)</option>
+                                    <option selected defaultValue="0">Company Type</option>
+                                    <option defaultValue="1" >One Person Company (OPC) </option>
+                                    <option defaultValue="2">Limited Liability Partnership (LLP)</option>
+                                    <option defaultValue="3">Private Limited Company</option>
+                                    <option defaultValue="4">Public Limited Company (PLC)</option>
                                 </select>
-                               
-                                {/* <input
-                                    type='text'
-                                    placeholder='Type here...'
-                                    id='companyType'
-                                    maxLength='6'
-                                    className='inp_register'
-                                    value={companyType}
-                                    onChange={e => setCompanyType(e.target.value)}
-                                /> */}
-                                <p className='error_reg' id='error_pc'></p>
+                                <p className='error_reg' id='error_ptype'></p>
                             </div>
                         </div>
                     </div>
@@ -276,7 +260,7 @@ function RegisterCompany() {
                             value={addressC}
                             onChange={e => setAddressC(e.target.value)}
                         />
-                        <p className='error_reg' id='error_cont'></p>
+                        <p className='error_reg' id='error_address'></p>
                         </div>
                         </div>
                         <div className='col-lg-6 col-12'>
@@ -291,10 +275,24 @@ function RegisterCompany() {
                                     value={overviewReg}
                                     onChange={e => setOverviewReg(e.target.value)}
                                 />
-                                <p className='error_reg' id='error_city'></p>
+                                <p className='error_reg' id='error_overview'></p>
                             </div>
                         </div>
                     </div>
+
+                    <div className='hr_11'>
+                                <p className='field_names'>About <img src={star} alt='required field' className='requ_1' /></p>
+                                <textarea
+                                 
+                                    placeholder='Type here...'
+                                    id='aboutwReg'
+                                    maxLength='50'
+                                    className='inp_register'
+                                    value={aboutwReg}
+                                    onChange={e => setaboutwReg(e.target.value)}
+                                />
+                                <p className='error_reg' id='error_aboutw'></p>
+                            </div>
 
                    
                     <button  className='next_btn_1' onClick={firstDetailsReg}>Next</button>

@@ -44,6 +44,7 @@ function MentorLogin() {
                         console.log(res.data.message)
                         setMentorProf(true)
                         localStorage.setItem('mentorid',res.data.data[0].mentorId)
+                        localStorage.setItem('mentorUsername',res.data.data[0].username)
                         console.log(res.data.data[0].mentorId)
                     }
                     else if(res.data.status === 202) {
