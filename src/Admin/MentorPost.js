@@ -58,12 +58,15 @@ const onAddClick = (e) =>{
     return (
         <div className='postM'>
             <Header></Header>
-           <br></br>
+          
             
             <div className='container-fluid  postM '>
              <div className = 'row rowMargin'>
            
-                 <div className = 'col-12 col-lg-6 container'>
+                 <div className = 'col-12 col-lg-12 container'>
+                 <center>
+                 <h1>All Posts </h1>
+                 </center>
                    <div className='post_boxM'>
                             <div className='row'>
                                 <div className='col-3 '>
@@ -74,28 +77,33 @@ const onAddClick = (e) =>{
                                 </div>
                             </div>
                             <div className=' box_posttM'>
-                            <p className = "box_posttSubH">Subject :</p>
+                            <center>
+                            <p className = "box_posttSubH">Subject</p>
                             <br></br>
-                            <div className = "valM">
+                            
+                            <div className="valSM">
                             <p  className = "box_posttSubD">{intialSubjectM}</p>
                             </div>
                             <br></br>
-                            <p  className = "box_posttSubH" >Message : </p>
+                            <p  className = "box_posttSubH" >Message </p>
                             <br></br>
                             <div className = "valM">
                             <p  className = "box_posttSubD">{intialMessageM}</p>
                             </div>
+                            </center>
                             </div>
                           
                             </div>
                           
                       </div>
                      
-                <div className = "col-12 col-lg-6 addPostM">
+                {/* <div className = "col-12 col-lg-6 ">
+
+                <center>
                 <h1 className="addPostHeading">Add Your Post </h1>
-                <div className="card text-white bg-primary mb-3">
-                    <div className="card-header">Subject :</div>
-                    <div className="card-body">
+                <div className = "addPostM">
+                <div className = "constHeightM ">
+               
                         <h5 className="card-title">Type Your Subject Here</h5>
                         <input className="card-text inputM"
                             type = "text" 
@@ -105,28 +113,27 @@ const onAddClick = (e) =>{
                             onChange = {(e) => setSubject(e.target.value)}
 
                     ></input>
-                    </div>
-                </div>
+             
                 <p className="error" id="subjectErrM"> Subject is required</p>
+                </div>
                    <br></br>
-                   <div class="card text-white bg-primary mb-3">
-                    <div class="card-header">Message : </div>
-                    <div class="card-body">
+                   <div className = "constHeightM">
+                  
                         <h5 class="card-title">Type Your Message Here</h5>
                         <textarea className="card-text messageM"
                       
                         value = {intialMessageM} 
                         onChange = {(e) => setMessage(e.target.value)}></textarea>
-                    </div>
-                    </div>
-                   
+                  
                    <p className="error" id="messageErrM"> Message is required</p>
+                   </div>
                    <br></br>
                    <center>
                    <button type = "button" className = "addPostBtn" onClick ={onAddClick}>Add +</button>
                    </center>
-
-                </div>
+                   </div>
+                   </center>
+                </div> */}
                  </div>
              </div>
         </div>

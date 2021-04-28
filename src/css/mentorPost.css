@@ -16,18 +16,21 @@
 .postM{
     overflow-x: hidden;
     position: relative;
-    margin-top: 30px;
+    /* margin-top: 20px;
     margin-left: 10px;
-    /* margin-right: 10px; */
+    margin-right: 10px; */
+    background-color: #89837A;
+    height: 100vh;
 }
 
 
 
-.rowMargin{
-    margin-top: 40px;
-}
+
 
 .post_boxM{
+    margin-top: 70px;
+    margin-left:auto;
+    margin-right: auto;
     background: #f5f5f5;
     padding: 40px;
     width: 550px;
@@ -38,7 +41,7 @@
     padding : 30px;
     border: 1px solid #045174;;
     width: 480px;
-    height: 300px;
+    height: 250px;
     margin-bottom: 5px;
     border-radius: 10px;
 }
@@ -55,19 +58,37 @@
 }
 .box_posttSubH{
     font-size: 15px;
-    font-family: 'caros_M';
+    font-family: 'caros_Bold';
     color:  #F8951D;
     display: inline-block;
+    margin-right: 10px;
+    text-align: center;
 }
 
 .box_posttSubD{
     font-size: 10px;
     font-family: 'caros';
     color:  #045174;;
+    display: inline-block;
+
 }
 
+.valSM{
+    height : 30px;
+  background-color:#fff;
+    border: 1px solid #045174;;
+    border-radius: 5px;
+    width: 250px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+
+
 .valM{
-    height : 60px;
+    height : 80px;
   background-color:#fff;
     border: 1px solid #045174;;
     border-radius: 15px;
@@ -77,7 +98,9 @@
 .addPostM{
     background-color: #BFD7ED;
     height: 600px;
-    padding: 40px;
+    padding: 20px;
+    margin: 0px;
+    width: 500px;
     /* width: 100%; */
 }
 
@@ -91,6 +114,7 @@
     font-size: 20px;
     padding: 10px;
     width: 140px;
+    margin-bottom: 10px;
 }
 
 #subjectErrM{
@@ -103,7 +127,8 @@
 .addPostHeading{
     text-align: center;
     color: #023858;
-    font-size: 40px;
+    font-size: 30px;
+    margin-top: 20px;
     font-family: 'caros_Bold';
 
 }
@@ -132,6 +157,7 @@
     font-size: 20px;
     resize: none;
     color: #023858;
+    box-shadow: #2d2d2d 2px;
 }
 .inputM:focus{
     outline: none;
@@ -142,4 +168,25 @@
 
 .addPostBtn:focus{
     outline: none;
+}
+
+.constHeightM{
+    height : 100px;
+    margin-bottom: 10px;
+}
+
+@media(max-width:991px){
+    .box_posttM{
+        width: 100%;
+    }
+
+    .post_boxM{
+        width: 100%;
+        padding: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .valSM{
+        width : 80px;
+    }
 }
