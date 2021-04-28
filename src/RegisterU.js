@@ -5,7 +5,7 @@ import star from './img/star.svg'
 import axios from 'axios'
 
 
-function RegisterU(props) {
+function RegisterU() {
     const[firstNameReg, setFirstNameReg] = useState('')
     const[lastNameReg, setLastNameReg] = useState('')
     const[contactNumReg, setContactNumReg] = useState('')
