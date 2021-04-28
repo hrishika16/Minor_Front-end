@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './css/step2.css'
 import star from './img/star.svg'
 import $ from 'jquery'
+import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 let isChecked;
 
 class Step2 extends Component {
@@ -11,8 +13,13 @@ class Step2 extends Component {
         this.state = {
              radioS : '',
              emp_Type: 'emp_type',
-             exp_H : 'emp_h'
+             exp_H : 'emp_h',
+             buttonValue : false
         }
+    }
+
+    componentDidMount(){
+
     }
 
     handleCheckBox = (e) =>{
@@ -38,9 +45,16 @@ class Step2 extends Component {
     console.log(this.state.exp_H)
     if(this.state.exp_H == 'Yes'){
         document.getElementById('emp_ff').style.display = "block"
+        this.setState({buttonValue : true})
+        console.log(this.state.buttonValue)
     }
     else if(this.state.exp_H == 'No'){
         document.getElementById('emp_ff').style.display = "none"
+        return(
+            <Redirect
+                to='/dashboard'
+            />
+        )
     }
    }
 
@@ -58,10 +72,6 @@ class Step2 extends Component {
                         <div className="form-check form-check-inline">
                             <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" onChange={e => this.handleCheckBox(e)} value="option2"/>
                             <label className="form-check-label rad_txt" htmlFor="inlineRadio2">Employee</label>
-                        </div>
-                        <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" onChange={e => this.handleCheckBox(e)} value="option3" />
-                            <label className="form-check-label rad_txt" htmlFor="inlineRadio3">Startup</label>
                         </div>
                         <div className='common_field'>
                             <div className='row'>
@@ -213,7 +223,7 @@ class Step2 extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className='hr_11'>
+                            <div className='hremp_11'>
                                 <select className="custom-select emp_select" value={this.state.emp_Type} onChange={this.handleEmpType}>
                                     <option selected disabled defaultValue='emp_type' className='emp_sel_txt_1'>Employee Type</option>
                                     <option defaultValue="full_time " className='emp_sel_txt'>Full Time </option>
@@ -224,8 +234,9 @@ class Step2 extends Component {
                                     <option defaultValue="trainee  " className='emp_sel_txt'>Trainee </option>
                                 </select>
                             </div>
+                            <button className='next_2btn'><Link to='/dashboard'>Next</Link></button>
                         </div>
-                        <div className='start_up'>
+                        {/* <div className='start_up'>
                             <div className='row'>
                                 <div className='col-lg-6 col-12'>
                                     <div className='hr_11'>
@@ -234,9 +245,9 @@ class Step2 extends Component {
                                 </div>
                                 <div className='col-lg-6 col-12'></div>
                             </div>
-                        </div>
+                        </div> */}
                         
-                        <button className='next_2btn'>Next</button>
+                        
                     </div>
                 </div>
             </div>
