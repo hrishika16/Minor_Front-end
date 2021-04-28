@@ -14,6 +14,15 @@
     background: #fff  ;
 }
 
+.pos_prof{
+    position: fixed;
+    background: #DEE6F1;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
 .link_cls {
     font-family: 'caros_bold';
     font-size: 17px;

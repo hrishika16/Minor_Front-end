@@ -5,6 +5,7 @@ class Header extends Component {
     render() {
         return (
             <div>
+                <div className='pos_prof'>
                 <nav className="navbar navbar-expand-lg nav_d ">
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -33,7 +34,7 @@ class Header extends Component {
                     </ul>
                     </div>
                 </nav>
-                
+                </div>
             </div>
         )
     }
