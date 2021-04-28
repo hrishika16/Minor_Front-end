@@ -13,6 +13,8 @@ function RegisterCompany() {
     const[overviewReg, setOverviewReg] = useState('')
     const[companySize, setCompanySize] = useState('')
     const[companyType, setCompanyType] = useState('')
+    const[contactNumber,setContactNumber] = useState('')
+    const[alternateNumber,setAlternateNumber] = useState('')
     const[sendTo2,sendToStep2] = useState(false)
 
 
@@ -168,6 +170,40 @@ function RegisterCompany() {
                             </div>
                         </div>
                     </div>
+                    <div className='row'>
+                        <div className='col-lg-6 col-12'>
+                        <div className='hr_11'>
+
+                        <p className='field_names'>Contact Number <img src={star} alt='required field' className='requ_1' /></p>
+                        <input
+                            type = "text"
+                            placeholder='Type here...'
+                            maxLength='10'
+                            id='contactNumber'
+                            className='inp_register'
+                            value={contactNumber}
+                            onChange={e => setContactNumber(e.target.value)}
+                        />
+                        <p className='error_reg' id='error_cont'></p>
+                        </div>
+                        </div>
+                        <div className='col-lg-6 col-12'>
+                            <div className='hr_11'>
+                                <p className='field_names'>Alternate Number <img src={star} alt='required field' className='requ_1' /></p>
+                                <input
+                                 type = "text"
+                                    placeholder='Type here...'
+                                    id='alternateNumber'
+                                    maxLength='10'
+                                    className='inp_register'
+                                    value={alternateNumber}
+                                    onChange={e => setAlternateNumber(e.target.value)}
+                                />
+                                <p className='error_reg' id='error_city'></p>
+                            </div>
+                        </div>
+                    </div>
+
                     {/* <div className='row'>
                         <div className='col-lg-6 col-12'></div>
                         <div className='col-lg-6 col-12'></div>
