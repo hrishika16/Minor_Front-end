@@ -58,7 +58,7 @@ function App() {
               <Route exact path = '/mentorLogin' component = {MentorLogin}></Route>
               <Route exact path = '/mentorProfile' component={MentorProfile}></Route>
               <Route exact path = '/mentorPost' component = {MentorPost}></Route>
-              <Route exact path='/registerForComapany' component={RegisterCompany} />
+              <Route exact path='/registerForCompany' component={RegisterCompany} />
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}
