@@ -43,14 +43,55 @@ function CompanyProfile() {
                <div className = "col-12 col-lg-9 detailCP">
                <h1 >Company Name </h1>
                <br></br>
-               <h3> Email Company </h3>
+               <h4> Email Company </h4>
                <br></br>
-               <h4> Since {'$'}Year of Establishment </h4>
+               <h4>     <a href="#" class="btn btn-secondary">Visit Website</a></h4>
                 </div>
+                
                 
               </div>
 
             </div>
+        
+            <hr></hr>
+            <br></br>
+            <div className = "container">
+               <div className = "row">
+               
+                   <div className = "col-6 col-lg-6 btnCPAlign">
+                   <center>
+                   <button type="button" class="btn btn-info btnCP ">OverView </button>
+                   </center>
+                   </div>
+                   <div className = "col-6 col-lg-6">
+                   <center>
+                   <button type="button" class="btn btn-info btnCP">About Us </button>
+                   </center>
+                </div>
+                      
+               </div>
+           </div>
+           <br></br>
+           <div className = "container">
+               <div className = "row">
+              
+                   <div className = "col-12 col-lg-12 cardCP"
+                   >
+                  <div class="card text-center">
+                    <div class="card-header bg-light text-info">
+                     OverView
+                    </div>
+                    <div class="card-body cardCPW">
+                        
+                        <p class="card-text">W additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional contenWith supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional contenWith supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional conten low as a natural lead-in to additional conten low as a natural lead-in to additional conten</p>
+                   
+                    </div>
+                  
+                    </div>
+                   </div>
+                 
+               </div>
+           </div>
 
         </div>
     )
