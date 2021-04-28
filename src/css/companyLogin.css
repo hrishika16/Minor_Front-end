@@ -1,0 +1,42 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.companyLogin{
+overflow-x: hidden;
+position: relative;
+}
+
+.btn_submitCL{
+
+    position: relative;
+    margin-top: 20px;
+    background-color: #F98935;
+    border: none;
+    border-radius: 25px;
+    color: #023858;
+    font-family: 'caros_bold';
+    font-size: 20px;
+    padding: 10px;
+    width: 340px;
+    text-align: center;
+}
+
+#userErr{
+    display: none;
+}
+
+#passErr{
+    display: none;
+}
