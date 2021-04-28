@@ -6,8 +6,7 @@ import axios from 'axios'
 import '../css/mentorProfile.css'
 
 function MentorProfile() {
-    let dataProfiel = [];
-    // const[dataProfiel, setdataProfiel] = useState([])
+    const[dataProfiel, setdataProfiel] = useState([])
 
     useEffect( ()=>{
         const mentor_id = localStorage.getItem('mentorid')
@@ -26,8 +25,9 @@ function MentorProfile() {
 
             if(res.data.status === 200){
                 console.log(res.data)
-                 dataProfiel = res.data.data[0]
-                console.log(dataProfiel)
+                //  dataProfiel = res.data.data[0]
+                // console.log(dataProfiel)
+                setdataProfiel([res.data.data[0]])
             }
             else if(res.data.status === 202) {
             // console.log(res.data.message);
@@ -71,24 +71,10 @@ function MentorProfile() {
                  <center>
                   <img src={mentorLogin} alt = "image" width="150px" height = "150px" className="imgMentorProfile"></img>
                 
-                    
-                        {/* dataProfiel.map((det) =>{
-                        // const pass = det.password.subString(0,4)
-                        return(
-                            <React.Fragment key={det.mentorId}>
-                            <p className="profileDetails">Name : {det.username}</p>
-                            <p className="profileDetails"> Email-ID : {det.email} </p>
-                            <p className="profileDetails">Phone Number : {det.contact} </p>
-                            <p className="profileDetails">Qualification : {det.qualification} </p>
-                            <p className="profileDetails">DOB : {det.dob} </p>
-                            <p className="profileDetails">Total Posts :</p>
-                            </React.Fragment>
-                        )
-                    }) */}
-                    
+                  {renderDetailsOfMentor()}
                   </center>
                  </div>
-                 {renderDetailsOfMentor()}
+                 
              </div>
          </div>
         </div>
