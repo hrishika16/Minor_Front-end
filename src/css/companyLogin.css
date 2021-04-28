@@ -40,3 +40,15 @@ position: relative;
 #passErr{
     display: none;
 }
+
+.loginBorder{
+
+    border: 2px solid #023858;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 766px) {
+   .btn_submitCL{
+       width : 100%;
+   }
+}

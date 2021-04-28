@@ -64,8 +64,8 @@ function CompanyLogin() {
         // )
     }
     return (
-        <div>
-        <div className = "companyLogin">
+      
+        <div className>
             <div className='ro'>
             <div className='row'>
                 <div className='col-lg-5 col-12'>
@@ -74,7 +74,7 @@ function CompanyLogin() {
                 <div className='col-lg-7 col-12'>
                     
                     <div className='spaceee'>
-                    <h2 className='sign'>Login In</h2>
+                    <h2 className='sign loginBorder'>Login In</h2>
                     <div className='hgt1'>
                         <p className='lbl_txt'> Email </p>
                         <input 
@@ -106,8 +106,8 @@ function CompanyLogin() {
         </div>
         </div>
     )
-        </div>
-    )
+        
+    
 }
 
 export default CompanyLogin
