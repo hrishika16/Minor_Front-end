@@ -26,49 +26,56 @@ class Mentor extends Component {
              totalPosts_Mentor : 0 
          };
 
-        this.handelSubmit = this.handelSubmit.bind(this);
-        this.handelChange = this.handelChange.bind(this);
+        // this.handelSubmit = this.handelSubmit.bind(this);
+        // this.handelChange = this.handelChange.bind(this);
     }
 
-   handelChange(event){
+   handelChange = (event)=>{
     this.setState({
-       username_Mentor: event.target.value,
-       email_Mentor : event.target.value,
-       dob_Mentor : event.target.value,
-       password_Mentor : event.target.value,
-       qualification_Mentor : event.target.value,
-       password_Mentor: event.target.value,
-       contactNumber_Mentor : event.target.value
-
+    //    username_Mentor: event.target.value,
+    //    email_Mentor : event.target.value,
+    //    dob_Mentor : event.target.value,
+    //    password_Mentor : event.target.value,
+    //    qualification_Mentor : event.target.value,
+    //    password_Mentor: event.target.value,
+    //    contactNumber_Mentor : event.target.value
+    [event.target.name]: event.target.value
+  
       })
-      console.log(this.state)
+      console.log("my objectt",this.state)
    }
 
-   handelSubmit(event){
+   handelSubmit = (event)=>{
     const { username_Mentor, email_Mentor, dob_Mentor, qualification_Mentor, contactNumber_Mentor,totalPosts_Mentor,password_Mentor } = this.state
     event.preventDefault()
     // alert('${email_Mentor}')
+  console.log("my username",username_Mentor)
    
     if(username_Mentor === ''){
-
-        document.getElementById('username_Mentor').style.display = 'block'
+console.log("run hua")
+        document.getElementById('nameErrM').style.display = 'block'
     }
     if(email_Mentor === ''){
 
-        document.getElementById('email_Mentor').style.display = 'block'
+        document.getElementById('emailErrM').style.display = 'block'
     }
     if(dob_Mentor === ''){
 
-        document.getElementById('dob_Mentor').style.display = 'block'
+        document.getElementById('dobErrM').style.display = 'block'
     }
     if(qualification_Mentor === ''){
 
-        document.getElementById('qualification_Mentor').style.display = 'block'
+        document.getElementById('qualiErrM').style.display = 'block'
     }
     if(contactNumber_Mentor === ''){
 
-        document.getElementById('contactNumber_Mentor').style.display = 'block'
+        document.getElementById('contactErrM').style.display = 'block'
     }
+    if(password_Mentor === ''){
+
+        document.getElementById('pswdErrM').style.display = 'block'
+    }
+    
     
     else {
        
@@ -243,6 +250,7 @@ class Mentor extends Component {
     
 
     render() {
+        const { username_Mentor, email_Mentor, dob_Mentor, qualification_Mentor, contactNumber_Mentor,totalPosts_Mentor,password_Mentor } = this.state
         return (
             <div className='whole_m'>
                 <Header/>
@@ -294,7 +302,7 @@ class Mentor extends Component {
                             </button>
                         </div>
                        <div className="modal-body">
-                       <form >
+                       <form onSubmit = {this.handelSubmit}>
                        <div className="form-group">
                        <label for="username_Mentor " class=" labelMentor" >Username :</label>
                           <input 
@@ -303,11 +311,11 @@ class Mentor extends Component {
                              name = "username_Mentor"
                       
                              className = "form-control inputElementMentor"
-                             value = {this.state.username_Mentor}
+                             value = {username_Mentor}
                              onChange = {this.handelChange}
                            
                           ></input>
-                          <p className="error">Username is required </p>
+                          <p className="error" id="nameErrM">Username is required </p>
                           </div>
 
                         <div className="form-group">
@@ -317,11 +325,11 @@ class Mentor extends Component {
                              id ="email_Mentor"
                              name = "email_Mentor"
                              className = "form-control inputElementMentor"
-                             value = {this.state.email_Mentor}
+                             value = {email_Mentor}
                              onChange = {this.handelChange}
 
                            ></input>
-                            <p className="error">Username is required </p>
+                            <p className="error" id="emailErrM">Username is required </p>
                            </div>
                           
                            <div className="form-group">
@@ -332,10 +340,10 @@ class Mentor extends Component {
                              name = "password_Mentor"
                            
                              className = "form-control inputElementMentor"
-                             value = {this.state.password_Mentor}
+                             value = {password_Mentor}
                              onChange = {this.handelChange}
                              ></input>
-                              <p className="error">Username is required </p>
+                              <p className="error" id="pswdErrM">Username is required </p>
                              </div>
                             
                              <div className="form-group">
@@ -346,10 +354,10 @@ class Mentor extends Component {
                                 name = "contactNumber_Mentor"
                                 
                                 className = "form-control inputElementMentor"
-                                value = {this.state.contactNumber_Mentor}
+                                value = {contactNumber_Mentor}
                                 onChange = {this.handelChange}
                             ></input>
-                             <p className="error">Username is required </p>
+                             <p className="error" id="contactErrM">Contact Number is required </p>
                             </div>
                             
                             <div className="form-group">
@@ -359,10 +367,10 @@ class Mentor extends Component {
                                 id ="DOB_Mentor"
                                 name = "DOB_Mentor"
                                 className = "form-control inputElementMentor"
-                                value = {this.state.dob_Mentor}
+                                value = {dob_Mentor}
                                 onChange = {this.handelChange}
                                 ></input>
-                                 <p className="error">Username is required </p>
+                                 <p className="error" id="dobErrM">Username is required </p>
                                 </div>
                                
                                 <div className="form-group">
@@ -372,13 +380,14 @@ class Mentor extends Component {
                                     id = "qualification_Mentor"
                                     name = "qualification_Mentor"
                                     className = "form-control inputElementMentor"
-                                    value = {this.state.qualification_Mentor}
+                                    value = {qualification_Mentor}
                                     onChange = {this.handelChange}
                                     ></input>
-                                     <p className="error">Username is required </p>
+                                     <p className="error" id="qualiErrM">Username is required </p>
                                     </div>
+                                    <p className="labelMentor">Total Posts : {totalPosts_Mentor}</p>
                                 <div class="modal-footer">
-                              <button type="button" className="btn btn-secondary submitBtnMentor" data-dismiss="modal" onClick={this.handelSubmit} >Submit</button>
+                              <button type="submit" className="btn btn-secondary submitBtnMentor"  onClick={this.handelSubmit}>Submit</button>
                               </div>
                                
                        </form>

@@ -149,6 +149,24 @@
     height : 70px;
 }
 
+#nameErrM{
+    display: none;
+}
+#emailErrM{
+    display: none;
+}
+#contactErrM{
+    display: none;
+}
+#qualiErrM{
+    display: none;
+}
+#pswdErrM{
+    display: none;
+}
+#dobErrM{
+    display: none;
+}
 @media(max-width:991px){
     .table_m{
         overflow-x: scroll;
