@@ -313,7 +313,7 @@ class Mentor extends Component {
                        <div className="modal-body">
                        <form >
                        <div className="form-group">
-                       <label htmlFor="username_Mentor " class=" labelMentor" >Username :</label>
+                       <label htmlFor="username_Mentor " className=" labelMentor" >Username :</label>
                           <input 
                              type='text' 
                              id ="username_Mentor" 
@@ -388,7 +388,7 @@ class Mentor extends Component {
                                 </div>
                                
                                 <div className="form-group">
-                                <label htmlFor="qualification_Mentor" class="labelMentor" >Qualification :</label>
+                                <label htmlFor="qualification_Mentor" className="labelMentor" >Qualification :</label>
                                 <input 
                                     type = "text"
                                     id = "qualification_Mentor"
