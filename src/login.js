@@ -1,9 +1,10 @@
 import React,{useState} from 'react'
 import './css/login.css'
-import img1 from './img/login_1.svg'
+import img1 from './img/userLogin.jpg'
 import { Redirect} from "react-router-dom"
 import axios from 'axios'
 import { authentication } from './App'
+
 
 function Login() {
     const[username , setUsername] = useState('')
@@ -70,7 +71,7 @@ function Login() {
         <div className='ro'>
             <div className='row'>
                 <div className='col-lg-5 col-12'>
-                    {/* <img src={img1} alt='Login image 1' className='img1' /> */}
+                    <img src={img1} alt='Login image 1' className='img1' />
                 </div>
                 <div className='col-lg-7 col-12'>
                     

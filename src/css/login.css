@@ -5,11 +5,13 @@
 
 .img1 {
     width: 100%;
+   margin-top: 42px;
+   margin-left: 12px;
 }
 
 .sign {
     font-weight: bold;
-    color: #2d2d2d;
+    color: #F98935;
     margin-bottom: 20px;
 }
 
@@ -45,11 +47,11 @@
     margin-top: 10px;
     border: none;
     outline: none;
-    background: #BE8EED;
+    background: #F98935;
     color: #fff;
-    padding: 7px;
+    padding: 15px;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 17px;
 }
 
