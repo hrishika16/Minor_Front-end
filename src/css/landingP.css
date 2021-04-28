@@ -12,6 +12,15 @@
     font-family: 'carosM';
     src: url('../font/cretype\ \ Caros\ Medium.otf');
 }
+
+.mainLanding{
+    overflow-x: hidden;
+    position: relative;
+    background-image: url('../img/landingBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .sigU{
     font-family: 'caros_bold';
     color: #045174;
@@ -75,4 +84,46 @@
 
 .stSel{
     visibility: hidden;
+}
+
+.target_user{
+    background-color: #fff;
+}
+.target_user img {
+    /* width : 600px; */
+    height : 600px; 
+  
+}
+
+.user_detailsL{
+    margin-top: 70px;
+    margin-left: 50px;
+}
+.user_detailsLR{
+    margin-right: 50px;
+    margin-left: 0px;
+    background-color:aqua;
+    margin-top: 70px;
+}
+
+.headingUsers{
+    font-size: 40px;
+    font-family: 'caros_bold';
+    color: #F98935;
+    margin-top: 40px;
+    
+}
+.tochooseL{
+    color: #023858;
+    font-family: 'carosM';
+}
+
+.userBoxL{
+    width: 210px;
+    height: 130px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px 3px #888888;
+    border: 2px solid #fff;
+    border-radius: 10px;
 }
