@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import axios from 'axios'
+import { Redirect } from 'react-router-dom'
 import mentorLogin from '../img/mentor_login_f.jpg'
 import '../css/mentorLogin.css'
 
@@ -7,7 +8,7 @@ function MentorLogin() {
 
     const[username , setUsername] = useState('')
     const[password , setPassword] = useState('')
-    const [login,setLogin] = useState(false)
+    const [mentorProf,setMentorProf] = useState(false)
 
     const SubmitHandler = (e) => {
         e.preventDefault()
@@ -27,7 +28,7 @@ function MentorLogin() {
             
                 axios({
                     method : 'post',
-                //     url : 
+                    url : 'http://localhost:3001/mentorLogin',
                     headers : {
                         AuthKey : 'asdfgh '
                     },
@@ -39,13 +40,18 @@ function MentorLogin() {
                 }) 
                 .then(res=>{
                     console.log(res)
-                    if(res.data.message === 201){
-                       
-                       
-                        console.log(res)
+                    if(res.data.status === 200){
+                        console.log(res.data.message)
+                        setMentorProf(true)
+                        localStorage.setItem('mentorid',res.data.data[0].mentorId)
+                        console.log(res.data.data[0].mentorId)
                     }
-                    else {
-                        console.log(res.data.message);
+                    else if(res.data.status === 202) {
+                    // console.log(res.data.message);
+                    console.log(" Please center with correct credentials")
+                    }
+                    else{
+                        console.log("Some error occured")
                     }
                 })
                 .catch(err=>{
@@ -54,6 +60,16 @@ function MentorLogin() {
         }
     }
 
+
+    if(mentorProf){
+        console.log(mentorProf)
+        return(
+            <Redirect to= {{
+                pathname : "/mentorProfile" 
+            }}
+            />
+        )
+    }
    
     return (
         <div>

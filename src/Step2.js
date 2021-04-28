@@ -67,6 +67,34 @@ class Step2 extends Component {
                             <div className='row'>
                                 <div className='col-lg-6 col-12'>
                                     <div className='hr_11'>
+                                        <p className='field_names'>School Name <img src={star} alt='required field' className='requ_1' /></p>
+                                        <input
+                                            type='text'
+                                            placeholder='Type here...'
+                                            id='scholl_name'
+                                            className='inp_register'
+                                            // onChange={}
+                                        />
+                                        {/* <p className='error_reg' id='error_degree'>Required</p> */}
+                                    </div>
+                                </div>
+                                <div className='col-lg-6 col-12'>
+                                    <div className='hr_11'>
+                                        <p className='field_names'>School Board <img src={star} alt='required field' className='requ_1' /></p>
+                                        <input
+                                            type='text'
+                                            placeholder='Type here...'
+                                            id='scholl_board'
+                                            className='inp_register'
+                                            // onChange={}
+                                        />
+                                        {/* <p className='error_reg' id='error_degree'>Required</p> */}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='row'>
+                                <div className='col-lg-6 col-12'>
+                                    <div className='hr_11'>
                                         <p className='field_names'>Degree <img src={star} alt='required field' className='requ_1' /></p>
                                         <input
                                             type='text'
@@ -75,12 +103,12 @@ class Step2 extends Component {
                                             className='inp_register'
                                             // onChange={}
                                         />
-                                        <p className='error_reg' id='error_degree'>Required</p>
+                                        {/* <p className='error_reg' id='error_degree'>Required</p> */}
                                     </div>
                                 </div>
                                 <div className='col-lg-6 col-12'>
                                     <div className='hr_11'>
-                                        <p className='field_names'>College Name <img src={star} alt='required field' className='requ_1' /></p>
+                                        <p className='field_names'>College Name </p>
                                         <input
                                             type='text'
                                             placeholder='Type here...'
@@ -88,7 +116,7 @@ class Step2 extends Component {
                                             className='inp_register'
                                             // onChange={}
                                         />
-                                        <p className='error_reg' id='error_clg_name'>Required</p>
+                                        {/* <p className='error_reg' id='error_clg_name'>Required</p> */}
                                     </div>
                                 </div>
                             </div>
@@ -186,15 +214,15 @@ class Step2 extends Component {
                                 </div>
                             </div>
                             <div className='hr_11'>
-                            <select className="custom-select emp_select" value={this.state.emp_Type} onChange={this.handleEmpType}>
-                                <option selected disabled defaultValue='emp_type' className='emp_sel_txt_1'>Employee Type</option>
-                                <option defaultValue="full_time " className='emp_sel_txt'>Full Time </option>
-                                <option defaultValue="part_time " className='emp_sel_txt'>Part Time </option>
-                                <option defaultValue="self_employed " className='emp_sel_txt'>Self Employed </option>
-                                <option defaultValue="freelance" className='emp_sel_txt'>Freelance </option>
-                                <option defaultValue="internship  " className='emp_sel_txt'>Internship </option>
-                                <option defaultValue="trainee  " className='emp_sel_txt'>Trainee </option>
-                            </select>
+                                <select className="custom-select emp_select" value={this.state.emp_Type} onChange={this.handleEmpType}>
+                                    <option selected disabled defaultValue='emp_type' className='emp_sel_txt_1'>Employee Type</option>
+                                    <option defaultValue="full_time " className='emp_sel_txt'>Full Time </option>
+                                    <option defaultValue="part_time " className='emp_sel_txt'>Part Time </option>
+                                    <option defaultValue="self_employed " className='emp_sel_txt'>Self Employed </option>
+                                    <option defaultValue="freelance" className='emp_sel_txt'>Freelance </option>
+                                    <option defaultValue="internship  " className='emp_sel_txt'>Internship </option>
+                                    <option defaultValue="trainee  " className='emp_sel_txt'>Trainee </option>
+                                </select>
                             </div>
                         </div>
                         <div className='start_up'>

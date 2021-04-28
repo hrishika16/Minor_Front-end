@@ -84,43 +84,43 @@ class Mentor extends Component {
            $( "#AddModal" ).hide();
           });
        
-        axios({
-            method : 'post',
-            // url : `http://localhost:3001/mentorSignup`,
-            headers : {
-                AuthKey : 'asdfgh'
-            },
-            data : {
-                username : username_Mentor,
-                email : email_Mentor,
-                password : password_Mentor ,
-                contact : contactNumber_Mentor,
-                dob : dob_Mentor,
-                qualification : qualification_Mentor
-            }
+        // axios({
+        //     method : 'post',
+        //     // url : `http://localhost:3001/mentorSignup`,
+        //     headers : {
+        //         AuthKey : 'asdfgh'
+        //     },
+        //     data : {
+        //         username : username_Mentor,
+        //         email : email_Mentor,
+        //         password : password_Mentor ,
+        //         contact : contactNumber_Mentor,
+        //         dob : dob_Mentor,
+        //         qualification : qualification_Mentor
+        //     }
             
-        })
-        .then(resp =>{
-            console.log(resp.data)
-                if(resp.data.status === 200){
-                    window.$("#btnSubmit").click(function() {
-                        console.log("work hua ")
-                        $( "#AddModal" ).hide();
-                      });
-                    console.log(resp.data.message)
-                    // sendToStep2(true)
-                }
-                else if(resp.data.status === 202) {
-                // console.log(res.data.message);
-                console.log(" Please center with correct credentials")
-                }
-                else{
-                    console.log("Some error occured")
-                }
-        })
-        .catch(error =>{
-            console.log('err',error)
-        })
+        // })
+        // .then(resp =>{
+        //     console.log(resp.data)
+        //         if(resp.data.status === 200){
+        //             window.$("#btnSubmit").click(function() {
+        //                 console.log("work hua ")
+        //                 $( "#AddModal" ).hide();
+        //               });
+        //             console.log(resp.data.message)
+        //             // sendToStep2(true)
+        //         }
+        //         else if(resp.data.status === 202) {
+        //         // console.log(res.data.message);
+        //         console.log(" Please center with correct credentials")
+        //         }
+        //         else{
+        //             console.log("Some error occured")
+        //         }
+        // })
+        // .catch(error =>{
+        //     console.log('err',error)
+        // })
 
     }
     
@@ -313,7 +313,7 @@ class Mentor extends Component {
                        <div className="modal-body">
                        <form >
                        <div className="form-group">
-                       <label for="username_Mentor " class=" labelMentor" >Username :</label>
+                       <label htmlFor="username_Mentor " class=" labelMentor" >Username :</label>
                           <input 
                              type='text' 
                              id ="username_Mentor" 
@@ -329,7 +329,7 @@ class Mentor extends Component {
                           </div>
 
                         <div className="form-group">
-                          <label  for="email_Mentor" className=" labelMentor">Email-Id :</label>
+                          <label  htmlFor="email_Mentor" className=" labelMentor">Email-Id :</label>
                           <input
                              type ="email"
                              id ="email_Mentor"
@@ -344,7 +344,7 @@ class Mentor extends Component {
                            </div>
                           
                            <div className="form-group">
-                           <label  for="password_Mentor " className=" labelMentor">Password :</label>
+                           <label  htmlFor="password_Mentor " className=" labelMentor">Password :</label>
                            <input 
                              type = "password"
                              id ="password_Mentor"
@@ -360,7 +360,7 @@ class Mentor extends Component {
                              </div>
                             
                              <div className="form-group">
-                             <label for="contact_Mentor" className=" labelMentor" >Contact Number :</label>
+                             <label htmlFor="contact_Mentor" className=" labelMentor" >Contact Number :</label>
                              <input 
                                 type = "tel"
                                 id ="contact_Mentor"
@@ -375,7 +375,7 @@ class Mentor extends Component {
                             </div>
                             
                             <div className="form-group">
-                            <label for="DOB_Mentor" className=" labelMentor">Date of Birth :</label>
+                            <label htmlFor="DOB_Mentor" className=" labelMentor">Date of Birth :</label>
                             <input 
                                 type = "date"
                                 id ="DOB_Mentor"
@@ -388,7 +388,7 @@ class Mentor extends Component {
                                 </div>
                                
                                 <div className="form-group">
-                                <label for="qualification_Mentor" class="labelMentor" >Qualification :</label>
+                                <label htmlFor="qualification_Mentor" class="labelMentor" >Qualification :</label>
                                 <input 
                                     type = "text"
                                     id = "qualification_Mentor"

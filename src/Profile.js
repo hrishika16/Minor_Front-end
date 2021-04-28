@@ -29,7 +29,7 @@ function Profile() {
                             </div>
                         </div>
                         <div className='col-lg-6'>
-                            <div className='row'>
+                            {/* <div className='row'>
                                 <div className='col-lg-3'></div>
                                 <div className='col-lg-3'>
                                     <p>Number</p>
@@ -40,7 +40,7 @@ function Profile() {
                                     <p className='requetss_1'>Requests</p>
                                 </div>
                                 <div className='col-lg-3'></div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
