@@ -4,7 +4,9 @@ import Header from "./Header";
 import '../css/mentor.css'
 import ReactPaginate from 'react-paginate'
 import '../css/Paginate.css'
+import $ from 'jquery'
 let selectedPage;
+
 
 class Mentor extends Component {
     constructor(props) {
@@ -26,8 +28,6 @@ class Mentor extends Component {
              totalPosts_Mentor : 0 
          };
 
-        // this.handelSubmit = this.handelSubmit.bind(this);
-        // this.handelChange = this.handelChange.bind(this);
     }
 
    handelChange = (event)=>{
@@ -42,27 +42,29 @@ class Mentor extends Component {
     [event.target.name]: event.target.value
   
       })
-      console.log("my objectt",this.state)
+    
    }
 
    handelSubmit = (event)=>{
     const { username_Mentor, email_Mentor, dob_Mentor, qualification_Mentor, contactNumber_Mentor,totalPosts_Mentor,password_Mentor } = this.state
     event.preventDefault()
     // alert('${email_Mentor}')
-  console.log("my username",username_Mentor)
+//   console.log("my username",username_Mentor)
+//   console.log("my username",email_Mentor)
+//   console.log("my username",dob_Mentor)
    
     if(username_Mentor === ''){
-console.log("run hua")
+
         document.getElementById('nameErrM').style.display = 'block'
     }
     if(email_Mentor === ''){
 
         document.getElementById('emailErrM').style.display = 'block'
     }
-    if(dob_Mentor === ''){
+    // if(dob_Mentor === ''){
 
-        document.getElementById('dobErrM').style.display = 'block'
-    }
+    //     document.getElementById('dobErrM').style.display = 'block'
+    // }
     if(qualification_Mentor === ''){
 
         document.getElementById('qualiErrM').style.display = 'block'
@@ -78,10 +80,13 @@ console.log("run hua")
     
     
     else {
+        window.$("#btnSubmit").on("click",function() {
+           $( "#AddModal" ).hide();
+          });
        
         axios({
             method : 'post',
-            url : `http://localhost:3001/mentorSignup`,
+            // url : `http://localhost:3001/mentorSignup`,
             headers : {
                 AuthKey : 'asdfgh'
             },
@@ -98,6 +103,10 @@ console.log("run hua")
         .then(resp =>{
             console.log(resp.data)
                 if(resp.data.status === 200){
+                    window.$("#btnSubmit").click(function() {
+                        console.log("work hua ")
+                        $( "#AddModal" ).hide();
+                      });
                     console.log(resp.data.message)
                     // sendToStep2(true)
                 }
@@ -114,7 +123,7 @@ console.log("run hua")
         })
 
     }
-    console.log("email",email_Mentor);
+    
 
 
   }
@@ -292,7 +301,7 @@ console.log("run hua")
                     </div>
                 </div>
                 {/* Add Modal  */}
-                <div className="modal fade" id="AddModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div className="modal fade" id="AddModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" >
                     <div className="modal-dialog " role="document">
                         <div className="modal-content">
                         <div className="modal-header">
@@ -302,7 +311,7 @@ console.log("run hua")
                             </button>
                         </div>
                        <div className="modal-body">
-                       <form onSubmit = {this.handelSubmit}>
+                       <form >
                        <div className="form-group">
                        <label for="username_Mentor " class=" labelMentor" >Username :</label>
                           <input 
@@ -311,6 +320,7 @@ console.log("run hua")
                              name = "username_Mentor"
                       
                              className = "form-control inputElementMentor"
+                             maxLength="30"
                              value = {username_Mentor}
                              onChange = {this.handelChange}
                            
@@ -324,12 +334,13 @@ console.log("run hua")
                              type ="email"
                              id ="email_Mentor"
                              name = "email_Mentor"
+                             maxLength="65"
                              className = "form-control inputElementMentor"
                              value = {email_Mentor}
                              onChange = {this.handelChange}
 
                            ></input>
-                            <p className="error" id="emailErrM">Username is required </p>
+                            <p className="error" id="emailErrM">Email is required </p>
                            </div>
                           
                            <div className="form-group">
@@ -338,12 +349,14 @@ console.log("run hua")
                              type = "password"
                              id ="password_Mentor"
                              name = "password_Mentor"
+                            //  minLength="8"
+                             maxLength = "21"
                            
                              className = "form-control inputElementMentor"
                              value = {password_Mentor}
                              onChange = {this.handelChange}
                              ></input>
-                              <p className="error" id="pswdErrM">Username is required </p>
+                              <p className="error" id="pswdErrM">Password is required </p>
                              </div>
                             
                              <div className="form-group">
@@ -352,6 +365,7 @@ console.log("run hua")
                                 type = "tel"
                                 id ="contact_Mentor"
                                 name = "contactNumber_Mentor"
+                                maxLength='10'
                                 
                                 className = "form-control inputElementMentor"
                                 value = {contactNumber_Mentor}
@@ -370,7 +384,7 @@ console.log("run hua")
                                 value = {dob_Mentor}
                                 onChange = {this.handelChange}
                                 ></input>
-                                 <p className="error" id="dobErrM">Username is required </p>
+                                 <p className="error" id="dobErrM">Date of Birth is required </p>
                                 </div>
                                
                                 <div className="form-group">
@@ -383,11 +397,11 @@ console.log("run hua")
                                     value = {qualification_Mentor}
                                     onChange = {this.handelChange}
                                     ></input>
-                                     <p className="error" id="qualiErrM">Username is required </p>
+                                     <p className="error" id="qualiErrM">Qualification is required </p>
                                     </div>
                                     <p className="labelMentor">Total Posts : {totalPosts_Mentor}</p>
                                 <div class="modal-footer">
-                              <button type="submit" className="btn btn-secondary submitBtnMentor"  onClick={this.handelSubmit}>Submit</button>
+                              <button type="submit" className="btn btn-secondary submitBtnMentor"  onClick={this.handelSubmit} id="btnSubmit">Submit</button>
                               </div>
                                
                        </form>
