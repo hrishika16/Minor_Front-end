@@ -16,7 +16,10 @@
 .postM{
     overflow-x: hidden;
     position: relative;
+}
 
+.mentor_pp{
+    margin-top: 80px;
 }
 
 .post_boxM{

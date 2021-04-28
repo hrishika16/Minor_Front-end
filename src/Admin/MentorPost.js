@@ -10,14 +10,14 @@ const[initalSubject, setSubject] = useState('')
 const[intialMessage,setMessage] = useState('')
 
     return (
-        <div>
+        <div className='postM'>
             <Header></Header>
            
             <div>
-            <div className='container'>
+            <div className='container mentor_pp'>
              <div className = 'row'>
                  <div className = 'col-12 col-lg-6'>
-                 <div className='container postM'>
+                 <div className='container'>
                    
                         <div className='post_box post_boxM'>
                             <div className='row'>
