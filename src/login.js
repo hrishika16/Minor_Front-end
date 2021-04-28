@@ -14,29 +14,29 @@ function Login() {
         e.preventDefault()
         authentication.onAuthentication()
         if(username === ''){
-            document.querySelector('#userErr').innerHTML = 'Email is Required';
-            document.getElementById('error_1').style.display = 'block';
-            document.querySelector('#user-name').focus()
+           
+            document.getElementById('userErr').style.display = 'block';
+            // document.querySelector('#user-name').focus()
         }
         if(password === ''){
-        document.querySelector('#passErr').innerHTML = 'Password is Required';
-        document.getElementById('error_2').style.display = 'block';
-        document.querySelector('#password').focus()
+        
+        document.getElementById('passErr').style.display = 'block';
+        // document.querySelector('#password').focus()
         }
        
         else {
             
                 axios({
-                //     method : 'post',
-                //     url : 'http://localhost:3001/signupdata',
-                //     headers : {
-                //         AuthKey : 'asdfgh '
-                //     },
-                //     data : {
-                //         email : username,
-                //         password : password,
-                //         // category : 
-                //     }
+                    method : 'post',
+                   // url : 'http://localhost:3001/signupdata',
+                    headers : {
+                        AuthKey : 'asdfgh '
+                    },
+                    data : {
+                        email : username,
+                        password : password,
+                        // category : 
+                    }
                 }) 
                 .then(res=>{
                     console.log(res)
@@ -77,32 +77,22 @@ function Login() {
                     <div className='spaceee'>
                     <h2 className='sign'>Sign Up</h2>
                     <div className='hgt1'>
-                        <p className='lbl_txt'> Username</p>
-                        <input 
-                        type="text" 
-                        className="form-control inp_login" 
-                        placeholder='Type here...'
-                        id='user-name' 
-                        value={username} 
-                        onChange={e=>setUsername(e.target.value)}/>
-                        <p className='error' id='userErr' ></p>   
+                    <div class="box1">
+                                <p class="border_txt"> UserName</p>
+                                <input type="email" id="user-name" maxLength="35" className="form-control inp_mm intL" value={username} onChange={e => setUsername(e.target.value)} placeholder="Email-ID"/>
+                                <p className='error' id='userErr'> Username is Required </p>
+                            </div>
+                            </div>
+                            <div className='box_3'>
+                            <div class="box1">
+                                <p class="border_txt"> Password</p>
+                                <textarea type="password" id="password" maxLength="600" className="form-control inp_mm intL" value={password} onChange={e => setPassword(e.target.value)} placeholder="Type here..."/>
+                                <p className='error' id='passErr'> Password is Required</p>
+                            </div>
                     </div>
-                     <div className='hgt1'>
-                        <p className='lbl_txt'>Password</p>
-                        <input 
-                            type="password"
-                            placeholder='Type here...'
-                            className ="form-control inp_login"
-                            id='password' 
-                            value={password} 
-                            onChange={e=>setPassword(e.target.value)}/>   
-                        <p className='error' id='passErr'></p>  
-                     </div>
                        
                     <button className="btn_submit" onClick={SubmitHandler}>Login</button>
-                    {/* <div>
-                        or
-                    </div> */}
+                   
                     </div>
                 </div>
             </div>
