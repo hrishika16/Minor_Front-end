@@ -4,6 +4,8 @@ import './css/landingP.css'
 import { Redirect } from 'react-router'
 import targetUsers from './img/users_landing.jpg'
 import features from './img/landing_features.png'
+import bg from './img/landingBg.jpg'
+
 import $ from 'jquery'
 
 
@@ -132,6 +134,7 @@ function LandingPage(props) {
 
     return (
         <div  className = "mainLanding">
+        <div >
         {/* navbar */}
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <a className="navbar-brand" href="#">Navbar</a>
@@ -251,6 +254,15 @@ function LandingPage(props) {
             </div>
             </div>
            
+             <div className = "mainLandingL">
+             {/* <img src = {bg} alt = "bg"></img> */}
+             <center>
+             <h1 className = "headingWelcome">Welcome To SyncIn</h1>
+             </center>
+             </div>
+
+              <br></br>
+
            <div className="target_user">
            <center>
            <h1 className = "headingUsers">Our Target Users</h1>
@@ -311,6 +323,28 @@ function LandingPage(props) {
         
            
            </div>
+        </div>
+        <div>
+            <h1>Our team members</h1>
+            <h2>Follow us !!!</h2>
+            <div className = "container">
+                <div className = "row">
+                    <div className = "col-lg-3">
+                     
+                     <img src = {userA} alt = "team 1" className = "teamImg"></img>
+                    </div>
+                    <div className = "col-lg-3">
+                    <img src = {userA} alt = "team 1" className = "teamImg"></img>
+                        </div>
+                        <div className = "col-lg-3">
+                        <img src = {userA} alt = "team 1" className = "teamImg"></img>
+                        </div>
+                        <div className = "col-lg-3">
+                        <img src = {userA} alt = "team 1" className = "teamImg"></img>
+                        </div>
+                </div>
+            </div>
+        </div>
         </div>
     )
 }

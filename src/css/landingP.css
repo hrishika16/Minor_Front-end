@@ -16,11 +16,19 @@
 .mainLanding{
     overflow-x: hidden;
     position: relative;
+    /* background-image: url('../img/landingBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.mainLandingL{
+    
     background-image: url('../img/landingBg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    height : 950px;
+    /* height */
 }
-
 .sigU{
     font-family: 'caros_bold';
     color: #045174;
@@ -87,7 +95,7 @@
 }
 
 .target_user{
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 .target_user img {
     /* width : 600px; */
@@ -110,8 +118,14 @@
     font-size: 40px;
     font-family: 'caros_bold';
     color: #F98935;
-    margin-top: 40px;
+    margin-top: 50px;
     
+}
+
+.headingWelcome{
+    font-size: 60px;
+    font-family: 'caros_bold';
+    color: #F98935;
 }
 .tochooseL{
     color: #023858;
@@ -126,4 +140,13 @@
     box-shadow: 3px 3px 3px 3px #888888;
     border: 2px solid #fff;
     border-radius: 10px;
+}
+
+.teamImg{
+
+    width: 100px;
+    height: 100px;
+    border : 1px solid black;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px 2px #fff;
 }
