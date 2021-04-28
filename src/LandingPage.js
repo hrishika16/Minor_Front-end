@@ -14,6 +14,7 @@ function LandingPage(props) {
     const[passwordCompany , setPasswordCompany] = useState('')
     // const[signUp, setSignUp] = useState('Sign Up')
     const[nextP, setnextP] = useState(false)
+    const[nextC, setnextC] = useState(false)
 
     const SubmitSignUp = (e) => {
         console.log('mormal')
@@ -81,42 +82,47 @@ function LandingPage(props) {
         document.getElementById('err_pcompany').innerHTML = 'Password is Required';
         document.getElementById('err_pcompany').style.display = 'block';
         }
-        // else {
-        //     axios({
-        //         method : 'post',
-        //             url : 'http://localhost:3001/signupdata',
-        //             headers : {
-        //                 AuthKey : 'asdfgh '
-        //             },
-        //             // data : {
-        //             //     email : username,
-        //             //     password : password,
-        //                 // category : 
-        //             // }
-        //     }) 
-        //     .then(res=>{
-        //         console.log(res)
-        //         if(res.data.message === 201){
-        //             // setLogin(true)
-        //             console.log(res)
-        //         }
-        //         else {
-        //             console.log(res.data.message);
-        //         }
-        //     })
-        //     .catch(err=>{
-        //         console.log(err)
-        //     })
-        // }
+        else {
+            axios({
+                method : 'post',
+                    url : 'http://localhost:3001/companyRegister',
+                    headers : {
+                        AuthKey : 'asdfgh'
+                    },
+                    data : {
+                        email : emailCompanyM,
+                        password : passwordCompany
+                    }
+            }) 
+            .then(res=>{
+                console.log(res)
+                console.log(res)
+                if(res.data.status === 200){
+                    console.log(res.data.message)
+                    setnextC(true)
+                }
+                else if(res.data.status === 202) {
+                // console.log(res.data.message);
+                console.log(" Please center with correct credentials")
+                }
+                else{
+                    console.log("Some error occured")
+                }
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+        }
     }
 
-    // if(nextP){
-    //     return(
-    //         <Redirect
-    //             to='/register'
-    //         />
-    //     )
-    // }
+    if(nextC){
+        window.$('#companyModalSingUp').modal('hide');
+        return(
+            <Redirect
+                to='/registerForComapany'
+            />
+        )
+    }
 
     
 
