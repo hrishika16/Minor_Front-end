@@ -38,6 +38,7 @@ function CompanyLogin() {
                 console.log(resp)
                 if(resp.data.status === 200){
                   console.log(resp.data.message)
+                  localStorage.setItem('companyid',resp.data.data[0].mentorId)
                 }
                 else if(resp.data.status === 202) {
                   // console.log(res.data.message);
@@ -65,7 +66,7 @@ function CompanyLogin() {
     }
     return (
       
-        <div className>
+        <div >
             <div className='ro'>
             <div className='row'>
                 <div className='col-lg-5 col-12'>
