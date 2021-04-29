@@ -13,6 +13,15 @@
     src: url('../font/cretype\ \ Caros\ Medium.otf');
 }
 
+.logo_img{
+    /* max-width: 100%; */
+    width: 140px;
+    margin-right: 10px;
+}
+
+.logo_img_1{
+    width: 220px;
+}
 .mainLanding{
     overflow-x: hidden;
     position: relative;
@@ -25,6 +34,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height : 950px;
+    margin-top: 51px;
     /* height */
 }
 .sigU{
@@ -84,8 +94,12 @@
     margin-bottom: 10px;
 }
 .nav_bg{
-    background-color: rgb(25,28,83);
-    color: #fff;
+    /* background-color: rgb(25,28,83); */
+    /* color: #fff;
+    color: #fff; */
+    background-color: #fff;
+    padding: 15px;
+    height: 50px;
 }
 
 .sigU_btn:focus{
@@ -131,10 +145,35 @@
     
 }
 
+.nav_right{
+    float: right;
+}
+.nab_btn_lo{
+    border: none;
+    width: 100px;
+    border-radius: 7px;
+    background-color: #F98935;
+    color: #fff;
+    font-family: 'caros_bold';
+    padding: 7px;
+    margin-right: 10px;
+}
+
+.nab_btn_lo:focus{
+    outline: none;
+}
+.user_link{
+    color: #2d2d2d;
+}
+.user_link:hover{
+    color: #2d2d2d;
+    text-decoration: none;
+}
 .headingWelcome{
     font-size: 60px;
-    font-family: 'caros_bold';
-    color: #023858;
+    font-family: 'caros_M';
+    /* color: #023858; */
+    color: #2d2d2d;
 }
 .tochooseL{
     color: #023858;
