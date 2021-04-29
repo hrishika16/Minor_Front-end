@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './css/sidebar.css'
 import userIcon from './img/userIcon.svg'
+import syncIn from './img/logo.png'
 
 class Sidebar extends Component {
     render() {

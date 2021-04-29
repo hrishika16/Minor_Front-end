@@ -4,7 +4,10 @@ import './css/landingP.css'
 import { Redirect } from 'react-router'
 import targetUsers from './img/users_landing.jpg'
 import features from './img/landing_features.png'
-import userA from './img/userA.png'
+import userA from './img/uA.jpg'
+import userB from './img/uB.jpg'
+import userC from './img/uC.jpg'
+import userD from './img/uD.jpg'
 import ca_first from './img/ca_first.jpg'
 import ca_second from './img/cs_second.jpg'
 import ca_third from './img/ca_three.jpg'
@@ -386,15 +389,15 @@ function LandingPage(props) {
                      <h3 className = "tochooseL">Hrishika Saxena </h3>
                     </div>
                     <div className = "col-lg-3">
-                    <img src = {userA} alt = "team 1" className = "teamImg"></img>
+                    <img src = {userB} alt = "team 1" className = "teamImg"></img>
                     <h3 className = "tochooseL">Khushi Kala </h3>
                         </div>
                         <div className = "col-lg-3">
-                        <img src = {userA} alt = "team 1" className = "teamImg"></img>
+                        <img src = {userC} alt = "team 1" className = "teamImg"></img>
                         <h3 className = "tochooseL">Pralipta Jena </h3>
                         </div>
                         <div className = "col-lg-3">
-                        <img src = {userA} alt = "team 1" className = "teamImg"></img>
+                        <img src = {userD} alt = "team 1" className = "teamImg"></img>
                         <h3 className = "tochooseL">Samiksha Khare</h3>
                         </div>
                 </div>
