@@ -5,6 +5,9 @@ import { Redirect } from 'react-router'
 import targetUsers from './img/users_landing.jpg'
 import features from './img/landing_features.png'
 import userA from './img/userA.png'
+import ca_first from './img/ca_first.jpg'
+import ca_second from './img/cs_second.jpg'
+import ca_third from './img/ca_three.jpg'
 import bg from './img/landingBg.jpg'
 import syncIn from './img/logo.png'
 
@@ -290,7 +293,7 @@ function LandingPage(props) {
                    <div className="userBoxL">
                    <center>
                    <h1 className = "tochooseL">Business Company
-</h1>
+                   </h1>
                    </center>
                    </div>
                    <br></br>
@@ -325,6 +328,47 @@ function LandingPage(props) {
            
            </div>
         </div>
+{/* carosule  */}
+<div >
+<center>
+    <h1 className = "headingUsers"> Applications </h1>
+    <br></br>
+    <div id="carouselExampleIndicators" className="carousel slide " data-ride="carousel">
+  <ol className="carousel-indicators indiCA">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active bg-primary"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1" className=" bg-primary"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2" className="bg-primary "></li>
+  </ol>
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img className="d-block imgCA" src={ca_first} alt="First slide"></img>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block imgCA" src={ca_second} alt="Second slide"></img>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block imgCA" src={ca_third} alt="Third slide"></img>
+      <div class="carousel-caption d-none d-md-block">
+    {/* <h5 className= "headingUsers">Heelo dskhfdsjfh</h5>
+    <p>...</p> */}
+  </div>
+    </div>
+  </div>
+  <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span className="carousel-control-prev-icon " aria-hidden="true"></span>
+    <span className="sr-only">Previous</span>
+  </a>
+  <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span className="carousel-control-next-icon " aria-hidden="true"></span>
+    <span className="sr-only">Next</span>
+  </a>
+</div>
+    </center>
+</div>
+
+
+
+        {/* our feature */}
         <div>
         <center>
             <h1 className = "headingUsers">Our team members</h1>

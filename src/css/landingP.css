@@ -110,6 +110,13 @@
     visibility: hidden;
 }
 
+.imgCA{
+    height: 400px; 
+}
+.indiCA{
+    margin-top: 30px;
+}
+
 .target_user{
     /* background-color: #fff; */
 }
