@@ -29,25 +29,29 @@ function Login() {
             
                 axios({
                     method : 'post',
-                   // url : 'http://localhost:3001/signupdata',
+                   url : 'http://localhost:3001/userlogin',
                     headers : {
                         AuthKey : 'asdfgh '
                     },
                     data : {
-                        email : username,
-                        password : password,
-                        // category : 
+                        'email' : username,
+                        'password' : password
                     }
                 }) 
                 .then(res=>{
                     console.log(res)
-                    if(res.data.message === 201){
+                    console.log(res)
+                    if(res.data.status === 200){
+                        console.log(res.data.message)
+                        localStorage.setItem('emailC' , res.data.data[0].email)
                         setLogin(true)
-                        //  localStorage.setItem('login' , res.data.jwt)
-                        console.log(res)
                     }
-                    else {
-                        console.log(res.data.message);
+                    else if(res.data.status === 202) {
+                    // console.log(res.data.message);
+                    console.log(" Please center with correct credentials")
+                    }
+                    else{
+                        console.log("Some error occured")
                     }
                 })
                 .catch(err=>{
@@ -59,12 +63,12 @@ function Login() {
     if(login) {
         
         // ll = localStorage.getItem('login')
-        // return (
-        //     <Redirect to= {{
-        //         pathname : "/dashboard" 
-        //     }}
-        //     />
-        // )
+        return (
+            <Redirect to= {{
+                pathname : "/dashboard" 
+            }}
+            />
+        )
     }
 
     return (
@@ -87,7 +91,7 @@ function Login() {
                             <div className='box_3'>
                             <div class="box1">
                                 <p class="border_txt"> Password</p>
-                                <textarea type="password" id="password" maxLength="600" className="form-control inp_mm intL" value={password} onChange={e => setPassword(e.target.value)} placeholder="Type here..."/>
+                                <input type="password" id="password" maxLength="600" className="form-control inp_mm intL" value={password} onChange={e => setPassword(e.target.value)} placeholder="Type here..."/>
                                 <p className='error' id='passErr'> Password is Required</p>
                             </div>
                     </div>

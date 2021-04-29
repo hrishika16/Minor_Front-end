@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect,Link } from 'react-router-dom'
 import './css/registerU.css'
 import star from './img/star.svg'
 import axios from 'axios'
@@ -295,7 +295,7 @@ function RegisterCompany() {
                             </div>
 
                    
-                    <button  className='next_btn_1' onClick={firstDetailsReg}>Next</button>
+                    <button  className='next_btn_1' onClick={firstDetailsReg}><Link to='/companyProfile'> Next</Link> </button>
                 </div>
                 </div>
             </div>

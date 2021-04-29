@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './css/headerUse.css'
 import logout from './img/logout.svg';
 import syncIn from './img/logo.png'
+import { Link } from 'react-router-dom'
 
 class HeaderUser extends Component {
     render() {
@@ -48,7 +49,7 @@ class HeaderUser extends Component {
                                 </div>
                             </li>
                             <li>
-                                <button className='logout_btn_dd'> Logout <img src={logout} alt='logout button' className='logg_img' /></button>
+                                <button className='logout_btn_dd'><Link to='/'> Logout <img src={logout} alt='logout button' className='logg_img' /></Link></button>
                             </li>
                         </ul>
                     </div>

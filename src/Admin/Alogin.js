@@ -107,7 +107,7 @@ function Alogin() {
                             <p className='errorr' id='err_p'>This field cannot be empty</p>
                         </div>
                         <button className='log_btn' onClick={SubmitHandler} >Log in</button>
-                            <p className='text-center frgt'>Forgot Password ?</p>
+                            {/* <p className='text-center frgt'>Forgot Password ?</p> */}
                     </div>
                 </div>
             </div>
