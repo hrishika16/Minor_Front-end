@@ -18,6 +18,7 @@ import insta from './img/insta.jpg'
 import bg from './img/landingBg.jpg'
 import syncIn from './img/logo.png'
 import car2 from './img/car3.jpg'
+import car44 from './img/car44.jpg'
 import $ from 'jquery'
 import { Link } from 'react-router-dom'
 
@@ -116,9 +117,10 @@ function LandingPage(props) {
                 console.log(res)
                 console.log(res)
                 if(res.data.status === 200){
-                    console.log(res.data.message)
-                    localStorage.setItem('emailC' , res.data.data[0].email)
+                    console.log(res.data)
+                    localStorage.setItem('emailC' , emailCompanyM)
                     setnextC(true)
+                    console.log(nextC)
                 }
                 else if(res.data.status === 202) {
                 // console.log(res.data.message);
@@ -166,7 +168,7 @@ function LandingPage(props) {
                         </button>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                            <button className="dropdown-item"> <Link to='/login' className='user_link'>As User</Link> </button>
-                           <button className="dropdown-item"> <Link to='/companyLogin ' className='user_link'>As Company</Link> </button>
+                           <button className="dropdown-item"> <Link to='/companyLogin' className='user_link'>As Company</Link> </button>
                         </div>
                     </li>
                     <li className="nav-item dropdown">
@@ -345,6 +347,7 @@ function LandingPage(props) {
     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active bg-primary"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1" className=" bg-primary"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2" className="bg-primary "></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3" className="bg-primary "></li>
   </ol>
   <div className="carousel-inner">
     <div className="carousel-item active">
@@ -352,6 +355,9 @@ function LandingPage(props) {
     </div>
     <div className="carousel-item">
       <img className="d-block imgCA" src={ca_second} alt="Second slide"></img>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block imgCA" src={car44} alt="foruth slide"></img>
     </div>
     <div className="carousel-item">
       <img className="d-block imgCA" src={car2} alt="Third slide"></img>
