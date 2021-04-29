@@ -14,7 +14,7 @@ import linked from './img/linked.jpg'
 import insta from './img/insta.jpg'
 import bg from './img/landingBg.jpg'
 import syncIn from './img/logo.png'
-
+import car2 from './img/car3.jpg'
 import $ from 'jquery'
 import { Link } from 'react-router-dom'
 
@@ -351,7 +351,7 @@ function LandingPage(props) {
       <img className="d-block imgCA" src={ca_second} alt="Second slide"></img>
     </div>
     <div className="carousel-item">
-      <img className="d-block imgCA" src={ca_third} alt="Third slide"></img>
+      <img className="d-block imgCA" src={car2} alt="Third slide"></img>
       <div class="carousel-caption d-none d-md-block">
     {/* <h5 className= "headingUsers">Heelo dskhfdsjfh</h5>
     <p>...</p> */}
@@ -404,13 +404,13 @@ function LandingPage(props) {
 <footer className="page-footer font-small  ">
 
  
-  <div className="container-fluid footca">
+  <div className=" footca">
 
-
+    <div className='container'>
     <div className="row">
 
-    
-      <div className="col-md-12 col-lg-3 py-5">
+    <div className='col-lg-4'></div>
+      <div className="col-lg-1 py-5">
         <div className="mb-5 flex-center">
 
           <a className="fb-ic iconSize">
@@ -418,25 +418,33 @@ function LandingPage(props) {
           </a>
           
         
-          {/* <!--Linkedin --> */}
-          <a className="li-ic iconSize">
-          <img src={github} alt = "fb" className="iconSize"></img>
-          </a>
-          {/* <!--Instagram--> */}
-          <a className="ins-ic iconSize">
-          <img src={insta} alt = "fb" className="iconSize"></img>
-          </a>
-
-          <a className="ins-ic iconSize">
-          <img src={linked} alt = "fb" className="iconSize"></img>
-          </a>
+        
+         
+        
           
         </div>
       </div>
-    
+      <div className='col-lg-1 py-5'>
+            {/* <!--Linkedin --> */}
+            <a className="li-ic iconSize">
+          <img src={github} alt = "fb" className="iconSize"></img>
+          </a>
+      </div>
+      <div className='col-lg-1 py-5'>
+           {/* <!--Instagram--> */}
+           <a className="ins-ic iconSize">
+          <img src={insta} alt = "fb" className="iconSize"></img>
+          </a>
 
+      </div>
+      <div className='col-lg-1 py-5'>
+      <a className="ins-ic iconSize">
+          <img src={linked} alt = "fb" className="iconSize"></img>
+          </a>
+      </div>
+      <div className='col-lg-4'></div>
     </div>
-   
+   </div>
 
   </div>
   
