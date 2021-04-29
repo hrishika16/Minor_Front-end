@@ -6,8 +6,10 @@ import targetUsers from './img/users_landing.jpg'
 import features from './img/landing_features.png'
 import userA from './img/userA.png'
 import bg from './img/landingBg.jpg'
+import syncIn from './img/logo.png'
 
 import $ from 'jquery'
+import { Link } from 'react-router-dom'
 
 
 function LandingPage(props) {
@@ -137,36 +139,33 @@ function LandingPage(props) {
         <div  className = "mainLanding">
         <div >
         {/* navbar */}
-            <nav className="navbar navbar-expand-lg  nav_bg">
-                <a className="navbar-brand" href="#">Navbar</a>
+            <nav className="navbar navbar-expand-lg  nav_bg fixed-top">
+                {/* <a className="navbar-brand" href="#">Navbar</a> */}
+                <img src={syncIn} alt='img logo' className='logo_img' />
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul className="navbar-nav">
-                    <li className="nav-item active">
+                    <ul className="navbar-nav nav_right">
+                    {/* <li className="nav-item active">
                         <a className="nav-link" href="#">Home </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Login</a>
+                    </li> */}
+                    <li className="nav-item dropdown">
+                        <button type="button " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="dropdown-toggle nab_btn_lo" >
+                            Login
+                        </button>
+                        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                           <button className="dropdown-item"> <Link to='/login' className='user_link'>As User</Link> </button>
+                           <button className="dropdown-item"> <Link to='/companyLogin ' className='user_link'>As Company</Link> </button>
+                        </div>
                     </li>
                     <li className="nav-item dropdown">
-                        <button type="button " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="dropdown-toggle btn btn-primary nav-link" >
+                        <button type="button " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="dropdown-toggle nab_btn_lo" >
                             Sign Up
                         </button>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <button className="dropdown-item" data-toggle="modal" data-target="#exampleModalCenter">As User</button>
                             <button className="dropdown-item" data-toggle="modal" data-target="#companyModalSingUp" >As Company</button>
-                        </div>
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown link
-                        </a>
-                        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a className="dropdown-item" href="#">Action</a>
-                        <a className="dropdown-item" href="#">Another action</a>
-                        <a className="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li>
                     </ul>
@@ -258,7 +257,7 @@ function LandingPage(props) {
              <div className = "mainLandingL">
              {/* <img src = {bg} alt = "bg"></img> */}
              <center>
-             <h1 className = "headingWelcome">Welcome To SyncIn</h1>
+             <h1 className = "headingWelcome">Welcome To <img src={syncIn} alt='img logo' className='logo_img_1' /></h1>
              </center>
              </div>
 
