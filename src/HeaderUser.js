@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './css/headerUse.css'
 import logout from './img/logout.svg';
+import syncIn from './img/logo.png'
 
 class HeaderUser extends Component {
     render() {
@@ -10,7 +11,7 @@ class HeaderUser extends Component {
                 <nav className="navbar navbar-expand-lg ">
                 {/* logo space */}
                     <div className='logo class="navbar-brand"'>
-                        LOGO
+                     <img src= {syncIn} alt= "logo" className="logoImg"></img>
                     </div>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>

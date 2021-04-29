@@ -35,6 +35,11 @@
     margin-right: 10px;
 }
 
+.logoImg{
+    width: 140px;
+    /* height: 50px; */
+}
+
 .inp_search{
     width: 450px !important;
     font-family: 'caros';
