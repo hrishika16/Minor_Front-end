@@ -2,11 +2,12 @@ import React,{useState} from 'react'
 import axios from 'axios'
 import companyLogin from './img/companyL.png'
 import './css/companyLogin.css'
+import {Redirect} from 'react-router-dom'
 
 function CompanyLogin() {
     const[email , setEmail] = useState('')
     const[password , setPassword] = useState('')
-    const [login,setLogin] = useState(false)
+    const [complogin,setCompLogin] = useState(false)
 
     const SubmitHandler = (e) => {
         e.preventDefault()
@@ -27,17 +28,18 @@ function CompanyLogin() {
                 method : 'post',
                 url : 'http://localhost:3001/companyLogin',
                 data: {
-                    'email ' : email,
+                    'email' : email,
                     'password' : password
                   },
                   headers : {
-                    AuthKey : 'asdfgh '
+                    AuthKey : 'asdfgh'
                   }
             }) 
             .then(resp=>{
                 console.log(resp)
                 if(resp.data.status === 200){
                   console.log(resp.data.message)
+                  setCompLogin(true)
                   localStorage.setItem('companyid',resp.data.data[0].mentorId)
                 }
                 else if(resp.data.status === 202) {
@@ -54,15 +56,15 @@ function CompanyLogin() {
         }
     }
 
-    if(login) {
+    if(complogin) {
         
         // ll = localStorage.getItem('login')
-        // return (
-        //     <Redirect to= {{
-        //         pathname : "/dashboard" 
-        //     }}
-        //     />
-        // )
+        return (
+            <Redirect to= {{
+                pathname : "/companyProfile" 
+            }}
+            />
+        )
     }
     return (
       
@@ -75,7 +77,7 @@ function CompanyLogin() {
                 <div className='col-lg-7 col-12'>
                     
                     <div className='spaceee'>
-                    <h2 className='sign loginBorder'>Login In</h2>
+                    <h2 className='sign loginBorder'>Login</h2>
                     <div className='hgt1'>
                         <p className='lbl_txt'> Email </p>
                         <input 
