@@ -4,6 +4,7 @@ import './css/landingP.css'
 import { Redirect } from 'react-router'
 import targetUsers from './img/users_landing.jpg'
 import features from './img/landing_features.png'
+import userA from './img/userA.png'
 import bg from './img/landingBg.jpg'
 
 import $ from 'jquery'
@@ -136,7 +137,7 @@ function LandingPage(props) {
         <div  className = "mainLanding">
         <div >
         {/* navbar */}
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg  nav_bg">
                 <a className="navbar-brand" href="#">Navbar</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -276,25 +277,26 @@ function LandingPage(props) {
                     <center>
                     <div className="userBoxL">
                     <center>
-                   <h1 className = "tochooseL">user</h1>
+                   <h1 className = "tochooseL"> Startup Entrepreneurs</h1>
                    </center>
                    </div>
 
                    <br></br>
                    <div className="userBoxL">
                    <center>
-                   <h1 className = "tochooseL">user</h1>
+                   <h1 className = "tochooseL">Mentors</h1>
                    </center>
                    </div>
                    <br></br>
                    <div className="userBoxL">
                    <center>
-                   <h1 className = "tochooseL">user</h1>
+                   <h1 className = "tochooseL">Business Company
+</h1>
                    </center>
                    </div>
                    <br></br>
                    <div className="userBoxL">
-                   <h1 className = "tochooseL">user</h1>
+                   <h1 className = "tochooseL">Job Seeker</h1>
                    </div>
                    </center>
                 </div>
@@ -325,22 +327,28 @@ function LandingPage(props) {
            </div>
         </div>
         <div>
-            <h1>Our team members</h1>
-            <h2>Follow us !!!</h2>
+        <center>
+            <h1 className = "headingUsers">Our team members</h1>
+            <h2  className = "tochooseL">Follow us !!!</h2>
+            </center>
             <div className = "container">
                 <div className = "row">
                     <div className = "col-lg-3">
                      
                      <img src = {userA} alt = "team 1" className = "teamImg"></img>
+                     <h3 className = "tochooseL">Hrishika Saxena </h3>
                     </div>
                     <div className = "col-lg-3">
                     <img src = {userA} alt = "team 1" className = "teamImg"></img>
+                    <h3 className = "tochooseL">Khushi Kala </h3>
                         </div>
                         <div className = "col-lg-3">
                         <img src = {userA} alt = "team 1" className = "teamImg"></img>
+                        <h3 className = "tochooseL">Pralipta Jena </h3>
                         </div>
                         <div className = "col-lg-3">
                         <img src = {userA} alt = "team 1" className = "teamImg"></img>
+                        <h3 className = "tochooseL">Samiksha Khare</h3>
                         </div>
                 </div>
             </div>

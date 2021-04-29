@@ -16,9 +16,7 @@
 .mainLanding{
     overflow-x: hidden;
     position: relative;
-    /* background-image: url('../img/landingBg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; */
+   /* background-color: rgb(239,239,237); */
 }
 
 .mainLandingL{
@@ -85,6 +83,10 @@
     width: 100%;
     margin-bottom: 10px;
 }
+.nav_bg{
+    background-color: rgb(25,28,83);
+    color: #fff;
+}
 
 .sigU_btn:focus{
     outline: none;
@@ -125,28 +127,34 @@
 .headingWelcome{
     font-size: 60px;
     font-family: 'caros_bold';
-    color: #F98935;
+    color: #023858;
 }
 .tochooseL{
     color: #023858;
     font-family: 'carosM';
+    font-size: 25px;
+    margin-top: 20px;
+    text-decoration: underline #F98935;
 }
 
 .userBoxL{
     width: 210px;
-    height: 130px;
+    height: 90px;
     text-align: center;
     background-color: #fff;
     box-shadow: 3px 3px 3px 3px #888888;
     border: 2px solid #fff;
     border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .teamImg{
 
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border : 1px solid black;
     border-radius: 50%;
     box-shadow: 2px 2px 2px 2px #fff;
+    margin-top: 30px;
 }
