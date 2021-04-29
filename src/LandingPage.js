@@ -8,6 +8,10 @@ import userA from './img/userA.png'
 import ca_first from './img/ca_first.jpg'
 import ca_second from './img/cs_second.jpg'
 import ca_third from './img/ca_three.jpg'
+import fb from './img/fb.jpg'
+import github from './img/git.png'
+import linked from './img/linked.jpg'
+import insta from './img/insta.jpg'
 import bg from './img/landingBg.jpg'
 
 import $ from 'jquery'
@@ -397,6 +401,55 @@ function LandingPage(props) {
                 </div>
             </div>
         </div>
+        {/* <!-- Footer --> */}
+<footer className="page-footer font-small  ">
+
+ 
+  <div className="container-fluid footca">
+
+
+    <div className="row">
+
+    
+      <div className="col-md-12 col-lg-3 py-5">
+        <div className="mb-5 flex-center">
+
+          <a className="fb-ic iconSize">
+           <img src={fb} alt = "fb" className="iconSize"></img>
+          </a>
+          
+        
+          {/* <!--Linkedin --> */}
+          <a className="li-ic iconSize">
+          <img src={github} alt = "fb" className="iconSize"></img>
+          </a>
+          {/* <!--Instagram--> */}
+          <a className="ins-ic iconSize">
+          <img src={insta} alt = "fb" className="iconSize"></img>
+          </a>
+
+          <a className="ins-ic iconSize">
+          <img src={linked} alt = "fb" className="iconSize"></img>
+          </a>
+          
+        </div>
+      </div>
+    
+
+    </div>
+   
+
+  </div>
+  
+
+ 
+  <div class="footer-copyright text-center py-3 footcp">© 2021 Copyright:
+    <a href="#">SyncIn.com</a>
+  </div>
+  
+
+</footer>
+
         </div>
     )
 }
