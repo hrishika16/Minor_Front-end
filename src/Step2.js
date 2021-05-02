@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import './css/step2.css'
 import star from './img/star.svg'
 import $ from 'jquery'
-import { Redirect } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Redirect,Link } from 'react-router-dom';
+import axios from 'axios'
 let isChecked;
 
 class Step2 extends Component {
@@ -14,12 +14,53 @@ class Step2 extends Component {
              radioS : '',
              emp_Type: 'emp_type',
              exp_H : 'emp_h',
-             buttonValue : false
+             buttonValue : false,
+             email : '',
+             category :'',
+             schoolName : '',
+             schoolBoard : '',
+             degree : '',
+             colleageName : '',
+             MasterDegree : '',
+             colleageName2 : ''
         }
     }
 
     componentDidMount(){
 
+    }
+
+    handleSubmit(){
+        axios({
+            method : 'post',
+           url : 'http://localhost:3001/page2',
+            headers : {
+                AuthKey : 'asdfgh'
+            },
+            // data : {
+            //     'email' : username,
+            //     'password' : password
+            // }
+        }) 
+        .then(res=>{
+            console.log(res)
+            console.log(res)
+            if(res.data.status === 200){
+                console.log(res.data.message)
+                localStorage.setItem('emailC' , res.data.data[0].email)
+                // setLogin(true)
+            }
+            else if(res.data.status === 202) {
+            // console.log(res.data.message);
+            console.log(" Please center with correct credentials")
+            }
+            else{
+                console.log("Some error occured")
+            }
+        })
+        .catch(err=>{
+            console.log(err)
+        })
     }
 
     handleCheckBox = (e) =>{
@@ -39,6 +80,8 @@ class Step2 extends Component {
     })
     
    }
+
+
 
    handleExp= event =>{
     event.preventDefault()
