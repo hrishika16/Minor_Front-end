@@ -57,12 +57,23 @@ function App() {
               <Route exact path='/404' component={Error404}></Route>
               <Route exact path ='/emailSent' component={EmailSent}></Route>
               <Route exact path = '/waiting/:token' component={Waiting}></Route>
+
+
+
+              {/* Mentor Routes Starts */}
               <Route exact path = '/mentorLogin' component = {MentorLogin}></Route>
               <Route exact path = '/mentorProfile' component={MentorProfile}></Route>
               <Route exact path = '/mentorPost' component = {MentorPost}></Route>
+              {/* Mentor Routes ends */}
+
+
+              {/* Company Routes Starts */}
               <Route exact path='/registerForCompany' component={RegisterCompany} />
               <Route exact path = '/companyLogin' component = {CompanyLogin}></Route>
-            <Route exact path = '/companyProfile' component={CompanyProfile}></Route>
+              <Route exact path = '/companyProfile' component={CompanyProfile}></Route>
+              {/* Company Routes ends */}
+
+
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}
