@@ -103,16 +103,9 @@ renderTableData() {
                         {user.message}
                     </div>
                     <div className='col-lg-6 col-12 btns_w'>
-                        <div className="dropdown">
-                            <button className="dropdown-toggle see_more" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                See more
-                            </button>
-                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a className="dropdown-item seemore_dropitem" href="#">Add</a>
-                                <a className="dropdown-item seemore_dropitem" href="#">Remove</a>
-                                <a className="dropdown-item seemore_dropitem1" href="#">More Details</a>
-                            </div>
-                    </div>
+                        <button className="see_more" type="button" data-toggle="modal" data-target="#viewModal">
+                            See more
+                        </button>
                     </div>
                 </div>
                 {/* <button className=' see_more'  >  See more</button>   dropdown see more - remove,suspend(cannot login from this account),more details(modal to show all details and edit option) */}   
@@ -179,6 +172,25 @@ render() {
                         activeClassName = {`active `}
                     />
                     <br/>  
+                </div>
+                {/* <center>
+                        <button className='see_more'>See More</button>
+                    </center> */}
+            </div>
+             {/* <!--view Modal --> */}
+             <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
