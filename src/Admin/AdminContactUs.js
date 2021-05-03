@@ -3,6 +3,7 @@ import '../css/contactUsForm.css'
 import ReactPaginate from 'react-paginate'
 import axios from 'axios'
 import Header from './Header'
+import $ from 'jquery'
 let selectedPage;
 
 class AdminContactUs extends Component {
@@ -57,6 +58,7 @@ handleAxiosDrop() {
            const data = response.data.data
             const forPage = response.data.TotalPages
             console.log(data)
+            console.log(this.state.currentPage)
             if(response.data.status === 200){
                 this.setState({
                     pageCount : forPage,
@@ -88,6 +90,11 @@ handlePageClick = e =>{
    } )
 }
 
+mane = (id,msg) =>{
+   console.log('id',id,'msg',msg)
+   $('#viewD').html(msg)
+}
+
 renderTableData() {
     return this.state.users.map((user) => {
        return (
@@ -103,7 +110,7 @@ renderTableData() {
                         {user.message}
                     </div>
                     <div className='col-lg-6 col-12 btns_w'>
-                        <button className="see_more" type="button" data-toggle="modal" data-target="#viewModal">
+                        <button className="see_more" type="button" data-toggle="modal" data-target="#viewModal" id={user._id} onClick={ () => this.mane(user._id , user.message) }>
                             See more
                         </button>
                     </div>
@@ -178,17 +185,17 @@ render() {
                     </center> */}
             </div>
              {/* <!--view Modal --> */}
-             <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <div className="modal fade" id="viewModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered" role="document">
+                    <div className="modal-content">
+                    <div className="modal-header">
+                        <h5 className="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        
+                    <div className="modal-body">
+                        <div id='viewD'></div>
                     </div>
                     </div>
                 </div>
