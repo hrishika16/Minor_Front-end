@@ -213,6 +213,20 @@
     border: 1px solid #ced4da;
 }
 
+.inp_txtarea{
+    font-family: 'caros';
+    resize: none;
+    border: 1px solid #ced4da;
+    padding-top: 9px;
+    height: 300px;
+    /* font-size: 14px; */
+}
+
+.inp_txtarea:focus{
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #ced4da;
+}
 #subj_err{
     display: none;
 }

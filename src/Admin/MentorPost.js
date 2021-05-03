@@ -54,7 +54,7 @@ const renderRequests =()=> {
         console.log(II.id)
         
         return (
-            <React.Fragment key={II.id}>
+            <React.Fragment key={II.mentorId}>
             <div className='post_boxM'>
                 <div className='row someborder'>
                     <div className='col-3 '>
@@ -138,17 +138,17 @@ const onAddClick = (e) =>{
                 <div className='post_boxM'>
                             <div className=' box_posttM'>
                             <div className='box_2'>
-                            <p class="text-center login-txt">Add Post</p>
-                            <div class="box1">
-                                <p class="border_txt"> Subject</p>
-                                <input type="text" id="user" maxLength="35" class="form-control inp_mm" value={intialSubjectM} onChange={e => setSubject(e.target.value)} placeholder="Type here..."/>
+                            <p className="text-center login-txt">Add Post</p>
+                            <div className="box1">
+                                <p className="border_txt"> Subject</p>
+                                <input type="text" id="user" maxLength="35" className="form-control inp_mm" value={intialSubjectM} onChange={e => setSubject(e.target.value)} placeholder="Type here..."/>
                                 <p className='error' id='subj_err'></p>
                             </div>
                             </div>
                             <div className='box_3'>
-                            <div class="box1">
-                                <p class="border_txt"> Message</p>
-                                <textarea type="text" id="user" maxLength="600" class="form-control inp_mm " value={intialMessageM} onChange={e => setMessage(e.target.value)} placeholder="Type here..."/>
+                            <div className="box1">
+                                <p className="border_txt"> Message</p>
+                                <textarea type="text" id="user" maxLength="600" className="form-control inp_txtarea " value={intialMessageM} onChange={e => setMessage(e.target.value)} placeholder="Type here..."/>
                                 <p className='error' id='msg_err'></p>
                             </div>
                             </div>
