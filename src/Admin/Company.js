@@ -167,7 +167,7 @@ class Company extends Component {
                         </table>
                     </div>
                     {/* pagination */}
-                    <div className='paginee'>
+                    {/* <div className='paginee'>
                         <ReactPaginate
                             previousLabel = {"<"}
                             nextLabel = {">"}
@@ -182,7 +182,10 @@ class Company extends Component {
                             activeClassName = {`active `}
                         />
                         <br/>  
-                    </div>
+                    </div> */}
+                    <center>
+                        <button className='see_more'>See More</button>
+                    </center>
                 </div>
             </div>
         )
