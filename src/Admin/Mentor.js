@@ -294,6 +294,9 @@ class Mentor extends Component {
                         />
                         <br/>  
                     </div> */}
+                    <center>
+                        <button className='see_more'>See More</button>
+                    </center>
                 </div>
                 {/* Add Modal  */}
                 <div className="modal fade" id="AddModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" >
