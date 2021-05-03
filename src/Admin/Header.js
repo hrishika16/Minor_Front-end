@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import $ from 'jquery'
 
 class Header extends Component {
+
+    handleClickActive(){
+        
+    }
+
     render() {
         return (
             <div>
