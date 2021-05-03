@@ -8,6 +8,7 @@ function Alogin() {
 
     const[adminName , setAdmin] = useState('')
     const[password , setPassword] = useState('')
+    const[check__box , setCheck__box] = useState('')
     const [login,setLogin] = useState(false)
 
     const SubmitHandler = (e) => {
@@ -105,6 +106,12 @@ function Alogin() {
                             onChange={e=>setPassword(e.target.value)}
                             />
                             <p className='errorr' id='err_p'>This field cannot be empty</p>
+                        </div>
+                        <div className="form-check check_mg">
+                            <input className="check_box_1 form-check-input" type="checkbox" value={check__box} id="defaultCheck1" onChange={e => setCheck__box(e.target.value)} />
+                            <label className="form-check-label" htmlFor="defaultCheck1">
+                                Remember Me
+                            </label>
                         </div>
                         <button className='log_btn' onClick={SubmitHandler} >Log in</button>
                             {/* <p className='text-center frgt'>Forgot Password ?</p> */}
