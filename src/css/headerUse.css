@@ -29,6 +29,14 @@
     left: 0;
     z-index: 1030;
 }
+.log_out_1{
+    color: #01355D;
+    font-family: 'caros';
+}
+.log_out_1:hover{
+    text-decoration: none;
+    color: #01355D;
+}
 
 .me_1{
     margin-left: 10px;
@@ -41,7 +49,7 @@
 }
 
 .inp_search{
-    width: 450px !important;
+    width: calc(700px - 30px) !important;
     font-family: 'caros';
     font-size: 13px;    
     border-radius: 7px;

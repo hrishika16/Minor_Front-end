@@ -23,7 +23,7 @@ class HeaderUser extends Component {
                         <form className="form-inline">
                             <input className="form-control inp_search" type="search" placeholder="Search" aria-label="Search"/>
                         </form>
-                        {/* <ul className='mr-auto'></ul> */}
+                        <ul className='mr-auto'></ul>
                         <ul className='mr-auto navbar-nav nav_11'>    
                             <li className="nav-item me_1">
                                 <button className='add_post_btn'>Add Post</button>
@@ -33,9 +33,9 @@ class HeaderUser extends Component {
                                     Settings
                                 </button>
                                 <div className="dropdown-menu" aria-labelledby="mentorDropdownButton">
-                                    <a className="dropdown-item seemore_dropitem" href="#">Add</a>
-                                    <a className="dropdown-item seemore_dropitem" href="#">Remove</a>
-                                    <a className="dropdown-item seemore_dropitem1" href="#">More Details</a>
+                                    <button className="dropdown-item seemore_dropitem" >Help</button>
+                                    <button className="dropdown-item seemore_dropitem" >Privacy</button>
+                                    <button className="dropdown-item seemore_dropitem1" ><Link to='/' className='log_out_1'> Logout <img src={logout} alt='logout button' className='logg_img' /></Link></button>
                                 </div>
                             </li>
                             <li className="nav-item dropdown me_1">
@@ -48,9 +48,9 @@ class HeaderUser extends Component {
                                     <a className="dropdown-item seemore_dropitem1" href="#">More Details</a>
                                 </div>
                             </li>
-                            <li>
+                            {/* <li>
                                 <button className='logout_btn_dd'><Link to='/'> Logout <img src={logout} alt='logout button' className='logg_img' /></Link></button>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </nav>
