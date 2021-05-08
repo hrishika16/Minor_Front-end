@@ -13,30 +13,40 @@
     src: url('../font/cretype\ \ Caros\ Medium.otf');
 }
 
+.main_prof{
+    padding-left: 220px;
+    width: 100%;
+    /* background: #f5f5f5; */
+}
 .whole_27{
     position: relative;
+    height: 100vh;
     overflow-x: hidden;
-    /* background: #f5f5f5; */
+    background: #f5f5f5;
 }
 .mm_11{
     margin-top: 80px;
 }
-
+.margin_11{
+    margin-top: 20px;
+}
 .edit_btn_p{
     border: none;
+    float: right;
     border-radius: 6px;
     background: #F8951D;
     color: #fff;
     font-size: 15px;
     font-family: 'caros_bold';
     padding: 7px;
-    margin-bottom: 20px;
+    
 }
 .edit_btn_p:focus{
     outline: none;
 }
 .userImg1{
     width: 110px;
+    /* max-width: 100%; */
     /* float: right; */
     /* margin-top: 40px; */
 }
@@ -68,7 +78,7 @@
 .summary_bx{
     resize: none;
     height: 70px;
-    width: 300px;
+    width: 240px;
     border: 1px solid rgba(45,45,45,0.3);
 }
 
@@ -103,9 +113,10 @@
 }
 
 .post_box{
-    background: #f5f5f5;
+    background: #fff;
     padding: 10px;
-    width: 500px;
+    /* width: 500px; */
+    /* box-shadow: 5px 5px 10px #00000014; */
 }
 
 .post_Img{
