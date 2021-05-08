@@ -113,3 +113,16 @@
 .logg_img{
     width: 14px;
 }
+
+.summary_bx_1{
+    resize: none;
+    height: 70px;
+    width: 100%;
+    border: 1px solid rgba(45,45,45,0.3);
+    margin-bottom: 20px;
+}
+
+.summary_bx_1:focus{
+    outline: none;
+    border: 1px solid rgba(45,45,45,0.3);
+}
