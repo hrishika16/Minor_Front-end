@@ -13,7 +13,7 @@ export class AdminL extends Component {
         super(props)
     
         this.state = {
-             
+            
         }
     }
 
@@ -23,10 +23,10 @@ export class AdminL extends Component {
                 $('#sidebarp, #content').toggleClass('active');
                 $('.overlay').toggleClass('active');
             });
-          $('.overlay').on('click', function(){
-            $('.overlay').toggleClass('active');
-            $('#sidebarp, #content').toggleClass('active');
-          });
+            $('.overlay').on('click', function(){
+                $('.overlay').toggleClass('active');
+                $('#sidebarp, #content').toggleClass('active');
+            });
         });
     }
     

@@ -27,6 +27,7 @@ import MentorPost from './Admin/MentorPost';
 import RegisterCompany from './RegisterCompany';
 import CompanyLogin from './CompanyLogin';
 import CompanyProfile from './CompanyProfile';
+import Internship from './Internship';
 let isLoggedIn;
 
 
@@ -57,7 +58,7 @@ function App() {
               <Route exact path='/404' component={Error404}></Route>
               <Route exact path ='/emailSent' component={EmailSent}></Route>
               <Route exact path = '/waiting/:token' component={Waiting}></Route>
-
+              <Route exact path='/internship' component={Internship} />
 
 
               {/* Mentor Routes Starts */}
