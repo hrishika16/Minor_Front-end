@@ -37,7 +37,7 @@ let isLoggedIn;
 function App() {
   return (
     <div className="App">
-     <BrowserRouter>
+    <BrowserRouter>
             <Switch>
               {/* login */}
               <Route exact path='/login' component={Login}  />
@@ -99,7 +99,7 @@ function SecureRoute(props){
       (
         <Redirect to={{ pathname : '/' }} />
       )
-     } >
+    } >
 
     </Route>
   )
