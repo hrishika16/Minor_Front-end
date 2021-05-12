@@ -30,6 +30,7 @@ import CompanyProfile from './CompanyProfile';
 import Step3 from './Step3';
 import Help from './Help';
 import Privacy from './Privacy';
+import Internship from './Internship';
 let isLoggedIn;
 
 
@@ -63,10 +64,7 @@ function App() {
               <Route exact path = '/step3' component={Step3}></Route>
               <Route exact path = '/help' component ={Help}></Route>
               <Route exact path ='/privacy' component = {Privacy}></Route>
-             
-
-
-
+              <Route exact path='/hiring' component={Internship} />
               {/* Mentor Routes Starts */}
               <Route exact path = '/mentorLogin' component = {MentorLogin}></Route>
               <Route exact path = '/mentorProfile' component={MentorProfile}></Route>
