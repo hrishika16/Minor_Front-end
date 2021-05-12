@@ -114,6 +114,16 @@ function Profile() {
                         </div>
                     </div>
                 </div>
+                {/* profile about  */}
+                <div className="container"  >
+                 <div className = "row">
+                     <div className = "col-lg-6">
+                         
+                     </div>
+                 </div>
+
+                </div>
+
             </div>
     )
 }
