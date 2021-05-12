@@ -1,0 +1,73 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.logo{
+    color: #01355D;
+    font-size: 22px;
+}
+
+.help_heading{
+    font-family: 'caros_bold';
+    font-size: 40px;
+    color:  #023858;
+}
+
+.tryyy{
+    position: fixed;
+    background: #DEE6F1;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    margin-bottom: 50px;
+}
+.heading_other{
+   margin-top: 60px;;
+  
+    color:#F98935;
+    font-family: 'caros_Bold';
+    margin-bottom: 30px;
+  
+    }
+
+    .btn_dropHelp{
+
+        width : 200px ; 
+        padding: 10px;
+       
+      
+    }
+.home_heading{
+
+    font-family: 'carosM';
+    color:#01355D;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.popular_actions{
+    font-family: 'caros';
+    color:#01355D;
+
+}
+
+.heading_suggested{
+    font-family: 'carosM';
+    color:#F98935;
+    font-weight: bold;
+
+}
+   

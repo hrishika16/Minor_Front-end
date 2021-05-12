@@ -1,0 +1,48 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.logo{
+    color: #01355D;
+    font-size: 22px;
+}
+
+.tryyy{
+    position: fixed;
+    background: #DEE6F1;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    margin-bottom: 50px;
+}
+
+.your_heading{
+
+  
+    margin-top: 70px ;
+    color : #F98935;
+    font-family: 'caros_bold';
+}
+
+.topic_heading{
+ 
+    color: #023858;
+    font-family: 'carosM';
+    text-decoration: underline;
+}
+.descrip{
+    font-family: 'caros';
+    color:#01355D;
+}
