@@ -1,0 +1,45 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.post_div{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px 10px 10px 10px;
+    box-shadow: 4px 4px 7px #00000014;
+    margin-bottom: 20px;
+}
+
+.post_div_1{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px ;
+    box-shadow: 4px 4px 7px #00000014;
+    margin-bottom: 20px;
+}
+
+.company_img{
+    max-width: 100%;
+}
+
+.argin_in{
+    margin-top: 50px;
+}
+
+.company_name{
+    font-family: 'caros_bold';
+    color: #045174;
+    font-size: 16px;
+    margin-bottom: 8px;
+}

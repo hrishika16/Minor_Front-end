@@ -29,6 +29,14 @@
     left: 0;
     z-index: 1030;
 }
+.log_out_1{
+    color: #01355D;
+    font-family: 'caros';
+}
+.log_out_1:hover{
+    text-decoration: none;
+    color: #01355D;
+}
 
 .me_1{
     margin-left: 10px;
@@ -41,7 +49,7 @@
 }
 
 .inp_search{
-    width: 450px !important;
+    width: calc(700px - 30px) !important;
     font-family: 'caros';
     font-size: 13px;    
     border-radius: 7px;
@@ -104,4 +112,17 @@
 
 .logg_img{
     width: 14px;
+}
+
+.summary_bx_1{
+    resize: none;
+    height: 70px;
+    width: 100%;
+    border: 1px solid rgba(45,45,45,0.3);
+    margin-bottom: 20px;
+}
+
+.summary_bx_1:focus{
+    outline: none;
+    border: 1px solid rgba(45,45,45,0.3);
 }

@@ -25,7 +25,7 @@ class Sidebar extends Component {
                         <button className='linkss_11'>Chat Screen</button>
                     </div>
                     <div className='sidess_11'>
-                        <button className='linkss_11'>Jobs/Startup</button>
+                        <Link to='/internship' className='linkss_12'>Hiring</Link>
                     </div>
                     <div className='sidess_11'>
                         <button className='linkss_11'>Network</button>

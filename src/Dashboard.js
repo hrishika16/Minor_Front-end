@@ -11,8 +11,8 @@ class Dashboard extends Component {
         super(props)
     
         this.state = {
-             requests : [],
-             request : []
+            requests : [],
+            request : []
         }
     }
 
@@ -35,28 +35,28 @@ class Dashboard extends Component {
         return this.state.requests.map((user) => {
             return (
                 <React.Fragment key={user.id}>
-                <div className='box_11'>
-                   <div className='row'>
-                        <div className='col-lg-3'>
-                            <img src={userI} alt='user Icon' className='user_rr' />
+                    <div className='box_11'>
+                        <div className='row'>
+                            <div className='col-lg-3'>
+                                <img src={userI} alt='user Icon' className='user_rr' />
+                            </div>
+                            <div className='col-lg-9 padr_dd'>
+                                <p className='userName'>{user.username}</p>
+                                <p className='profeSS'>{user.email}</p>
+                                {/* <p className='userName'>Username</p>
+                                <p className='profeSS'>profession</p> */}
+                            </div>
                         </div>
-                        <div className='col-lg-9 padr_dd'>
-                            <p className='userName'>{user.username}</p>
-                            <p className='profeSS'>{user.email}</p>
-                            {/* <p className='userName'>Username</p>
-                            <p className='profeSS'>profession</p> */}
-                        </div>
-                    </div>
-                </div>    
-               </React.Fragment>
+                    </div>    
+                </React.Fragment>
             )
-         })
+        })
     }
     
     render() {
         return (
             <div className='contt'>
-            <HeaderUser/>
+                <HeaderUser/>
                 <Sidebar/>
                 <div className='main'>
                     

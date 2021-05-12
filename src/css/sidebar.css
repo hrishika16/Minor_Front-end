@@ -17,7 +17,10 @@
     position: relative;
     overflow-x: hidden;
 } */
-
+.side_img{
+    width: 15px;
+    /* max-width: 100%; */
+}
 .sidebard {
     background: #045174;
     height: 100%;
@@ -49,7 +52,7 @@
     padding: 0px;
     /* margin-bottom: 20px; */
     font-family: 'carosM';
-    font-size: 17px;
+    font-size: 16px;
     vertical-align: middle;
 }
 
@@ -64,7 +67,7 @@
     border: none;
     /* margin-bottom: 20px; */
     font-family: 'carosM';
-    font-size: 17px;
+    font-size: 16px;
     vertical-align: middle;
 }
 
