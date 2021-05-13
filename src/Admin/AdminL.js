@@ -37,7 +37,7 @@ export class AdminL extends Component {
             {/* navbar */}
                 <Header/>
                 {/* dashboard */}
-                <div className='container'>
+                <div className='container some_class'>
                     <div>
                         <img src={bargraph} alt='graph1' className='graph_img' />
                     </div>
