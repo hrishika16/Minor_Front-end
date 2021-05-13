@@ -151,9 +151,9 @@ class JobSeeker extends Component {
                         <div className='col-lg-6'>
                             <p className='cust'>JOB SEEKER DETAILS</p>
                         </div>
-                        <div className='col-lg-6'>
+                        {/* <div className='col-lg-6'>
                             <button className='add_btn'>ADD  </button>
-                        </div>
+                        </div> */}
                     </div>
                     {/* sort by button */}
                     <div className='table_d'>

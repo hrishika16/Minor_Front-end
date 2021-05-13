@@ -148,9 +148,9 @@ render() {
                     <div className='col-lg-6'>
                         <p className='cust'>CONTACT DETAILS</p>
                     </div>
-                    <div className='col-lg-6'>
+                    {/* <div className='col-lg-6'>
                         <button className='add_btn'>ADD  </button>
-                    </div>
+                    </div> */}
                 </div>
                 {/* sort by button */}
                 <div className='table_d'>
