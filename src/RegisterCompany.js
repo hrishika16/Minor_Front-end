@@ -171,8 +171,9 @@ function RegisterCompany() {
                             <div className='hr_11'>
                                 <p className='field_names'>Date Of Establishment<img src={star} alt='required field' className='requ_1' /></p>
                                 <input
-                                    type='date'
+                                    type='text'
                                     className='start_yr_inp'
+                                    maxLength='4'
                                     id='start_doe'
                                     value={yoeReg}
                                     onChange={e => setYOEReg(e.target.value)}
@@ -244,8 +245,6 @@ function RegisterCompany() {
                             </div>
                         </div>
                     </div>
-                    
-                   
                     <div className='row'>
                         <div className='col-lg-6 col-12'>
                         <div className='hr_11'>
@@ -267,7 +266,6 @@ function RegisterCompany() {
                             <div className='hr_11'>
                                 <p className='field_names'>Overiew <img src={star} alt='required field' className='requ_1' /></p>
                                 <textarea
-                                 
                                     placeholder='Type here...'
                                     id='overviewReg'
                                     maxLength='50'
