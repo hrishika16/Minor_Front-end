@@ -37,10 +37,11 @@ class Header extends Component {
                         <li className="nav-item">
                             <Link to='/adminContactUs' className="nav-link link_cls">Contact Us </Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link to='/adminLogin' className="nav-link link_cls">Logout </Link>
-                        </li>
+                        </li> */}
                     </ul>
+                    <Link to='/adminLogin' className="nav-link link_cls">Logout </Link>
                     </div>
                 </nav>
                 </div>

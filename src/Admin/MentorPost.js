@@ -74,9 +74,9 @@ const renderRequests =()=> {
                 </div>
                           
                 </div>
-           </React.Fragment>
+          </React.Fragment>
         )
-     })
+    })
 }
 
 const onAddClick = (e) =>{
@@ -89,10 +89,7 @@ const onAddClick = (e) =>{
     if(intialMessageM === ''){
         document.querySelector('#msg_err').innerHTML = 'Message is Required'
         document.getElementById('msg_err').style.display = 'block'
-    }
-    
-    
-       else{
+    }else{
         
             axios({
               method : 'post',
@@ -123,17 +120,15 @@ const onAddClick = (e) =>{
             .catch(error=>{
               console.log(error)
             })
-       }
+      }
 }
 
     return (
         <div className='postM'>
-            <Header></Header>
-          
-            
-            <div className='container '>
-             <div className = 'row rowMargin'>
-             <div className='col-lg-1'></div>
+          <Header></Header>
+          <div className='container '>
+            <div className = 'row rowMargin'>
+              <div className='col-lg-1'></div>
                 <div className='col-lg-5'>
                 <div className='post_boxM'>
                             <div className=' box_posttM'>
@@ -170,19 +165,13 @@ const onAddClick = (e) =>{
                 </div>
                 
 
-                 <div className = 'col-lg-5 col-12'>
-                 
-                 {renderRequests()}
-                      </div>
-                      <div className='col-lg-1'></div>
-                 </div>
-             </div>
+                <div className = 'col-lg-5 col-12'>
+                  {renderRequests()}
+                </div>
+                <div className='col-lg-1'></div>
+                </div>
+            </div>
         </div>
-     
-          
-               
-          
-       
     )
 }
 

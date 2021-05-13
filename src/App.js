@@ -1,5 +1,5 @@
 import react from 'react'
-import { BrowserRouter, Switch, Route,Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Route,Redirect, Link } from 'react-router-dom';
 import AdminContactUs from './Admin/AdminContactUs';
 import AdminL from './Admin/AdminL';
 import Alogin from './Admin/Alogin';
@@ -31,6 +31,7 @@ import Step3 from './Step3';
 import Help from './Help';
 import Privacy from './Privacy';
 import Internship from './Internship';
+import Test from './Test';
 let isLoggedIn;
 
 
@@ -78,12 +79,13 @@ function App() {
               <Route exact path = '/companyProfile' component={CompanyProfile}></Route>
               {/* Company Routes ends */}
 
-
+              <Route exact path='/testing' component={Test} />
               {/* dashboard */}
               {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
               {/* Error Handling */}
               {/* <Route path='/404' component={Sucess} /> */}
               <Redirect to='/404'/>
+              
             </Switch> 
           </BrowserRouter> 
     </div>
