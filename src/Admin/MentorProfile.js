@@ -64,7 +64,7 @@ function MentorProfile() {
     return (
         <div className='mainMentorProfile'>
          <Header></Header>  
-         <Sidebar></Sidebar> 
+         {/* <Sidebar></Sidebar> mainProfile */}
          <div className="mainProfile">
              <div className ="row">
                  <div className="col-12 col-lg-12 ">
