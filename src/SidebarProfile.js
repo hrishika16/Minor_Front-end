@@ -20,7 +20,7 @@ class SidebarProfile extends Component {
                 <br/><br/>
                 <div className='sidess_11'>
                     {/* <button className='linkss_11'>Profile</button> */}
-                   <img src={userProf} alt='user icon' className='side_img' /> <Link to='/profile' className='linkss_12'>Profile/About</Link>
+                    <img src={userProf} alt='user icon' className='side_img' /> <Link to='/aboutUser' className='linkss_12'>Profile/About</Link>
                 </div>
                 <div className='sidess_11'>
                 
