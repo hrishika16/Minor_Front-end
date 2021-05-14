@@ -32,6 +32,7 @@ import Help from './Help';
 import Privacy from './Privacy';
 import Internship from './Internship';
 import Test from './Test';
+import UserAbout from './UserAbout';
 let isLoggedIn;
 
 
@@ -66,6 +67,7 @@ function App() {
               <Route exact path = '/help' component ={Help}></Route>
               <Route exact path ='/privacy' component = {Privacy}></Route>
               <Route exact path='/hiring' component={Internship} />
+              <Route exact path='/aboutUser' component={UserAbout} />
               {/* Mentor Routes Starts */}
               <Route exact path = '/mentorLogin' component = {MentorLogin}></Route>
               <Route exact path = '/mentorProfile' component={MentorProfile}></Route>

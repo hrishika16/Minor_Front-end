@@ -159,16 +159,13 @@ function LandingPage(props) {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav nav_right">
-                    {/* <li className="nav-item active">
-                        <a className="nav-link" href="#">Home </a>
-                    </li> */}
                     <li className="nav-item dropdown">
                         <button type="button " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="dropdown-toggle nab_btn_lo" >
                             Login
                         </button>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                           <button className="dropdown-item"> <Link to='/login' className='user_link'>As User</Link> </button>
-                           <button className="dropdown-item"> <Link to='/companyLogin' className='user_link'>As Company</Link> </button>
+                            <button className="dropdown-item"> <Link to='/login' className='user_link'>As User</Link> </button>
+                            <button className="dropdown-item"> <Link to='/companyLogin' className='user_link'>As Company</Link> </button>
                         </div>
                     </li>
                     <li className="nav-item dropdown">
@@ -204,7 +201,7 @@ function LandingPage(props) {
                             value={emailRegisterM} 
                             onChange={e=>setEmailRegisterM(e.target.value)}
                         />
-                         <p className='error' id='err_ur'>This field cannot be empty</p>
+                        <p className='error' id='err_ur'>This field cannot be empty</p>
                     </div>
                     <div className='rh_1'>
                         <p className='emr'>Password</p>
