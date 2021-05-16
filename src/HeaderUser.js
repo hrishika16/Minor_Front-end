@@ -20,7 +20,10 @@ class HeaderUser extends Component {
                     
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className='mr-auto'></ul>
+                         {/* my */}
+                       
                         <form className="form-inline">
+                      
                             <input className="form-control inp_search" type="search" placeholder="Search" aria-label="Search"/>
                         </form>
                         <ul className='mr-auto'></ul>
