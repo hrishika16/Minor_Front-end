@@ -35,7 +35,7 @@ class Step2 extends Component {
     }
 
     handleSubmit(){
-      
+      console.log(this.state.category)
         // const {category,schoolName,schoolBoard,degree,colleageName,MasterDegree,emp_Type,colleageName2,designation,companyName,dateofJoining} = this.state;
         axios({
             method : 'post',
@@ -44,7 +44,7 @@ class Step2 extends Component {
                 AuthKey : 'asdfgh'
             },
             data : {
-                'category' : this.state.category,
+                'category' : "Student",
                 'schoolName' : this.state.schoolName,
                 'schoolBoard' : this.state.schoolBoard,
                 'degree' : this.state.degree,
