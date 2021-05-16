@@ -13,41 +13,39 @@ class Mentor extends Component {
         super(props);
     
         this.state = {
-             users : [],
-             offset : 0,
-             data : [],
-             perPage : 9 ,
-             currentPage : 1,
-             totalPages : 0,
-             username_Mentor : '',
-             email_Mentor : '',
-             dob_Mentor : '',
-             password_Mentor : '',
-             qualification_Mentor : '',
-             contactNumber_Mentor : '',
-             totalPosts_Mentor : 0 
-         };
+            users : [],
+            offset : 0,
+            data : [],
+            perPage : 9 ,
+            currentPage : 1,
+            totalPages : 0,
+            username_Mentor : '',
+            email_Mentor : '',
+            dob_Mentor : '',
+            password_Mentor : '',
+            qualification_Mentor : '',
+            contactNumber_Mentor : '',
+            totalPosts_Mentor : 0 
+        };
 
     }
 
-   handelChange = (event)=>{
-    this.setState({
-    [event.target.name]: event.target.value
-  
-      })
+    handelChange = (event)=>{
+        this.setState({
+        [event.target.name]: event.target.value
+        })
     
-   }
+    }
 
-   handelChangeDob = e =>{
-       this.setState({
-        dob_Mentor : e.target.value
-       })
-   }
+    handelChangeDob = e =>{
+    this.setState({
+    dob_Mentor : e.target.value
+    })
+    }
 
-   handelSubmit = (event)=>{
+    handelSubmit = (event)=>{
     const { username_Mentor, email_Mentor, dob_Mentor, qualification_Mentor, contactNumber_Mentor,totalPosts_Mentor,password_Mentor } = this.state
     event.preventDefault()
-   
     if(username_Mentor === ''){
 
         document.getElementById('nameErrM').style.display = 'block'
@@ -78,7 +76,6 @@ class Mentor extends Component {
         // $("#btnSubmit").on("click",function() {
             window.$( "#AddModal" ).modal('hide');
         //   });
-       
         axios({
             method : 'post',
             url : `http://localhost:3001/mentorSignup`,
@@ -101,7 +98,7 @@ class Mentor extends Component {
                     window.$("#btnSubmit").click(function() {
                         console.log("work hua ")
                         $( "#AddModal" ).hide();
-                      });
+                    });
                     console.log(resp.data.message)
                     // sendToStep2(true)
                 }
@@ -116,12 +113,8 @@ class Mentor extends Component {
         .catch(error =>{
             console.log('err',error)
         })
-
     }
-    
-
-
-  }
+}
 
     componentDidMount(){
         // https://jsonplaceholder.typicode.com/users
@@ -194,13 +187,13 @@ class Mentor extends Component {
         selectedPage = e.selected;
        const offset = selectedPage * this.state.perPage;
 
-       this.setState({
-           currentPage : selectedPage,
-           offset : offset
-       },()=>{
+        this.setState({
+        currentPage : selectedPage,
+        offset : offset
+        },()=>{
         this.handleAxiosDrop()
-       } )
-   }
+        } )
+    }
 
     renderTableData() {
         return this.state.users.map((user) => {
