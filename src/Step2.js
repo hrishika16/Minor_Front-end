@@ -15,6 +15,7 @@ class Step2 extends Component {
             emp_Type: 'emp_type',
             exp_H : 'emp_h',
             buttonValue : false,
+            nextPage : false ,
             email : '',
             category :'',
             schoolName : '',
@@ -31,11 +32,12 @@ class Step2 extends Component {
     }
 
     componentDidMount(){
-        
+        this.handleSomething()
     }
 
     handleSubmit(){
-      
+        const mail = localStorage.getItem('emailUU')
+        console.log(this.state)
         // const {category,schoolName,schoolBoard,degree,colleageName,MasterDegree,emp_Type,colleageName2,designation,companyName,dateofJoining} = this.state;
         axios({
             method : 'post',
@@ -55,17 +57,17 @@ class Step2 extends Component {
                 'companyName' : this.state.companyName,
                 'dateofJoining' : this.state.dateofJoining,
                 'jobType' : this.state.jobType,
-                'email' : "khushikala2000@gmail.com"
+                'email' : mail
             }
         }) 
         .then(res=>{
             console.log(res)
-            console.log(res)
             if(res.data.status === 200){
-                console.log(res.data.message)
-                localStorage.setItem('emailC' , res.data.data[0].email)
+                // console.log(res)
                 this.handleCompChange()
-                if(this.state.buttonValue){
+                console.log(this.state.nextPage)
+                // this.handleSomething()
+                if(this.state.nextPage){
                     return(
                         <Redirect to= {{
                             pathname : "/step3" 
@@ -90,6 +92,9 @@ class Step2 extends Component {
     handleCheckBox = (e) =>{
         isChecked = e.target.value;
         console.log(isChecked);
+        this.setState({
+            category : isChecked
+        })
     }
 
     handleEmpType = event =>{
@@ -114,8 +119,19 @@ class Step2 extends Component {
 
     handleCompChange = () =>{
         this.setState({
-            buttonValue : true
+            nextPage : true
         })
+    }
+
+    handleSomething(){
+        if(this.state.nextPage === true){
+            return(
+                <Redirect to= {{
+                    pathname : "/step3" 
+                }}
+                />
+            )
+        }
     }
 
     
@@ -124,11 +140,10 @@ class Step2 extends Component {
 
     handleExp= event =>{
         event.preventDefault()
-        console.log(this.state.exp_H)
         if(this.state.exp_H == 'Yes'){
             document.getElementById('emp_ff').style.display = "block"
             this.setState({buttonValue : true})
-            console.log(this.state.buttonValue)
+            // console.log(this.state.buttonValue)
         }
         else if(this.state.exp_H == 'No'){
             document.getElementById('emp_ff').style.display = "none"
