@@ -46,7 +46,7 @@ class Step2 extends Component {
                 AuthKey : 'asdfgh'
             },
             data : {
-                'category' : this.state.category,
+                'category' : "Student",
                 'schoolName' : this.state.schoolName,
                 'schoolBoard' : this.state.schoolBoard,
                 'degree' : this.state.degree,
