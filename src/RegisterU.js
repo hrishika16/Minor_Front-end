@@ -68,7 +68,7 @@ function RegisterU() {
                         "city" : cityReg,
                         "gender" : genderReg,
                         "prefCity" : pinReg,
-                        "email" : email
+                        "email" : 'khushikala2000@gmail.com'
                     }
             }) 
             .then(res=>{

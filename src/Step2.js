@@ -27,14 +27,15 @@ class Step2 extends Component {
             companyName : '',
             dateofJoining :''
         }
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     componentDidMount(){
-
+        
     }
 
     handleSubmit(){
-        // console.log(this.state)
+      
         // const {category,schoolName,schoolBoard,degree,colleageName,MasterDegree,emp_Type,colleageName2,designation,companyName,dateofJoining} = this.state;
         axios({
             method : 'post',
@@ -53,7 +54,8 @@ class Step2 extends Component {
                 'designation' : this.state.designation,
                 'companyName' : this.state.companyName,
                 'dateofJoining' : this.state.dateofJoining,
-                'jobType' : this.state.jobType
+                'jobType' : this.state.jobType,
+                'email' : "khushikala2000@gmail.com"
             }
         }) 
         .then(res=>{
