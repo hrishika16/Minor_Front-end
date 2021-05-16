@@ -35,7 +35,7 @@ class Step2 extends Component {
     }
 
     handleSubmit(){
-      console.log(this.state.category)
+     
         // const {category,schoolName,schoolBoard,degree,colleageName,MasterDegree,emp_Type,colleageName2,designation,companyName,dateofJoining} = this.state;
         axios({
             method : 'post',
@@ -44,7 +44,7 @@ class Step2 extends Component {
                 AuthKey : 'asdfgh'
             },
             data : {
-                'category' : "Student",
+                'category' : this.state.category,
                 'schoolName' : this.state.schoolName,
                 'schoolBoard' : this.state.schoolBoard,
                 'degree' : this.state.degree,
@@ -88,8 +88,11 @@ class Step2 extends Component {
     }
 
     handleCheckBox = (e) =>{
-        isChecked = e.target.value;
-        console.log(isChecked);
+        this.setState({
+           category: e.target.value
+           
+        })
+      
     }
 
     handleEmpType = event =>{
