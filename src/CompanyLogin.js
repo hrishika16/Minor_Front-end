@@ -40,7 +40,7 @@ function CompanyLogin() {
                 if(resp.data.status === 200){
                   console.log(resp.data.message)
                   setCompLogin(true)
-                  localStorage.setItem('companyid',resp.data.data[0].mentorId)
+                  localStorage.setItem('companyid',resp.data.data[0].companyId)
                 }
                 else if(resp.data.status === 202) {
                   // console.log(res.data.message);

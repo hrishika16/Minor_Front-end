@@ -1,0 +1,42 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.about_prof{
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.border_ull{
+    border-bottom: 1px solid rgba(45,45,45,0.3);
+}
+
+.about_heading{
+    font-family: 'caros_bold';
+    color: #045174;
+}
+
+.sub_heading{
+    font-family: 'carosM';
+    color: #045174;
+    font-size: 16px;
+    margin-bottom: px;
+}
+
+.normal_para{
+    font-family: 'caros';
+    color: #2d2d2d;
+    font-size: 14px;
+}

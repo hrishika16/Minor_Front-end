@@ -12,7 +12,7 @@ class HeaderUser extends Component {
                 <nav className="navbar navbar-expand-lg ">
                 {/* logo space */}
                     <div className='logo class="navbar-brand"'>
-                     <img src= {syncIn} alt= "logo" className="logoImg"></img>
+                        <img src= {syncIn} alt= "logo" className="logoImg"></img>
                     </div>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -23,8 +23,22 @@ class HeaderUser extends Component {
                          {/* my */}
                        
                         <form className="form-inline">
-                      
-                            <input className="form-control inp_search" type="search" placeholder="Search" aria-label="Search"/>
+                            <div className="input-group ">
+                                <div className="input-group-prepend">
+                                    {/* <div className="form-group slect_11"> */}
+                                        <select className="form-control slect_11" id="exampleFormControlSelect1">
+                                        <option className='slect_11_option'>User</option>
+                                        <option className='slect_11_option'>Company</option>
+                                        <option className='slect_11_option'>Mentor</option>
+                                        </select>
+                                    {/* </div> */}
+                                </div>
+                                <input className="form-control inp_search" type="search" placeholder="Search" aria-label="Search"/>
+                                <div className="input-group-append">
+                                    <button className="search_btn" type="button">Search</button>
+                                </div>
+                            </div>
+                            
                         </form>
                         <ul className='mr-auto'></ul>
                         <ul className='mr-auto navbar-nav nav_11'>    

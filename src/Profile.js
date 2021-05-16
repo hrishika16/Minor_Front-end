@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import './css/profile.css'
 import HeaderUser from './HeaderUser'
 import userIcon from './img/userIcon.svg'
+import ProfileDetails from './ProfileDetails'
 import SidebarProfile from './SidebarProfile'
 
 function Profile() {
@@ -17,7 +18,7 @@ function Profile() {
                 <div className='main_prof mm_11'>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-lg-8 col-12'>
+                        <div className='col-lg-7 col-12'>
                         {/* <center> */}
                         <div className='post_box'>
                             <div className='row'>
@@ -33,19 +34,10 @@ function Profile() {
                         </div>
                     {/* </center> */}
                         </div>
-                        <div className='col-lg-4 col-12 reqq'>
-                        <button className='edit_btn_p' data-toggle="modal" data-target="#EditProfileModal">Edit profile</button>
-                   
-                            <div className='row margin_11'>
-                                <div className='col-lg-5'>
-                                    <img src={userIcon} alt='user Icon' className='userImg1' />
-                                </div>
-                                <div className='col-lg-7'>
-                                    <p className='name'>Name</p>
-                                    <button className='add_bio_btn'> ADD BIO </button>
-                                    <br/>
-                                    <textarea className='summary_bx' placeholder='Add summary '></textarea>
-                                </div>
+                        <div className='col-lg-1 col-0'></div>
+                        <div className='col-lg-4 col-12 '>
+                            <div className='reqq'>
+                                <ProfileDetails/>
                             </div>
                         {/* <div className='col-lg-6'>
                             <div className='row'>
@@ -66,16 +58,6 @@ function Profile() {
                 </div>
                     
                 </div>
-                {/* <div className='kindNav'>
-                    <nav className="nav nav-pills nav-justified">
-                        <a className="nav-item nav-link kindLinkss" href="#">Posts</a>
-                        <a className="nav-item nav-link kindLinkss" href="#">Profile/About</a>
-                        <a className="nav-item nav-link kindLinkss" href="#">Success stories</a>
-                        <a className="nav-item nav-link kindLinkss " href="#" >Your story</a>
-                    </nav>
-                </div>
-                <br/> */}
-                
                 {/* Edit Modal */}
                 <div className="modal fade" id="EditProfileModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div className="modal-dialog modal-dialog-centered" role="document">
