@@ -1,0 +1,70 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.columnSearch{
+padding-left:140px;
+margin-top: 20px;
+}
+
+.cmpnySearchCol{
+    margin-top: 30px;
+}
+.cmpnySearchCol h2 {
+    font-family: 'caros_bold';
+    color: #01355D;
+ 
+}
+
+.cmpnySearchCol h4{
+    font-family: 'carosM';
+    color: #01355D;
+   
+}
+
+.cardstart{
+    padding-left:140px;
+    margin-top: 20px;
+width:  900px;
+padding-top: 30px;
+}
+
+.cardDesign{
+    border: 2px solid #01355D;
+ border-radius: 5px;
+ margin-bottom: 20px;
+}
+.expSearch{
+    font-family: 'caros_bold';
+    color : #F98935;
+
+}
+.decripSearch{
+    font-family: 'caros';
+    color : #01355D;
+
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #01355D;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+ .cardSkills{
+     padding-left: 40px;
+     padding-top: 20px;
+ }
