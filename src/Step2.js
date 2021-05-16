@@ -33,7 +33,7 @@ class Step2 extends Component {
     handleSubmit(){
         axios({
             method : 'post',
-           url : 'http://localhost:3001/page2',
+            url : 'http://localhost:3001/page2',
             headers : {
                 AuthKey : 'asdfgh'
             },
@@ -215,7 +215,7 @@ class Step2 extends Component {
                             <div className='row'>
                                 <div className='col-lg-6 col-12'>
                                     <div className='hr_11'>
-                                        <p className='field_names'>Title </p>
+                                        <p className='field_names'>Designation </p>
                                         <input
                                             type='text'
                                             placeholder='Type here...'
@@ -255,18 +255,28 @@ class Step2 extends Component {
                                 </div>
                                 <div className='col-lg-6 col-12'>
                                     <div className='hr_11'>
-                                        <p className='field_names'>Internship If any</p>
+                                        {/* <p className='field_names'>Internship If any</p>
                                         <input
                                             type='text'
                                             id='doj'
                                             className='inp_register'
-                                            // onChange={}
+                                            onChange={}
                                         />
-                                        {/* <p className='error_reg' id='error_doj'>Required</p> */}
+                                        <p className='error_reg' id='error_doj'>Required</p> */}
+                                        <p className='field_names'>Employment Type</p>
+                                        <select className="custom-select emp_select" value={this.state.emp_Type} onChange={this.handleEmpType}>
+                                    <option selected disabled defaultValue='emp_type' className='emp_sel_txt_1'>Employee Type</option>
+                                    <option defaultValue="full_time " className='emp_sel_txt'>Full Time </option>
+                                    <option defaultValue="part_time " className='emp_sel_txt'>Part Time </option>
+                                    <option defaultValue="self_employed " className='emp_sel_txt'>Self Employed </option>
+                                    <option defaultValue="freelance" className='emp_sel_txt'>Freelance </option>
+                                    <option defaultValue="internship  " className='emp_sel_txt'>Internship </option>
+                                    <option defaultValue="trainee  " className='emp_sel_txt'>Trainee </option>
+                                </select>
                                     </div>
                                 </div>
                             </div>
-                            <div className='hremp_11'>
+                            {/* <div className='hremp_11'>
                                 <select className="custom-select emp_select" value={this.state.emp_Type} onChange={this.handleEmpType}>
                                     <option selected disabled defaultValue='emp_type' className='emp_sel_txt_1'>Employee Type</option>
                                     <option defaultValue="full_time " className='emp_sel_txt'>Full Time </option>
@@ -276,7 +286,7 @@ class Step2 extends Component {
                                     <option defaultValue="internship  " className='emp_sel_txt'>Internship </option>
                                     <option defaultValue="trainee  " className='emp_sel_txt'>Trainee </option>
                                 </select>
-                            </div>
+                            </div> */}
                             <button className='next_2btn'><Link to='/dashboard'>Next</Link></button>
                         </div>
                         {/* <div className='start_up'>

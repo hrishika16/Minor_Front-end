@@ -62,6 +62,42 @@ function CompanyProfile() {
         })
     }
 
+    const overViewRender = () =>{
+        console.log('something')
+        return companyData.map((overview) =>{
+            return(
+                <React.Fragment key={overview.companyId}>
+                    <div className="card text-center">
+                        <div className="card-header bg-light text-info">
+                        OverView
+                        </div>
+                        <div className="card-body cardCPW">
+                            <p className="card-text">{overview.overview}</p>
+                        </div>
+                    </div>
+                </React.Fragment>
+            )
+        })
+    }
+
+    const aboutRender = () =>{
+        console.log('something')
+        return companyData.map((overview) =>{
+            return(
+                <React.Fragment key={overview.about}>
+                    <div className="card text-center">
+                        <div className="card-header bg-light text-info">
+                        About
+                        </div>
+                        <div className="card-body cardCPW">
+                            <p className="card-text">{overview.overview}</p>
+                        </div>
+                    </div>
+                </React.Fragment>
+            )
+        })
+    }
+
     return (
         <div>
             <div className='mainCP'>
@@ -77,12 +113,12 @@ function CompanyProfile() {
                
                    <div className = "col-6 col-lg-6 btnCPAlign">
                    <center>
-                   <button type="button" className="btn btn-info btnCP ">OverView </button>
+                   <button type="button" className="btn btn-info btnCP " onClick={overViewRender} >OverView </button>
                    </center>
                    </div>
                    <div className = "col-6 col-lg-6">
                    <center>
-                   <button type="button" className="btn btn-info btnCP">About Us </button>
+                   <button type="button" className="btn btn-info btnCP" onClick={aboutRender} >About Us </button>
                    </center>
                 </div>
                       
@@ -93,17 +129,7 @@ function CompanyProfile() {
                <div className = "row">
               
                    <div className = "col-12 col-lg-12 cardCP">
-                  <div className="card text-center">
-                    <div className="card-header bg-light text-info">
-                     OverView
-                    </div>
-                    <div className="card-body cardCPW">
-                        
-                        <p className="card-text">W additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional contenWith supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional contenWith supporting text below as a natural lead-in to additional content.With supporting text below as a natural lead-in to additional conten low as a natural lead-in to additional conten low as a natural lead-in to additional conten</p>
-                   
-                    </div>
-                  
-                    </div>
+                    {/* {overViewRender()} */}
                    </div>
                  
                </div>

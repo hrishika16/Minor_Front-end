@@ -358,7 +358,7 @@ function LandingPage(props) {
     </div>
     <div className="carousel-item">
       <img className="d-block imgCA" src={car2} alt="Third slide"></img>
-      <div class="carousel-caption d-none d-md-block">
+      <div className="carousel-caption d-none d-md-block">
     {/* <h5 className= "headingUsers">Heelo dskhfdsjfh</h5>
     <p>...</p> */}
   </div>
@@ -456,7 +456,7 @@ function LandingPage(props) {
   
 
  
-  <div class="footer-copyright text-center py-3 footcp">© 2021 Copyright:
+  <div className="footer-copyright text-center py-3 footcp">© 2021 Copyright:
     <a href="#">SyncIn.com</a>
   </div>
   
