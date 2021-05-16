@@ -19,8 +19,7 @@ function SearchPage() {
                     </div>
                     <div className = "col-lg-9 cmpnySearchCol">
                       <h2>Company Name</h2>
-                     
-                       <h4 > Bio </h4>
+                      <h4 > Bio </h4>
                     </div>
                 </div>
              
