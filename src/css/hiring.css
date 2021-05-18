@@ -14,11 +14,57 @@
 }
 
 .wholeHiring{
-    margin-top: 10px;
-    padding-left: 40px;
+    margin-top: 20px;
+    padding-left: 170px;
+    overflow-x: hidden;
 }
 
 .headHiring{
     font-family:  'caros_bold';
     color : #F98935 ;
+
+  
+}
+
+.headHiring button{
+
+    background-color: #095079;
+    color : #fff ;
+    border : 2px solid black ;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-right : 10px;
+    margin-top: 10px;
+}
+
+.imghire{
+width: 400px;
+
+text-align: center;
+}
+
+.jobhead{
+    color : #F98935;
+    font-family: 'caros_bold';
+
+}
+
+.roles {
+    border: 2px solid #095079 ;
+    border-radius: 50px;
+    box-shadow: 2px #095079;
+    max-width: 800px;
+margin: auto;
+text-align: left;
+padding-top: 20px ;
+padding-bottom: 20px;
+padding-right: 40px;
+padding-left: 70px; 
+font-family: 'carosM';
+color : #095079;
+margin-bottom: 10px;
+   
+
 }
