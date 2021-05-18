@@ -13,19 +13,19 @@
     src: url('../font/cretype\ \ Caros\ Medium.otf');
 }
 
-.wholeInterest{
+.wholeInterest {
     overflow-x: hidden;
     position: relative;
 }
 
-.selectHeading{
+.selectHeading {
     color: #F8951D;
     font-weight: bold;
     margin-top: 10px;
     font-size: 40px;
 }
 
-.btnInterest button {
+.btnInterest input[type='button'] {
 
     background-color: #095079;
     border: 2px solid #045174;
@@ -35,20 +35,20 @@
     padding-bottom: 10px;
     padding-right: 20px;
     margin-top: 20px;
-    color:#fff;
+    color: #fff;
     font-family: 'carosM';
 }
 
-.btnInterest button:focus{
+.btnInterest input[type='button']:focus {
     outline: none;
 }
 
-.fieldDiv{
+.fieldDiv {
     margin-top: 50px;
-  
+
 }
 
-.fieldInput{
+.fieldInput {
 
 
     padding: 15px;
@@ -58,15 +58,15 @@
     color: #2d2d2d;
 }
 
-.fieldInput:focus{
-outline : none ; 
+.fieldInput:focus {
+    outline: none;
 
 }
 
-.submitBtnStep{
+.submitBtnStep {
 
     position: relative;
- 
+
     background-color: #F98935;
     border: none;
     border-radius: 27px;
@@ -79,9 +79,9 @@ outline : none ;
 
 }
 
-.submitBtnStep:focus{
+.submitBtnStep:focus {
 
-    outline: none ; 
+    outline: none;
 }
 
 .enterDetails {
@@ -89,11 +89,11 @@ outline : none ;
     color: #F8951D;
     font-weight: bold;
     margin-top: 10px;
-   
+
 
 }
 
-.errorCategory{
+.errorCategory {
 
     /* display :none; */
     /* visibility: hidden; */
@@ -103,31 +103,31 @@ outline : none ;
 
 }
 
-.btnInterest button:hover{
+.btnInterest input[type='button']:hover {
     background-color: #BFD7ED;
     color: #000;
 }
 
-.btnInterest button:active{
+.btnInterest input[type='button']:active {
     background-color: #BFD7ED;
     color: #000;
 }
 
-.add_btn_step3{
+.add_btn_step3 {
     margin-left: -80px;
-    border: 2px solid white ;
+    border: 2px solid white;
     border-radius: 10px;
     background-color: #F8951D;
     color: white;
     font-family: 'carosM';
     padding: 10px;
-    width: 70px; 
-    
+    width: 70px;
+
 
 }
 
 
-.add_btn_step3:focus{
+.add_btn_step3:focus {
     outline: none;
 
 }
@@ -138,12 +138,12 @@ outline : none ;
     }
 
     .selectHeading {
-       font-size:30px ;
+        font-size: 30px;
     }
 
-    .fieldInput{
+    .fieldInput {
         width: 100%;
-      
-  
+
+
     }
 }
