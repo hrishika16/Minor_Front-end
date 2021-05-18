@@ -12,6 +12,10 @@ function Hiring() {
   const[employment ,employmentChange] = useState('')
   const[roleCategory , roleCategoryChange] = useState('')
   const[skills , skillsChange] = useState('')
+  //abhi by deafult daal rhi name 
+  const[companyName , companyNameChange] = useState("Company Name")
+  const[companyLoc , companyLocChange] = useState("Location")
+  
 
 
     return (
@@ -24,26 +28,35 @@ function Hiring() {
             <div className = "container wholeHiring">
                 <div className = "row">
              
-                    <div className = "col-lg-9 headHiring">
-                        <h2 >Company Name</h2>
-                        <h3>Location</h3>
-                        <button>Apply on Comapny Website</button>
+                    <div className = "col-lg-7 headHiring">
+                    <br></br>
+                    <br></br>
+                        <h2 >{companyName}</h2>
+                       
+                        <h3>{companyLoc}</h3>
+                        <button>Apply on Company Website</button>
                     </div>
-                    <div className = "col-lg-3">
-                        <img src = {hireimg} width = "450px" className = "imghire"></img>
+                    <div className = "col-lg-5">
+                    <center>
+                        <img src = {hireimg}  className = "imghire"></img>
+                        </center>
                         </div>
                        
                 </div>
             </div>
             <hr></hr>
             <div className = "container">
+            <center>
                 <div className = "row">
                     <div className = "col-lg-12">
-                        <h3>Job Requirements</h3>
-                        <br></br>
+                  
+                        <h3 className = "jobhead">Job Requirements</h3>
+                      
                         <div className = "container" >
+                        <center>
                          <div className = "row">
-                             <div className = "col-lg-12">
+                         
+                             <div className = "col-lg-12 roles">
                                 <p>Role : &nbsp; {role} </p>
                                 <p>Industory Type : &nbsp; {industoryType}</p>
                                 <p>Functional Area : &nbsp; {functionalArea} </p>
@@ -51,12 +64,13 @@ function Hiring() {
                                 <p>Role Category : &nbsp; {roleCategory} </p>
                                 <p>Skills : &nbsp; {skills}</p>
                             </div>
-                             
+                        
                          </div>
-
+                         </center>
                         </div>
                     </div>
                 </div>
+                </center>
             </div>
         </div>
     )
