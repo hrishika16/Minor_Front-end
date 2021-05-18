@@ -62,6 +62,7 @@ function LandingPage(props) {
             .then(res=>{
                 console.log(res)
                 if(res.data.status === 200){
+                    localStorage.setItem('emailUU' , res.data.data[0].email)
                     console.log(res.data.message)
                     setnextP(true)
                 }

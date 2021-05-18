@@ -7,6 +7,7 @@ import CompanySidebar from './CompanySidebar'
 function CompanyProfile() {
 
     const[companyData, setCompanyData] = useState([])
+    const[overviewButton, getOverviewButton] = useState('Overview')
 
     useEffect( ()=>{
         const companyid = localStorage.getItem("companyid")
@@ -26,7 +27,8 @@ function CompanyProfile() {
             if(resp.data.status === 200){
               //error occur 
             setCompanyData([resp.data.data[0]])
-            console.log(resp.data.message)
+            // console.log(resp.data.message)
+            console.log(overviewButton)
             }
             else if(resp.data.status === 202) {
               // console.log(res.data.message);
@@ -63,7 +65,6 @@ function CompanyProfile() {
     }
 
     const overViewRender = () =>{
-        console.log('something')
         return companyData.map((overview) =>{
             return(
                 <React.Fragment key={overview.companyId}>
@@ -80,23 +81,6 @@ function CompanyProfile() {
         })
     }
 
-    const aboutRender = () =>{
-        console.log('something')
-        return companyData.map((overview) =>{
-            return(
-                <React.Fragment key={overview.about}>
-                    <div className="card text-center">
-                        <div className="card-header bg-light text-info">
-                        About
-                        </div>
-                        <div className="card-body cardCPW">
-                            <p className="card-text">{overview.overview}</p>
-                        </div>
-                    </div>
-                </React.Fragment>
-            )
-        })
-    }
 
     return (
         <div>
@@ -113,12 +97,12 @@ function CompanyProfile() {
                
                    <div className = "col-6 col-lg-6 btnCPAlign">
                    <center>
-                   <button type="button" className="btn btn-info btnCP " onClick={overViewRender} >OverView </button>
+                   <input type="button"  className="btn btn-info btnCP " value={overviewButton} onClick={e => {getOverviewButton(e.target.value)}} /> 
                    </center>
                    </div>
                    <div className = "col-6 col-lg-6">
                    <center>
-                   <button type="button" className="btn btn-info btnCP" onClick={aboutRender} >About Us </button>
+                   <button type="button" className="btn btn-info btnCP"  >About Us </button>
                    </center>
                 </div>
                       
@@ -129,7 +113,7 @@ function CompanyProfile() {
                <div className = "row">
               
                    <div className = "col-12 col-lg-12 cardCP">
-                    {/* {overViewRender()} */}
+                    {overViewRender()}
                    </div>
                  
                </div>
