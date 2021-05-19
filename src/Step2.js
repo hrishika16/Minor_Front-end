@@ -57,7 +57,7 @@ class Step2 extends Component {
                 'companyName' : this.state.companyName,
                 'dateofJoining' : this.state.dateofJoining,
                 'jobType' : this.state.jobType,
-                'email' : mail
+                'email' : 'hrishikasmwp09@gmail.com'
             }
         }) 
         .then(res=>{
