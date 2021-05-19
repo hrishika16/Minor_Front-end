@@ -154,12 +154,12 @@ function LandingPage(props) {
         {/* navbar */}
             <nav className="navbar navbar-expand-lg  nav_bg fixed-top">
                 {/* <a className="navbar-brand" href="#">Navbar</a> */}
-                <img src={syncIn} alt='img logo' className='logo_img' />
+                <img src={syncIn} alt='img logo' className='logo_img mr-auto' />
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul className="navbar-nav nav_right">
+                    <ul className="navbar-nav nav_right ">
                     <li className="nav-item dropdown">
                         <button type="button " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="dropdown-toggle nab_btn_lo" >
                             Login
