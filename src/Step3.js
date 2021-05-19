@@ -30,6 +30,7 @@ export class Step3 extends Component {
         // })
         // console.log(event.target.id)
         const test2 = event.target.id
+        console.log(test2)
         // var join = this.state.arra.push(event.target.id)
         // this.setState({
         //     arra: this.state.arra.concat(event.target.value)
@@ -38,10 +39,10 @@ export class Step3 extends Component {
         // test.push(this.state.arra)
         // test = this.state.arra
         // console.log(test)
-        this.setState(previousState => ({
-            arra: [...previousState.arra, test2]
-        }));
-        console.log(this.state.arra)
+        // this.setState(previousState => ({
+        //     arra: [...previousState.arra, test2]
+        // }));
+        // console.log(this.state.arra)
     }
 
     handleSubmitBtn(){
