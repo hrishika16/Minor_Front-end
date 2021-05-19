@@ -36,8 +36,8 @@ class Step2 extends Component {
     }
 
     handleSubmit(){
-        const mail = localStorage.getItem('emailUU')
         console.log(this.state)
+        const mail = localStorage.getItem('emailOfUser')
         // const {category,schoolName,schoolBoard,degree,colleageName,MasterDegree,emp_Type,colleageName2,designation,companyName,dateofJoining} = this.state;
         axios({
             method : 'post',
@@ -57,7 +57,7 @@ class Step2 extends Component {
                 'companyName' : this.state.companyName,
                 'dateofJoining' : this.state.dateofJoining,
                 'jobType' : this.state.jobType,
-                'email' : 'hrishikasmwp09@gmail.com'
+                'email' : mail
             }
         }) 
         .then(res=>{
@@ -66,15 +66,15 @@ class Step2 extends Component {
                 // console.log(res)
                 this.handleCompChange()
                 console.log(this.state.nextPage)
-                // this.handleSomething()
-                if(this.state.nextPage){
-                    return(
-                        <Redirect to= {{
-                            pathname : "/step3" 
-                        }}
-                        />
-                    )
-                }
+                this.handleSomething()
+                // if(this.state.nextPage){
+                //     return(
+                        // <Redirect to= {{
+                        //     pathname : "/step3" 
+                        // }}
+                //         />
+                //     )
+                // }
             }
             else if(res.data.status === 202) {
             // console.log(res.data.message);
@@ -124,7 +124,7 @@ class Step2 extends Component {
     }
 
     handleSomething(){
-        if(this.state.nextPage === true){
+        if(this.state.nextPage){
             return(
                 <Redirect to= {{
                     pathname : "/step3" 
