@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom';
 import './css/step3.css'
-let test
+let test 
 export class Step3 extends Component {
 
     constructor(props) {
@@ -24,61 +24,69 @@ export class Step3 extends Component {
     }
 
     handleButtonClick = (event) =>{
-        this.setState({
-            [event.target.name]: event.target.id
-        })
-        console.log(event.target.id)
+        // this.setState({
+        //     [event.target.name]: event.target.id,
+        //     // arra: this.state.arra.concat(event.target.value)
+        // })
+        // console.log(event.target.id)
+        const test2 = event.target.id
         // var join = this.state.arra.push(event.target.id)
-        this.setState({
-            arra: this.state.arra.concat(event.target.value)
-        })
-        test = this.state.arra
+        // this.setState({
+        //     arra: this.state.arra.concat(event.target.value)
+            // arra: [...this.state.arra, event.target.id]
+        // })
+        // test.push(this.state.arra)
+        // test = this.state.arra
+        // console.log(test)
+        this.setState(previousState => ({
+            arra: [...previousState.arra, test2]
+        }));
+        console.log(this.state.arra)
     }
 
     handleSubmitBtn(){
-        console.log(test)
+        const mail = localStorage.getItem('emailOfUser')
         // if(this.state.arra.length === null){
         //     console.log('Atleast select 1 field');
         // }
         // else{
-        //     axios({
-        //         method : 'post',
-        //         url : 'http://localhost:3001/interests',
-        //         headers : {
-        //             AuthKey : 'asdfgh'
-        //         },
-        //         data : {
-        //             'email' : 'hrishikasmwp09@gmail.com',
-        //             'interests' : this.state.arra
-        //         }
-        //     }) 
-        //     .then(res=>{
-        //         console.log(res)
-        //         if(res.data.status === 200){
-        //             // console.log(res)
-        //             this.handleCompChange()
-        //             console.log(this.state.nextPage)
-        //             // this.handleSomething()
-        //             if(this.state.nextPage){
-        //                 return(
-        //                     <Redirect to= {{
-        //                         pathname : "/step3" 
-        //                     }}
-        //                     />
-        //                 )
-        //             }
-        //         }
-        //         else if(res.data.status === 202) {
-        //         // console.log(res.data.message);
-        //         console.log(" Please center with correct credentials")
-        //         }
-        //         else{
-        //             console.log("Some error occured")
-        //         }
-        //     })
-        //     .catch(err=>{
-        //         console.log(err)
-        //     })
+            axios({
+                method : 'post',
+                url : 'http://localhost:3001/interests',
+                headers : {
+                    AuthKey : 'asdfgh'
+                },
+                data : {
+                    'email' : mail,
+                    'interests' : this.state.arra
+                }
+            }) 
+            .then(res=>{
+                console.log(res)
+                if(res.data.status === 200){
+                    console.log(res)
+                    // this.handleCompChange()
+                    // console.log(this.state.nextPage)
+                    // // this.handleSomething()
+                    // if(this.state.nextPage){
+                        return(
+                            <Redirect to= {{
+                                pathname : "/dashboard" 
+                            }}
+                            />
+                        )
+                    // }
+                }
+                else if(res.data.status === 202) {
+                console.log(res.data.message);
+                }
+                else{
+                    console.log(res.data.message);
+                }
+            })
+            .catch(err=>{
+                console.log(err)
+            })
         // }
     }
     
