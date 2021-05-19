@@ -34,6 +34,7 @@ import Internship from './Internship';
 import Test from './Test';
 import SearchPage from './SearchPage';
 import Hiring from './Hiring';
+import HireDetails from './Admin/HireDetails';
 
 let isLoggedIn;
 
@@ -71,6 +72,7 @@ function App() {
               <Route exact path='/hiring' component={Internship} />
               <Route exact path = '/searchPage' component = {SearchPage}></Route>
             <Route exact path = '/hirecompany' component = {Hiring}></Route>
+            <Route exact path = '/hiredetails' component = {HireDetails}></Route>
               {/* Mentor Routes Starts */}
               <Route exact path = '/mentorLogin' component = {MentorLogin}></Route>
               <Route exact path = '/mentorProfile' component={MentorProfile}></Route>
