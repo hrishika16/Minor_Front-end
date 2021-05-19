@@ -28,21 +28,31 @@ export class Step3 extends Component {
         //     [event.target.name]: event.target.id,
         //     // arra: this.state.arra.concat(event.target.value)
         // })
-        // console.log(event.target.id)
-        const test2 = event.target.id
-        // var join = this.state.arra.push(event.target.id)
+        console.log(event.target.id)
+        // const test2 = event.target.id
+        var join = this.state.arra.push(event.target.id)
         // this.setState({
         //     arra: this.state.arra.concat(event.target.value)
             // arra: [...this.state.arra, event.target.id]
         // })
         // test.push(this.state.arra)
         // test = this.state.arra
-        // console.log(test)
-        this.setState(previousState => ({
-            arra: [...previousState.arra, test2]
-        }));
+        // console.log(arra)
+        // this.setState(previousState => ({
+        //     arra: [...previousState.arra, test2]
+        // }));
         console.log(this.state.arra)
+        // this.handleTry(event.target.id);
     }
+
+
+    // handleTry(test){
+    //         console.log(test)
+    //         this.setState(previousState => ({
+    //             arra: [...previousState.arra, test]
+    //         }));
+    //         console.log(this.state.arra) 
+    //     }
 
     handleSubmitBtn(){
         const mail = localStorage.getItem('emailOfUser')
