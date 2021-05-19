@@ -46,7 +46,7 @@ function Waiting(props) {
                 if(res.data.status === 200){
                     console.log(res.data.message)
                     setToRegister(true)
-                    localStorage.setItem('email' , res.data.data[0].email)
+                    localStorage.setItem('emailOfUser' , res.data.data[0].email)
                     console.log(res.data.data[0].email)
                 }
                 else if(res.data.status === 202) {

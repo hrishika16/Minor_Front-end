@@ -51,7 +51,7 @@ function RegisterU() {
             document.getElementById('error_pc').style.display = 'block'
         }
         else{
-            const email = localStorage.getItem("email")
+            const email = localStorage.getItem("emailOfUser")
             
             axios({
                 method : 'post',
@@ -68,13 +68,14 @@ function RegisterU() {
                         "city" : cityReg,
                         "gender" : genderReg,
                         "prefCity" : pinReg,
-                        "email" : 'khushikala2000@gmail.com'
+                        "email" : email
                     }
             }) 
             .then(res=>{
                 console.log(res)
                 if(res.data.status === 200){
                     console.log(res.data.message)
+                    
                     sendToStep2(true)
                 }
                 else if(res.data.status === 202) {
