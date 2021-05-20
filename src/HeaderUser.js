@@ -9,6 +9,8 @@ function HeaderUser() {
 
     const [subjectPost, setsubjectPost] = useState('')
     const [msg, setmsg] = useState('')
+    // const [subjectStory, setsubjectStory] = useState('')
+    const [msgStory, setmsgStory] = useState('')
 
     const getTheDataFromPosts =() =>{
         const userId = localStorage.getItem('userId')
@@ -43,6 +45,40 @@ function HeaderUser() {
             console.log('err',error)
         })
     }
+
+    const getTheDataFromStory =() =>{
+        const userId = localStorage.getItem('userId')
+        axios({
+            method : 'post',
+            url : 'http://localhost:3001/successPostInsert',
+            data: {
+                'id' : userId,
+                'content' :  msgStory
+            },
+            headers : {
+            AuthKey : 'asdfgh '
+            }
+        })
+        .then(resp =>{
+            if(resp.data.status === 200){
+                
+                console.log(resp.data)
+                window.$('#exampleAddPost').modal('hide');
+            }
+            else if(resp.data.status === 202) {
+            console.log(resp.data.message);
+            document.getElementById('post_error').innerHTML = resp.data.message
+            }
+            else{
+                document.getElementById('post_error').innerHTML = resp.data.message
+                console.log(resp.data.message);
+            }
+        })
+        .catch(error =>{
+            console.log('err',error)
+        })
+    }
+
         return (
             <div className=''>
                 <div className='tryyy bg_he'>
@@ -122,17 +158,23 @@ function HeaderUser() {
                                 </button>
                             </div>
                             <div className="modal-body pd_rr">
-                                <p className='story_p'>Subject</p>
+                                {/* <p className='story_p'>Subject</p>
                                 <input
                                     type='text'
                                     placeholder ='Subject'
                                     name='subject'
                                     className='inp_sub'
-                                />
+                                    value={subjectStory}
+                                    onChange={e => setsubjectStory(e.target.value)}
+                                /> */}
                                 <p className='story_p'>Summary</p>
-                                <textarea className='summary_bx_1' placeholder='Add Description here '></textarea>
+                                <textarea 
+                                className='summary_bx_1'
+                                value={msgStory}
+                                onChange={e => setmsgStory(e.target.value)} 
+                                placeholder='Add Description here '></textarea>
                                 {/* dropdown button- sign in with google,2 more options */}
-                                <button className='sigU_btn'  >Submit</button>
+                                <button className='sigU_btn' onClick={getTheDataFromStory} >Submit</button>
                             </div>
                         </div>
                     </div>
