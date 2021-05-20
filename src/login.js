@@ -4,6 +4,7 @@ import img1 from './img/userLogin.jpg'
 import { Redirect} from "react-router-dom"
 import axios from 'axios'
 import { authentication } from './App'
+import $ from 'jquery'
 
 
 function Login() {
@@ -15,7 +16,6 @@ function Login() {
         e.preventDefault()
         authentication.onAuthentication()
         if(username === ''){
-           
             document.getElementById('userErr').style.display = 'block';
             // document.querySelector('#user-name').focus()
         }
@@ -24,12 +24,11 @@ function Login() {
         document.getElementById('passErr').style.display = 'block';
         // document.querySelector('#password').focus()
         }
-       
         else {
             
                 axios({
                     method : 'post',
-                   url : 'http://localhost:3001/userlogin',
+                    url : 'http://localhost:3001/userlogin',
                     headers : {
                         AuthKey : 'asdfgh '
                     },
@@ -40,18 +39,16 @@ function Login() {
                 }) 
                 .then(res=>{
                     console.log(res)
-                    console.log(res)
                     if(res.data.status === 200){
-                        console.log(res.data.message)
                         localStorage.setItem('emailC' , res.data.data[0].email)
+                        localStorage.setItem('userId', res.data.data[0].userID)
                         setLogin(true)
                     }
                     else if(res.data.status === 202) {
-                    // console.log(res.data.message);
-                    console.log(" Please center with correct credentials")
+                    console.log(res.data.message);
                     }
                     else{
-                        console.log("Some error occured")
+                        console.log(res.data.message);
                     }
                 })
                 .catch(err=>{
@@ -82,15 +79,15 @@ function Login() {
                     <div className='spaceee'>
                     <h2 className='sign'>Sign Up</h2>
                     <div className='hgt1'>
-                    <div class="box1">
-                                <p class="border_txt"> UserName</p>
+                    <div className="box1">
+                                <p className="border_txt"> UserName</p>
                                 <input type="email" id="user-name" maxLength="35" className="form-control inp_mm intL" value={username} onChange={e => setUsername(e.target.value)} placeholder="Email-ID"/>
                                 <p className='error' id='userErr'> Username is Required </p>
                             </div>
                             </div>
                             <div className='box_3'>
-                            <div class="box1">
-                                <p class="border_txt"> Password</p>
+                            <div className="box1">
+                                <p className="border_txt"> Password</p>
                                 <input type="password" id="password" maxLength="600" className="form-control inp_mm intL" value={password} onChange={e => setPassword(e.target.value)} placeholder="Type here..."/>
                                 <p className='error' id='passErr'> Password is Required</p>
                             </div>
