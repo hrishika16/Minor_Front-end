@@ -12,24 +12,28 @@ class Dashboard extends Component {
     
         this.state = {
             requests : [],
-            request : []
+            request : [],
+            postsData : []
         }
     }
 
     componentDidMount(){
         axios.get('https://jsonplaceholder.typicode.com/users')
         .then(resp =>{
-            console.log(resp.data)
+            // console.log(resp.data)
             this.setState({
                 requests : resp.data.slice(0,7) ,
-                request : this.state.requests.slice(0,7) 
+                request : this.state.requests.slice(0,7)  
             })
             console.log(this.state.requests)
         })
         .catch(error =>{
             console.log('err',error)
         })
+        
     }
+
+   
 
     renderRequests(){
         return this.state.requests.map((user) => {
@@ -52,6 +56,47 @@ class Dashboard extends Component {
             )
         })
     }
+
+    renderPostsInDashBoard(){
+        return this.state.requests.map((user) => {
+            return (
+                <React.Fragment key={user.id}>
+                    {/* <div className='post_box'>
+                        <div className='row'>
+                            <div className='col-3'>
+                                <img src={userIcon} alt='profile' className='post_Img' />
+                            </div>
+                            <div className='col-9'>
+                                <p className='user_Name'>Name</p>
+                            </div>
+                        </div>
+                        <div className='box_postt'></div>
+                        <button className='star_btn'>Star</button> <button className='count_btn'>Count</button>
+                    </div> */}
+                    <div className='post_boxM'>
+                        <div className='someborder'>
+                            <div className='row '>
+                                <div className='col-3 '>
+                                    <img src={userIcon} alt='profile' className='post_ImgM' />
+                                </div>
+                                <div className='col-9'>
+                                    {/* <p className='user_NameM'>{mentorUsername}</p> */}
+                                </div>
+                            </div>
+                            <div className=' box_posttM'>
+                                {/* <p className = "box_posttSubH">Subject:<span className='something'> {II.subject} </span> </p> */}
+                                <p  className = "box_posttSubH" >Message  </p>
+                                <p className='msg_post'>
+                                {/* {II.message} */}
+                                </p>
+                                <br></br>
+                            </div> 
+                        </div>    
+                    </div>
+                </React.Fragment>
+            )
+        })
+    }
     
     render() {
         return (
@@ -68,18 +113,7 @@ class Dashboard extends Component {
                                     <div className='posts'>
                                         <p className='had_txt'>Posts</p>
                                         <center>
-                                        <div className='post_box'>
-                                            <div className='row'>
-                                                <div className='col-3'>
-                                                    <img src={userIcon} alt='profile' className='post_Img' />
-                                                </div>
-                                                <div className='col-9'>
-                                                    <p className='user_Name'>Name</p>
-                                                </div>
-                                            </div>
-                                            <div className='box_postt'></div>
-                                            <button className='star_btn'>Star</button> <button className='count_btn'>Count</button>
-                                        </div>
+                                        {/* {this.renderPostsInDashBoard()} */}
                                     </center>
                                     </div>
                                 </div>

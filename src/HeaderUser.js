@@ -1,11 +1,48 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
 import './css/headerUse.css'
 import logout from './img/logout.svg';
 import syncIn from './img/logo.png'
 import { Link } from 'react-router-dom'
 
-class HeaderUser extends Component {
-    render() {
+function HeaderUser() {
+
+    const [subjectPost, setsubjectPost] = useState('')
+    const [msg, setmsg] = useState('')
+
+    const getTheDataFromPosts =() =>{
+        const userId = localStorage.getItem('userId')
+        axios({
+            method : 'post',
+            url : 'http://localhost:3001/postInsert',
+            data: {
+                'id' : userId,
+                'subject' : subjectPost,
+                'content' :  msg
+            },
+            headers : {
+            AuthKey : 'asdfgh '
+            }
+        })
+        .then(resp =>{
+            if(resp.data.status === 200){
+                
+                console.log(resp.data)
+                window.$('#exampleAddPost').modal('hide');
+            }
+            else if(resp.data.status === 202) {
+            console.log(resp.data.message);
+            document.getElementById('post_error').innerHTML = resp.data.message
+            }
+            else{
+                document.getElementById('post_error').innerHTML = resp.data.message
+                console.log(resp.data.message);
+            }
+        })
+        .catch(error =>{
+            console.log('err',error)
+        })
+    }
         return (
             <div className=''>
                 <div className='tryyy bg_he'>
@@ -21,7 +58,6 @@ class HeaderUser extends Component {
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className='mr-auto'></ul>
                          {/* my */}
-                       
                         <form className="form-inline">
                             <div className="input-group ">
                                 <div className="input-group-prepend">
@@ -78,7 +114,7 @@ class HeaderUser extends Component {
                 {/* modal for signup */}
                 <div className="modal fade" id="exampleAddStory"  role="dialog" aria-labelledby="exampleAddStoryTitle" aria-hidden="true">
                     <div className="modal-dialog modal-dialog-centered" role="document">
-                        <div className="modal-content">
+                        <div className="modal-content some_try_height">
                             <div className="modal-header">
                                 <h5 className="modal-title sigU" id="exampleAddStoryTitle">Add Your Story Here</h5>
                                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
@@ -86,6 +122,14 @@ class HeaderUser extends Component {
                                 </button>
                             </div>
                             <div className="modal-body pd_rr">
+                                <p className='story_p'>Subject</p>
+                                <input
+                                    type='text'
+                                    placeholder ='Subject'
+                                    name='subject'
+                                    className='inp_sub'
+                                />
+                                <p className='story_p'>Summary</p>
                                 <textarea className='summary_bx_1' placeholder='Add Description here '></textarea>
                                 {/* dropdown button- sign in with google,2 more options */}
                                 <button className='sigU_btn'  >Submit</button>
@@ -103,16 +147,32 @@ class HeaderUser extends Component {
                                 </button>
                             </div>
                             <div className="modal-body pd_rr">
-                                <textarea className='summary_bx_1' placeholder='Add your thoughts here '></textarea>
+                            <p className='story_p'>Subject</p>
+                            <input
+                                    type='text'
+                                    placeholder ='Subject'
+                                    name='subjectPosts'
+                                    className='inp_sub'
+                                    value={subjectPost}
+                                    onChange={e => setsubjectPost(e.target.value)}
+                                />
+                                <p className='story_p'>Summary</p>
+                                <textarea 
+                                    className='summary_bx_1' 
+                                    placeholder='Add your thoughts here '
+                                    value={msg}
+                                    onChange={e => setmsg(e.target.value)}
+                                    ></textarea>
                                 {/* dropdown button- sign in with google,2 more options */}
-                                <button className='sigU_btn'  >Submit</button>
+                                <button className='sigU_btn' onClick={getTheDataFromPosts} >Submit</button>
+                                <p className='errorr_posts' id='post_error'></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         )
-    }
+    
 }
 
 export default HeaderUser
