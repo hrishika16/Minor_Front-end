@@ -55,7 +55,7 @@ const renderRequests =()=> {
         
         return (
             <React.Fragment key={II.mentorId}>
-            <div className='post_boxM'>
+              <div className='post_boxM'>
                 <div className='row someborder'>
                     <div className='col-3 '>
                         <img src={userIcon} alt='profile' className='post_ImgM' />
@@ -73,7 +73,7 @@ const renderRequests =()=> {
                     <br></br>
                 </div>
                           
-                </div>
+              </div>
           </React.Fragment>
         )
     })
