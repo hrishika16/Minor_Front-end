@@ -66,15 +66,8 @@ class Step2 extends Component {
                 // console.log(res)
                 this.handleCompChange()
                 console.log(this.state.nextPage)
-                this.handleSomething()
-                // if(this.state.nextPage){
-                //     return(
-                        // <Redirect to= {{
-                        //     pathname : "/step3" 
-                        // }}
-                //         />
-                //     )
-                // }
+               this.handleSomething(this.state.nextPage)
+               
             }
             else if(res.data.status === 202) {
             // console.log(res.data.message);
@@ -123,8 +116,8 @@ class Step2 extends Component {
         })
     }
 
-    handleSomething(){
-        if(this.state.nextPage){
+    handleSomething(next){
+        if(next){
             return(
                 <Redirect to= {{
                     pathname : "/step3" 
