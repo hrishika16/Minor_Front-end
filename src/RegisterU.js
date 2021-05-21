@@ -75,7 +75,6 @@ function RegisterU() {
                 console.log(res)
                 if(res.data.status === 200){
                     console.log(res.data.message)
-                    
                     sendToStep2(true)
                 }
                 else if(res.data.status === 202) {
