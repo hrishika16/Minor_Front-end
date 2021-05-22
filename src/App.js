@@ -35,6 +35,8 @@ import Test from './Test';
 import SearchPage from './SearchPage';
 import Hiring from './Hiring';
 import HireDetails from './Admin/HireDetails';
+import Oops from './oops';
+import Notifications from './Notifications';
 
 let isLoggedIn;
 
@@ -73,6 +75,8 @@ function App() {
               <Route exact path = '/searchPage' component = {SearchPage}></Route>
             <Route exact path = '/hirecompany' component = {Hiring}></Route>
             <Route exact path = '/hiredetails' component = {HireDetails}></Route>
+            <Route exact path = '/oops' component = {Oops}></Route>
+            <Route exact path ='/notifications' component = {Notifications}></Route>
               {/* Mentor Routes Starts */}
               <Route exact path = '/mentorLogin' component = {MentorLogin}></Route>
               <Route exact path = '/mentorProfile' component={MentorProfile}></Route>
