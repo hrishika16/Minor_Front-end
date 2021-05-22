@@ -5,18 +5,14 @@ import chat from './img/chat.png'
 import story from './img/cardbox.png'
 import post from './img/post.png'
 import yourStroy from './img/yourStroy.png'
+import './css/sidebarProfile.css'
 
 class SidebarProfile extends Component {
     render() {
         return (
             <div className='cside'>
             <div className='sidebard'> 
-                {/* User icon */}
-                {/* <div>
-                    <center>
-                        <img src={userIcon} alt='user Icon' className='userImg' />
-                    </center>
-                </div> */}
+              <h2 className ="myProfile">My Profile</h2>
                 <br/><br/>
                 <div className='sidess_11'>
                     {/* <button className='linkss_11'>Profile</button> */}
