@@ -34,7 +34,7 @@ import Internship from './Internship';
 import Test from './Test';
 import SearchPage from './SearchPage';
 import Hiring from './Hiring';
-import HireDetails from './Admin/HireDetails';
+import HireDetails from './HireDetails';
 import Oops from './oops';
 import Notifications from './Notifications';
 

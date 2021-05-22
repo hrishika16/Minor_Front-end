@@ -1,12 +1,12 @@
 import React from 'react'
-import Sidebar from '../Sidebar'
-import Header from './MentorNavbar'
+import Sidebar from './Sidebar'
+import Header from './Admin/MentorNavbar'
 
 function HireDetails() {
     return (
         <div>
-        <Header></Header>
-        <Sidebar></Sidebar>
+       
+       
          <br></br>
          <br></br>
          <br></br>
