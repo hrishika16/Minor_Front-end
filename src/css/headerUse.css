@@ -30,7 +30,7 @@
     z-index: 1030;
 }
 .log_out_1{
-    color: #01355D;
+    color: white;
     font-family: 'caros';
 }
 .log_out_1:hover{
@@ -71,11 +71,12 @@
     border: none;
     /* background: #01355D;
     color: #fff; */
-    background: #fff;
+    background: #F8951D;
     outline: none;
     font-size: 12px;
     font-family: 'caros';
     border-radius: 8px;
+    color : white;
 }
 
 .add_post_btn:focus{
@@ -89,11 +90,12 @@
     border: none;
     /* background: #01355D;
     color: #fff; */
-    background: #fff;
+    background: #F8951D;
     outline: none;
     font-size: 12px;
     font-family: 'caros';
     border-radius: 8px;
+    color:white;
 }
 
 .see_more_n:focus{
@@ -101,12 +103,13 @@
 }
 
 .logout_btn_dd{
-    background: #fff;
+    background-color: #F8951D;
     border: none;
     font-family: 'caros';
     font-size: 12px;
     padding: 7px;
     border-radius: 8px;
+    color: white;
 }
 
 .logout_btn_dd:focus{
@@ -115,6 +118,7 @@
 
 .logg_img{
     width: 14px;
+  
 }
 
 .summary_bx_1{
@@ -144,11 +148,12 @@
     border: none;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+   
 }
 
 .slect_11:focus{
     outline: none;
-    border: 0.5px solid rgba(45, 45, 45, 0.2);
+    /* border: 0.5px solid rgba(45, 45, 45, 0.2); */
     box-shadow: none;
 }
 /* .slect_11_option{
@@ -206,4 +211,29 @@
     margin-top: 3px;
     font-weight: 600;
     text-align: center;
+}
+.helpheader{
+    color:#01355D;
+    text-decoration: none;
+}
+
+.helpheader:hover{
+    text-decoration: none;
+    color :#01355D;
+}
+
+.linksearchpage{
+    text-decoration: none;
+    color:white;
+
+}
+.linksearchpage:hover{
+    text-decoration: none;
+    color : white ; 
+}
+.homeDashboard{
+    margin-left: 15px;
+    height:35px;
+    width : 35px ;
+   
 }
