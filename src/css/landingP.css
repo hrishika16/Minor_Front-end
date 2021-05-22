@@ -220,3 +220,38 @@
     height: 50px;
     border-radius: 50%;
 }
+
+.contactUs{
+    font-family: 'caros_bold';
+    color:#F98935;
+    margin-top: 7px;
+    margin-right: 10px;
+    
+  
+}
+.contactUs:hover{
+    text-decoration: none;
+    color : #F98935;
+}
+.home{
+    height:35px;
+    width : 35px ;
+   
+}
+
+
+
+.helpfooter {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+   
+  }
+
+  .helpfooter li{
+      float : left; 
+      margin-right: 10px;
+      text-align: center;
+  }
