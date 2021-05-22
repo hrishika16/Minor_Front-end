@@ -41,6 +41,10 @@
     box-shadow: 5px 5px 10px #00000014;
 }
 
+.pos_ff{
+    
+    position: fixed;
+}
 .reqq{
     padding: 15px;
     background: #fff;

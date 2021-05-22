@@ -63,7 +63,7 @@ class Dashboard extends Component {
     renderPostsInDashBoard(){
         return this.state.postsData.map((user) => {
             return (
-                <React.Fragment key={user.id}>
+                <React.Fragment key={user.userId}>
                     <div className='post_boxM'>
                         <div className='someborder'>
                             <div className='row '>
@@ -142,7 +142,7 @@ class Dashboard extends Component {
                                     </div>
                                 </div>
                                 <div className='col-md-4'>
-                                    <div className='reqq'>
+                                    <div className='reqq pos_ff'>
                                         <p className='had_txt'>Your Requests</p>
                                         {this.renderRequests()}
                                         <center><button className='see_btn_dd'>See More</button></center>
