@@ -17,14 +17,21 @@ function CompanySidebar() {
                     <div className='sidess_11'>
                         <button className='linkss_11'>Profile</button>
                     </div>
-                <div className='sidess_11'>
-                        <button className='linkss_11'>Jobs/InternShip</button>
+                    <div className='sidess_11'>
+                        <button className='linkss_11'>Posts</button>
                     </div>
+                    <div className='sidess_11'>
+                        <button className='linkss_11'>Hire Posts </button>
+                    </div>
+               
                     <div className='sidess_11'>
                         <button className='linkss_11'>Mentor Post </button>
                     </div>
                     <div className='sidess_11'>
-                        <button className='linkss_11'>Your Post</button>
+                        <button className='linkss_11'>Add Post</button>
+                    </div>
+                    <div className='sidess_11'>
+                        <button className='linkss_11'>Add Hire Post</button>
                     </div>
                 </div>
         </div>

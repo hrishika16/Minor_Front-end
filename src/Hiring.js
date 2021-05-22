@@ -15,6 +15,7 @@ function Hiring() {
   //abhi by deafult daal rhi name 
   const[companyName , companyNameChange] = useState("Company Name")
   const[companyLoc , companyLocChange] = useState("Location")
+  const[description , descriptionChange] = useState('')
   
 
 
@@ -63,6 +64,7 @@ function Hiring() {
                                 <p>Employment : &nbsp;  {employment} </p>
                                 <p>Role Category : &nbsp; {roleCategory} </p>
                                 <p>Skills : &nbsp; {skills}</p>
+                                <p>Job Description : &nbsp; {description}</p>
                             </div>
                         
                          </div>

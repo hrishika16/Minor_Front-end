@@ -53,6 +53,15 @@
     outline: none;
 }
 
+.oopsImg{
+  height: 550px;
+}
+
+.nodata{
+    font-family: 'caros_bold';
+    color: #F98935;
+}
+
 @media only screen and (max-width: 766px) {
     .errorMessage img {
 

@@ -4,6 +4,7 @@ import Header from './Header'
 import mentorLogin from '../img/mentor_login_f.jpg'
 import axios from 'axios'
 import '../css/mentorProfile.css'
+import MentorNavbar from './MentorNavbar'
 
 function MentorProfile() {
     const[dataProfiel, setdataProfiel] = useState([])
@@ -63,7 +64,7 @@ function MentorProfile() {
     
     return (
         <div className='mainMentorProfile'>
-         <Header></Header>  
+       <MentorNavbar></MentorNavbar>
          {/* <Sidebar></Sidebar> mainProfile */}
          <div className="mainProfile">
              <div className ="row">

@@ -98,6 +98,7 @@ function Profile() {
                                     value={user_desp} 
                                     onChange={e=>setDesp(e.target.value)}
                                 />
+                                <button className ='btn edit_btn_p' data-dismiss="modal" >&nbsp;Edit &nbsp;</button>
                             {/* </center> */}
                         </div>
                         </div>

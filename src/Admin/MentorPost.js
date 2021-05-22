@@ -5,6 +5,7 @@ import userIcon from '../img/userIcon.svg'
 import '../css/mentorPost.css'
 import axios from 'axios'
 import userI from '../img/userIcon.svg'
+import MentorNavbar from './MentorNavbar'
 
 
 function MentorPost() {
@@ -125,7 +126,7 @@ const onAddClick = (e) =>{
 
     return (
         <div className='postM'>
-          <Header></Header>
+         <MentorNavbar></MentorNavbar>
           <div className='container '>
             <div className = 'row rowMargin'>
               <div className='col-lg-1'></div>

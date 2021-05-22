@@ -38,12 +38,15 @@
 .userImg{
     width: 120px;
     margin-top: 40px;
+    margin-bottom: 10px;
 }
 
 .sidess_11{
     padding-left: 20px;
     margin-bottom: 20px;
 }
+
+
 
 .linkss_11{
     color: #fff;
@@ -54,11 +57,19 @@
     font-family: 'carosM';
     font-size: 16px;
     vertical-align: middle;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    border: 2px solid #045174;
+    border-radius: 50px;
 }
 
 .linkss_11:hover{
     text-decoration: none;
-    color: #fff;
+    color: #045174;
+    background-color: #BFD7ED;
+    
 }
 
 .linkss_12{
@@ -69,12 +80,48 @@
     font-family: 'carosM';
     font-size: 16px;
     vertical-align: middle;
+    border: 2px solid #045174;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    margin-bottom: 20px;
 }
 
 .linkss_12:hover{
     text-decoration: none;
-    color: #fff;
+    color: #045174;
+    background-color: #BFD7ED;
 }
 .linkss_11:focus{
     outline: none;
+}
+
+.addStory{
+    background-color: #BFD7ED;
+    color: #045174;
+  
+    
+    font-family: 'carosM';
+    font-size: 16px;
+    vertical-align: middle;
+    border: 2px solid #045174;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    
+}
+.addStory :hover{
+    text-decoration: none;
+    color: #045174;
+  
+
+
+}
+.addStory:focus {
+    outline: none ; 
 }
