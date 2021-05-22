@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import './css/headerUse.css'
-import logout from './img/logout.svg';
+import logout from './img/logout4.png';
 import syncIn from './img/logo.png'
 import { Link } from 'react-router-dom'
+import home from './img/home.jpg'
 
 function HeaderUser() {
 
@@ -107,39 +108,37 @@ function HeaderUser() {
                                 </div>
                                 <input className="form-control inp_search" type="search" placeholder="Search" aria-label="Search"/>
                                 <div className="input-group-append">
-                                    <button className="search_btn" type="button">Search</button>
+                                    <button className="search_btn" type="button"><Link to ='/searchpage' className="linksearchpage" >Search</Link></button>
                                 </div>
                             </div>
                             
                         </form>
                         <ul className='mr-auto'></ul>
                         <ul className='mr-auto navbar-nav nav_11'>    
+                          
                             <li className="nav-item me_1">
                                 <button className='add_post_btn' data-toggle="modal" data-target="#exampleAddStory">Add Story</button>
-                            </li>
-                            <li className="nav-item me_1">
-                                <button className='add_post_btn' data-toggle="modal" data-target="#exampleAddPost">Add Post</button>
                             </li>
                             <li className="nav-item dropdown me_1">
                                 <button className="nav-item dropdown-toggle see_more_n" type="button" id="mentorDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Settings
                                 </button>
                                 <div className="dropdown-menu" aria-labelledby="mentorDropdownButton">
-                                    <button className="dropdown-item seemore_dropitem" >Help</button>
-                                    <button className="dropdown-item seemore_dropitem" >Privacy</button>
-                                    <button className="dropdown-item seemore_dropitem1" ><Link to='/' className='log_out_1'> Logout <img src={logout} alt='logout button' className='logg_img' /></Link></button>
+                                    <button className="dropdown-item seemore_dropitem" ><Link to ='/help' className = "helpheader">Help</Link></button>
+                                    <button className="dropdown-item seemore_dropitem" ><Link to ='/privacy' className = "helpheader">Privacy</Link></button>
+                                   
                                 </div>
                             </li>
-                            <li className="nav-item dropdown me_1">
-                                <button className="nav-item dropdown-toggle see_more_n" type="button" id="mentorDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Notifications
-                                </button>
-                                <div className="dropdown-menu" aria-labelledby="mentorDropdownButton">
-                                    <a className="dropdown-item seemore_dropitem" href="#">Add</a>
-                                    <a className="dropdown-item seemore_dropitem" href="#">Remove</a>
-                                    <a className="dropdown-item seemore_dropitem1" href="#">More Details</a>
-                                </div>
+                            <li className = "nav-item me_1">
+                            <button className="logout_btn_dd" ><Link to='/' className='log_out_1'> Logout <img src={logout} alt='logout button' className='logg_img' /></Link></button>
                             </li>
+                            <li className ="nav-item">
+                                <Link to ='/dashboard'>
+                                <img src = {home} className="homeDashboard" ></img>
+                                </Link>
+                                
+                                </li>
+                            
                             {/* <li>
                                 <button className='logout_btn_dd'><Link to='/'> Logout <img src={logout} alt='logout button' className='logg_img' /></Link></button>
                             </li> */}
