@@ -21,6 +21,7 @@ import car2 from './img/car3.jpg'
 import car44 from './img/car44.jpg'
 import $ from 'jquery'
 import { Link } from 'react-router-dom'
+import home from './img/home2.jpg'
 
 
 function LandingPage(props) {
@@ -177,6 +178,15 @@ function LandingPage(props) {
                             <button className="dropdown-item" data-toggle="modal" data-target="#exampleModalCenter">As User</button>
                             <button className="dropdown-item" data-toggle="modal" data-target="#companyModalSingUp" >As Company</button>
                         </div>
+                    </li>
+                    <li className = "nav-item">
+                        <h5 className ="contactUs" ><Link to ='/contactUs' className = "contactUs">Contact Us</Link></h5>
+                    </li>
+                    <li className ="nav-item">
+                    <Link to ='/'>
+                    <img src = {home} className="home" ></img>
+                    </Link>
+                      
                     </li>
                     </ul>
                 </div>
@@ -454,11 +464,36 @@ function LandingPage(props) {
    </div>
 
   </div>
-  
-
- 
-  <div className="footer-copyright text-center py-3 footcp">© 2021 Copyright:
+  <div className = "container footer py-3 footcp">
+      <div className = "row">
+     
+          <div className ="col-lg-4">
+          <center>
+          <Link to='/help'>
+          Help Center
+          </Link>
+       
+          </center>
+           
+          </div>
+          <div className ="col-lg-4">
+          <center>
+          © 2021 Copyright:
     <a href="#">SyncIn.com</a>
+          </center>
+         
+          </div>
+          <div className ="col-lg-4">
+          <center>
+          <Link to='/privacy'>
+          Privacy Policy 
+          </Link>
+        
+          </center>
+           
+          </div>
+    
+      </div>
   </div>
   
 

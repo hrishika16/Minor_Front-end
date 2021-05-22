@@ -64,7 +64,7 @@ function Hiring() {
                                 <p>Employment : &nbsp;  {employment} </p>
                                 <p>Role Category : &nbsp; {roleCategory} </p>
                                 <p>Skills : &nbsp; {skills}</p>
-                                <p>JOb Descrption : &nbsp; {description}</p>
+                                <p>Job Description : &nbsp; {description}</p>
                             </div>
                         
                          </div>
