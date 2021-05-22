@@ -63,14 +63,14 @@ function HeaderUser() {
             if(resp.data.status === 200){
                 
                 console.log(resp.data)
-                window.$('#exampleAddPost').modal('hide');
+                window.$('#exampleAddStory').modal('hide');
             }
             else if(resp.data.status === 202) {
             console.log(resp.data.message);
-            document.getElementById('post_error').innerHTML = resp.data.message
+            document.getElementById('story_error').innerHTML = resp.data.message
             }
             else{
-                document.getElementById('post_error').innerHTML = resp.data.message
+                document.getElementById('story_error').innerHTML = resp.data.message
                 console.log(resp.data.message);
             }
         })
@@ -175,6 +175,7 @@ function HeaderUser() {
                                 placeholder='Add Description here '></textarea>
                                 {/* dropdown button- sign in with google,2 more options */}
                                 <button className='sigU_btn' onClick={getTheDataFromStory} >Submit</button>
+                                <p className='errorr_posts' id='story_error'></p>
                             </div>
                         </div>
                     </div>
