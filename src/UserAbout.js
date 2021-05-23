@@ -26,11 +26,11 @@ function UserAbout() {
         .then(resp=>{
             
             if(resp.data.status === 200){
-                console.log(resp)
+                // console.log(resp)
                 setexpAbt([resp.data.data[0]])
                 setinterestArr(resp.data.data[0].interests)
                 console.log(resp.data.data[0].interests)
-                // console.log(interestArr)
+                console.log(interestArr)
             }
             else if(resp.data.status === 202) {
             console.log(resp.data.message);
@@ -45,24 +45,42 @@ function UserAbout() {
     },[])
 
     const renderInterest = () =>{
-        // console.log(interestArr)
-        let income;
+        console.log(interestArr)
+        return (
+            <div>
+              {interestArr.map((person, index) => (
+                  
+                <li key={index}>{person}</li>
+              ))}
+            </div>
+          );
+        // let skills
+        // return (
+        //     interestArr.map(person => (
+        //         console.log(person)
+        //     ))
+        
+
+          
+        // );
         // for(let i=0;i<interestArr.length;i++){
-            // interestArr.map(skills =>{
-            //     return(
-            //             <li>{skills}</li>
-            //     )
-            // })
+        //     console.log(interestArr[i])
+        //     // interestArr.map(skills =>{
+        //     //     return(
+        //     //             <li>{skills}</li>
+        //     //     )
+        //     // })
         // }
         // for (const income of interestArr) {
         //     console.log(income)
         // }
-            // return interestArr.map(skills =>{
-                return(
-                        <li>{income}</li>
-                )
-            // })
-        // }
+        //     return (interestArr.map(skills =>{
+        //         console.log(skills)
+        //         // return(
+        //                 // <li>{skills}</li>
+        //         // )
+        //     }))
+        // // }
     }
 
     const renderUserAbout = () =>{
