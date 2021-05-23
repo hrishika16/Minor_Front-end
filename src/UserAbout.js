@@ -26,11 +26,11 @@ function UserAbout() {
         .then(resp=>{
             
             if(resp.data.status === 200){
-                // console.log(resp)
+                console.log(resp)
                 setexpAbt([resp.data.data[0]])
-                setinterestArr(resp.data.data[0].interests)
-                console.log(resp.data.data[0].interests)
-                console.log(interestArr)
+                // setinterestArr(resp.data.data[0].interests)
+                // console.log(resp.data.data[0].interests)
+                // console.log(interestArr)
             }
             else if(resp.data.status === 202) {
             console.log(resp.data.message);
@@ -45,23 +45,19 @@ function UserAbout() {
     },[])
 
     const renderInterest = () =>{
-        console.log(interestArr)
+        // console.log(interestArr)
         return (
             <div>
-              {interestArr.map((person, index) => (
-                  
-                <li key={index}>{person}</li>
-              ))}
+                {interestArr.map((person, index) => (
+                    <li key={index}>{person}</li>
+                ))}
             </div>
-          );
+        );
         // let skills
         // return (
         //     interestArr.map(person => (
         //         console.log(person)
         //     ))
-        
-
-          
         // );
         // for(let i=0;i<interestArr.length;i++){
         //     console.log(interestArr[i])
@@ -100,16 +96,23 @@ function UserAbout() {
                     <h2 className='about_heading'>Education</h2>
                     <ul className='border_ull' >
                         <li>
-                            <p className='sub_heading'>Lorem Ipsum es simplemente</p>
-                            <p className='normal_para'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                            <p className='normal_para'>
+                            {dataOfuser.schoolName}
+                            </p>
+                        </li>
+                        <li>
+                            <p className='normal_para'>
+                            {dataOfuser.colleageName}
                             </p>
                         </li>
                     </ul>
                     <br/>
                     <h2 className='about_heading'>Skills</h2>
                     <ul>
-                    {renderInterest()}
+                    {/* {renderInterest()} */}
+                        {/* {interestArr.map((person, index) => (
+                            <li key={index}>{person}</li>
+                        ))} */}
                     </ul>
                     
                 </React.Fragment> 
