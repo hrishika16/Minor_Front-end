@@ -46,14 +46,24 @@ function UserAbout() {
 
     const renderInterest = () =>{
         console.log(interestArr)
-        return (
-            <div>
-              {interestArr.map((person, index) => (
-                  
-                <li key={index}>{person}</li>
-              ))}
-            </div>
-          );
+        if(interestArr == null){
+            console.log("not yet");
+        }else{
+            console.log("jsjb");
+            return (
+                <div>
+                    {interestArr.map((person, index) => (
+                        
+                    <li key={index}>{person}</li>
+                    ))}
+                </div>
+            );
+            
+        }
+           
+        
+        // console.log(interestArr)
+        
         // let skills
         // return (
         //     interestArr.map(person => (
