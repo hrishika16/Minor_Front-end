@@ -63,16 +63,14 @@ function LandingPage(props) {
             .then(res=>{
                 console.log(res)
                 if(res.data.status === 200){
-                    // localStorage.setItem('emailUU' , res.data.data[0].email)
                     console.log(res.data)
                     setnextP(true)
                 }
                 else if(res.data.status === 202) {
-                // console.log(res.data.message);
-                console.log(" Please center with correct credentials")
+                    console.log(res.data.message);
                 }
                 else{
-                    console.log("Some error occured")
+                    console.log(res.data.message);
                 }
             })
             .catch(err=>{
@@ -125,11 +123,10 @@ function LandingPage(props) {
                     console.log(nextC)
                 }
                 else if(res.data.status === 202) {
-                // console.log(res.data.message);
-                console.log(" Please center with correct credentials")
+                    console.log(res.data.message);
                 }
                 else{
-                    console.log("Some error occured")
+                    console.log(res.data.message);
                 }
             })
             .catch(err=>{
