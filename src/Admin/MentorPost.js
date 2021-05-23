@@ -37,11 +37,10 @@ useEffect( ()=>{
           console.log(resp.data.message)
         }
         else if(resp.data.status === 202) {
-          // console.log(res.data.message);
-          console.log(" Please center with correct credentials")
+          console.log(resp.data.message);
         }
         else{
-            console.log("Some error occured")
+          console.log(resp.data.message);
         }
       })
       .catch(error=>{
