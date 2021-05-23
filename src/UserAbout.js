@@ -8,7 +8,7 @@ import HeaderUser from './HeaderUser'
 function UserAbout() {
 
     const[expAbt, setexpAbt] = useState([])
-    const[interestArr, setinterestArr] = useState([])
+    const[interestArr, setinterestArr] = useState()
     const user_id = localStorage.getItem('userId')
 
     useEffect( ()=>{
@@ -24,12 +24,13 @@ function UserAbout() {
         }) 
         // setdataPost([res.data])
         .then(resp=>{
-            console.log(resp)
+            
             if(resp.data.status === 200){
+                console.log(resp)
                 setexpAbt([resp.data.data[0]])
-                setinterestArr([resp.data.data[0].interests])
-                // console.log(expAbt)
-                console.log(interestArr)
+                setinterestArr(resp.data.data[0].interests)
+                console.log(resp.data.data[0].interests)
+                // console.log(interestArr)
             }
             else if(resp.data.status === 202) {
             console.log(resp.data.message);
@@ -44,16 +45,24 @@ function UserAbout() {
     },[])
 
     const renderInterest = () =>{
-        console.log(interestArr.length)
-        for(let i=0;i<interestArr.length;i++){
-            return interestArr.map(skills =>{
+        // console.log(interestArr)
+        let income;
+        // for(let i=0;i<interestArr.length;i++){
+            // interestArr.map(skills =>{
+            //     return(
+            //             <li>{skills}</li>
+            //     )
+            // })
+        // }
+        // for (const income of interestArr) {
+        //     console.log(income)
+        // }
+            // return interestArr.map(skills =>{
                 return(
-                    <ul>
-                        <li>{skills.i}</li>
-                    </ul>
+                        <li>{income}</li>
                 )
-            })
-        }
+            // })
+        // }
     }
 
     const renderUserAbout = () =>{
@@ -81,7 +90,10 @@ function UserAbout() {
                     </ul>
                     <br/>
                     <h2 className='about_heading'>Skills</h2>
+                    <ul>
                     {renderInterest()}
+                    </ul>
+                    
                 </React.Fragment> 
             )
         })
