@@ -75,7 +75,7 @@ function App() {
               <Route exact path = '/help' component ={Help}></Route>
               <Route exact path ='/privacy' component = {Privacy}></Route>
               <Route exact path='/hiring' component={Internship} />
-              <Route exact path = '/searchPage' component = {SearchPage}></Route>
+              <Route exact path = '/searchPage/:searchparam' component = {SearchPage}></Route>
               <Route exact path = '/hirecompany' component = {Hiring}></Route>
               <Route exact path = '/hiredetails' component = {HireDetails}></Route>
               <Route exact path = '/oops' component = {Oops}></Route>
