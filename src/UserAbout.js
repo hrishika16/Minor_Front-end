@@ -96,6 +96,7 @@ function UserAbout() {
                     <h2 className='about_heading'>Education</h2>
                     <ul className='border_ull' >
                         <li>
+                        {/* gfhf */}
                             <p className='normal_para'>
                             {dataOfuser.schoolName}
                             </p>
