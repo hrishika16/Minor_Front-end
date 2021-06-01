@@ -3,6 +3,7 @@ import './css/companyProfile.css'
 import axios from 'axios'
 import building from './img/companyBuilding.jpg'
 import CompanySidebar from './CompanySidebar'
+import CompanyNavbar from './CompanyNavbar'
 
 function CompanyProfile() {
 
@@ -85,6 +86,9 @@ function CompanyProfile() {
     return (
         <div>
             <div className='mainCP'>
+            <CompanyNavbar></CompanyNavbar>
+            <br></br>
+            <br></br>
                 <CompanySidebar/>
             <div className = "container completeCP">
                 {renderCompanyData()}

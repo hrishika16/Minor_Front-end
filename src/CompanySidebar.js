@@ -1,6 +1,8 @@
 import React from 'react'
 import './css/companyProfile.css'
 import userIcon from './img/userIcon.svg'
+import userProf from './img/userProf.png'
+import post from './img/post.png'
 
 function CompanySidebar() {
     return (
@@ -15,23 +17,28 @@ function CompanySidebar() {
                     <br/>
                     <br></br>
                     <div className='sidess_11'>
+                    <img src={userProf} alt='user icon' className='side_img' />
                         <button className='linkss_11'>Profile</button>
                     </div>
                     <div className='sidess_11'>
+                    <img src ={post} className ='side_img'></img>
+            
                         <button className='linkss_11'>Posts</button>
                     </div>
                     <div className='sidess_11'>
+                    <img src ={post} className ='side_img'></img>
                         <button className='linkss_11'>Hire Posts </button>
                     </div>
                
                     <div className='sidess_11'>
+                    <img src ={post} className ='side_img'></img>
                         <button className='linkss_11'>Mentor Post </button>
                     </div>
                     <div className='sidess_11'>
-                        <button className='linkss_11'>Add Post</button>
+                        <button className='linkss_11 addpos'> + Add Post</button>
                     </div>
                     <div className='sidess_11'>
-                        <button className='linkss_11'>Add Hire Post</button>
+                        <button className='linkss_11 addpos'> + Add Hire Post</button>
                     </div>
                 </div>
         </div>
