@@ -82,3 +82,12 @@
     width: 300px;
     padding-left: 203px;
 }
+
+.addpos{
+    border: 2px solid white ;
+    border-radius: 10px;
+    background-color: #BFD7ED;
+    color: #045174;
+    width: 170px;
+
+}

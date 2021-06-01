@@ -1,0 +1,84 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.inp_hire{
+ 
+    border : none;
+    border-bottom: 2px solid black ; ;
+    font-family: 'caros';
+    resize: none;
+    color: black;
+    font-size: 16px;
+    padding: 8px;
+    width: 600px;
+    margin-bottom: 10px;
+ 
+}
+
+.inp_hire:focus{
+    outline: none;
+    border : none ; 
+    border-bottom: 2px solid black ; 
+}
+.labelHire{
+
+    font-family: 'caros_bold';
+    font-size: 20px;
+    color : #045174;
+    margin-bottom: 20px;
+   
+
+}
+
+.message_input{
+
+    margin-top: 10px;
+    width: 600px ;
+    height : 150px ;
+    padding: 22px 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    color: #2d2d2d;
+}
+.message_input:focus{
+    outline:none ; 
+}
+
+.submit_hiredetails{
+
+    position: relative;
+    margin-top: 20px;
+    background-color: #F98935;
+    border: none;
+    border-radius: 25px;
+    color: #023858;
+    font-family: 'caros_bold';
+    font-size: 20px;
+    padding: 10px;
+    width: 140px;
+}
+.submit_hiredetails:focus{
+    outline : none ; 
+}
+.hiredetailshead{
+    font-family: 'caros_bold';
+    color: #F8951D;
+    text-align: center;
+    
+}
