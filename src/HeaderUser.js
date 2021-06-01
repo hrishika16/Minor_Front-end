@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import './css/headerUse.css'
-import logout from './img/logout4.png';
+import logout from './img/logout5.svg';
 import syncIn from './img/logo.png'
 import { Link } from 'react-router-dom'
 import home from './img/home.jpg'
