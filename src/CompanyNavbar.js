@@ -1,48 +1,53 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
-import $ from 'jquery'
+import React, { useState } from 'react'
+import axios from 'axios'
+import './css/headerUse.css'
+import logout from './img/logout5.svg';
+import syncIn from './img/logo.png'
+import { Link } from 'react-router-dom'
+import home from './img/home.jpg'
 
-function CompanyNavbar(){
-
-    return (
-        <div>
-            <div className='pos_prof'>
-            <nav className="navbar navbar-expand-lg nav_d ">
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            
-                <ul className="navbar-nav mr-auto mt-6">
-                    <li className="nav-item active">
-                        <Link to='/admin' className="nav-link link_cls">Dashboard </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to='/userA' className="nav-link link_cls">User </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to='/mentorA' className="nav-link link_cls">Mentor </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to='/adminCompany' className="nav-link link_cls">Company </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to='/jobSeeker' className="nav-link link_cls">Job Seeker </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to='/adminContactUs' className="nav-link link_cls">Contact Us </Link>
-                    </li>
-                    {/* <li className="nav-item">
-                        <Link to='/adminLogin' className="nav-link link_cls">Logout </Link>
-                    </li> */}
-                </ul>
-                <Link to='/adminLogin' className="nav-link link_cls">Logout </Link>
-                </div>
-            </nav>
-            </div>
-        </div>
-    )
-}
+function CompanyNavbar() {
    
+    return (
+            <div className=''>
+                <div className='tryyy bg_he'>
+                <nav className="navbar navbar-expand-lg ">
+                {/* logo space */}
+                    <div className='logo class="navbar-brand"'>
+                        <img src= {syncIn} alt= "logo" className="logoImg"></img>
+                    </div>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                       
+                        <ul className='mr-auto'></ul>
+                        <ul className='mr-auto navbar-nav nav_11'>    
+                          
+                            
+                           
+                            <li className = "nav-item me_1">
+                            <button className="logout_btn_dd" ><Link to='/' className='log_out_1'> Logout <img src={logout} alt='logout button' className='logg_img' /></Link></button>
+                            </li>
+                            <li className ="nav-item">
+                                <Link to ='/dashboard'>
+                                <img src = {home} className="homeDashboard" ></img>
+                                </Link>
+                                
+                         </li>
+                            
+                           
+                        </ul>
+                    </div>
+                </nav>
+                </div>
+                
+                
+               
+            </div>
+        )
+    
+}
 
 export default CompanyNavbar
