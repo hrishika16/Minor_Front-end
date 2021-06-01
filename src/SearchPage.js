@@ -1,10 +1,50 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import axios from 'axios'
 import HeaderUser from './HeaderUser'
 import Sidebar from './Sidebar'
 import userIcon from './img/userSearch.png'
 import './css/searchPage.css'
 
-function SearchPage() {
+function SearchPage(props) {
+
+    // const[toRegister, setToRegister] = useState(false)
+
+    useEffect( ()=> {
+
+        const seachparam = new URLSearchParams(props.location.search).get("searchparam")
+        console.log(seachparam)
+        const category = new URLSearchParams(props.location.search).get("category")
+        console.log(category)
+        
+        axios({
+            method : 'post',
+            url : 'http://localhost:3001/search',
+            headers : {
+                AuthKey : 'asdfgh'
+            },
+            data : {
+                'seachparam' : seachparam,
+                'category' : category
+            }
+        })
+            .then(res=>{
+                console.log(res)
+                if(res.data.status === 200){
+                    console.log(res.data)
+                }
+                else if(res.data.status === 202) {
+                    console.log(res.data.message);
+                }
+                else{
+                    console.log(res.data.message);
+                }
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+        
+    },[])
+
     return (
         <div>
             <HeaderUser></HeaderUser>

@@ -12,24 +12,21 @@ class SidebarProfile extends Component {
         return (
             <div className='cside'>
             <div className='sidebard'> 
-              <h2 className ="myProfile">My Profile</h2>
+                <h2 className ="myProfile">My Profile</h2>
                 <br/><br/>
                 <div className='sidess_11'>
-                    {/* <button className='linkss_11'>Profile</button> */}
-                    <img src={userProf} alt='user icon' className='side_img' /> <Link to='/aboutUser' className='linkss_12'>Profile/About</Link>
+                    <img src={userProf} alt='user icon' className='side_img' /> <Link to='/aboutUser' className='linkss_12'>About</Link>
                 </div>
                 <div className='sidess_11'>
-                
                     <img src={chat} alt='user icon' className='side_img' /> <button className='linkss_11'>Chat Screen</button>
                 </div>
                 <div className='sidess_11'>
-                    <img src={story} alt='user icon' className='side_img' /> <button className='linkss_11'>Sucess Stories</button>
+                {/* profilePosts */}
+                    <img src={post} alt='user icon' className='side_img' /> <Link to='/profilePosts' className='linkss_12'>Posts</Link>
                 </div>
                 <div className='sidess_11'>
-                    <img src={post} alt='user icon' className='side_img' /> <button className='linkss_11'>Posts</button>
-                </div>
-                <div className='sidess_11'>
-                    <img src={yourStroy} alt='user icon' className='side_img' /> <button className='linkss_11'>Your Story</button>
+                {/* aboutStory */}
+                    <img src={yourStroy} alt='user icon' className='side_img' /> <Link to='/aboutStory' className='linkss_11'>My Story</Link>
                 </div>
             </div>
         </div>

@@ -3,16 +3,19 @@ import axios from 'axios'
 import './css/headerUse.css'
 import logout from './img/logout5.svg';
 import syncIn from './img/logo.png'
-import { Link } from 'react-router-dom'
+import { Link,Redirect } from 'react-router-dom'
 import home from './img/home.jpg'
 
 function HeaderUser() {
 
     const [subjectPost, setsubjectPost] = useState('')
     const [msg, setmsg] = useState('')
-    // const [subjectStory, setsubjectStory] = useState('')
+    const[category,setcategory] = useState('user')
+    const [searchInp, setsearchInp] = useState('')
     const [msgStory, setmsgStory] = useState('')
+    const [nextSearch, setnextSearch] = useState(false)
 
+    // post api
     const getTheDataFromPosts =() =>{
         const userId = localStorage.getItem('userId')
         axios({
@@ -47,6 +50,7 @@ function HeaderUser() {
         })
     }
 
+    // story api
     const getTheDataFromStory =() =>{
         const userId = localStorage.getItem('userId')
         axios({
@@ -80,6 +84,51 @@ function HeaderUser() {
         })
     }
 
+    // search api
+    const getSearch =() =>{
+        if(searchInp === ''){
+            console.log('field empty')
+        }
+        else{
+            // axios({
+            //     method : 'post',
+            //     url : 'http://localhost:3001/search',
+            //     data: {
+            //         'searchparam' : searchInp,
+            //         'category' :  category
+            //     },
+            //     headers : {
+            //     AuthKey : 'asdfgh'
+            //     }
+            // })
+            // .then(resp =>{
+            //     if(resp.data.status === 200){
+            //         console.log(resp.data)
+                    setnextSearch(true)
+            //     }
+            //     else if(resp.data.status === 202) {
+            //         console.log(resp.data.message);
+            //     }
+            //     else{
+            //         console.log(resp.data.message);
+            //     }
+            // })
+            // .catch(error =>{
+            //     console.log('err',error)
+            // })
+            // <Redirect to={`/searchPage?category=${category}&searchparam=${searchInp}`}/>
+        }
+    }
+
+    if(nextSearch){
+        return(
+            <Redirect to= {{
+                pathname : `/searchPage/abc?category=${category}&searchparam=${searchInp}`
+            }}
+            />
+        )
+    }
+
         return (
             <div className=''>
                 <div className='tryyy bg_he'>
@@ -95,24 +144,30 @@ function HeaderUser() {
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className='mr-auto'></ul>
                          {/* my */}
-                        <form className="form-inline">
+                        <div className="">
                             <div className="input-group ">
                                 <div className="input-group-prepend">
-                                    {/* <div className="form-group slect_11"> */}
-                                        <select className="form-control slect_11" id="exampleFormControlSelect1">
-                                        <option className='slect_11_option'>User</option>
-                                        <option className='slect_11_option'>Company</option>
-                                        <option className='slect_11_option'>Mentor</option>
+                                        <select className="form-control slect_11" id="exampleFormControlSelect1" value={category} onChange={e => setcategory(e.target.value)}>
+                                        <option defaultValue='user' className='slect_11_option'>User</option>
+                                        <option defaultValue='company' className='slect_11_option'>Company</option>
                                         </select>
-                                    {/* </div> */}
                                 </div>
-                                <input className="form-control inp_search" type="search" placeholder="Search" aria-label="Search"/>
+                                <input 
+                                    className="form-control inp_search" 
+                                    type="text" 
+                                    value={searchInp}
+                                    id='searchIn'
+                                    onChange={e => setsearchInp(e.target.value)}
+                                    placeholder="Search" 
+                                    />
                                 <div className="input-group-append">
-                                    <button className="search_btn" type="button"><Link to ='/searchpage' className="linksearchpage" >Search</Link></button>
+                                    <button className="search_btn" onClick={getSearch()}>
+                                        Search
+                                    </button>
                                 </div>
                             </div>
                             
-                        </form>
+                        </div>
                         <ul className='mr-auto'></ul>
                         <ul className='mr-auto navbar-nav nav_11'>    
                           

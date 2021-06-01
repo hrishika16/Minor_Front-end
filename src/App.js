@@ -37,6 +37,9 @@ import Hiring from './Hiring';
 import HireDetails from './HireDetails';
 import Oops from './oops';
 import Notifications from './Notifications';
+import ProfilePosts from './ProfilePosts';
+import UserAbout from './UserAbout'
+import ProfileStory from './ProfileStory';
 
 let isLoggedIn;
 
@@ -72,11 +75,14 @@ function App() {
               <Route exact path = '/help' component ={Help}></Route>
               <Route exact path ='/privacy' component = {Privacy}></Route>
               <Route exact path='/hiring' component={Internship} />
-              <Route exact path = '/searchPage' component = {SearchPage}></Route>
+              <Route exact path = '/searchPage/:searchparam' component = {SearchPage}></Route>
               <Route exact path = '/hirecompany' component = {Hiring}></Route>
               <Route exact path = '/hiredetails' component = {HireDetails}></Route>
               <Route exact path = '/oops' component = {Oops}></Route>
               <Route exact path ='/notifications' component = {Notifications}></Route>
+              <Route exact path ='/profilePosts' component = {ProfilePosts} />
+              <Route exact path ='/aboutUser' component = {UserAbout}  />
+              <Route exact path ='/aboutStory' component = {ProfileStory} /> 
               {/* Mentor Routes Starts */}
               <Route exact path = '/mentorLogin' component = {MentorLogin}></Route>
               <Route exact path = '/mentorProfile' component={MentorProfile}></Route>
