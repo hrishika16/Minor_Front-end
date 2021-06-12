@@ -38,7 +38,6 @@ function Sidebar() {
                     <img src={story} alt='user icon' className='side_img' /> 
                         <Link to='/hiring' className='linkss_12'>Hiring</Link>
                     </div>
-                   
                     <div className='sidess_11'>
                     <img src={yourStroy} alt='user icon' className='side_img' />
                         <button className='linkss_11'>Our Story</button>
@@ -48,7 +47,6 @@ function Sidebar() {
                         <button className='linkss_11'>Notifications</button>
                     </div>
                     <div className='sidess_11'>
-                 
                         <button className='addStory'  data-toggle="modal" data-target="#exampleAddPost"> + Add Post </button>
                     </div>
                 </div>
