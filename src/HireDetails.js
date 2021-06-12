@@ -1,20 +1,65 @@
 import React,{useState} from 'react'
+import axios from 'axios'
 import Sidebar from './Sidebar'
 import Header from './Admin/MentorNavbar'
 import CompanyNavbar from './CompanyNavbar'
 import CompanySidebar from './CompanySidebar'
 import './css/hireDetails.css'
+import $ from 'jquery'
 
 function HireDetails() {
     const[role, roleChange] = useState('');
     const[industoryType , industoryTypeChange ] = useState('');
     const[functionalArea , functionalAreaChange] = useState('');
-    const[employment ,employmentChange] = useState('')
+    const[employment ,employmentChange] = useState('Full_Time')
     const[roleCategory , roleCategoryChange] = useState('')
     const[skills , skillsChange] = useState('')
     const[descrip , descripChange] = useState('')
 
-    
+    const handleSubmitSome = (event) =>{
+        // event.preventDefault()
+        console.log('something')
+        const companyId = localStorage.getItem('companyid')
+        if(role === '' || industoryType === '' ||  functionalArea === '' || roleCategory === '' || skills === '' || descrip === ''){
+            // document.querySelector('#error_hireComp').innerHTML = 'All fields are Required'
+            // document.getElementById('error_hireComp').style.display = 'block'
+            $('#error_hireComp').css('display', 'block')
+        }
+        else{
+        axios({
+            method : 'post',
+            url : 'http://localhost:3001/companyhirepost',
+            headers : {
+                AuthKey : 'asdfgh'
+            },
+            data : {
+                'companyid' : companyId,
+                'role' : role,
+                'industryType' : industoryType,
+                'functionalArea' : functionalArea,
+                'employmentType ' : employment,
+                'RoleCategory ' : roleCategory,
+                'skills ' : skills,
+                'description' : descrip
+            }
+        }) 
+        .then(res=>{
+            
+            if(res.data.status === 200){
+                console.log(res)
+            }
+            else if(res.data.status === 202) {
+                console.log(res.data.message);
+            }
+            else{
+                console.log(res.data.message);
+            }
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+        }
+    }
 
     return (
         <div className = "mainCP">
@@ -38,7 +83,7 @@ function HireDetails() {
                <br></br>
                <label className ="labelHire">Functional Area : </label>
                <br></br>
-               <label className ="labelHire">Employment : </label>
+               <label className ="labelHire">Employment Type : </label>
                <br></br>
                <label className ="labelHire">Role category : </label>
                <br></br>
@@ -56,8 +101,8 @@ function HireDetails() {
                     className ="inp_hire"
                     placeholder ="Type Here..."
                     value={role}
-                  onchange=  {(e)=>roleChange(e.target.value)}
-                    ></input>
+                    onChange=  {(e)=>roleChange(e.target.value)}
+                    />
                     <br></br>
                 
                     <input 
@@ -65,7 +110,7 @@ function HireDetails() {
                     className ="inp_hire"
                     placeholder ="Type Here..."
                     value = {industoryType}
-                    onchange = {(e)=>industoryTypeChange(e.target.value)}
+                    onChange = {(e)=>industoryTypeChange(e.target.value)}
                     ></input>
                     <br></br>
 
@@ -74,15 +119,15 @@ function HireDetails() {
                     className ="inp_hire"
                     placeholder ="Type Here..."
                     value = {functionalArea}
-                    onchange = {(e)=>functionalAreaChange(e.target.value)}
+                    onChange = {(e)=>functionalAreaChange(e.target.value)}
                     ></input>
                     <br></br>
                     
-                    <select className ="inp_hire">
-                        <option>Full time</option>
-                        <option>Part time</option>
-                        <option>Permanent Job</option>
-                        <option>Temporary Job</option>
+                    <select className ="inp_hire" value={employment} onChange={e => employmentChange(e.target.value)} >
+                        <option defaultValue='Full_Time' >Full time</option>
+                        <option defaultValue='Part_Time' >Part time</option>
+                        <option defaultValue='Permanent_Time'>Permanent Job</option>
+                        <option defaultValue='Temporary_Time'>Temporary Job</option>
                     </select>
                    <br></br>
                 
@@ -91,7 +136,7 @@ function HireDetails() {
                     className ="inp_hire"
                     placeholder ="Type Here..."
                     value ={roleCategory}
-                    onchange = {(e) => roleCategoryChange(e.target.value)}
+                    onChange = {(e) => roleCategoryChange(e.target.value)}
                     ></input>
                     <br></br>
                 
@@ -100,7 +145,7 @@ function HireDetails() {
                     className ="inp_hire"
                     placeholder ="Type Here..."
                     value ={skills}
-                    onchange = {(e) => skillsChange(e.target.value)}
+                    onChange = {(e) => skillsChange(e.target.value)}
                     ></input>
                     <br></br>
                 
@@ -108,19 +153,19 @@ function HireDetails() {
                         placeholder="Enter Descrpition Here..."
                         className = "message_input"
                         value ={descrip}
-                        onchange = {(e) => descripChange(e.target.value)}
+                        onChange = {(e) => descripChange(e.target.value)}
                             ></textarea>
                         <br></br>
 
                 
                 </form>
                 </div>
-                    </div>
-                    </div>
-                    
-                    <button className = "submit_hiredetails">Submit</button>
-                    </center>
-                    </div>
+                </div>
+                </div>
+                <p id='error_hireComp' className='error'>All fields are required</p>
+                <button className = "submit_hiredetails" onClick={handleSubmitSome} >Submit</button>
+                </center>
+                </div>
     )
 }
 
