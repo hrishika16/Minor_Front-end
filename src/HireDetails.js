@@ -6,26 +6,28 @@ import CompanyNavbar from './CompanyNavbar'
 import CompanySidebar from './CompanySidebar'
 import './css/hireDetails.css'
 import $ from 'jquery'
+import { computeHeadingLevel } from '@testing-library/dom'
 
 function HireDetails() {
     const[role, roleChange] = useState('');
-    const[industoryType , industoryTypeChange ] = useState('');
-    const[functionalArea , functionalAreaChange] = useState('');
-    const[employment ,employmentChange] = useState('Full_Time')
+    const[industoryType , industoryTypeChange ] = useState('')
+    const[functionalArea , functionalAreaChange] = useState('')
+    const[employmentTest ,employmentChange] = useState('emp_type')
     const[roleCategory , roleCategoryChange] = useState('')
     const[skills , skillsChange] = useState('')
     const[descrip , descripChange] = useState('')
 
     const handleSubmitSome = (event) =>{
         // event.preventDefault()
-        console.log('something')
+        
+        // console.log(employment+' ' +role+ ' ' + industoryType + ' ' + functionalArea + ' ' + roleCategory + ' '+ skills +' '+ descrip )
         const companyId = localStorage.getItem('companyid')
-        if(role === '' || industoryType === '' ||  functionalArea === '' || roleCategory === '' || skills === '' || descrip === ''){
-            // document.querySelector('#error_hireComp').innerHTML = 'All fields are Required'
-            // document.getElementById('error_hireComp').style.display = 'block'
+        if(functionalArea === ''){
             $('#error_hireComp').css('display', 'block')
+            document.getElementById('error_hireComp').innerHTML = 'All fields are required'
         }
         else{
+            
         axios({
             method : 'post',
             url : 'http://localhost:3001/companyhirepost',
@@ -37,7 +39,7 @@ function HireDetails() {
                 'role' : role,
                 'industryType' : industoryType,
                 'functionalArea' : functionalArea,
-                'employmentType ' : employment,
+                'employmentType ' : employmentTest,
                 'RoleCategory ' : roleCategory,
                 'skills ' : skills,
                 'description' : descrip
@@ -47,12 +49,15 @@ function HireDetails() {
             
             if(res.data.status === 200){
                 console.log(res)
+                console.log(employmentTest)
             }
             else if(res.data.status === 202) {
                 console.log(res.data.message);
+                console.log(employmentTest)
             }
             else{
                 console.log(res.data.message);
+                console.log(employmentTest)
             }
         })
         .catch(err=>{
@@ -95,7 +100,7 @@ function HireDetails() {
 
                </div>
                <div className = "col-lg-6">
-               <form className = "formdetails">
+               <div className = "formdetails">
                     <input 
                     type= "text"
                     className ="inp_hire"
@@ -123,7 +128,7 @@ function HireDetails() {
                     ></input>
                     <br></br>
                     
-                    <select className ="inp_hire" value={employment} onChange={e => employmentChange(e.target.value)} >
+                    <select className ="inp_hire" value={employmentTest} onChange={e => {employmentChange(e.target.value)}} >
                         <option defaultValue='Full_Time' >Full time</option>
                         <option defaultValue='Part_Time' >Part time</option>
                         <option defaultValue='Permanent_Time'>Permanent Job</option>
@@ -158,7 +163,7 @@ function HireDetails() {
                         <br></br>
 
                 
-                </form>
+                </div>
                 </div>
                 </div>
                 </div>
