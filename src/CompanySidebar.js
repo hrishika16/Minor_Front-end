@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './css/companyProfile.css'
 import userIcon from './img/userIcon.svg'
 import userProf from './img/userProf.png'
@@ -24,6 +25,7 @@ function CompanySidebar() {
                     <img src ={post} className ='side_img'></img>
             
                         <button className='linkss_11'>Posts</button>
+                        {/* <Link to='/hiredetails' className='linkss_11' >Posts</Link> */}
                     </div>
                     <div className='sidess_11'>
                     <img src ={post} className ='side_img'></img>
@@ -38,7 +40,8 @@ function CompanySidebar() {
                         <button className='linkss_11 addpos'> + Add Post</button>
                     </div>
                     <div className='sidess_11'>
-                        <button className='linkss_11 addpos'> + Add Hire Post</button>
+                        {/* <button className='linkss_11 addpos'> + Add Hire Post</button> */}
+                        <Link to='/hiredetails' className='linkss_11 addpos' >+ Add Hire Post</Link> 
                     </div>
                 </div>
         </div>
