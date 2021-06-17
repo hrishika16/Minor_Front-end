@@ -95,7 +95,7 @@ class Dashboard extends Component {
             method : 'post',
             url : 'http://localhost:3001/loadmorePost',
             headers : {
-            AuthKey : 'asdfgh '
+            AuthKey : 'asdfgh'
             },
             data : {
                 'page' : this.state.page
