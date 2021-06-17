@@ -23,6 +23,7 @@
     height: 100%;
     position: fixed;
     display: block;
+    margin-top: 58px;
     width: 204px;
     z-index: 100;
     transition: all 0.3s;
@@ -35,6 +36,7 @@
     /* margin :auto; */
     /* margin-left: 10px; */
     width: 100%;
+    margin-top: 50px;
     padding-left: 203px;
 }
 
