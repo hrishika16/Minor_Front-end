@@ -56,32 +56,70 @@ function CompanyAllPost() {
                         <div className='card cardDesign'> 
                         {/* roles */}
                         <div className  ="card-body">
-                            <div className='row '>
-                                <div className = "col-lg-4">
+                            <div className='row rowDesign'>
+                                <div className = "col-lg-6">
                                     <label className ="labelHire">Role : </label>
-                                    <br></br>
-                                    <label className ="labelHire">Industry Type : </label>
-                                    <br></br>
-                                    <label className ="labelHire">Functional Area : </label>
-                                    <br></br>
-                                    <label className ="labelHire">Employment Type : </label>
-                                    <br></br>
-                                    <label className ="labelHire">Role category : </label>
-                                    <br></br>
-                                    <label className ="labelHire">Skills : </label>
-                                    <br></br>
-                                    <label className ="labelHire">Job Description :</label>
-                                </div>    
-                                <div className='col-8'>
+                                   </div>
+                                   <div className = "col-lg-6">
                                     <p className ="labelHireValue">{user.role}</p>
-                                    <p className ="labelHireValue">{user.industryType}</p>
-                                    <p className ="labelHireValue">{user.functionalArea}</p>
-                                    <p className ="labelHireValue">{user.employmentType}</p>
-                                    <p className ="labelHireValue">{user.RoleCategory}</p>
-                                    <p className ="labelHireValue">{user.skills}</p>
-                                    <p className ="labelHireValue">{user.description}</p>
-                                </div>
+                                   </div>
                             </div>
+                            <div className = "row rowDesign">
+                            <div className = "col-lg-6">
+                            <label className ="labelHire">Industry Type : </label>
+                                   </div>
+                                   <div className = "col-lg-6">
+                                   <p className ="labelHireValue">{user.industryType}</p>
+                                   </div>
+                            </div>
+                            <div className = "row rowDesign">
+                            <div className = "col-lg-6">
+                            <label className ="labelHire">Functional Area : </label>
+                                   </div>
+                                   <div className = "col-lg-6">
+                                   <p className ="labelHireValue">{user.functionalArea}</p>
+                                   </div>
+                            </div>
+                            <div className = "row rowDesign">
+                            <div className = "col-lg-6">
+                            <label className ="labelHire">Employment Type : </label>
+                                   </div>
+                                   <div className = "col-lg-6">
+                                   <p className ="labelHireValue">{user.employmentType}</p>
+                                   </div>
+                            </div>
+                            <div className = "row rowDesign">
+                            <div className = "col-lg-6">
+                            <label className ="labelHire">Role category : </label>
+                                   </div>
+                                   <div className = "col-lg-6">
+                                   <p className ="labelHireValue">{user.RoleCategory}</p>
+                                   </div>
+                            </div>
+                            <div className = "row rowDesign">
+                            <div className = "col-lg-6">
+                            <label className ="labelHire">Skills : </label>
+                                   </div>
+                                   <div className = "col-lg-6">
+                                   <p className ="labelHireValue">{user.skills}</p>
+                                   </div>
+                            </div>
+                            <div className = "row rowDesign">
+                            <div className = "col-lg-6">
+                            <label className ="labelHire">Job Description :</label>
+                                   </div>
+                                   <div className = "col-lg-6">
+                                   <p className ="labelHireValue">{user.description}</p>
+                                   </div>
+                            </div>
+                                  
+                                   
+                                  
+                                   
+                                    
+                                   
+                                 
+                           
                             </div>
                             {/* <div className=' box_posttM'>
                                 <p className = "box_posttSubH">Subject:<span className='something'> {user.subject} </span> </p>
