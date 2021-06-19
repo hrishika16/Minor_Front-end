@@ -3,7 +3,7 @@ import axios from 'axios'
 import CompanyNavbar from './CompanyNavbar'
 import CompanySidebar from './CompanySidebar'
 import userI from './img/userIcon.svg'
-
+import './css/companyAllPost.css'
 function CompanyAllPost() {
 
     const [compDatat, setcompDatat] = useState([])
@@ -53,8 +53,9 @@ function CompanyAllPost() {
             return (
                 <React.Fragment key={user.postID}>
                     <div className='post_boxM'>
-                        <div className=''> 
+                        <div className='card cardDesign'> 
                         {/* roles */}
+                        <div className  ="card-body">
                             <div className='row '>
                                 <div className = "col-lg-4">
                                     <label className ="labelHire">Role : </label>
@@ -72,14 +73,15 @@ function CompanyAllPost() {
                                     <label className ="labelHire">Job Description :</label>
                                 </div>    
                                 <div className='col-8'>
-                                    <p className ="labelHire">{user.role}</p>
-                                    <p className ="labelHire">{user.industryType}</p>
-                                    <p className ="labelHire">{user.functionalArea}</p>
-                                    <p className ="labelHire">{user.employmentType}</p>
-                                    <p className ="labelHire">{user.RoleCategory}</p>
-                                    <p className ="labelHire">{user.skills}</p>
-                                    <p className ="labelHire">{user.description}</p>
+                                    <p className ="labelHireValue">{user.role}</p>
+                                    <p className ="labelHireValue">{user.industryType}</p>
+                                    <p className ="labelHireValue">{user.functionalArea}</p>
+                                    <p className ="labelHireValue">{user.employmentType}</p>
+                                    <p className ="labelHireValue">{user.RoleCategory}</p>
+                                    <p className ="labelHireValue">{user.skills}</p>
+                                    <p className ="labelHireValue">{user.description}</p>
                                 </div>
+                            </div>
                             </div>
                             {/* <div className=' box_posttM'>
                                 <p className = "box_posttSubH">Subject:<span className='something'> {user.subject} </span> </p>

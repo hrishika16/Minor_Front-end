@@ -1,0 +1,28 @@
+@font-face{
+    font-family: 'caros';
+    src: url('../font/cretype\ \ Caros.otf');
+}
+
+@font-face{
+    font-family: 'caros_bold';
+    src: url('../font//cretype\ \ Caros\ Bold.otf');
+}
+
+@font-face{
+    font-family: 'carosM';
+    src: url('../font/cretype\ \ Caros\ Medium.otf');
+}
+
+.cardDesign{
+
+    border: 1px solid #F98935;
+    border-radius: 30px;
+    padding: 10px ;
+    margin-top: 20px;
+}
+.labelHireValue{
+    font-family: 'carosM';
+    font-size: 18px;
+    color : #F98935;
+    margin-bottom: 20px;
+}
