@@ -49,7 +49,7 @@ function CompanyMentorPost() {
     const renderPostsIncomapM =() =>{
         return compMentor.map((user) => {
             return (
-                <React.Fragment key={user.userID}>
+                <React.Fragment key={user._id}>
                     <div className='post_boxM'>
                         <div className=' box_posttM'>
                             <p className = "box_posttSubH">Subject:<span className='something'> {user.subject} </span> </p>
