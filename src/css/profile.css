@@ -74,11 +74,19 @@
     font-size: 20px;
     margin-bottom: 6px;
 }
-
+.col_pdddd{
+    padding: 0px;
+}
+.col_left_pdn{
+    padding-left: 0px;
+}
+.col_right_pdn{
+    padding-right: 0px;
+}
 .summary_bx{
     resize: none;
     height: 70px;
-    width: 240px;
+    width: 200px;
     border: 1px solid rgba(45,45,45,0.3);
 }
 
