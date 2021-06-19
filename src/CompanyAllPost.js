@@ -93,7 +93,7 @@ function CompanyAllPost() {
                             <label className ="labelHire">Role category : </label>
                                    </div>
                                    <div className = "col-lg-6">
-                                   <p className ="labelHireValue">{user.RoleCategory}</p>
+                                   <p className ="labelHireValue">{user.roleCategory}</p>
                                    </div>
                             </div>
                             <div className = "row rowDesign">
