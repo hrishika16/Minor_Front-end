@@ -34,12 +34,15 @@ import Internship from './Internship';
 import Test from './Test';
 import SearchPage from './SearchPage';
 import Hiring from './Hiring';
-import HireDetails from './HireDetails';
 import Oops from './oops';
 import Notifications from './Notifications';
 import ProfilePosts from './ProfilePosts';
 import UserAbout from './UserAbout'
 import ProfileStory from './ProfileStory';
+import CompanyAllPost from './CompanyAllPost';
+import HirePost from './HirePost';
+import CompanyMentorPost from './CompanyMentorPost';
+import CompanyPosts from './CompanyPosts';
 
 let isLoggedIn;
 
@@ -76,13 +79,14 @@ function App() {
               <Route exact path ='/privacy' component = {Privacy}></Route>
               <Route exact path='/hiring' component={Internship} />
               <Route exact path = '/searchPage/:searchparam' component = {SearchPage}></Route>
-              <Route exact path = '/hirecompany' component = {Hiring}></Route>
-              <Route exact path = '/hiredetails' component = {HireDetails}></Route>
+              
+              
               <Route exact path = '/oops' component = {Oops}></Route>
               <Route exact path ='/notifications' component = {Notifications}></Route>
               <Route exact path ='/profilePosts' component = {ProfilePosts} />
               <Route exact path ='/aboutUser' component = {UserAbout}  />
               <Route exact path ='/aboutStory' component = {ProfileStory} /> 
+              
               {/* Mentor Routes Starts */}
               <Route exact path = '/mentorLogin' component = {MentorLogin}></Route>
               <Route exact path = '/mentorProfile' component={MentorProfile}></Route>
@@ -94,13 +98,14 @@ function App() {
               <Route exact path='/registerForCompany' component={RegisterCompany} />
               <Route exact path = '/companyLogin' component = {CompanyLogin}></Route>
               <Route exact path = '/companyProfile' component={CompanyProfile}></Route>
+              <Route exact path = '/hiredetails' component = {HirePost}></Route>
+              <Route exact path = '/hirecompany' component = {Hiring}></Route>
+              <Route exact path='/hirePost' component={CompanyAllPost} />
+              <Route exact path='/mentorPostC' component={CompanyMentorPost} />
+              <Route exact path='/postC' component={CompanyPosts} />
               {/* Company Routes ends */}
 
               <Route exact path='/testing' component={Test} />
-              {/* dashboard */}
-              {/* <SecureRoute exact path='/dashboard' component={Dashboard}  /> */}
-              {/* Error Handling */}
-              {/* <Route path='/404' component={Sucess} /> */}
               <Redirect to='/404'/>
               
             </Switch> 

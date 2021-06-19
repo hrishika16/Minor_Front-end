@@ -82,20 +82,19 @@ function CompanyProfile() {
         })
     }
 
+    
+
 
     return (
         <div>
             <div className='mainCP'>
             <CompanyNavbar></CompanyNavbar>
-            <br></br>
-            <br></br>
                 <CompanySidebar/>
             <div className = "container completeCP">
                 {renderCompanyData()}
             </div>
         
-            <hr></hr>
-            <br></br>
+            {/* <hr></hr> */}
             <div className = "container">
                <div className = "row">
                
@@ -121,7 +120,8 @@ function CompanyProfile() {
                    </div>
                  
                </div>
-                </div>
+            </div>
+            
             </div>
         </div>
     )

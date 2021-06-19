@@ -82,3 +82,7 @@
     text-align: center;
     
 }
+
+#error_hireComp{
+    display: none;
+}
