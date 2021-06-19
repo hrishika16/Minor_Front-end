@@ -134,7 +134,7 @@ function UserAbout() {
                             </div>
                         </div>
                         <div className='col-lg-1 col-0'></div>
-                        <div className='col-lg-4 col-12 '>
+                        <div className='col-lg-4 col-12 col_pdddd'>
                             <div className='reqq'>
                                 <ProfileDetails/>
                             </div>
