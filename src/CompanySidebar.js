@@ -60,7 +60,7 @@ function CompanySidebar() {
                     <div className='sidess_11'>
                     <img src ={post} className ='side_img'></img>
                         {/* <button className='linkss_11'>Posts</button> */}
-                        <Link to='/hirePost' className='linkss_11' >Posts</Link>
+                        <Link to='/postC' className='linkss_11' >Posts</Link>
                     </div>
                     <div className='sidess_11'>
                     <img src ={post} className ='side_img'></img>
