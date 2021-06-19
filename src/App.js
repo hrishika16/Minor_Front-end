@@ -42,6 +42,7 @@ import ProfileStory from './ProfileStory';
 import CompanyAllPost from './CompanyAllPost';
 import HirePost from './HirePost';
 import CompanyMentorPost from './CompanyMentorPost';
+import CompanyPosts from './CompanyPosts';
 
 let isLoggedIn;
 
@@ -101,6 +102,7 @@ function App() {
               <Route exact path = '/hirecompany' component = {Hiring}></Route>
               <Route exact path='/hirePost' component={CompanyAllPost} />
               <Route exact path='/mentorPostC' component={CompanyMentorPost} />
+              <Route exact path='/postC' component={CompanyPosts} />
               {/* Company Routes ends */}
 
               <Route exact path='/testing' component={Test} />
