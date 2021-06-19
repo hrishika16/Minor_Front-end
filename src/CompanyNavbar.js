@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import home from './img/home.jpg'
 
 function CompanyNavbar() {
-   
+
     return (
             <div className=''>
                 <div className='tryyy bg_he'>
@@ -21,12 +21,12 @@ function CompanyNavbar() {
                     </button>
                     
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                       
+                        <ul className='mr-auto'></ul>
+                        <ul className='mr-auto'></ul>
+                        <ul className='mr-auto'></ul>
+                        <ul className='mr-auto'></ul>
                         <ul className='mr-auto'></ul>
                         <ul className='mr-auto navbar-nav nav_11'>    
-                          
-                            
-                           
                             <li className = "nav-item me_1">
                             <button className="logout_btn_dd" ><Link to='/' className='log_out_1'> Logout <img src={logout} alt='logout button' className='logg_img' /></Link></button>
                             </li>
@@ -35,9 +35,7 @@ function CompanyNavbar() {
                                 <img src = {home} className="homeDashboard" ></img>
                                 </Link>
                                 
-                         </li>
-                            
-                           
+                            </li>
                         </ul>
                     </div>
                 </nav>
