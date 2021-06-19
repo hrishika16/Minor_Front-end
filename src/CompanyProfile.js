@@ -70,40 +70,6 @@ function CompanyProfile() {
         })
     }
 
-    // const overViewRender = () =>{
-    //     return companyData.map((overview) =>{
-    //         return(
-    //             <React.Fragment key={overview.companyId}>
-    //                 <div className="card text-center">
-    //                     <div className="card-header bg-light text-info">
-    //                     OverView
-    //                     </div>
-    //                     <div className="card-body cardCPW">
-    //                         <p className="card-text">{overview.overview}</p>
-    //                     </div>
-    //                 </div>
-    //             </React.Fragment>
-    //         )
-    //     })
-    // }
-
-    // const aboutRender = () =>{
-    //     return companyData.map((about) =>{
-    //         return(
-    //             <React.Fragment key={about.companyId}>
-    //                 <div className="card text-center">
-    //                     <div className="card-header bg-light text-info">
-    //                     About Us
-    //                     </div>
-    //                     <div className="card-body cardCPW">
-    //                         <p className="card-text">{about.about}</p>
-    //                     </div>
-    //                 </div>
-    //             </React.Fragment>
-    //         )
-    //     })
-    // }
-
     const renderABoutDes = () =>{
         $('#abt_btn').on('click',function(){
             document.getElementById('upptxt').innerHTML = 'About Us'

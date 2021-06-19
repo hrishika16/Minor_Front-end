@@ -1,15 +1,62 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import './css/profile.css'
 import HeaderUser from './HeaderUser'
 import userIcon from './img/userIcon.svg'
 import ProfileDetails from './ProfileDetails'
 import SidebarProfile from './SidebarProfile'
+import axios from 'axios'
 
 function Profile() {
 
-    const[user_Name , setName] = useState('')
-    const[user_bio , setBio] = useState('')
-    const[user_desp , setDesp] = useState('')
+    const [postsOfUserss, setpostsOfUserss] = useState([])
+
+    useEffect( ()=>{
+        axios({
+            method : 'post',
+            url : 'http://localhost:3001/companyallHirePost',
+            data: {
+                // 'companyid' : companyId
+            },
+            headers : {
+                AuthKey : 'asdfgh'
+            }
+        }) 
+        .then(resp=>{
+            console.log(resp)
+            if(resp.data.status === 200){
+                setpostsOfUserss(resp.data.data)
+                console.log(resp.data)
+            }
+            else if(resp.data.status === 202) {
+            console.log(resp.data.message);
+            }
+            else{
+            console.log(resp.data.message);
+            }
+        })
+        .catch(error=>{
+        console.log(error)
+        })
+    },[])
+
+    const renderPostsOfUser = () =>{
+        return postsOfUserss.map((user) => {
+            return (
+                <React.Fragment key={user.postID}>
+                    <div className='post_boxM'>
+                        <div className=' box_posttM'>
+                            <p className = "box_posttSubH">Subject:<span className='something'> {user.subject} </span> </p>
+                            <p  className = "box_posttSubH" >Message  </p>
+                            <p className='msg_post'>
+                            {user.content}
+                            </p>
+                            <br></br>
+                        </div>   
+                    </div>
+                </React.Fragment>
+            )
+        })
+    }
 
     return (
         <div className='whole_27'>
@@ -19,20 +66,7 @@ function Profile() {
                 <div className='container'>
                     <div className='row'>
                         <div className='col-lg-7 col-12'>
-                        {/* <center> */}
-                        <div className='post_box'>
-                            <div className='row'>
-                                <div className='col-3'>
-                                    <img src={userIcon} alt='profile' className='post_Img' />
-                                </div>
-                                <div className='col-9'>
-                                    <p className='user_Name'>Name</p>
-                                </div>
-                            </div>
-                            <div className='box_postt'></div>
-                            <button className='star_btn'>Star</button> <button className='count_btn'>Count</button>
-                        </div>
-                    {/* </center> */}
+                            {/* renderPostsOfUser() */}
                         </div>
                         <div className='col-lg-1 col-0'></div>
                         <div className='col-lg-4 col-12 col_pdddd'>
@@ -58,52 +92,7 @@ function Profile() {
                 </div>
                     
                 </div>
-                {/* Edit Modal */}
-                <div className="modal fade" id="EditProfileModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered" role="document">
-                        <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLongTitle">Edit Info</h5>
-                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div className="modal-body">
-                            {/* <center> */}
-                            <img src={userIcon} alt='user Icon' className='userImg1' />
-                            
-                                <p className='profile_md'>NAME</p>
-                                <input
-                                     type='text'
-                                    className='inp_prof'
-                                    id='username'
-                                    maxLength='50'
-                                    value={user_Name} 
-                                    onChange={e=>setName(e.target.value)}
-                                />
-                                <p className='profile_md'>BIO</p>
-                                <input
-                                     type='text'
-                                    className='inp_prof'
-                                    id='user_bio'
-                                    maxLength='50'
-                                    value={user_bio} 
-                                    onChange={e=>setBio(e.target.value)}
-                                />
-                                <p className='profile_md'>DESCRIPTION</p>
-                                <textarea
-                                     type='text'
-                                    className='inp_prof'
-                                    id='username'
-                                    value={user_desp} 
-                                    onChange={e=>setDesp(e.target.value)}
-                                />
-                                <button className ='btn edit_btn_p' data-dismiss="modal" >&nbsp;Edit &nbsp;</button>
-                            {/* </center> */}
-                        </div>
-                        </div>
-                    </div>
-                </div>
+                
                 {/* profile about  */}
                 <div className="container"  >
                  <div className = "row">
