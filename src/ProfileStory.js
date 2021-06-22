@@ -4,11 +4,13 @@ import userIcon from './img/userIcon.svg'
 import ProfileDetails from './ProfileDetails'
 import SidebarProfile from './SidebarProfile'
 import axios from 'axios'
+import nodata from './img/nodata.png'
 
 function ProfileStory() {
 
     const[post, setPost] = useState([])
     const user_id = localStorage.getItem('userId')
+    const [status, setstatus] = useState(false)
 
     useEffect( ()=>{
         axios({
@@ -18,13 +20,15 @@ function ProfileStory() {
                 'id' : user_id
             },
             headers : {
-            AuthKey : 'asdfgh '
+            AuthKey : 'asdfgh'
             }
         }) 
         // setdataPost([res.data])
         .then(resp=>{
             console.log(resp)
             if(resp.data.status === 200){
+                setstatus(true)
+                console.log(status)
                 setPost([resp.data.data[0]])
                 console.log(resp.data.message)
             }
@@ -39,6 +43,15 @@ function ProfileStory() {
         console.log(error)
         })
     },[])
+
+    const showNOdataFoundImg = () =>{
+        return(
+            <div>
+                <img src={nodata} alt='no data found' className='' />
+                <p>Oops No data Found</p>
+            </div>
+        )
+    }
 
     const renderPostsInProfile = () =>{
         return post.map(postI =>{
@@ -76,7 +89,7 @@ function ProfileStory() {
                 <div className='container'>
                     <div className='row'>
                         <div className='col-lg-7 col-12'>
-                            {renderPostsInProfile()}
+                        { status ? renderPostsInProfile() : showNOdataFoundImg()}
                         </div>
                         <div className='col-lg-1 col-0'></div>
                         <div className='col-lg-4 col-12'>
