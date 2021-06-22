@@ -19,7 +19,7 @@ function UserAbout() {
                 'id' : user_id
             },
             headers : {
-            AuthKey : 'asdfgh '
+            AuthKey : 'asdfgh'
             }
         }) 
         // setdataPost([res.data])
