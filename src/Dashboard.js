@@ -63,7 +63,7 @@ class Dashboard extends Component {
     renderPostsInDashBoard(){
         return this.state.postsData.map((user) => {
             return (
-                <React.Fragment key={user.userId}>
+                <React.Fragment key={user.postID}>
                     <div className='post_boxM'>
                         <div className='someborder'>
                             <div className='row '>
