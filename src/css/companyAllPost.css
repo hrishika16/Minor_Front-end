@@ -33,7 +33,7 @@
     margin-bottom: 5px;
 }
 .cardDesign:hover {
-   
-    box-shadow: 1px 1px 1px 1px rgba(45,45,45,0.4), 
-      -5px -5px 1px 1px rgba(45,45,45,0.22);
-  }
+    /* box-shadow: 1px 1px 1px 1px rgba(45,45,45,0.4), 
+      -5px -5px 1px 1px rgba(45,45,45,0.22); */
+    box-shadow:  10px 5px 5px 5px #00000013;
+}
