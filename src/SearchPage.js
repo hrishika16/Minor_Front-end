@@ -95,9 +95,9 @@ function SearchPage(props) {
                         </div>
                         <div className="card-body">
                            
-                            <p className="card-text decripSearch"><span class="dot"></span>With supporting text below </p>
-                            <p className="card-text decripSearch"><span class="dot"></span>With supporting below  </p>
-                            <p className="card-text decripSearch"><span class="dot"></span>With supporting </p>
+                            <p className="card-text decripSearch"><span className="dot"></span>With supporting text below </p>
+                            <p className="card-text decripSearch"><span className="dot"></span>With supporting below  </p>
+                            <p className="card-text decripSearch"><span className="dot"></span>With supporting </p>
                            
                         </div>
                         </div>
