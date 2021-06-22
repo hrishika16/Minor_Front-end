@@ -61,7 +61,7 @@ function HeaderUser() {
                 'content' :  msgStory
             },
             headers : {
-            AuthKey : 'asdfgh '
+            AuthKey : 'asdfgh'
             }
         })
         .then(resp =>{
