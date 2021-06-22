@@ -28,7 +28,6 @@ function ProfileStory() {
             console.log(resp)
             if(resp.data.status === 200){
                 setstatus(true)
-                console.log(status)
                 setPost([resp.data.data[0]])
                 console.log(resp.data.message)
             }
