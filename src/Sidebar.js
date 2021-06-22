@@ -40,7 +40,8 @@ function Sidebar() {
                     </div>
                     <div className='sidess_11'>
                     <img src={yourStroy} alt='user icon' className='side_img' />
-                        <button className='linkss_11'>Our Story</button>
+                        {/* successStory */}
+                        <Link to='/successStory' className='linkss_12'>Success Story</Link>
                     </div>
                     <div className='sidess_11'>
                     <img src={notif} className = "side_img"></img>
