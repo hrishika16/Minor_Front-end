@@ -53,40 +53,51 @@ function App() {
     <div className="App">
     <BrowserRouter>
             <Switch>
-              {/* login */}
-              <Route exact path='/login' component={Login}  />
+              <Route exact path='/' component={LandingPage} />
+              {/*Admin*/}
+              
               <Route exact path='/admin' component={AdminL}  />
               <Route exact path='/userA' component={User} />
               <Route exact path='/mentorA' component={Mentor} />
               <Route exact path='/adminLogin' component={Alogin} />
-              <Route exact path='/' component={LandingPage} />
+              <Route exact path ='/adminContactUs' component={AdminContactUs} />
+              <Route exact path ='/adminCompany' component={Company} />
+              <Route exact path='/jobSeeker' component={JobSeeker} />
+
+
+              {/* Register */}
               <Route exact path='/register' component={RegisterU} />
-              <Route exact path='/profile' component={Profile} />
               <Route exact path='/page2' component={Step2} />
               <Route exact path='/page3' component={Profession} />
-              <Route exact path='/dashboard' component={Dashboard} />
+              <Route exact path ='/emailSent' component={EmailSent}></Route>
+              <Route exact path = '/waiting/:token' component={Waiting}></Route>
+              <Route exact path = '/step3' component={Step3}></Route>
+              
+              {/* some of the other pages */}
               <Route exact path='/connections' component={Connections} />
               <Route exact path = '/contactUs' component={ContactUs}></Route>
               <Route exact path = '/contactUsForm' component={ContactUsForm}></Route>
               <Route exact path ='/forgotPassword' component={ForgotPassword}></Route>
-              <Route exact path ='/adminContactUs' component={AdminContactUs} />
-              <Route exact path ='/adminCompany' component={Company} />
-              <Route exact path='/jobSeeker' component={JobSeeker} />
+              
               <Route exact path='/404' component={Error404}></Route>
-              <Route exact path ='/emailSent' component={EmailSent}></Route>
-              <Route exact path = '/waiting/:token' component={Waiting}></Route>
-              <Route exact path = '/step3' component={Step3}></Route>
+              
               <Route exact path = '/help' component ={Help}></Route>
               <Route exact path ='/privacy' component = {Privacy}></Route>
-              <Route exact path='/hiring' component={Internship} />
-              <Route exact path = '/searchPage/:searchparam' component = {SearchPage}></Route>
-              <Route exact path='/successStory' component={SuccessStory} />
               
+              <Route exact path = '/searchPage/:searchparam' component = {SearchPage}></Route>
+              
+              {/* user */}
+              <Route exact path='/login' component={Login}  />
+              <Route exact path='/profile' component={Profile} />
               <Route exact path = '/oops' component = {Oops}></Route>
+              <Route exact path='/successStory' component={SuccessStory} />
+              <Route exact path='/dashboard' component={Dashboard} />
               <Route exact path ='/notifications' component = {Notifications}></Route>
               <Route exact path ='/profilePosts' component = {ProfilePosts} />
-              <Route exact path ='/aboutUser' component = {UserAbout}  />
+              <Route exact path ='/aboutUser' component = {UserAbout}  /> 
+              <Route exact path='/hiring' component={Internship} /> 
               <Route exact path ='/aboutStory' component = {ProfileStory} /> 
+              <Route exact path = '/hirecompany' component = {Hiring}></Route> 
               
               {/* Mentor Routes Starts */}
               <Route exact path = '/mentorLogin' component = {MentorLogin}></Route>
@@ -100,7 +111,6 @@ function App() {
               <Route exact path = '/companyLogin' component = {CompanyLogin}></Route>
               <Route exact path = '/companyProfile' component={CompanyProfile}></Route>
               <Route exact path = '/hiredetails' component = {HirePost}></Route>
-              <Route exact path = '/hirecompany' component = {Hiring}></Route>
               <Route exact path='/hirePost' component={CompanyAllPost} />
               <Route exact path='/mentorPostC' component={CompanyMentorPost} />
               <Route exact path='/postC' component={CompanyPosts} />
