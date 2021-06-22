@@ -43,6 +43,7 @@ import CompanyAllPost from './CompanyAllPost';
 import HirePost from './HirePost';
 import CompanyMentorPost from './CompanyMentorPost';
 import CompanyPosts from './CompanyPosts';
+import SuccessStory from './SuccessStory';
 
 let isLoggedIn;
 
@@ -79,7 +80,7 @@ function App() {
               <Route exact path ='/privacy' component = {Privacy}></Route>
               <Route exact path='/hiring' component={Internship} />
               <Route exact path = '/searchPage/:searchparam' component = {SearchPage}></Route>
-              
+              <Route exact path='/successStory' component={SuccessStory} />
               
               <Route exact path = '/oops' component = {Oops}></Route>
               <Route exact path ='/notifications' component = {Notifications}></Route>
