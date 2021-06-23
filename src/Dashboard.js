@@ -75,13 +75,19 @@ class Dashboard extends Component {
                                 </div>
                             </div>
                             <div className=' box_posttM'>
-                                <p className = "box_posttSubH">Subject:<span className='something'> {user.subject} </span> </p>
+                            <div className ='row'>
+                                <div className ='col-lg-3'>
+                                <p className = "box_posttSubH">Subject:</p>
                                 <p  className = "box_posttSubH" >Message  </p>
+                                </div>
+                                <div className ='col-lg-9'>
+                                <p className='something'> {user.subject}  </p>
                                 <p className='msg_post'>
                                 {user.content}
                                 </p>
-                                <br></br>
-                            </div> 
+                                 </div>
+                            </div>
+                        </div> 
                         </div>    
                     </div>
                 </React.Fragment>

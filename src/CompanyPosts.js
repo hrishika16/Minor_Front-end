@@ -47,6 +47,7 @@ function CompanyPosts() {
         })
     },[])
 
+    
     const renderPostsIncomapP =() =>{
         return compPosts.map((user) => {
             return (
