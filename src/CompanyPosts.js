@@ -55,7 +55,7 @@ function CompanyPosts() {
                     <div className='post_boxM'>
                           <div className='row '>
                                 <div className='col-3 '>
-                                    <img src={userIcon} alt='profile' className='post_ImgM' />
+                                    <img src={userI} alt='profile' className='post_ImgM' />
                                 </div>
                                 <div className='col-9 '>
                                     <p className='user_NameM'>{user.name}</p>
