@@ -88,7 +88,7 @@ function App() {
               
               {/* user */}
               <Route exact path='/login' component={Login}  />
-              <Route exact path='/profile' component={Profile} />
+              {/* <Route exact path='/profile' component={Profile} /> */}
               <Route exact path = '/oops' component = {Oops}></Route>
               <Route exact path='/successStory' component={SuccessStory} />
               <Route exact path='/dashboard' component={Dashboard} />
