@@ -16,10 +16,10 @@
 .post_div{
     background-color: #fff;
     border-radius: 8px;
-    padding: 25px 10px 10px 10px;
+    padding: 25px 15px 10px 10px;
     box-shadow: 4px 4px 7px #00000014;
     margin-bottom: 20px;
-    width:600px ;
+    width:700px ;
 }
 
 .post_div_1{
@@ -40,7 +40,22 @@
 
 .company_name{
     font-family: 'caros_bold';
-    color: #045174;
+    color: #F98935;
     font-size: 16px;
     margin-bottom: 8px;
+    text-align: left;
+}
+
+.place_name{
+    font-family: 'carosM';
+    color: #045174;
+    text-align: left;
+    margin-bottom: 2px;
+}
+
+.inner_txt{
+    font-family: 'carosM';
+    color: #045174;
+    text-align: left;
+    margin-bottom: 2px;
 }
