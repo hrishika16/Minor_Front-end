@@ -47,7 +47,7 @@ function ProfileDetails() {
                         <img src={userIcon} alt='user Icon' className='userImg1' />
                     </div>
                     <div className='col-lg-7 col_left_pdn'>
-                        <p className='name'>{user.first_name}  {user.last_name} </p>
+                        <p className='user--name'>{user.first_name}  {user.last_name} </p>
                         <p className='name'>{user.email} </p>
                         <p className='name'>{user.city} , {user.state}</p>
                         {/* <button className='add_bio_btn'> ADD BIO </button> */}
