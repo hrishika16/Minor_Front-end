@@ -29,7 +29,6 @@ function UserAbout() {
                 console.log(resp)
                 setexpAbt([resp.data.data[0]])
                 setinterestArr(resp.data.data[0].interests)
-                console.log(interestArr)
             }
             else if(resp.data.status === 202) {
             console.log(resp.data.message);
@@ -44,7 +43,6 @@ function UserAbout() {
     },[])
 
     const renderInterest = () =>{
-        // console.log(interestArr)
         return (
             <div>
                 {interestArr.map((person, index) => (
@@ -52,43 +50,26 @@ function UserAbout() {
                 ))}
             </div>
         );
-        // let skills
-        // return (
-        //     interestArr.map(person => (
-        //         console.log(person)
-        //     ))
-        // );
-        // for(let i=0;i<interestArr.length;i++){
-        //     console.log(interestArr[i])
-        //     // interestArr.map(skills =>{
-        //     //     return(
-        //     //             <li>{skills}</li>
-        //     //     )
-        //     // })
-        // }
-        // for (const income of interestArr) {
-        //     console.log(income)
-        // }
-        //     return (interestArr.map(skills =>{
-        //         console.log(skills)
-        //         // return(
-        //                 // <li>{skills}</li>
-        //         // )
-        //     }))
-        // // }
     }
 
     const renderUserAbout = () =>{
         return expAbt.map(dataOfuser =>{
             return(
-                <React.Fragment key={dataOfuser.userId}>
+                <React.Fragment key={dataOfuser.userID}>
                     <h2 className='about_heading'>Experience</h2>
                     <ul className='border_ull'>
                         <li>
-                            <p className='sub_heading'>Lorem Ipsum has been the industry's standard dum</p>
-                            <p className='normal_para'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book
-                            </p>
+                            {
+                                dataOfuser.dateofJoining ?
+                                    <div>
+                                    <p className='sub_heading'>{dataOfuser.companyName}</p>
+                                    <p className='normal_para'>{dataOfuser.designation}</p>
+                                    <p className='normal_para'>{dataOfuser.dateofJoining}</p>
+                                    </div> 
+                                    : 
+                                    <p className='sub_heading'>You Have not added any Experience</p>
+                                }
+                            
                         </li>
                     </ul>
                     <br/>
