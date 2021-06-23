@@ -37,9 +37,9 @@
     border-bottom: 1px solid rgba(45,45,45,0.3);
     margin-bottom: 45px;
 }
-.someborder{
-    border-bottom: 1px solid rgba(45,45,45,0.3);
-}
+/* .someborder{
+    /* border-bottom: 1px solid rgba(45,45,45,0.3); */
+ */
 .box_posttM{
     padding : 10px;
     /* border: 1px solid #045174;;
@@ -51,6 +51,7 @@
 
 .post_ImgM{
     width: 30px;
+    text-align: left;
     /* display: inline-block; */
 }
 
@@ -58,12 +59,14 @@
     font-size: 16px;
     font-family: 'caros_Bold';
     color:  #045174;;
+    text-align: left;
 }
 .box_posttSubH{
     font-size: 16px;
     margin-bottom: 10px;
     font-family: 'caros_Bold';
     color:  #F8951D;
+    text-align: left;
 }
 .something{
     font-size: 18px;
@@ -74,6 +77,7 @@
     font-size: 10px;
     font-family: 'caros';
     color:  #045174;;
+    text-align: left;
 }
 
 .valM{
