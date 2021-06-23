@@ -8,7 +8,7 @@ import HeaderUser from './HeaderUser'
 function UserAbout() {
 
     const[expAbt, setexpAbt] = useState([])
-    const[interestArr, setinterestArr] = useState()
+    const[interestArr, setinterestArr] = useState([])
     const user_id = localStorage.getItem('userId')
 
     useEffect( ()=>{
@@ -28,9 +28,8 @@ function UserAbout() {
             if(resp.data.status === 200){
                 console.log(resp)
                 setexpAbt([resp.data.data[0]])
-                // setinterestArr(resp.data.data[0].interests)
-                // console.log(resp.data.data[0].interests)
-                // console.log(interestArr)
+                setinterestArr(resp.data.data[0].interests)
+                console.log(interestArr)
             }
             else if(resp.data.status === 202) {
             console.log(resp.data.message);
@@ -110,7 +109,7 @@ function UserAbout() {
                     <br/>
                     <h2 className='about_heading'>Skills</h2>
                     <ul>
-                    {/* {renderInterest()} */}
+                    {renderInterest()}
                         {/* {interestArr.map((person, index) => (
                             <li key={index}>{person}</li>
                         ))} */}
