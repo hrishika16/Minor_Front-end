@@ -48,8 +48,9 @@
 }
 
 .post_ImgM{
-    width: 30px;
+    width: 80px;
     text-align: left;
+    height: 100px;
     /* display: inline-block; */
 }
 
