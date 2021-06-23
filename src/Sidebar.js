@@ -28,7 +28,7 @@ function Sidebar() {
                     <div className='sidess_11'>
                         {/* <button className='linkss_11'>Profile</button> */}
                         <img src={userProf} alt='user icon' className='side_img' />
-                        <Link to='/profile' className='linkss_12'>Profile</Link>
+                        <Link to='/aboutUser' className='linkss_12'>Profile</Link>
                     </div>
                     <div className='sidess_11'>
                     <img src={chat} alt='user icon' className='side_img' />
