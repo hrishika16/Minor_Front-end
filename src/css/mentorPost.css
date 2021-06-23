@@ -23,7 +23,7 @@
 .msg_post{
     font-family: 'carosM';
     color: #045174;
-    font-size: 18px;
+    font-size: 16px;
 }
 .rowMargin{
     margin-top: 90px;
@@ -37,9 +37,7 @@
     border-bottom: 1px solid rgba(45,45,45,0.3);
     margin-bottom: 45px;
 }
-/* .someborder{
-    /* border-bottom: 1px solid rgba(45,45,45,0.3); */
- */
+
 .box_posttM{
     padding : 10px;
     /* border: 1px solid #045174;;
@@ -62,7 +60,7 @@
     text-align: left;
 }
 .box_posttSubH{
-    font-size: 16px;
+    font-size: 21px;
     margin-bottom: 10px;
     font-family: 'caros_Bold';
     color:  #F8951D;
@@ -70,7 +68,7 @@
 }
 .something{
     font-size: 18px;
-    font-family: 'caros';
+    font-family: 'caros_Bold';
     color:  #045174;;
 }
 .box_posttSubD{
