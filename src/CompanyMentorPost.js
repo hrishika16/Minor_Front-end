@@ -52,8 +52,8 @@ function CompanyMentorPost() {
                 <React.Fragment key={user._id}>
                     <div className='post_boxM'>
                         <div className=' box_posttM'>
-                            <p className = "box_posttSubH">Subject:<span className='something'> {user.subject} </span> </p>
-                            <p  className = "box_posttSubH" >Message  </p>
+                            <p className='something'> {user.subject} </p>
+                         
                             <p className='msg_post'>
                             {user.content}
                             </p>

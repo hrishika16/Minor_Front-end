@@ -24,6 +24,7 @@
     font-family: 'carosM';
     color: #045174;
     font-size: 13px;
+    text-align: justify;
     
 }
 .rowMargin{
@@ -41,18 +42,14 @@
 
 .box_posttM{
     padding : 10px;
-    /* border: 1px solid #045174;;
-    width: 480px;
-    height: 300px; */
-    /* margin-bottom: 5px;
-    border-radius: 10px; */
+
 }
 
 .post_ImgM{
-    width: 80px;
+    width: 30px;
     text-align: left;
     height: 100px;
-    /* display: inline-block; */
+    
 }
 
 .user_NameM{
