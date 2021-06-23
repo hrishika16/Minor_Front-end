@@ -72,17 +72,17 @@ class Dashboard extends Component {
                                 </div>
                                 <div className='col-9 box_posttM'>
                                     <p className='user_NameM'>{user.name}</p>
-                                    <div className ='row'>
-                                        <div className ='col-lg-3'>
+                                    <div className =''>
+                                        {/* <div className ='col-lg-3'>
                                         <p className = "box_posttSubH">Subject:</p>
                                         <p  className = "box_posttSubH" >Message  </p>
-                                        </div>
-                                        <div className ='col-lg-9'>
+                                        </div> */}
+                                        {/* <div className ='col-lg-9'> */}
                                         <p className='something'> {user.subject}  </p>
                                         <p className='msg_post'>
                                         {user.content}
                                         </p>
-                                   </div>
+                                   {/* </div> */}
                                 </div>
                             </div>
                             </div> 
