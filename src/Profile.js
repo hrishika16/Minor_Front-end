@@ -5,6 +5,7 @@ import userIcon from './img/userIcon.svg'
 import ProfileDetails from './ProfileDetails'
 import SidebarProfile from './SidebarProfile'
 import axios from 'axios'
+import UserAbout from './UserAbout'
 
 function Profile() {
 
@@ -66,27 +67,13 @@ function Profile() {
                 <div className='container'>
                     <div className='row'>
                         <div className='col-lg-7 col-12'>
-                            {/* renderPostsOfUser() */}
+                            <UserAbout/>
                         </div>
                         <div className='col-lg-1 col-0'></div>
                         <div className='col-lg-4 col-12 col_pdddd'>
                             <div className='reqq'>
                                 <ProfileDetails/>
                             </div>
-                        {/* <div className='col-lg-6'>
-                            <div className='row'>
-                                <div className='col-lg-3'></div>
-                                <div className='col-lg-3'>
-                                    <p>Number</p>
-                                    <p className='connections_1'>Connections</p>
-                                </div>
-                                <div className='col-lg-3'>
-                                    <p>Number</p>
-                                    <p className='requetss_1'>Requests</p>
-                                </div>
-                                <div className='col-lg-3'></div>
-                            </div>
-                        </div> */}
                         </div>
                     </div>
                 </div>
