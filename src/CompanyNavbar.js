@@ -27,11 +27,11 @@ function CompanyNavbar() {
                         <ul className='mr-auto'></ul>
                         <ul className='mr-auto'></ul>
                         <ul className='mr-auto navbar-nav nav_11'>   
-                            <li className ="nav-item">
+                            {/* <li className ="nav-item">
                                 <Link to ='/dashboard'>
                                 <img src = {home} className="homeDashboard" ></img>
                                 </Link>
-                            </li>
+                            </li> */}
                             <li className = "nav-item me_1">
                             <button className="logout_btn_dd" ><Link to='/' className='log_out_1'> Logout <img src={logout} alt='logout button' className='logg_img' /></Link></button>
                             </li>
