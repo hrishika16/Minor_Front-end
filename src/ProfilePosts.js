@@ -46,7 +46,7 @@ function ProfilePosts() {
     const showNOdataFoundImg = () =>{
         return(
             <div>
-                <p className='nodata_txt'>Oops No data Found</p>
+                <p className='nodata_txt'>Oops ! <br/> No data Found</p>
                 <center> <img src={nodata} alt='no data found' className='nodata_inmg' /> </center>
             </div>
         )
