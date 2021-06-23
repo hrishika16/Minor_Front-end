@@ -59,14 +59,12 @@ function CompanyMentorPost() {
                                     <p className='user_NameM'>{user.name}</p>
                                 </div>
                             </div> 
-                        <div className=' box_posttM'>
                             <p className='something'> {user.subject} </p>
                          
                             <p className='msg_post'>
-                            {user.content}
+                            {user.message}
                             </p>
                             <br></br>
-                        </div>   
                     </div>
                 </React.Fragment>
             )
