@@ -4,7 +4,6 @@ import './css/userAbout.css'
 import ProfileDetails from './ProfileDetails'
 import SidebarProfile from './SidebarProfile'
 import HeaderUser from './HeaderUser'
-// let interestArr = []
 function UserAbout() {
 
     const[expAbt, setexpAbt] = useState([])
@@ -22,7 +21,6 @@ function UserAbout() {
             AuthKey : 'asdfgh'
             }
         }) 
-        // setdataPost([res.data])
         .then(resp=>{
             
             if(resp.data.status === 200){
@@ -46,7 +44,7 @@ function UserAbout() {
         return (
             <div>
                 {interestArr.map((person, index) => (
-                    <li key={index}>{person}</li>
+                    <li className='normal_para' key={index}>{person}</li>
                 ))}
             </div>
         );
@@ -64,10 +62,10 @@ function UserAbout() {
                                     <div>
                                     <p className='sub_heading'>{dataOfuser.companyName}</p>
                                     <p className='normal_para'>{dataOfuser.designation}</p>
-                                    <p className='normal_para'>{dataOfuser.dateofJoining}</p>
+                                    <p className='normal_para'>{dataOfuser.dateofJoining} &nbsp; {dataOfuser.jobType}  </p> 
                                     </div> 
                                     : 
-                                    <p className='sub_heading'>You Have not added any Experience</p>
+                                    <p className='normal_para'>You Have not added any Experience</p>
                                 }
                             
                         </li>

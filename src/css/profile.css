@@ -69,16 +69,28 @@
 }
 
 .name{
-    font-family: 'carosM';
+    font-family: 'caros';
     color: #045174;
-    font-size: 20px;
-    margin-bottom: 6px;
+    font-size: 15px;
+    margin-bottom: 2px;
 }
 .col_pdddd{
     padding: 0px;
 }
+
+.nodata_txt{
+    text-align: center;
+    font-size: 40px;
+    color: #F8951D;
+    font-family: 'caros_bold';
+    margin-bottom: 30px;
+}
+.nodata_inmg{
+    width: 300px;
+}
 .col_left_pdn{
     padding-left: 0px;
+    margin-top: 20px;
 }
 .col_right_pdn{
     padding-right: 0px;
