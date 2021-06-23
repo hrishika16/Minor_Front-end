@@ -51,14 +51,7 @@ function CompanyMentorPost() {
             return (
                 <React.Fragment key={user._id}>
                     <div className='post_boxM'>
-                    <div className='row '>
-                                <div className='col-3 '>
-                                    <img src={userI} alt='profile' className='post_ImgM' />
-                                </div>
-                                <div className='col-9 '>
-                                    <p className='user_NameM'>{user.name}</p>
-                                </div>
-                            </div> 
+                    
                             <p className='something'> {user.subject} </p>
                          
                             <p className='msg_post'>
