@@ -43,10 +43,10 @@ function ProfileDetails() {
         return nameDetail.map(user=>{
             return(
                 <div className='row ' key={user.token}>
-                    <div className='col-lg-5 col_right_pdn'>
+                    <div className='col-lg-4 col_right_pdn'>
                         <img src={userIcon} alt='user Icon' className='userImg1' />
                     </div>
-                    <div className='col-lg-7 col_left_pdn'>
+                    <div className='col-lg-8 col_left_pdn'>
                         <p className='user--name'>{user.first_name}  {user.last_name} </p>
                         <p className='name'>{user.email} </p>
                         <p className='name'>{user.city} , {user.state}</p>
