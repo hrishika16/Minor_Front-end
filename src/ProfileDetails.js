@@ -43,11 +43,11 @@ function ProfileDetails() {
         return nameDetail.map(user=>{
             return(
                 <div className='row ' key={user.token}>
-                    <div className='col-lg-5 col_right_pdn'>
-                        <img src={userIcon} alt='user Icon' className='userImg1' />
+                    <div className='col-lg-4 '>
+                        <img src={userIcon} alt='user Icon' />
                     </div>
-                    <div className='col-lg-7 col_left_pdn'>
-                        <p className='name'>{user.first_name}  {user.last_name} </p>
+                    <div className='col-lg-8 col_left_pdn'>
+                        <p className='user--name'>{user.first_name}  {user.last_name} </p>
                         <p className='name'>{user.email} </p>
                         <p className='name'>{user.city} , {user.state}</p>
                         {/* <button className='add_bio_btn'> ADD BIO </button> */}

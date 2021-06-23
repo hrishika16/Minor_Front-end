@@ -71,8 +71,14 @@
 .name{
     font-family: 'caros';
     color: #045174;
-    font-size: 15px;
+    font-size: 13px;
     margin-bottom: 2px;
+}
+.user--name{
+    font-family: 'carosM';
+    color: #F8951D;
+    font-size: 15px;
+    margin-bottom: 5px;
 }
 .col_pdddd{
     padding: 0px;
