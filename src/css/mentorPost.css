@@ -23,7 +23,9 @@
 .msg_post{
     font-family: 'carosM';
     color: #045174;
-    font-size: 16px;
+    font-size: 13px;
+    text-align: justify;
+    
 }
 .rowMargin{
     margin-top: 90px;
@@ -40,24 +42,20 @@
 
 .box_posttM{
     padding : 10px;
-    /* border: 1px solid #045174;;
-    width: 480px;
-    height: 300px; */
-    /* margin-bottom: 5px;
-    border-radius: 10px; */
+
 }
 
 .post_ImgM{
-    width: 80px;
+    width: 30px;
     text-align: left;
     height: 100px;
-    /* display: inline-block; */
+    
 }
 
 .user_NameM{
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'caros_Bold';
-    color:  #045174;;
+    color:  #F8951D;
     text-align: left;
 }
 .box_posttSubH{
@@ -70,7 +68,7 @@
 .something{
     font-size: 18px;
     font-family: 'caros_Bold';
-    color:  #045174;;
+    color:  #045174;
 }
 .box_posttSubD{
     font-size: 10px;

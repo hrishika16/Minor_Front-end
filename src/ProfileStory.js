@@ -68,7 +68,7 @@ function ProfileStory() {
                             </div>
                             <div className=' box_posttM'>
                                 {/* <p className = "box_posttSubH">Subject:<span className='something'> {postI.subject} </span> </p> */}
-                                <p  className = "box_posttSubH" >Message  </p>
+                                
                                 <p className='msg_post'>
                                 {postI.content}
                                 </p>

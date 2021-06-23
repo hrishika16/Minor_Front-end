@@ -66,12 +66,9 @@ function SuccessStory() {
                                 </div>
                             </div>
                             <div className=' box_posttM'>
-                                <p className = "box_posttSubH">Subject:<span className='something'> {user.subject} </span> </p>
-                                <p  className = "box_posttSubH" >Message  </p>
                                 <p className='msg_post'>
                                 {user.content}
                                 </p>
-                                <br></br>
                             </div> 
                         </div>    
                     </div>
