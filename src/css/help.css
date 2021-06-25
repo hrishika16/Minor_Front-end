@@ -16,12 +16,14 @@
 .logo{
     color: #01355D;
     font-size: 22px;
+    
 }
 
 .help_heading{
     font-family: 'caros_bold';
     font-size: 40px;
     color:  #023858;
+    text-align: center;
 }
 
 .tryyy{
@@ -39,6 +41,7 @@
     color:#F98935;
     font-family: 'caros_Bold';
     margin-bottom: 30px;
+    text-align: center;
   
     }
 
