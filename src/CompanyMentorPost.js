@@ -52,7 +52,7 @@ function CompanyMentorPost() {
                 <React.Fragment key={user._id}>
                     <div className='post_boxM'>
                     
-                            <p className='something'> {user.subject} </p>
+                            <p className='somethingMentor'> {user.subject} </p>
                          
                             <p className='msg_post'>
                             {user.message}

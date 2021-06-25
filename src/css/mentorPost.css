@@ -68,6 +68,11 @@
 .something{
     font-size: 18px;
     font-family: 'caros_Bold';
+    color: #045174 ;
+}
+.somethingMentor{
+    font-size: 18px;
+    font-family: 'caros_Bold';
     color: #F8951D ;
 }
 .box_posttSubD{
