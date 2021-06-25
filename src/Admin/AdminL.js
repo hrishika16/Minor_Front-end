@@ -38,6 +38,89 @@ export class AdminL extends Component {
                 <Header/>
                 {/* dashboard */}
                 <div className='container some_class'>
+                <center>
+                <h1 className ="analysis">Analysis</h1>
+                </center>
+                <div className ="container">
+                <center>
+                    <div className ="row">
+                        <div className ="col-lg-6">
+                        
+                            <div className="cardAdmin">
+                                <center>
+                                <br></br>
+                                <h2 className ="headingCard">Users</h2>
+                                </center>
+                                <div className="contentBx">
+                                    <div className="size">
+                                    <h3>Total  :</h3>
+                                    <span>100</span>
+                                    <h3>JOb Sekeers</h3>
+                                    <span>100</span>
+                                    <h3>Internships</h3>
+                                    <span>100</span>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            {/* other */}
+                            <div className="cardAdmin">
+                                <center>
+                                <br></br>
+                                <h2 className ="headingCard">Company</h2>
+                                </center>
+                                <div className="contentBx">
+                                <div className="size">
+                                        <h3>Total  :</h3>
+                                        <span>100</span>
+                                        <h3>Total Posts</h3>
+                                        <span>100</span>
+                                        <h3>Total Hiring Posts</h3>
+                                        <span>100</span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        
+                   
+                        <div className ="col-lg-6">
+                        <div className="cardAdmin">
+                                <center>
+                                <br></br>
+                                <h2 className ="headingCard">Mentor</h2>
+                                </center>
+                                <div className="contentBx">
+                                <div className="size">
+                                        <h3>Total  :</h3>
+                                        <span>15</span>
+                                        <h3>Total Posts</h3>
+                                        <span>100</span>
+                                </div>
+                            </div>
+                            
+                            </div>
+                            {/* other */}
+                            <div className="cardAdmin">
+                                <center>
+                                <br></br>
+                                <h2 className ="headingCard">Contacts</h2>
+                                </center>
+                                <div className="contentBx">
+                                <div className="size">
+                                        <h3>Total  :</h3>
+                                        <span>10</span>
+                                        <h3>Contact Us </h3>
+                                        <span>10</span>
+                                </div>
+                            </div>
+                            
+                            </div>
+                   
+                   </div> 
+                </div>
+                </center>
+                </div>
+                  
                     <div>
                         <img src={bargraph} alt='graph1' className='graph_img' />
                     </div>
