@@ -48,17 +48,22 @@ export class AdminL extends Component {
                         
                             <div className="cardAdmin">
                                 <center>
-                                <br></br>
-                                <h2 className ="headingCard">Users</h2>
+                                 <h2 className ="headingCard">Users</h2>
                                 </center>
                                 <div className="contentBx">
                                     <div className="size">
-                                    <h3>Total  :</h3>
-                                    <span>100</span>
-                                    <h3>JOb Sekeers</h3>
-                                    <span>100</span>
-                                    <h3>Internships</h3>
-                                    <span>100</span>
+                                      <div className ="row">
+                                          <div className ="col-lg-7">
+                                          <h3>Total  :</h3>
+                                          <h3>Job Sekeers :</h3>
+                                          <h3>Internships :</h3>
+                                          </div>
+                                          <div className ="col-lg-5">
+                                          <div className ="circleT">03</div>
+                                          <div className ="circleT">05</div>
+                                          <div className ="circleT">02</div>
+                                          </div>
+                                      </div>
                                 </div>
                             </div>
                             </div>
@@ -66,17 +71,23 @@ export class AdminL extends Component {
                             {/* other */}
                             <div className="cardAdmin">
                                 <center>
-                                <br></br>
-                                <h2 className ="headingCard">Company</h2>
+                                 <h2 className ="headingCard">Company</h2>
+                                 <br></br>
                                 </center>
                                 <div className="contentBx">
-                                <div className="size">
-                                        <h3>Total  :</h3>
-                                        <span>100</span>
-                                        <h3>Total Posts</h3>
-                                        <span>100</span>
-                                        <h3>Total Hiring Posts</h3>
-                                        <span>100</span>
+                                    <div className="size">
+                                      <div className ="row">
+                                          <div className ="col-lg-7">
+                                          <h3>Total  :</h3>
+                                          <h3>Total Posts :</h3>
+                                         
+                                          </div>
+                                          <div className ="col-lg-5">
+                                          <div className ="circleT">10</div>
+                                          <div className ="circleT">15</div>
+                                          
+                                          </div>
+                                      </div>
                                 </div>
                             </div>
                         </div>
@@ -86,35 +97,51 @@ export class AdminL extends Component {
                         <div className ="col-lg-6">
                         <div className="cardAdmin">
                                 <center>
-                                <br></br>
-                                <h2 className ="headingCard">Mentor</h2>
+                                 <h2 className ="headingCard">Mentor</h2>
+                                 <br></br>
                                 </center>
                                 <div className="contentBx">
-                                <div className="size">
-                                        <h3>Total  :</h3>
-                                        <span>15</span>
-                                        <h3>Total Posts</h3>
-                                        <span>100</span>
+                                    <div className="size">
+                                      <div className ="row">
+                                          <div className ="col-lg-7">
+                                          <h3>Total  :</h3>
+                                          <h3>Total Posts :</h3>
+                                         
+                                          </div>
+                                          <div className ="col-lg-5">
+                                          <div className ="circleT">05</div>
+                                          <div className ="circleT">08</div>
+                                          
+                                          </div>
+                                      </div>
                                 </div>
                             </div>
-                            
-                            </div>
+                        </div>
                             {/* other */}
                             <div className="cardAdmin">
                                 <center>
-                                <br></br>
-                                <h2 className ="headingCard">Contacts</h2>
+                                 <h2 className ="headingCard">Contacts</h2>
+                                 <br></br>
                                 </center>
                                 <div className="contentBx">
-                                <div className="size">
-                                        <h3>Total  :</h3>
-                                        <span>10</span>
-                                        <h3>Contact Us </h3>
-                                        <span>10</span>
+                                    <div className="size">
+                                      <div className ="row">
+                                          <div className ="col-lg-7">
+                                          <h3>Total  :</h3>
+                                          <h3>Queries Solved  :</h3>
+                                          
+                                         
+                                          </div>
+                                          <div className ="col-lg-5">
+                                          <div className ="circleT">20</div>
+                                          <div className ="circleT">12</div>
+                                          
+                                          
+                                          </div>
+                                      </div>
                                 </div>
                             </div>
-                            
-                            </div>
+                        </div>
                    
                    </div> 
                 </div>
