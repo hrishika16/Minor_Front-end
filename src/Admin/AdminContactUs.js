@@ -90,8 +90,10 @@ handlePageClick = e =>{
    } )
 }
 
-mane = (id,msg) =>{
-   console.log('id',id,'msg',msg)
+mane = (id,msg,sub) =>{
+//    console.log('id',id,'msg',msg)
+//    exampleTitleTT
+   $('#exampleTitleTT').html(sub)
    $('#viewD').html(msg)
 }
 
@@ -110,7 +112,7 @@ renderTableData() {
                         {user.message}
                     </div>
                     <div className='col-lg-6 col-12 btns_w'>
-                        <button className="see_more" type="button" data-toggle="modal" data-target="#viewModal" id={user._id} onClick={ () => this.mane(user._id , user.message) }>
+                        <button className="see_more" type="button" data-toggle="modal" data-target="#viewModal" id={user._id} onClick={ () => this.mane(user._id , user.message, user.subject) }>
                             See more
                         </button>
                     </div>
@@ -189,7 +191,7 @@ render() {
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <h5 className="modal-title" id="exampleTitleTT"></h5>
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>

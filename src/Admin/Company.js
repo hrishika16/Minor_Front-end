@@ -24,41 +24,41 @@ class Company extends Component {
     componentDidMount(){
         // https://jsonplaceholder.typicode.com/users
         this.handleAxiosDrop()
-        axios({
-            method : 'get',
-            url : 'https://jsonplaceholder.typicode.com/users',
-            // headers : {
-            //     "jwt" : localStorage.getItem('login')
-            // }
-        })
-        .then(resp =>{
-            console.log(resp.data)
-            this.setState({
-                users : resp.data
-            })
-            console.log(this.state.users)
-        })
-        .catch(error =>{
-            console.log('err',error)
-        })
+        // axios({
+        //     method : 'get',
+        //     url : 'https://jsonplaceholder.typicode.com/users',
+        //     // headers : {
+        //     //     "jwt" : localStorage.getItem('login')
+        //     // }
+        // })
+        // .then(resp =>{
+        //     console.log(resp.data)
+        //     this.setState({
+        //         users : resp.data
+        //     })
+        //     console.log(this.state.users)
+        // })
+        // .catch(error =>{
+        //     console.log('err',error)
+        // })
     }
 
     handleAxiosDrop() {
         axios({
             method : 'post',
-            // url : 'https://api.wappgo.com/legal251AppDashboardAPI/?parameter=paginateNewsalert',
-            // data : {
-            //     "category" : data_catgory,
-            //     "page" : this.state.currentPage
-            // } ,
-            // headers : {
-            //     "jwt" : localStorage.getItem('login')
-            // }
+            url : 'http://localhost:3001/adminUsersData',
+            headers : {
+                AuthKey : 'asdfgh '
+            },
+            data : {
+                "category" : 'company',
+                // "page" : '1'
+            }
            })
            .then(response =>{
                const data = response.data.data
                 const forPage = response.data.TotalPages
-                console.log(data)
+                console.log(response.data)
                 if(response.data.status === 200){
                     this.setState({
                         pageCount : forPage,
@@ -92,19 +92,19 @@ class Company extends Component {
     renderTableData() {
         return this.state.users.map((user) => {
            return (
-               <React.Fragment key={user.id}>
+               <React.Fragment key={user._id}>
               <tr >
-                 <td >{user.username}</td>
+                 <td >{user.name}</td>
                  <td >{user.email}</td>
-                 <td>{user.phone}</td>
+                 <td>{user.contact}</td>
                  <td>{user.website}</td>
-                 <td>{user.id}</td>
+                 <td>{user.estdYear}</td>
                  <td >
                     <div className='row'>
-                        <div className='col-lg-6 col-12 up_w'>
-                            {user.name}
+                        <div className='col-lg-12 col-12 up_w'>
+                            {user.companyId}
                         </div>
-                        <div className='col-lg-6 col-12 btns_w'>
+                        {/* <div className='col-lg-6 col-12 btns_w'>
                             <div className="dropdown">
                                 <button className="dropdown-toggle see_more" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     See more
@@ -115,7 +115,7 @@ class Company extends Component {
                                     <a className="dropdown-item seemore_dropitem1" href="#">More Details</a>
                                 </div>
                         </div>
-                        </div>
+                        </div> */}
                     </div>
                     {/* <button className=' see_more'  >  See more</button>   dropdown see more - remove,suspend(cannot login from this account),more details(modal to show all details and edit option) */}   
                     
@@ -134,9 +134,9 @@ class Company extends Component {
                 <th>Username</th>
                 <th>Email</th>
                 <th>Contact</th>
-                <th>Category</th>
-                <th>Date</th>
-                <th>Time</th>
+                <th>Website</th>
+                <th>Estd Year</th>
+                <th>Data</th>
             </React.Fragment>
         )
      }
