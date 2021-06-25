@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import '../css/userA.css'
-import ReactPaginate from 'react-paginate'
 import axios from 'axios'
 import Header from './Header'
 import '../css/Paginate.css'
-let selectedPage;
 
 class User extends Component {
 
@@ -128,9 +126,9 @@ class User extends Component {
                             </tbody>
                         </table>
                     </div>
-                    <center>
+                    {/* <center>
                         <button className='see_more'>See More</button>
-                    </center>
+                    </center> */}
                 </div>
             </div>
         )

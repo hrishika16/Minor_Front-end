@@ -104,7 +104,7 @@ class JobSeeker extends Component {
                         <div className='col-lg-6 col-12 up_w'>
                             {user.name}
                         </div>
-                        <div className='col-lg-6 col-12 btns_w'>
+                        {/* <div className='col-lg-6 col-12 btns_w'>
                             <div className="dropdown">
                                 <button className="dropdown-toggle see_more" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     See more
@@ -115,7 +115,7 @@ class JobSeeker extends Component {
                                     <a className="dropdown-item seemore_dropitem1" href="#">More Details</a>
                                 </div>
                         </div>
-                        </div>
+                        </div> */}
                     </div>
                     {/* <button className=' see_more'  >  See more</button>   dropdown see more - remove,suspend(cannot login from this account),more details(modal to show all details and edit option) */}   
                     
