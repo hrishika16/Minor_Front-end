@@ -183,9 +183,9 @@ class JobSeeker extends Component {
                         />
                         <br/>  
                     </div> */}
-                    <center>
+                    {/* <center>
                         <button className='see_more'>See More</button>
-                    </center>
+                    </center> */}
                 </div>
             </div>
         )
