@@ -166,7 +166,7 @@ render() {
                     </table>
                 </div>
                 {/* pagination */}
-                <div className='paginee'>
+                {/* <div className='paginee'>
                     <ReactPaginate
                         previousLabel = {"<"}
                         nextLabel = {">"}
@@ -181,7 +181,7 @@ render() {
                         activeClassName = {`active `}
                     />
                     <br/>  
-                </div>
+                </div> */}
                 {/* <center>
                         <button className='see_more'>See More</button>
                     </center> */}
