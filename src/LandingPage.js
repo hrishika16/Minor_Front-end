@@ -22,6 +22,7 @@ import car44 from './img/car44.jpg'
 import $ from 'jquery'
 import { Link } from 'react-router-dom'
 import home from './img/home2.jpg'
+import mobile from './img/mobile.gif'
 
 
 function LandingPage(props) {
@@ -282,6 +283,8 @@ function LandingPage(props) {
 
            <div className="target_user">
            <center>
+           
+           <br></br>
            <h1 className = "headingUsers">Our Target Users</h1>
            </center>
            <div className = "container-fluid">
@@ -356,7 +359,7 @@ function LandingPage(props) {
   </ol>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img className="d-block imgCA" src={ca_first} alt="First slide"></img>
+      <img className="d-block imgCA" src={mobile} alt="First slide"></img>
     </div>
     <div className="carousel-item">
       <img className="d-block imgCA" src={ca_second} alt="Second slide"></img>
