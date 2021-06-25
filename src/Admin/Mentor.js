@@ -118,29 +118,22 @@ class Mentor extends Component {
 
     componentDidMount(){
         // https://jsonplaceholder.typicode.com/users
-        this.handleAxiosDrop()
+        // this.handleAxiosDrop()
         axios({
-            method : 'get',
-            url : 'https://jsonplaceholder.typicode.com/users',
-            // headers : {
-            //     AuthKey : 'asdfgh'
-            // },
-            // data : {
-            //     "username" : firstNameReg ,
-            //     "last_name" : lastNameReg,
-            //     "contact" : contactNumReg,
-            //     "dob" : dobReg,
-            //     "state" : stateReg,
-            //     "city" : cityReg,
-            //     "gender" : genderReg,
-            //     "prefCity" : pinReg,
-            //     "email" : email
-            // }
+            method : 'post',
+            url : 'http://localhost:3001/mentorData',
+            headers : {
+                AuthKey : 'asdfgh'
+            },
+            data : {
+                // "category" : 'mentorData',
+                // "page" : '1'
+            }
         })
         .then(resp =>{
             console.log(resp.data)
             this.setState({
-                users : resp.data
+                users : resp.data.data
             })
             console.log(this.state.users)
         })
@@ -198,15 +191,15 @@ class Mentor extends Component {
     renderTableData() {
         return this.state.users.map((user) => {
            return (
-               <React.Fragment key={user.id}>
+               <React.Fragment key={user._id}>
               <tr >
                  <td className='date_w'>{user.username}</td>
                  <td className='time_w'>{user.email}</td>
-                 <td>{user.phone}</td>
-                 <td>{user.website}</td>
-                 <td>{user.id}</td>
-                 <td className='update_w'>
-                    {/* {user.name}    <button className=' see_more'  >  See more</button> */}
+                 <td>{user.contact}</td>
+                 <td>{user.dob}</td>
+                 <td>{user.qualification}</td>
+                 {/* <td className='update_w'>
+                    {user.name}    <button className=' see_more'  >  See more</button>
                     <div className='row'>
                         <div className='col-lg-6 col-12 up_w'>
                             {user.name}
@@ -224,7 +217,7 @@ class Mentor extends Component {
                             </div>
                         </div>
                     </div>
-                 </td>
+                 </td> */}
               </tr>
               
               </React.Fragment>
@@ -238,9 +231,9 @@ class Mentor extends Component {
                 <th>Username</th>
                 <th>Email</th>
                 <th>Contact</th>
-                <th>Category</th>
-                <th>Date</th>
-                <th>Time</th>
+                <th>DOB</th>
+                <th>Qualification</th>
+                {/* <th>Time</th> */}
             </React.Fragment>
         )
      }

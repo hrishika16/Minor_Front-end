@@ -46,8 +46,8 @@
 
     margin-top: 10px;
     width: 600px ;
-    height : 150px ;
-    padding: 22px 10px;
+    height : 100px ;
+    padding: 10px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 10px;
@@ -81,6 +81,10 @@
     color: #F8951D;
     text-align: center;
     
+}
+
+.mrgn_11{
+    margin-top: 75px;
 }
 
 #error_hireComp{

@@ -70,12 +70,10 @@ function HirePost() {
         <CompanyNavbar></CompanyNavbar>
         <CompanySidebar></CompanySidebar>   
          <center>
-         <h1 className = "hiredetailshead">Hire Details </h1>
-         <br></br>
-   
-
-         <div className = "container">
-           <div className = "row">
+         <div className = "container mrgn_11">
+            <h1 className = "hiredetailshead">Hire Details </h1>
+            <br></br>
+            <div className = "row">
                <div className = "col-lg-6">
                <label className ="labelHire">Role : </label>
                <br></br>

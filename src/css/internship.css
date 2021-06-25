@@ -16,6 +16,7 @@
 .post_div{
     background-color: #fff;
     border-radius: 8px;
+    cursor: pointer;
     padding: 25px 15px 10px 10px;
     box-shadow: 4px 4px 7px #00000014;
     margin-bottom: 20px;

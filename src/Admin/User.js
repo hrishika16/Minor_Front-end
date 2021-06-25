@@ -33,17 +33,17 @@ class User extends Component {
             method : 'post',
             url : 'http://localhost:3001/adminUsersData',
             headers : {
-                AuthKey : 'asdfgh '
+                AuthKey : 'asdfgh'
             },
             data : {
-                "category" : this.state.category,
-                "page" : this.state.currentPage
+                "category" : 'userDetails',
+                // "page" : '1'
             }
            })
            .then(response =>{
                const data = response.data.data
                 const forPage = response.data.TotalPages
-                console.log(data)
+                console.log(response.data)
                 if(response.data.status === 200){
                     this.setState({
                         pageCount : forPage,

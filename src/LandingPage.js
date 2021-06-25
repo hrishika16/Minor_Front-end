@@ -157,8 +157,9 @@ function LandingPage(props) {
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
+                {/* <ul className='mr-auto'></ul> */}
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul className="navbar-nav nav_right ">
+                    <ul className="navbar-nav nav_right ml-auto">
                     <li className="nav-item dropdown">
                         <button type="button " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="dropdown-toggle nab_btn_lo" >
                             Login
