@@ -101,7 +101,7 @@ class JobSeeker extends Component {
                  <td>{user.id}</td>
                  <td >
                     <div className='row'>
-                        <div className='col-lg-6 col-12 up_w'>
+                        <div className='col-lg-12 col-12 up_w'>
                             {user.name}
                         </div>
                         {/* <div className='col-lg-6 col-12 btns_w'>
