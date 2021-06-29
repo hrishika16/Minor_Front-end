@@ -154,8 +154,8 @@ function LandingPage(props) {
             <nav className="navbar navbar-expand-lg  nav_bg fixed-top">
                 {/* <a className="navbar-brand" href="#">Navbar</a> */}
                 <img src={syncIn} alt='img logo' className='logo_img mr-auto' />
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                <button className=" btn_lpp" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    {/* <span className="navbar-toggler-icon"></span> */}
                 </button>
                 {/* <ul className='mr-auto'></ul> */}
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
@@ -398,22 +398,22 @@ function LandingPage(props) {
             </center>
             <div className = "container">
                 <div className = "row">
-                    <div className = "col-lg-3">
+                    <div className = "col-lg-3 col-6">
                      
-                     <img src = {userA} alt = "team 1" className = "teamImg"></img>
-                     <h3 className = "tochooseL">Hrishika Saxena </h3>
+                    <center> <img src = {userA} alt = "team 1" className = "teamImg"></img> </center>
+                     <h3 className = "tochooseL text-center">Hrishika Saxena </h3>
                     </div>
-                    <div className = "col-lg-3">
-                    <img src = {userB} alt = "team 1" className = "teamImg"></img>
-                    <h3 className = "tochooseL">Khushi Kala </h3>
+                    <div className = "col-lg-3 col-6">
+                        <center><img src = {userB} alt = "team 1" className = "teamImg"></img> </center>
+                    <h3 className = "tochooseL text-center">Khushi Kala </h3>
                         </div>
-                        <div className = "col-lg-3">
-                        <img src = {userC} alt = "team 1" className = "teamImg"></img>
-                        <h3 className = "tochooseL">Pralipta Jena </h3>
+                        <div className = "col-lg-3 col-6">
+                            <center><img src = {userC} alt = "team 1" className = "teamImg"></img> </center>
+                        <h3 className = "tochooseL text-center">Pralipta Jena </h3>
                         </div>
-                        <div className = "col-lg-3">
-                        <img src = {userD} alt = "team 1" className = "teamImg"></img>
-                        <h3 className = "tochooseL">Samiksha Khare</h3>
+                        <div className = "col-lg-3 col-6">
+                         <center><img src = {userD} alt = "team 1" className = "teamImg"></img></center>
+                        <h3 className = "tochooseL text-center">Samiksha Khare</h3>
                         </div>
                 </div>
             </div>
@@ -427,8 +427,8 @@ function LandingPage(props) {
     <div className='container'>
     <div className="row">
 
-    <div className='col-lg-4'></div>
-      <div className="col-lg-1 py-5">
+    <div className='col-lg-4 col-4'></div>
+      <div className="col-lg-1 col-1 py-5">
         <div className="mb-5 flex-center">
 
           <a className="fb-ic iconSize">
@@ -442,25 +442,25 @@ function LandingPage(props) {
           
         </div>
       </div>
-      <div className='col-lg-1 py-5'>
+      <div className='col-lg-1 col-1 py-5'>
             {/* <!--Linkedin --> */}
             <a className="li-ic iconSize">
           <img src={github} alt = "fb" className="iconSize"></img>
           </a>
       </div>
-      <div className='col-lg-1 py-5'>
+      <div className='col-lg-1 col-1 py-5'>
            {/* <!--Instagram--> */}
            <a className="ins-ic iconSize">
           <img src={insta} alt = "fb" className="iconSize"></img>
           </a>
 
       </div>
-      <div className='col-lg-1 py-5'>
+      <div className='col-lg-1 col-1 py-5'>
       <a className="ins-ic iconSize">
           <img src={linked} alt = "fb" className="iconSize"></img>
           </a>
       </div>
-      <div className='col-lg-4'></div>
+      <div className='col-lg-4 col-4'></div>
     </div>
    </div>
 
@@ -468,25 +468,24 @@ function LandingPage(props) {
   <div className = "container footer py-3 footcp">
       <div className = "row">
      
-          <div className ="col-lg-4">
+          <div className ="col-lg-3 col-3">
           <center>
-          <Link to='/help'>
+          <Link to='/help' className='some_txtx_1'>
           Help Center
           </Link>
        
           </center>
            
           </div>
-          <div className ="col-lg-4">
-          <center>
-          © 2021 Copyright:
-    <a href="#">SyncIn.com</a>
+          <div className ="col-lg-6 col-6">
+          <center className='some_txtx_1'>
+          © 2021 Copyright:SyncIn.com
           </center>
          
           </div>
-          <div className ="col-lg-4">
+          <div className ="col-lg-3 col-3">
           <center>
-          <Link to='/privacy'>
+          <Link to='/privacy' className='some_txtx_1'>
           Privacy Policy 
           </Link>
         
