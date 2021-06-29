@@ -1,257 +1,305 @@
-@font-face{
-    font-family: 'caros';
-    src: url('../font/cretype\ \ Caros.otf');
+@font-face {
+	font-family: "caros";
+	src: url("../font/cretype\ \ Caros.otf");
 }
 
-@font-face{
-    font-family: 'caros_bold';
-    src: url('../font//cretype\ \ Caros\ Bold.otf');
+@font-face {
+	font-family: "caros_bold";
+	src: url("../font//cretype\ \ Caros\ Bold.otf");
 }
 
-@font-face{
-    font-family: 'carosM';
-    src: url('../font/cretype\ \ Caros\ Medium.otf');
+@font-face {
+	font-family: "carosM";
+	src: url("../font/cretype\ \ Caros\ Medium.otf");
 }
 
-.logo_img{
-    /* max-width: 100%; */
-    width: 140px;
-    margin-right: 10px;
+.logo_img {
+	/* max-width: 100%; */
+	width: 140px;
+	margin-right: 10px;
 }
 
-.logo_img_1{
-    width: 220px;
+.logo_img_1 {
+	width: 220px;
 }
-.mainLanding{
-    overflow-x: hidden;
-    position: relative;
-   /* background-color: rgb(239,239,237); */
-}
-
-.mainLandingL{
-    
-    background-image: url('../img/landingBg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height : 950px;
-    margin-top: 51px;
-    /* height */
-}
-.sigU{
-    font-family: 'caros_bold';
-    color: #045174;
-    font-size: 22px;
+.mainLanding {
+	overflow-x: hidden;
+	position: relative;
+	/* background-color: rgb(239,239,237); */
 }
 
-.emr{
-    font-family: 'caros_bold';
-    color: #045174;
-    font-size: 16px;
-    margin-bottom: 4px;
+.mainLandingL {
+	background-image: url("../img/landingBg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 950px;
+	margin-top: 51px;
+	/* height */
 }
-#err_ur{
-    display: none;
-}
-#err_pr{
-    display: none;
-}
-#err_company{
-    display: none;
-}
-#err_pcompany{
-    display: none;
-}
-.rh_1{
-    height: 100px;
-}
-.pd_rr{
-    padding: 20px 30px 20px 30px;
-}
-.inp_r{
-    width: 100%;
-    border: 0.5px solid rgba(45, 45, 45, 0.2);
-    font-family: 'caros';
-    border-radius: 12px;
-    color: #045174;
-    font-size: 16px;
-    padding: 8px;
+.sigU {
+	font-family: "caros_bold";
+	color: #045174;
+	font-size: 22px;
 }
 
-.inp_r:focus{
-    outline: none;
-    border: 0.5px solid rgba(45, 45, 45, 0.2);
+.emr {
+	font-family: "caros_bold";
+	color: #045174;
+	font-size: 16px;
+	margin-bottom: 4px;
+}
+#err_ur {
+	display: none;
+}
+#err_pr {
+	display: none;
+}
+#err_company {
+	display: none;
+}
+#err_pcompany {
+	display: none;
+}
+.rh_1 {
+	height: 100px;
+}
+.pd_rr {
+	padding: 20px 30px 20px 30px;
+}
+.inp_r {
+	width: 100%;
+	border: 0.5px solid rgba(45, 45, 45, 0.2);
+	font-family: "caros";
+	border-radius: 12px;
+	color: #045174;
+	font-size: 16px;
+	padding: 8px;
 }
 
-.sigU_btn{
-    border: none;
-    border-radius: 10px;
-    background: #045174;
-    color: #fff;
-    font-family: 'carosM';
-    font-size: 16px;
-    padding: 8px;
-    width: 100%;
-    margin-bottom: 10px;
+.inp_r:focus {
+	outline: none;
+	border: 0.5px solid rgba(45, 45, 45, 0.2);
 }
-.nav_bg{
-    /* background-color: rgb(25,28,83); */
-    /* color: #fff;
+
+.sigU_btn {
+	border: none;
+	border-radius: 10px;
+	background: #045174;
+	color: #fff;
+	font-family: "carosM";
+	font-size: 16px;
+	padding: 8px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.nav_bg {
+	/* background-color: rgb(25,28,83); */
+	/* color: #fff;
     color: #fff; */
-    background-color: #fff;
-    padding: 15px;
-    height: 50px;
+	background-color: #fff;
+	padding: 15px;
+	height: 50px;
 }
 
-.sigU_btn:focus{
-    outline: none;
+.sigU_btn:focus {
+	outline: none;
 }
 
-.stSel{
-    visibility: hidden;
+.stSel {
+	visibility: hidden;
 }
 
-.imgCA{
-    height: 560px; 
+.imgCA {
+	height: 560px;
 }
-.indiCA{
-    margin-top: 30px;
+.indiCA {
+	margin-top: 30px;
 }
 
-.target_user{
-    /* background-color: #fff; */
+.target_user {
+	/* background-color: #fff; */
 }
 .target_user img {
-    /* width : 600px; */
-    height : 600px; 
-  
+	/* width : 600px; */
+	height: 600px;
 }
 
-.user_detailsL{
-    margin-top: 70px;
-    margin-left: 50px;
+.user_detailsL {
+	margin-top: 70px;
+	margin-left: 50px;
 }
-.user_detailsLR{
-    margin-right: 50px;
-    margin-left: 0px;
-    background-color:aqua;
-    margin-top: 70px;
-}
-
-.headingUsers{
-    font-size: 40px;
-    font-family: 'caros_bold';
-    color: #F98935;
-    margin-top: 50px;
-    
+.user_detailsLR {
+	margin-right: 50px;
+	margin-left: 0px;
+	background-color: aqua;
+	margin-top: 70px;
 }
 
-.nav_right{
-    float: right;
-}
-.nab_btn_lo{
-    border: none;
-    width: 100px;
-    border-radius: 7px;
-    background-color: #F98935;
-    color: #fff;
-    font-family: 'caros_bold';
-    padding: 7px;
-    margin-right: 10px;
+.headingUsers {
+	font-size: 40px;
+	font-family: "caros_bold";
+	color: #f98935;
+	margin-top: 50px;
 }
 
-.nab_btn_lo:focus{
-    outline: none;
+.nav_right {
+	float: right;
 }
-.user_link{
-    color: #2d2d2d;
-}
-.user_link:hover{
-    color: #2d2d2d;
-    text-decoration: none;
-}
-.headingWelcome{
-    font-size: 60px;
-    font-family: 'caros_M';
-    /* color: #023858; */
-    color: #2d2d2d;
-}
-.tochooseL{
-    color: #023858;
-    font-family: 'carosM';
-    font-size: 25px;
-    margin-top: 20px;
-    text-decoration: underline #F98935;
+.nab_btn_lo {
+	border: none;
+	width: 100px;
+	border-radius: 7px;
+	background-color: #f98935;
+	color: #fff;
+	font-family: "caros_bold";
+	padding: 7px;
+	margin-right: 10px;
 }
 
-.userBoxL{
-    width: 210px;
-    height: 90px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 3px 3px 3px 3px #888888;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+.nab_btn_lo:focus {
+	outline: none;
+}
+.user_link {
+	color: #2d2d2d;
+}
+.user_link:hover {
+	color: #2d2d2d;
+	text-decoration: none;
+}
+.headingWelcome {
+	font-size: 60px;
+	font-family: "caros_M";
+	/* color: #023858; */
+	color: #2d2d2d;
+}
+.tochooseL {
+	color: #023858;
+	font-family: "carosM";
+	font-size: 25px;
+	margin-top: 20px;
+	text-decoration: underline #f98935;
 }
 
-.teamImg{
-
-    width: 170px;
-    height: 170px;
-    border : 1px solid black;
-    border-radius: 50%;
-    box-shadow: 2px 2px 2px 2px #fff;
-    margin-top: 30px;
-    padding: 10px;
-}
-.footca{
-    background-color: #045174;
-    color: #fff;
-    margin-top: 30px;
-
-}
-.footcp{
-    background-color: white;
-    color: black; 
-}
-.iconSize{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.userBoxL {
+	width: 210px;
+	height: 90px;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 3px 3px 3px 3px #888888;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
-.contactUs{
-    font-family: 'caros_bold';
-    color:#F98935;
-    margin-top: 7px;
-    margin-right: 10px;
-    
-  
+.teamImg {
+	width: 170px;
+	height: 170px;
+	border: 1px solid black;
+	border-radius: 50%;
+	box-shadow: 2px 2px 2px 2px #fff;
+	margin-top: 30px;
+	padding: 10px;
 }
-.contactUs:hover{
-    text-decoration: none;
-    color : #F98935;
+.footca {
+	background-color: #045174;
+	color: #fff;
+	margin-top: 30px;
 }
-.home{
-    height:35px;
-    width : 35px ;
-   
+.footcp {
+	background-color: white;
+	color: black;
+}
+.iconSize {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
 }
 
-
+.contactUs {
+	font-family: "caros_bold";
+	color: #f98935;
+	margin-top: 7px;
+	margin-right: 10px;
+}
+.contactUs:hover {
+	text-decoration: none;
+	color: #f98935;
+}
+.home {
+	height: 35px;
+	width: 35px;
+}
 
 .helpfooter {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
-   
-  }
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	text-align: center;
+}
 
-  .helpfooter li{
-      float : left; 
-      margin-right: 10px;
-      text-align: center;
-  }
+.helpfooter li {
+	float: left;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.btn_lpp{
+    display: none;
+}
+
+@media (max-width: 1200px) {
+	.target_user img {
+		max-width: 100%;
+		height: auto;
+	}
+	.tochooseL {
+		font-size: 18px;
+		margin-top: 8px;
+	}
+	.userBoxL {
+		height: auto;
+		padding: 6px;
+	}
+	.mainLandingL {
+		height: 550px;
+		margin-top: 70px;
+	}
+    .btn_lpp{
+        background:url('../img/hamburger.svg') #fff;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50px;
+        height: 40px;
+        border: none;
+        display: block;
+    }
+    .btn_lpp:focus{
+        outline: none;
+    }
+    .nav_bg{
+        padding: 5px;
+        height: 70px;
+    }
+}
+@media(max-width:776px){
+    .imgCA{
+        max-width: 100%;
+        height: 320px;
+    }
+    .iconSize{
+        width: 30px;
+        height: auto;
+    }
+    .some_txtx_1{
+        color: #045174;
+        text-decoration: none;
+        font-family: "caros";
+        font-size: 13px;
+    }
+    .some_txtx_1:hover{
+        color: #045174;
+        text-decoration: none;
+    }
+}
