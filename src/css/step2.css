@@ -140,12 +140,12 @@
 
 @media(max-width:1200px){
     .pdddm{
-        padding: 8% 10%;
+        padding: 4% 8%;
     }
 }
 @media(max-width:991px){
     .pdddm{
-        padding: 8% 2%;
+        padding: 3% 2%;
     }
     .nnnm{
         border: none;

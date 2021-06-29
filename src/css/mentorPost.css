@@ -238,3 +238,25 @@
 #msg_err{
     display: none;
 }
+
+@media(max-width:766px){
+    .box_3{
+        margin-bottom: 0px;
+    }
+    .spaceee {
+        padding: 3% 5%;
+    }
+    .img1{
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    .intL {
+        height: 50px;
+    }
+    .inp_mm{
+        font-size: 14px;
+    }
+    .sign{
+        margin-bottom: 25px;
+    }
+}
