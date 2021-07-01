@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './css/headerUse.css'
 import logout from './img/logout5.svg';
 import syncIn from './img/logo.png'
 import { Link,Redirect } from 'react-router-dom'
 import home from './img/home.jpg'
+import menu from './img/menu.png'
+import $ from 'jquery'
 
 function HeaderUser() {
 
@@ -14,6 +16,19 @@ function HeaderUser() {
     const [searchInp, setsearchInp] = useState('')
     const [msgStory, setmsgStory] = useState('')
     const [nextSearch, setnextSearch] = useState(false)
+
+    useEffect(() => {
+        $(document).ready(function(){
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebarp ').toggleClass('active');
+                $('.overlay').toggleClass('active');
+            });
+          $('.overlay').on('click', function(){
+            $('.overlay').toggleClass('active');
+            $('#sidebarp').toggleClass('active');
+          });
+        });
+    }, [])
 
     // post api
     const getTheDataFromPosts =() =>{
@@ -133,15 +148,19 @@ function HeaderUser() {
             <div className=''>
                 <div className='tryyy bg_he'>
                 <nav className="navbar navbar-expand-lg ">
+                <button type="button" id="sidebarCollapse" className="navbar-btn " >
+                    <img src={menu} alt='menu' className='sidebar_menu' />
+                </button>
                 {/* logo space */}
-                    <div className='logo class="navbar-brand"'>
+                    <div className='logo classn navbar-brand'>
                         <img src= {syncIn} alt= "logo" className="logoImg"></img>
                     </div>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                    {/* <img src={syncIn} alt='img logo' className='logo_img mr-auto' /> */}
+                    <button className=" btn_lpp" type="button" data-toggle="collapse" data-target="#navbarNavDropdown1" aria-controls="navbarNavDropdown1" aria-expanded="false" aria-label="Toggle navigation">
+                        {/* <span className="navbar-toggler-icon"></span> */}
                     </button>
                     
-                    <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                    <div className="collapse navbar-collapse" id="navbarNavDropdown1">
                         <ul className='mr-auto'></ul>
                          {/* my */}
                         <div className="">
