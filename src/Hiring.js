@@ -7,16 +7,6 @@ import hireimg from './img/weAreHiring.png'
 
 
 function Hiring() {
-    // const[role, roleChange] = useState('');
-    // const[industoryType , industoryTypeChange ] = useState('');
-    // const[functionalArea , functionalAreaChange] = useState('');
-    // const[employment ,employmentChange] = useState('')
-    // const[roleCategory , roleCategoryChange] = useState('')
-    // const[skills , skillsChange] = useState('')
-    // //abhi by deafult daal rhi name 
-    // const[companyName , companyNameChange] = useState("Company Name")
-    // const[companyLoc , companyLocChange] = useState("Location")
-    // const[description , descriptionChange] = useState('')
 
     const [datatoShow, setdatatoShow] = useState([])
     const [dataofHireDetail, setdataofHireDetail] = useState([])
@@ -90,11 +80,11 @@ function Hiring() {
             <br></br>
             <div className = "container wholeHiring">
                 <div className = "row">
-                    <div className = "col-lg-7 headHiring">
+                    <div className = "col-lg-7 col-5 headHiring">
                         {renderPostData()}
                         <button>Apply on Company Website</button>
                     </div>
-                    <div className = "col-lg-5">
+                    <div className = "col-lg-5 col-7">
                     <center>
                         <img src = {hireimg}  className = "imghire"></img>
                         </center>
