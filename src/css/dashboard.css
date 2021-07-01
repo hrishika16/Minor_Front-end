@@ -97,8 +97,39 @@
     padding-left: 0px;
 }
 
-/* @media(max-width:766px) {
-    .padr_dd{
-        padding-left: 20px;
+@media(max-width:991px) {
+    .main{
+        width: 100%;
+        padding-left: 0px;
+        margin-top: 70px;
+        height: 100vh;
     }
-} */
+    .overlay {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    .overlay.active {
+        display: block;
+        opacity: 1;
+    }
+    .padr_dd{
+        padding-left: 15px;
+    }
+    .pos_ff{
+        position: absolute;
+    }
+    .userName{
+        font-size: 12px;
+        margin-bottom: 6px;
+        margin-top: 5px;
+    }
+    .profeSS{
+        font-size: 9.5px;
+    }
+}
