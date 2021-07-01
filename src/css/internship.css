@@ -1,64 +1,70 @@
-@font-face{
-    font-family: 'caros';
-    src: url('../font/cretype\ \ Caros.otf');
+@font-face {
+	font-family: "caros";
+	src: url("../font/cretype\ \ Caros.otf");
 }
 
-@font-face{
-    font-family: 'caros_bold';
-    src: url('../font//cretype\ \ Caros\ Bold.otf');
+@font-face {
+	font-family: "caros_bold";
+	src: url("../font//cretype\ \ Caros\ Bold.otf");
 }
 
-@font-face{
-    font-family: 'carosM';
-    src: url('../font/cretype\ \ Caros\ Medium.otf');
+@font-face {
+	font-family: "carosM";
+	src: url("../font/cretype\ \ Caros\ Medium.otf");
 }
 
-.post_div{
-    background-color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
-    padding: 25px 15px 10px 10px;
-    box-shadow: 4px 4px 7px #00000014;
-    margin-bottom: 20px;
-    width:700px ;
+.post_div {
+	background-color: #fff;
+	border-radius: 8px;
+	cursor: pointer;
+	padding: 25px 15px 10px 10px;
+	box-shadow: 4px 4px 7px #00000014;
+	margin-bottom: 20px;
+	width: 700px;
 }
 
-.post_div_1{
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 25px ;
-    box-shadow: 4px 4px 7px #00000014;
-    margin-bottom: 20px;
+.post_div_1 {
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 25px;
+	box-shadow: 4px 4px 7px #00000014;
+	margin-bottom: 20px;
 }
 
-.company_img{
-    max-width: 100%;
+.company_img {
+	max-width: 100%;
 }
 
-.argin_in{
-    margin-top: 50px;
+.argin_in {
+	margin-top: 50px;
 }
 
-.company_name{
-    font-family: 'caros_bold';
-    color: #F98935;
-    font-size: 16px;
-    margin-bottom: 8px;
-    text-align: left;
+.company_name {
+	font-family: "caros_bold";
+	color: #f98935;
+	font-size: 16px;
+	margin-bottom: 8px;
+	text-align: left;
 }
 
-.place_name{
-    font-family: 'carosM';
-    color: #045174;
-    text-align: left;
-    margin-bottom: 2px;
-    font-size: 14px;
+.place_name {
+	font-family: "carosM";
+	color: #045174;
+	text-align: left;
+	margin-bottom: 2px;
+	font-size: 14px;
 }
 
-.inner_txt{
-    font-family: 'carosM';
-    color: #045174;
-    text-align: left;
-    margin-bottom: 2px;
-    font-size: 14px;
+.inner_txt {
+	font-family: "carosM";
+	color: #045174;
+	text-align: left;
+	margin-bottom: 2px;
+	font-size: 14px;
+}
+
+@media (max-width: 991px) {
+	.post_div {
+		width: 100%;
+	}
 }

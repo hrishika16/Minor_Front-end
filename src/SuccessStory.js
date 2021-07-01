@@ -85,10 +85,10 @@ function SuccessStory() {
                 <React.Fragment key={user.id}>
                     <div className='box_11'>
                         <div className='row'>
-                            <div className='col-lg-3'>
+                            <div className='col-lg-3 col-3'>
                                 <img src={userI} alt='user Icon' className='user_rr' />
                             </div>
-                            <div className='col-lg-9 padr_dd'>
+                            <div className='col-lg-9 col-9 padr_dd'>
                                 <p className='userName'>{user.username}</p>
                                 <p className='profeSS'>{user.email}</p>
                             </div>
