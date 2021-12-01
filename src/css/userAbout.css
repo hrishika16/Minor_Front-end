@@ -41,3 +41,10 @@
     color: #2d2d2d;
     font-size: 14px;
 }
+
+@media(max-width:991px){
+    .about_prof{
+        border-radius:2px ;
+        box-shadow: 5px 5px 10px #00000014;
+    }
+}
