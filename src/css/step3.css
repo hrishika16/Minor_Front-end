@@ -1,149 +1,130 @@
 @font-face {
-    font-family: 'caros';
-    src: url('../font/cretype\ \ Caros.otf');
+	font-family: "caros";
+	src: url("../font/cretype\ \ Caros.otf");
 }
 
 @font-face {
-    font-family: 'caros_bold';
-    src: url('../font//cretype\ \ Caros\ Bold.otf');
+	font-family: "caros_bold";
+	src: url("../font//cretype\ \ Caros\ Bold.otf");
 }
 
 @font-face {
-    font-family: 'carosM';
-    src: url('../font/cretype\ \ Caros\ Medium.otf');
+	font-family: "carosM";
+	src: url("../font/cretype\ \ Caros\ Medium.otf");
 }
 
 .wholeInterest {
-    overflow-x: hidden;
-    position: relative;
+	overflow-x: hidden;
+	position: relative;
 }
 
 .selectHeading {
-    color: #F8951D;
-    font-weight: bold;
-    margin-top: 10px;
-    font-size: 40px;
+	color: #f8951d;
+	font-weight: bold;
+	margin-top: 10px;
+	font-size: 40px;
 }
 
-.btnInterest input[type='button'] {
-
-    background-color: #095079;
-    border: 2px solid #045174;
-    border-radius: 30px;
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    margin-top: 20px;
-    color: #fff;
-    font-family: 'carosM';
+.btnInterest input[type="button"] {
+	background-color: #095079;
+	border: 2px solid #045174;
+	border-radius: 30px;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	margin-top: 20px;
+	color: #fff;
+	font-family: "carosM";
 }
 
-.btnInterest input[type='button']:focus {
-    outline: none;
+.btnInterest input[type="button"]:focus {
+	outline: none;
 }
 
 .fieldDiv {
-    margin-top: 50px;
-
+	margin-top: 50px;
 }
 
 .fieldInput {
-
-
-    padding: 15px;
-    width: 470px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    color: #2d2d2d;
+	padding: 15px;
+	width: 470px;
+	border: 2px solid #ccc;
+	border-radius: 10px;
+	color: #2d2d2d;
 }
 
 .fieldInput:focus {
-    outline: none;
-
+	outline: none;
 }
 
 .submitBtnStep {
+	position: relative;
 
-    position: relative;
-
-    background-color: #F98935;
-    border: none;
-    border-radius: 27px;
-    color: #fff;
-    font-family: 'caros_bold';
-    font-size: 25px;
-    padding: 12px;
-    width: 230px;
-    margin-top: 50px;
-
+	background-color: #f98935;
+	border: none;
+	border-radius: 27px;
+	color: #fff;
+	font-family: "caros_bold";
+	font-size: 25px;
+	padding: 12px;
+	width: 230px;
+	margin-top: 50px;
 }
 
 .submitBtnStep:focus {
-
-    outline: none;
+	outline: none;
 }
 
 .enterDetails {
-
-    color: #F8951D;
-    font-weight: bold;
-    margin-top: 10px;
-
-
+	color: #f8951d;
+	font-weight: bold;
+	margin-top: 10px;
 }
 
 .errorCategory {
-
-    /* display :none; */
-    /* visibility: hidden; */
-    font-size: 1px;
-    padding-left: 15px;
-    margin-top: 5px;
-
+	/* display :none; */
+	/* visibility: hidden; */
+	font-size: 1px;
+	padding-left: 15px;
+	margin-top: 5px;
 }
 
-.btnInterest input[type='button']:hover {
-    background-color: #BFD7ED;
-    color: #000;
+.btnInterest input[type="button"]:hover {
+	background-color: #bfd7ed;
+	color: #000;
 }
 
-.btnInterest input[type='button']:active {
-    background-color: #BFD7ED;
-    color: #000;
+.btnInterest input[type="button"]:active {
+	background-color: #bfd7ed;
+	color: #000;
 }
 
 .add_btn_step3 {
-    margin-left: -80px;
-    border: 2px solid white;
-    border-radius: 10px;
-    background-color: #F8951D;
-    color: white;
-    font-family: 'carosM';
-    padding: 10px;
-    width: 70px;
-
-
+	margin-left: -80px;
+	border: 2px solid white;
+	border-radius: 10px;
+	background-color: #f8951d;
+	color: white;
+	font-family: "carosM";
+	padding: 10px;
+	width: 70px;
 }
-
 
 .add_btn_step3:focus {
-    outline: none;
-
+	outline: none;
 }
 
-@media only screen and (max-width: 766px) {
-    .btnInterest {
-        width: 100%;
-    }
+@media (max-width: 766px) {
+	.btnInterest {
+		width: 100%;
+	}
 
-    .selectHeading {
-        font-size: 30px;
-    }
+	.selectHeading {
+		font-size: 30px;
+	}
 
-    .fieldInput {
-        width: 100%;
-
-
-    }
+	.fieldInput {
+		width: 90%;
+	}
 }
