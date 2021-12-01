@@ -1,135 +1,134 @@
-@font-face{
-    font-family: 'caros';
-    src: url('../font/cretype\ \ Caros.otf');
+@font-face {
+	font-family: "caros";
+	src: url("../font/cretype\ \ Caros.otf");
 }
 
-@font-face{
-    font-family: 'caros_bold';
-    src: url('../font//cretype\ \ Caros\ Bold.otf');
+@font-face {
+	font-family: "caros_bold";
+	src: url("../font//cretype\ \ Caros\ Bold.otf");
 }
 
-@font-face{
-    font-family: 'carosM';
-    src: url('../font/cretype\ \ Caros\ Medium.otf');
+@font-face {
+	font-family: "carosM";
+	src: url("../font/cretype\ \ Caros\ Medium.otf");
 }
 
-.contt{
-    position: relative;
-    overflow-x: hidden;
-    height: 100vh;
-    background-color: #f5f5f5;
+.contt {
+	position: relative;
+	overflow-x: hidden;
+	height: 100vh;
+	background-color: #f5f5f5;
 }
 
-.main{
-    padding-left: 203px;
-    width: 100%;
-    /* height: 100vh; */
-    background: #f5f5f5;
-    margin-top: 50px;
+.main {
+	padding-left: 203px;
+	width: 100%;
+	/* height: 100vh; */
+	background: #f5f5f5;
+	margin-top: 70px;
 }
 
-.had_txt{
-    color: #045174;
-    font-size: 17px;
-    font-family:'caros_bold';
-    margin-top: 15px;
-    text-align: center;
+.had_txt {
+	color: #045174;
+	font-size: 17px;
+	font-family: "caros_bold";
+	margin-top: 15px;
+	text-align: center;
 }
 
-.posts{
-    background: #fff;
-    padding: 15px;
-    box-shadow: 5px 5px 10px #00000014;
+.posts {
+	background: #fff;
+	padding: 15px;
+	box-shadow: 5px 5px 10px #00000014;
 }
 
-.pos_ff{
-    
-    position: fixed;
+.pos_ff {
+	position: fixed;
 }
-.reqq{
-    padding: 15px;
-    background: #fff;
-    box-shadow: 5px 5px 10px #00000014;
-}
-
-.box_11{
-    border: none;
-    background: #045174;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-.user_rr{
-    padding-left: 8px;
-    padding-top: 4px;
-    width: 45px;
+.reqq {
+	padding: 15px;
+	background: #fff;
+	box-shadow: 5px 5px 10px #00000014;
 }
 
-.userName{
-    font-family: 'carosM';
-    color: #fff;
-    font-size: 17px;
-    margin-bottom: 2px;
+.box_11 {
+	border: none;
+	background: #045174;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+.user_rr {
+	padding-left: 8px;
+	padding-top: 4px;
+	width: 45px;
 }
 
-.profeSS{
-    font-family: 'caros';
-    color: #fff;
-    font-size: 14px;
-    margin-bottom: 0px;
+.userName {
+	font-family: "carosM";
+	color: #fff;
+	font-size: 17px;
+	margin-bottom: 2px;
 }
 
-.see_btn_dd{
-    border: none;
-    width: 110px;
-    background: #F8951D;
-    color: #2d2d2d;
-    font-family: 'caros_bold';
-    font-size: 15px;
-    padding: 7px;
-    border-radius: 4px;
-}
-.see_btn_dd:focus{
-    outline: none;
+.profeSS {
+	font-family: "caros";
+	color: #fff;
+	font-size: 14px;
+	margin-bottom: 0px;
 }
 
-.padr_dd{
-    padding-left: 0px;
+.see_btn_dd {
+	border: none;
+	width: 110px;
+	background: #f8951d;
+	color: #2d2d2d;
+	font-family: "caros_bold";
+	font-size: 15px;
+	padding: 7px;
+	border-radius: 4px;
+}
+.see_btn_dd:focus {
+	outline: none;
 }
 
-@media(max-width:991px) {
-    .main{
-        width: 100%;
-        padding-left: 0px;
-        margin-top: 70px;
-        height: 100vh;
-    }
-    .overlay {
-        display: none;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.7);
-        z-index: 999;
-        opacity: 0;
-        transition: all 0.5s ease-in-out;
-    }
-    .overlay.active {
-        display: block;
-        opacity: 1;
-    }
-    .padr_dd{
-        padding-left: 15px;
-    }
-    .pos_ff{
-        position: absolute;
-    }
-    .userName{
-        font-size: 12px;
-        margin-bottom: 6px;
-        margin-top: 5px;
-    }
-    .profeSS{
-        font-size: 9.5px;
-    }
+.padr_dd {
+	padding-left: 0px;
+}
+
+@media (max-width: 991px) {
+	.main {
+		width: 100%;
+		padding-left: 0px;
+		margin-top: 70px;
+		height: 100vh;
+	}
+	.overlay {
+		display: none;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.7);
+		z-index: 999;
+		opacity: 0;
+		transition: all 0.5s ease-in-out;
+	}
+	.overlay.active {
+		display: block;
+		opacity: 1;
+	}
+	.padr_dd {
+		padding-left: 15px;
+	}
+	.pos_ff {
+		position: absolute;
+	}
+	.userName {
+		font-size: 12px;
+		margin-bottom: 6px;
+		margin-top: 5px;
+	}
+	.profeSS {
+		font-size: 9.5px;
+	}
 }

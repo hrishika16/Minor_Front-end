@@ -132,14 +132,13 @@
 	#sidebarp {
 		width: 250px;
 		padding-top: 60px;
-		border-right: 1px solid #2d2d2d;
 		position: fixed;
 		top: 50px;
 		left: -250px;
 		height: 100vh;
 		z-index: 998;
-		background-color: #2d2d2d;
-		color: #fff;
+		background: #045174;
+		/* color: #fff; */
 		transition: all 0.15s ease-out;
 	}
 
