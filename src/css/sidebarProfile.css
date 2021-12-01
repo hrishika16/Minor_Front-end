@@ -21,3 +21,9 @@
     font-family: 'caros_bold';
     margin-bottom: 30px;
 }
+
+@media(max-width:991px){
+    .myProfile{
+        margin: 0px;
+    }
+}
